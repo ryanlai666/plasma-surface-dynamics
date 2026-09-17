@@ -140,6 +140,82 @@ def render_frame(name, snapshots, index, p, *, side, depth_layers, max_removal, 
     return image
 
 
+def render_perspective(name, snapshots, index, p, **settings):
+    """Project the same independent columns with a fixed pinhole camera.
+
+    Only exposed top and camera-facing side faces are drawn. Lateral spacing
+    and vertical exaggeration are display choices, not a crystal geometry.
+    """
+    image = render_frame(name, snapshots, index, p, **settings)
+    draw = ImageDraw.Draw(image)
+    draw.rectangle((28,139,972,485), fill=BG)
+    draw.rounded_rectangle((28,139,972,485), radius=12, fill=PANEL)
+    draw.text((48,151), "3D perspective | fixed camera | actual column heights", font=_font(16), fill=TEXT)
+    side = settings['side']
+    depth = settings['depth_layers']
+    snap = snapshots[index]
+    heights = snap['heights'].reshape(side,side)
+    modified = snap['modified'].reshape(side,side)
+    previous = snapshots[max(0,index-1)]['heights'].reshape(side,side)
+    target = np.array([side/2, side/2, -1.5])
+    camera = target + np.array([28.,32.,27.])
+    forward = (target-camera)/np.linalg.norm(target-camera)
+    right = np.cross(forward, [0.,0.,1.]); right /= np.linalg.norm(right)
+    up = np.cross(right,forward)
+    def project(vertices):
+        vertices = np.array(vertices,dtype=float)
+        vertices[:,2] *= 1.5
+        rel = vertices-camera
+        distances = rel@forward
+        xy = np.column_stack((500+720*(rel@right)/distances,
+                              270-720*(rel@up)/distances))
+        return [tuple(v) for v in xy], float(distances.mean())
+    faces = []
+    for y in range(side):
+        for x in range(side):
+            h = int(heights[y,x])
+            top = [(x,y,h),(x+1,y,h),(x+1,y+1,h),(x,y+1,h)]
+            color = MODIFIED if modified[y,x] else BARE
+            edge = ETCHED if h < previous[y,x] else GRID
+            points,distance = project(top)
+            faces.append((distance,points,color,edge))
+            # Interior side faces extend only to a lower adjacent surface.
+            hx = int(heights[y,x+1]) if x+1<side else -depth
+            hy = int(heights[y+1,x]) if y+1<side else -depth
+            if h>hx:
+                points,distance = project([(x+1,y,h),(x+1,y+1,h),(x+1,y+1,hx),(x+1,y,hx)])
+                faces.append((distance,points,'#36516c',GRID))
+            if h>hy:
+                points,distance = project([(x,y+1,h),(x+1,y+1,h),(x+1,y+1,hy),(x,y+1,hy)])
+                faces.append((distance,points,'#263d57',GRID))
+    for _,points,color,edge in sorted(faces,key=lambda face:face[0],reverse=True):
+        draw.polygon(points,fill=color,outline=edge,width=1)
+    # A height reference uses exactly the same projection as the columns.
+    for h in range(0,-depth-1,-1):
+        points,_ = project([(side+2,0,h),(side+2.4,0,h)])
+        draw.line(points,fill=MUTED,width=1)
+        x,y = points[-1]
+        draw.text((x-24,y-7),str(h),font=_font(12),fill=MUTED)
+    draw.text((48,440), 'Height labels: removal increments; zero is the initial surface.',font=_font(13),fill=MUTED)
+    draw.text((48,461), 'Schematic spacing; vertical scale exaggerated 1.5x. No crystal structure or lateral interactions.',font=_font(13),fill=MUTED)
+    return image
+
+
+def save_animation(frames, path):
+    # A fixed palette prevents color flicker between frames.
+    palette = frames[0].quantize(colors=128)
+    encoded = [frame.quantize(palette=palette,dither=Image.Dither.NONE) for frame in frames]
+    encoded[0].save(path,save_all=True,append_images=encoded[1:],duration=100,loop=0,disposal=2,optimize=False)
+    with Image.open(path) as gif:
+        assert gif.n_frames == len(frames)
+        duration = 0
+        for i in range(gif.n_frames):
+            gif.seek(i)
+            duration += gif.info['duration']
+        assert duration == 100*len(frames)
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
 def run(output="docs/animations"):
     root=Path(__file__).resolve().parents[1]
     output=Path(output);output.mkdir(parents=True,exist_ok=True)
@@ -162,29 +238,30 @@ def run(output="docs/animations"):
         print('Rendering',label,flush=True)
         frames=[render_frame(label,snapshots,i,p,side=16,depth_layers=depth,max_removal=ymax,phases=phases,cycles=3)
                 for i in range(len(snapshots))]
-        # One shared palette across every frame prevents color flicker.
-        palette=frames[0].quantize(colors=128)
-        gif_frames=[f.quantize(palette=palette,dither=Image.Dither.NONE) for f in frames]
-        filename=label.lower().replace('.','p')+'.gif'
-        gif_frames[0].save(output/filename,save_all=True,append_images=gif_frames[1:],duration=100,loop=0,disposal=2,optimize=False)
-        frames[len(frames)//2].save(output/(label.lower().replace('.','p')+'_preview.png'))
+        stem=label.lower().replace('.','p')
+        filename=stem+'.gif'
+        gif_hash=save_animation(frames,output/filename)
+        frames[len(frames)//2].save(output/(stem+'_preview.png'))
+        del frames
+        perspective=[render_perspective(label,snapshots,i,p,side=16,depth_layers=depth,
+                     max_removal=ymax,phases=phases,cycles=3) for i in range(len(snapshots))]
+        perspective_filename=stem+'_3d.gif'
+        perspective_hash=save_animation(perspective,output/perspective_filename)
+        perspective[len(perspective)//2].save(output/(stem+'_3d_preview.png'))
+        del perspective
         stats=[]
         for snap in snapshots:
             stats.append(dict(time_s=snap['time_s'],cycle=snap['cycle'],phase=snap['phase'],events=snap['events'],
                               coverage=float(snap['modified'].mean()),net_removed_nm=-float(snap['heights'].mean())*p.layer_nm))
         write_csv(output/(label.lower().replace('.','p')+'_frames.csv'),stats)
-        with Image.open(output/filename) as gif:
-            assert gif.n_frames==len(snapshots)
-            durations=[]
-            for i in range(gif.n_frames):
-                gif.seek(i);durations.append(gif.info['duration'])
-            assert sum(durations)==12100
         summary.append(dict(material=label,filename=filename,frames=len(snapshots),playback_duration_s=12.1,
                             simulation_duration_s=history[-1]['time_s'],final_net_removed_nm=history[-1]['net_removed_nm'],
-                            events=history[-1]['events'],parameters=asdict(p),gif_sha256=hashlib.sha256((output/filename).read_bytes()).hexdigest()))
+                            events=history[-1]['events'],parameters=asdict(p),gif_sha256=gif_hash,
+                            perspective_filename=perspective_filename,perspective_gif_sha256=perspective_hash))
     write_json(output/'manifest.json',manifest(dict(backend='python',seed=42,sites=256,cycles=3,
         frames=121,frame_duration_ms=100,phase_schedule=[asdict(s) for s in phases],
         depth_scale_layers=depth,removal_scale_nm=ymax,scenarios=summary,
+        perspective_camera_offset=[28,32,27],perspective_focal_pixels=720,vertical_exaggeration=1.5,
         interpretation='Independent-column display, not an atomistic Si/SiNx lattice. Nitride rates hypothetical.')))
     print(json.dumps(summary,indent=2),flush=True)
 

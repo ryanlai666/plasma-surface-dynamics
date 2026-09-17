@@ -8,65 +8,80 @@ Combining surface reaction kinetics, Python/C++ simulation, public atomistic dat
 
 > **Scientific scope:** This project verifies numerical implementations and compares atomistic models. Default ALE rates are uncalibrated, and SiNx composition cards are hypothetical sensitivity scenarios. The results do not establish experimental etching accuracy.
 
-## Demonstrations
+[Animations](#animation-gallery) | [Quick start](#quick-start) | [Results](#recorded-results) | [Equations and literature](#physical-hypotheses-equations-and-literature-support) | [Documentation](#documentation-and-project-map)
 
-### Animated kMC: follow the surface through each ALE cycle
+## Animation gallery
 
-The top-down lattice shows **bare sites in teal** and **modified sites in gold**. Pink outlines mark removal since the previous frame. The highlighted row is shown in cross-section, with live phase, coverage, and removal readouts. All four systems use the same 35 eV exposure and fixed display scales.
+Each movie follows three ALE cycles on 256 independent surface columns at 35 eV. **Teal** marks bare sites, **gold** marks modified sites, and **pink** marks removal since the preceding frame. The 3D perspective and the top-view/cross-section movies use the same seeded trajectory. Each 21 s simulation plays in 12.1 s.
 
-**Si - reference scenario**
+### Silicon
 
-![Animated silicon ALE: site states, removal depth, and cycle timing](docs/animations/si.gif)
+![Silicon kMC in 3D perspective](docs/animations/si_3d.gif)
 
 <details>
-<summary><strong>SiN0.8 - open the animation</strong></summary>
+<summary>Si: top view and linked height cross-section</summary>
 
-![Animated hypothetical SiN0.8 ALE](docs/animations/sin0p8.gif)
+![Silicon site map and height cross-section](docs/animations/si.gif)
+
+</details>
+
+### Silicon nitride composition scenarios
+
+<details>
+<summary><strong>SiN0.8: 3D perspective and top view</strong></summary>
+
+![SiN0.8 kMC in 3D perspective](docs/animations/sin0p8_3d.gif)
+
+![SiN0.8 site map and height cross-section](docs/animations/sin0p8.gif)
 
 </details>
 
 <details>
-<summary><strong>SiN1.0 - open the animation</strong></summary>
+<summary><strong>SiN1.0: 3D perspective and top view</strong></summary>
 
-![Animated hypothetical SiN1.0 ALE](docs/animations/sin1p0.gif)
+![SiN1.0 kMC in 3D perspective](docs/animations/sin1p0_3d.gif)
+
+![SiN1.0 site map and height cross-section](docs/animations/sin1p0.gif)
 
 </details>
 
 <details>
-<summary><strong>Si3N4 - open the animation</strong></summary>
+<summary><strong>Si3N4: 3D perspective and top view</strong></summary>
 
-![Animated hypothetical Si3N4 ALE](docs/animations/si3n4.gif)
+![Si3N4 kMC in 3D perspective](docs/animations/si3n4_3d.gif)
+
+![Si3N4 site map and height cross-section](docs/animations/si3n4.gif)
 
 </details>
 
-These are actual seeded Gillespie trajectories on **256 independent surface columns**, displayed as a square lattice. The animation does not resolve atomic positions, bonds, or individual Si/N species; nitride rates remain hypothetical. The 21 s trajectory plays in 12.1 s and loops back to the initial state.
+The columns represent model states and removal increments. Their spacing is schematic, and the 3D vertical scale is exaggerated 1.5x; neither view resolves atom identities, chemical bonds, or a crystal lattice. Nitride compositions label hypothetical rate cards.
 
-Reproduce all four with `python -m plasma_surface.animate`. [Visualization rationale, settings, and validation](docs/ANIMATIONS.md) - [Animation provenance](docs/animations/manifest.json).
+Reproduce all eight GIFs with `python -m plasma_surface.animate`. [Visualization settings and fidelity checks](docs/ANIMATIONS.md) | [Trajectory and rendering provenance](docs/animations/manifest.json).
 
-### Silicon ALE: reaction kinetics across repeated cycles
+## Quick start
 
-![Silicon ALE phase histories and ion-energy sweep](docs/results/cpp/overview.png)
-
-The left panel compares exact mean-field integration with a stochastic Gillespie simulation. The right panel shows the illustrative model's energy dependence at different modification durations. Coverage carries across process phases and cycles.
+Python 3.11+ and a local CPU are sufficient. From a source checkout on Windows:
 
 ```powershell
-python scripts/build_cpp.py
-python -m plasma_surface.cli demo --backend cpp
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+python -m pip install -e ".[dev]"
+python -m plasma_surface.cli demo
 ```
 
-### Silicon nitride: explore assumptions and atomistic model disagreement
+On Linux/macOS, activate with `source .venv/bin/activate`. The demo writes phase histories, a synthetic ML campaign, metrics, plots, and provenance to `outputs/demo/`.
 
-![MACE energy-strain comparison for silicon and silicon nitride](docs/mace_results/comparison.png)
+| Task | Command |
+|---|---|
+| Generate the 2D and 3D animations | `python -m plasma_surface.animate` |
+| Compare the four material cards | `python -m plasma_surface.cli materials` |
+| Fetch the public DFT geometries | `python -m plasma_surface.cli fetch-data` |
+| Run regression tests | `python -m pytest -q --basetemp=outputs/pytest-run` |
+| Build the optional C++ backend | `python scripts/build_cpp.py` |
+| Run the C++ demo | `python -m plasma_surface.cli demo --backend cpp` |
+| Run the full numerical campaign after building C++ | `python -m plasma_surface.validation` |
 
-MACE-MP-0b2 small and MACE-MPA-0 medium are evaluated on diamond Si, a public beta-Si3N4 crystal, and two unrelaxed nitrogen-vacancy probes. Energies are referenced separately within each composition. These are structural comparisons, not predicted etch rates or an accuracy ranking.
-
-[Atomistic comparison report](docs/mace_results/REPORT.md) ? [MACE setup](docs/MACE.md) ? [Hypothetical Si/SiNx kinetics comparison](docs/results/materials/comparison.png)
-
-### Numerical validation and saturation
-
-![Finite-site convergence and dose saturation](docs/results/verification.png)
-
-The stochastic ensemble scatter decreases with increasing site count. The dose sweep checks saturation within the chosen illustrative mechanism.
+The C++ build requires a C++17 GCC/Clang compiler. [Detailed setup, benchmarking, calibration, and deposition examples](docs/USAGE.md) | [Optional MACE environment](docs/MACE.md).
 
 ## Recorded results
 
@@ -82,9 +97,40 @@ The stochastic ensemble scatter decreases with increasing site count. The dose s
 | MACE energy/force consistency | Both checks passed | Finite-difference tolerance: 1e-4 eV/angstrom |
 | Public Si-HCl DFT geometry inventory | 22 structures | Provenance and checksums retained |
 
-[Full simulation report](docs/results/REPORT.md) ? [Raw benchmark timings](docs/results/benchmark.json) ? [Research roadmap](docs/RESEARCH_PLAN.md)
+[Full simulation report](docs/results/REPORT.md) | [Raw benchmark timings](docs/results/benchmark.json) | [Research roadmap](docs/RESEARCH_PLAN.md)
 
 The C++ kMC backend uses constant-time eligible-site selection. The recorded 2,048-site, 10-cycle benchmark had median times of 2.64048 s in Python and 0.002218 s in C++. This workload-specific comparison includes the algorithm change as well as compilation; timings vary with machine load and do not imply a universal speedup.
+
+## Simulation and atomistic comparisons
+
+<details>
+<summary><strong>Si ALE: phase histories and ion-energy dependence</strong></summary>
+
+![Silicon ALE phase histories and ion-energy sweep](docs/results/cpp/overview.png)
+
+Exact mean-field integration and stochastic Gillespie simulation describe the same illustrative kinetics. The energy sweep explores modification-dose dependence.
+
+</details>
+
+<details>
+<summary><strong>Si/SiNx: comparison of two pretrained MACE models</strong></summary>
+
+![MACE energy-strain comparison](docs/mace_results/comparison.png)
+
+MACE-MP-0b2 small and MACE-MPA-0 medium are evaluated on diamond Si, beta-Si3N4, and two unrelaxed nitrogen-vacancy probes. Energies are referenced separately within each composition. These are structural comparisons, not an etch-rate validation or accuracy ranking.
+
+[Atomistic report](docs/mace_results/REPORT.md) | [Hypothetical composition-rate comparison](docs/results/materials/comparison.png).
+
+</details>
+
+<details>
+<summary><strong>Numerical verification: finite-site convergence and dose saturation</strong></summary>
+
+![Finite-site convergence and dose saturation](docs/results/verification.png)
+
+Ensemble scatter decreases as the number of sites increases. The dose sweep checks saturation within the assumed mechanism.
+
+</details>
 
 ## Physical hypotheses, equations, and literature support
 
@@ -130,105 +176,27 @@ flowchart LR
 
 Solid arrows describe implemented workflows; dashed arrows require further reaction data and model development. [HiPRGen assessment](docs/HIPRGEN.md).
 
-## Run locally
+## Public data and scientific scope
 
-Python 3.11+; no GPU, paid data service, or cluster required. From this directory:
+The project uses public structures and explicitly synthetic kinetic campaigns. The [Si-HCl DFT archive](https://zenodo.org/records/10211009) contains 22 inventoried geometries with CC BY 4.0 attribution and checksums. Two [public HF/SiN DFT barrier entries](data/literature/sin_hf_barriers.csv) are retained as reference data and are not loaded into the solver. See [dataset sources and suitability](docs/DATASETS.md).
 
-```powershell
-python -m venv .venv
-.venv\Scripts\python -m pip install -e ".[dev]"
-.venv\Scripts\python -m plasma_surface.cli demo
-```
+Composition is metadata in the current [Si/SiNx cards](configs/materials.json). Hydrogen content, preferential Si/N removal, film density, product speciation, and lateral interactions do not drive the kinetics. The inherited thickness conversion is illustrative for nitrides. The generic growth channel is not a validated PECVD/PEALD mechanism. Experimental calibration requires measurements matched to the implemented recipe and chemistry; none are fabricated or bundled.
 
-If your active Python already has NumPy, SciPy, scikit-learn, Matplotlib, and pytest:
+## Documentation and project map
 
-```powershell
-python -m plasma_surface.cli demo
-python -m pytest -q --basetemp=outputs/pytest-run
-```
-
-`outputs/demo/` contains phase-resolved mean-field and kMC results, a 128-recipe synthetic campaign, held-out ML predictions, metrics, a figure, and a provenance manifest.
-
-## C++ acceleration
-
-A C++17 GCC/Clang compiler is optional. The current Windows machine has MSYS2 GCC. Build locally; no Python binding package is needed:
-
-```powershell
-python scripts/build_cpp.py
-python -m plasma_surface.cli demo --backend cpp --output outputs/demo_cpp
-python -m plasma_surface.cli benchmark
-python -m pytest -q --basetemp=outputs/pytest-cpp
-```
-
-The C++ library implements both exact mean-field integration and continuous-time Gillespie kMC. A permutation partition enables constant-time selection of bare or modified sites. Python's reference kMC scans site arrays, so the measured improvement includes both compilation and an improved selection algorithm. Python still handles rate construction, analysis, plotting, and ML.
-
-Benchmark results are saved to `outputs/benchmark.json`, including workload, repeat timings, event counts, compiler options, and source/binary hashes. Stochastic trajectories differ between backends; agreement is statistical. C++ mean-field outputs are checked against Python to numerical precision. Small mean-field problems may not speed up because binding overhead dominates. Linux/macOS builds are supported by the script but have not been run on this machine. The backend is designed for a source checkout/editable install; a portable binary wheel is not provided.
-
-## Silicon and silicon nitride
-
-```powershell
-python -m plasma_surface.cli materials --backend cpp
-```
-
-This compares Si, SiN₀.₈, SiN₁.₀, and Si₃N₄ tags using explicit parameter cards in [configs/materials.json](configs/materials.json). Here x=N/Si; stoichiometric Si₃N₄ has x=4/3. Outputs include a comparison figure, CSV, and all effective parameters.
-
-**Composition is metadata in this first version, not an evolving surface state.** Differences between curves come from the chosen hypothetical rates. Hydrogen fraction is recorded but does not drive kinetics. The generic phase sequence is not a validated nitride etch chemistry. The Si thickness conversion is also inherited in these exploratory cards; real SiNₓ calibration must replace it. Preferential N removal, composition enrichment, hydrogen chemistry, film density, and product speciation require a richer reaction network. See the [research plan](docs/RESEARCH_PLAN.md).
-
-## Public data
-
-```powershell
-python -m plasma_surface.cli fetch-data
-```
-
-The verified public [Si–HCl DFT archive](https://zenodo.org/records/10211009) is ~75 kB and licensed CC BY 4.0. The downloader preserves attribution, source metadata, and checksums; inventory reads the ZIP without extraction. The recorded run inventoried 22 structures; use the download command to recreate `data/raw/si_hcl/` locally. These geometries do not provide a calibrated chlorine/argon ALE model.
-
-For SiNₓ, the [SAIT MLFF benchmark](https://github.com/SAITPublic/MLFF-Framework) is a strong public atomistic starting point. Its Si/N data must not be treated as a reactive halogen force field. Download links, suitability, limitations, and other sources are in [DATASETS.md](docs/DATASETS.md). Large archives are not downloaded automatically.
-
-## Experimental calibration interface
-
-```powershell
-python -m plasma_surface.cli calibrate path/to/measurements.csv
-```
-
-CSV columns: `energy_ev,dose_s,ion_s,temperature_k,cycle,epc_nm,sigma_nm,source_id`. Supply at least four measurements, positive standard uncertainties, and enough distinct doses/energies to constrain both fitted parameters. The current fitter assumes the exact fluxes, purge durations, initial state, and base silicon parameters in `ale_recipe`; do not feed unrelated chemistries or mixed-material data into it. It fits sticking and chemical yield, reports Jacobian rank/singular values, and records the input checksum. No experimental measurements are bundled or fabricated; the parameter-recovery test uses explicitly synthetic data.
-
-## Etching and deposition extensions
-
-The same kernel supports simultaneous neutral and ion exposure for continuous etching and a generic precursor-arrival channel for net growth:
-
-```python
-from plasma_surface.model import Phase, mean_field
-
-continuous_etch = Phase("etch", 10, radical_flux_m2_s=2e19,
-                       ion_flux_m2_s=2e19, ion_energy_ev=60)
-generic_growth = Phase("growth", 10, precursor_flux_m2_s=1e19)
-print(mean_field([continuous_etch], cycles=1)[-1])
-print(mean_field([generic_growth], cycles=1)[-1])
-```
-
-Growth is a minimal deposition channel, not a PECVD or PEALD mechanism. Positive net removal means etching; negative means growth.
-
-## Simulation and numerical verification campaign
-
-Run `python -m plasma_surface.validation` after building the C++ backend. This executes regression tests, both demos, Si/SiNx scenarios, 4,096 recipes with both backends, stochastic convergence ensembles, half-cycle controls, dose saturation, ML evaluation, and a five-repeat benchmark.
-
-The generated [simulation report](docs/results/REPORT.md) and supporting results are tracked under `docs/results/`. Raw archives and compiled binaries remain local artifacts. The campaign exits with an error if its predefined numerical checks fail. Experimental validation still requires compatible measured data.
-
-For an optional reaction-discovery extension, see the [HiPRGen assessment and proposed connection](docs/HIPRGEN.md). It is an upstream candidate generator, not a calibrated plasma rate source.
-
-For optional atomistic force-field comparisons, see [MACE setup and interpretation](docs/MACE.md).
-
-## Project map
-
-| Location | Purpose |
+| Topic | Location |
 |---|---|
-| `plasma_surface/model.py` | Reference kinetics, exact solver, Gillespie kMC |
-| `cpp/surface.cpp`, `plasma_surface/native.py` | C++ kernel and Python interface |
-| `plasma_surface/workflows.py` | Campaign, ML evaluation, two-parameter calibration |
-| `plasma_surface/datasets.py` | Public-data download, checksum, geometry inventory |
-| `configs/materials.json` | Explicit Si/SiNₓ hypothetical parameter cards |
-| `tests/` | Analytical limits, stochastic agreement, calibration, backend checks |
-| `hpc/sweep.slurm` | Optional future cluster array template; not required locally |
-| `docs/` | Equations, research milestones, datasets, validation guidance |
+| Equations and exact integration | [Model](docs/MODEL.md) |
+| DFT/AIMD evidence, parameter audit, and hypotheses | [Literature](docs/LITERATURE.md) |
+| Reproduction and extended command examples | [Usage guide](docs/USAGE.md) |
+| Animation interpretation and settings | [Animations](docs/ANIMATIONS.md) |
+| Validation method and recorded campaign | [Validation](docs/VALIDATION.md), [results](docs/results/REPORT.md) |
+| Public atomistic data and MACE comparisons | [Datasets](docs/DATASETS.md), [MACE](docs/MACE.md) |
+| Future reaction discovery and research milestones | [HiPRGen](docs/HIPRGEN.md), [research plan](docs/RESEARCH_PLAN.md) |
+| Python kinetics and animation rendering | `plasma_surface/model.py`, `plasma_surface/animate.py` |
+| C++ kernel and Python interface | `cpp/surface.cpp`, `plasma_surface/native.py` |
+| Campaigns, ML, and calibration | `plasma_surface/workflows.py` |
+| Material assumptions and regression checks | `configs/materials.json`, `tests/` |
+| Optional cluster array template | `hpc/sweep.slurm` |
 
 The SLURM array shards a deterministic design by recipe ID; merging and sorting the shards reproduces serial output.

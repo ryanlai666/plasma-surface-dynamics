@@ -67,7 +67,9 @@
           "physical_yield_scale": 0.15,
           "deposition_sticking": 0.2
         },
-        "gif_sha256": "9c8b6ae5f5691aa5c9239b290e0c53df7dd56c8b45b7a33a8ae32e4199b815c1"
+        "gif_sha256": "9c8b6ae5f5691aa5c9239b290e0c53df7dd56c8b45b7a33a8ae32e4199b815c1",
+        "perspective_filename": "si_3d.gif",
+        "perspective_gif_sha256": "aaaa47e0337b1bf906964773aee2e8e3109e70aea211bf982151164fd57762e8"
       },
       {
         "material": "SiN0.8",
@@ -89,7 +91,9 @@
           "physical_yield_scale": 0.15,
           "deposition_sticking": 0.2
         },
-        "gif_sha256": "9b7cbf70596730c1668f07dbf6bb082c8e853e72dc45f7fadb221e48af0342a7"
+        "gif_sha256": "9b7cbf70596730c1668f07dbf6bb082c8e853e72dc45f7fadb221e48af0342a7",
+        "perspective_filename": "sin0p8_3d.gif",
+        "perspective_gif_sha256": "ed16e82a3421e8acd8bab17283cc3e6a54a25914c82fb73ce2ae7dc06f54b687"
       },
       {
         "material": "SiN1.0",
@@ -111,7 +115,9 @@
           "physical_yield_scale": 0.15,
           "deposition_sticking": 0.2
         },
-        "gif_sha256": "429d4c10cb8910c7b7e71457c96edd3bf449c20a3a0545be797e0fb19c365a68"
+        "gif_sha256": "429d4c10cb8910c7b7e71457c96edd3bf449c20a3a0545be797e0fb19c365a68",
+        "perspective_filename": "sin1p0_3d.gif",
+        "perspective_gif_sha256": "032804639d3ad349be5c6ceebd62329dd700c01499500580ceb987da48edb5cd"
       },
       {
         "material": "Si3N4",
@@ -133,9 +139,18 @@
           "physical_yield_scale": 0.15,
           "deposition_sticking": 0.2
         },
-        "gif_sha256": "75adb1ab920e540174d5ebfcd7fde5df7d196322449007fa89ddb3da2adf386b"
+        "gif_sha256": "75adb1ab920e540174d5ebfcd7fde5df7d196322449007fa89ddb3da2adf386b",
+        "perspective_filename": "si3n4_3d.gif",
+        "perspective_gif_sha256": "20a332df7500cee0e0c5deb8523dfe0128959b25ac68218a365e61d3bf16609a"
       }
     ],
+    "perspective_camera_offset": [
+      28,
+      32,
+      27
+    ],
+    "perspective_focal_pixels": 720,
+    "vertical_exaggeration": 1.5,
     "interpretation": "Independent-column display, not an atomistic Si/SiNx lattice. Nitride rates hypothetical."
   },
   "python": "3.13.5",
@@ -147,7 +162,7 @@
   },
   "source_sha256": {
     "__init__.py": "2eee4f408af7112f5672290d39d3f70a4f52db355976203a8cb6b15fb3c70819",
-    "animate.py": "db2df4b5e30a6a4e3f6db9f3040a86cee9d5aba2f44c6f3aadcf38b65289bdb4",
+    "animate.py": "aeb22ec11ebe4cb878a28fb6e0d63bddfd33911c78c5c4f6e699cae4c69adcfa",
     "benchmark.py": "1186f1fc47572d94686147aa0a3a458f1d633c58ed828f9576fcdfd848d4b413",
     "cli.py": "7f11433f324aca2cb1889f882b489ce231995d506a6cf67fce5d8baab136c1c9",
     "datasets.py": "8f36b228e58e360891f8a259d563cc097e9728a9748d4377eefbd9d6420def7e",

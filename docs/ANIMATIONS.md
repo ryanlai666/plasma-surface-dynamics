@@ -14,7 +14,7 @@ The design follows the general separation of simulation data and visual glyphs d
 python -m plasma_surface.animate
 ```
 
-Pillow (installed with the current plotting dependencies) writes GIFs without FFmpeg or a GPU. The command reads `configs/materials.json` and writes all four animations, representative PNG frames, sampled metrics, and a manifest to `docs/animations/`.
+Pillow (installed with the current plotting dependencies) writes GIFs without FFmpeg or a GPU. The command reads `configs/materials.json` and writes four top-view/cross-section animations and four 3D perspective animations, representative PNG frames, sampled metrics, and a manifest to `docs/animations/`.
 
 | Setting | Value |
 |---|---|
@@ -39,3 +39,11 @@ The optional observer in `model.kmc` receives copied states at phase starts, acc
 Tests verify identical phase summaries with/without the observer, immunity to callback mutation, nondecreasing timestamps, zero-flux sampling, and the column-height/material-count balance. The generator also checks seeded parity for each material, the final balance, GIF frame counts, and playback duration. Numerical verification does not establish experimental accuracy.
 
 SiNx labels specify the scenario's bulk-composition metadata. They do not represent spatially resolved Si/N identities, preferential nitrogen loss, crystallographic orientation, or equilibrated amorphous material. All nitride kinetic parameters remain hypothetical; the inherited 0.136 nm increment is an illustrative conversion. The cross-section is an independent-column statistic, not a predicted trench profile or validated AFM roughness.
+
+## 3D perspective view
+
+Files ending in `_3d.gif` project the same sampled states as the original site-map movies. A fixed pinhole camera draws exposed column tops and visible side faces. Surface colors and pink removal outlines have the same meaning in both views. The height reference is projected with the columns; zero denotes the initial surface. There is no interpolation, smoothing, or camera motion. All scenarios use identical camera and height scales.
+
+Lateral grid spacing is schematic and vertical coordinates are exaggerated 1.5x for readability. Solid sides visualize the column height offsets; they do not introduce bulk atom positions or a crystallographic lattice. Occlusion can hide sites in perspective, so use the paired top view to inspect every site. This is a visualization of independent-column kinetics, not a morphology prediction.
+
+The manifest records the camera offset, focal distance in pixels, exaggeration, and hashes of both GIFs for each material. Both views contain 121 frames at 100 ms each and use the same CSV time series. Reproduce all views with the command above.
