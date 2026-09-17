@@ -1,0 +1,3 @@
+pathway,context,activation_energy_ev,reaction_energy_ev,source_id,source_page,use_status
+P1d,first_fluorination_Si_N_Si_bridge,0.72,-0.97,Khumaini_ALD2024_poster,1,reference_only_not_solver_input
+P4,fourth_fluorination_SiF4_release,0.53,-0.77,Khumaini_ALD2024_poster,1,reference_only_not_solver_input

@@ -10,6 +10,39 @@ Combining surface reaction kinetics, Python/C++ simulation, public atomistic dat
 
 ## Demonstrations
 
+### Animated kMC: follow the surface through each ALE cycle
+
+The top-down lattice shows **bare sites in teal** and **modified sites in gold**. Pink outlines mark removal since the previous frame. The highlighted row is shown in cross-section, with live phase, coverage, and removal readouts. All four systems use the same 35 eV exposure and fixed display scales.
+
+**Si - reference scenario**
+
+![Animated silicon ALE: site states, removal depth, and cycle timing](docs/animations/si.gif)
+
+<details>
+<summary><strong>SiN0.8 - open the animation</strong></summary>
+
+![Animated hypothetical SiN0.8 ALE](docs/animations/sin0p8.gif)
+
+</details>
+
+<details>
+<summary><strong>SiN1.0 - open the animation</strong></summary>
+
+![Animated hypothetical SiN1.0 ALE](docs/animations/sin1p0.gif)
+
+</details>
+
+<details>
+<summary><strong>Si3N4 - open the animation</strong></summary>
+
+![Animated hypothetical Si3N4 ALE](docs/animations/si3n4.gif)
+
+</details>
+
+These are actual seeded Gillespie trajectories on **256 independent surface columns**, displayed as a square lattice. The animation does not resolve atomic positions, bonds, or individual Si/N species; nitride rates remain hypothetical. The 21 s trajectory plays in 12.1 s and loops back to the initial state.
+
+Reproduce all four with `python -m plasma_surface.animate`. [Visualization rationale, settings, and validation](docs/ANIMATIONS.md) - [Animation provenance](docs/animations/manifest.json).
+
 ### Silicon ALE: reaction kinetics across repeated cycles
 
 ![Silicon ALE phase histories and ion-energy sweep](docs/results/cpp/overview.png)
@@ -39,7 +72,7 @@ The stochastic ensemble scatter decreases with increasing site count. The dose s
 
 | Check or comparison | Recorded result | Interpretation |
 |---|---:|---|
-| Regression suite | 19 tests passed | Analytical limits, kinetics, calibration recovery, and backend checks |
+| Regression suite | 22 tests passed | Analytical limits, kinetics, calibration recovery, backend checks, and animation-state fidelity |
 | Python/C++ recipe comparison | 4,096 recipes | Same deterministic model evaluated by both implementations |
 | Maximum backend EPC difference | 2.22e-16 nm/cycle | Numerical agreement |
 | Stochastic ensembles | 6 of 6 within five standard errors | Agreement with the exact mean-field expectation |
@@ -52,6 +85,36 @@ The stochastic ensemble scatter decreases with increasing site count. The dose s
 [Full simulation report](docs/results/REPORT.md) ? [Raw benchmark timings](docs/results/benchmark.json) ? [Research roadmap](docs/RESEARCH_PLAN.md)
 
 The C++ kMC backend uses constant-time eligible-site selection. The recorded 2,048-site, 10-cycle benchmark had median times of 2.64048 s in Python and 0.002218 s in C++. This workload-specific comparison includes the algorithm change as well as compilation; timings vary with machine load and do not imply a universal speedup.
+
+## Physical hypotheses, equations, and literature support
+
+The implemented model resolves bare/modified surface states. With modified fraction $\theta$, modification hazard $a$, desorption $d$, chemical removal $c$, physical removal $s$, and growth $g$ (all in s$^{-1}$):
+
+$$
+\frac{d\theta}{dt}=a(1-\theta)-(d+c+s+g)\theta,
+\qquad \frac{dD}{dt}=\ell(c\theta+s-g).
+$$
+
+Here $D$ is net removed thickness and $\ell$ is the thickness increment. The rates use arrival fluxes, an Arrhenius desorption term, and an illustrative threshold yield:
+
+$$
+a=\frac{S\Gamma_r}{n_s},\quad d=\nu\exp[-E_d/(k_BT)],\quad
+c=\frac{\Gamma_i}{n_s}Y_c(E),\quad
+Y_j(E)=A_j\max\!\left(\sqrt{E/E_j}-1,0\right).
+$$
+
+**Hypotheses:** modification saturates available sites; ion-assisted removal depends on modification; newly exposed columns are bare; columns are independent. Increasing nitrogen content is assigned lower sticking and higher thresholds only as a sensitivity hypothesis, not an established composition law.
+
+| Atomistic evidence | Implication for this project |
+|---|---|
+| [Si chlorination DFT/TDDFT](https://doi.org/10.1016/j.mssp.2022.107169) reports lower removal energy after modification | Supports separate bare/modified states; does not calibrate incident-ion thresholds |
+| [SiN + CH3F first-principles study](https://doi.org/10.1016/j.apsusc.2020.148557) finds very low molecular sticking on its H-terminated surface | Current sticking values describe a generic effective radical channel, not measured CH3F sticking |
+| [SiN ion-impact AIMD/tight-binding MD](https://doi.org/10.1063/5.0155929) examines adsorbate decomposition | Motivates explicit precursor fragments and collision-assisted reactions in a future mechanism |
+| [Amorphous hydrogenated SiN + HF DFT](https://doi.org/10.1016/j.apsusc.2024.159414) resolves bond-cleavage pathways | Thermal barriers need specific states, hydrogen content, and chemistry before transfer to kMC |
+
+**Parameter status:** the current values remain uncalibrated. A DFT reaction barrier in eV is not an ion-impact threshold in eV. The 35 eV animations illustrate the chosen cards; they are not a literature-validated ALE window.
+
+[Detailed evidence, numerical parameters, hypotheses, and DFT/AIMD-to-kMC equations](docs/LITERATURE.md) | [Exact solver equations](docs/MODEL.md) | [Small public DFT barrier extract](data/literature/sin_hf_barriers.csv).
 
 ## Modeling workflow
 

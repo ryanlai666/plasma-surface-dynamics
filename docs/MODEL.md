@@ -36,3 +36,7 @@ Illustrative defaults use 7×10¹⁸ sites/m², 0.136 nm/event, chemical thresho
 - Validate on independent runs and compositions. An accurate surrogate of this model does not establish physical accuracy.
 
 No self-consistent plasma discharge, electron kinetics, reactor transport, evolving Si/N ratio, charging, redeposition, lattice orientation, or chemical product accounting is implemented. These exclusions define the scientific scope of the current kernel.
+
+## Literature and parameter provenance
+
+See [Literature, hypotheses, and parameter provenance](LITERATURE.md) for primary DFT/AIMD sources, a parameter-by-parameter audit, explicit hypotheses, and the proposed conversion of atomistic evidence into rates. The current constants remain uncalibrated.

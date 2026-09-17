@@ -1,0 +1,19 @@
+{
+  "source_id": "Khumaini_ALD2024_poster",
+  "authors": "Khabib Khumaini, Yewon Kim, Romel Hidayat, Tanzia Chowdhury, Hye-Lee Kim, Byungchul Cho, Sangjoon Park, Won-Jun Lee",
+  "title": "Gas-Phase Etching Mechanism of Amorphous Hydrogenated Silicon Nitride by Hydrogen Fluoride: A Theoretical Study",
+  "source_url": "https://avssymposium.org/ALD2024/Sessions/SupplementalDocumentDownload/80689?sessionId=79078",
+  "associated_paper_doi": "10.1016/j.apsusc.2024.159414",
+  "accessed": "2026-09-16",
+  "source_location": "Page 1; first and fourth fluorination tables, rows P1d and P4",
+  "method": "Manual transcription of two factual numerical entries from public author poster",
+  "units": "eV",
+  "uncertainty": "Not supplied in extract; not zero",
+  "energy_reference": "Retain source pathway convention; inspect reactant/physisorption reference before rate conversion",
+  "license_note": "No new license asserted for source material; paper/poster not redistributed; attribution retained",
+  "limitations": [
+    "Different chemistry and hydrogen content from current generic parameter cards",
+    "No prefactors or free-energy corrections extracted",
+    "Not loaded by solver; not etch calibration"
+  ]
+}

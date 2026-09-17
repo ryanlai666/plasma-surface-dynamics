@@ -1,0 +1,163 @@
+{
+  "config": {
+    "backend": "python",
+    "seed": 42,
+    "sites": 256,
+    "cycles": 3,
+    "frames": 121,
+    "frame_duration_ms": 100,
+    "phase_schedule": [
+      {
+        "name": "modify",
+        "duration_s": 2,
+        "radical_flux_m2_s": 2e+19,
+        "ion_flux_m2_s": 0.0,
+        "ion_energy_ev": 0.0,
+        "precursor_flux_m2_s": 0.0,
+        "temperature_k": 300.0
+      },
+      {
+        "name": "purge",
+        "duration_s": 0.5,
+        "radical_flux_m2_s": 0.0,
+        "ion_flux_m2_s": 0.0,
+        "ion_energy_ev": 0.0,
+        "precursor_flux_m2_s": 0.0,
+        "temperature_k": 300.0
+      },
+      {
+        "name": "remove",
+        "duration_s": 4,
+        "radical_flux_m2_s": 0.0,
+        "ion_flux_m2_s": 2e+19,
+        "ion_energy_ev": 35,
+        "precursor_flux_m2_s": 0.0,
+        "temperature_k": 300.0
+      },
+      {
+        "name": "purge",
+        "duration_s": 0.5,
+        "radical_flux_m2_s": 0.0,
+        "ion_flux_m2_s": 0.0,
+        "ion_energy_ev": 0.0,
+        "precursor_flux_m2_s": 0.0,
+        "temperature_k": 300.0
+      }
+    ],
+    "depth_scale_layers": 4,
+    "removal_scale_nm": 0.408,
+    "scenarios": [
+      {
+        "material": "Si",
+        "filename": "si.gif",
+        "frames": 121,
+        "playback_duration_s": 12.1,
+        "simulation_duration_s": 21.0,
+        "final_net_removed_nm": 0.31290625,
+        "events": 1178,
+        "parameters": {
+          "site_density_m2": 7e+18,
+          "layer_nm": 0.136,
+          "sticking": 0.25,
+          "desorption_prefactor_s": 1000000.0,
+          "desorption_barrier_ev": 0.65,
+          "chemical_threshold_ev": 15.0,
+          "physical_threshold_ev": 40.0,
+          "chemical_yield_scale": 0.8,
+          "physical_yield_scale": 0.15,
+          "deposition_sticking": 0.2
+        },
+        "gif_sha256": "9c8b6ae5f5691aa5c9239b290e0c53df7dd56c8b45b7a33a8ae32e4199b815c1"
+      },
+      {
+        "material": "SiN0.8",
+        "filename": "sin0p8.gif",
+        "frames": 121,
+        "playback_duration_s": 12.1,
+        "simulation_duration_s": 21.0,
+        "final_net_removed_nm": 0.26243750000000005,
+        "events": 1015,
+        "parameters": {
+          "site_density_m2": 7e+18,
+          "layer_nm": 0.136,
+          "sticking": 0.22,
+          "desorption_prefactor_s": 1000000.0,
+          "desorption_barrier_ev": 0.65,
+          "chemical_threshold_ev": 22.0,
+          "physical_threshold_ev": 45.0,
+          "chemical_yield_scale": 0.65,
+          "physical_yield_scale": 0.15,
+          "deposition_sticking": 0.2
+        },
+        "gif_sha256": "9b7cbf70596730c1668f07dbf6bb082c8e853e72dc45f7fadb221e48af0342a7"
+      },
+      {
+        "material": "SiN1.0",
+        "filename": "sin1p0.gif",
+        "frames": 121,
+        "playback_duration_s": 12.1,
+        "simulation_duration_s": 21.0,
+        "final_net_removed_nm": 0.2156875,
+        "events": 864,
+        "parameters": {
+          "site_density_m2": 7e+18,
+          "layer_nm": 0.136,
+          "sticking": 0.2,
+          "desorption_prefactor_s": 1000000.0,
+          "desorption_barrier_ev": 0.65,
+          "chemical_threshold_ev": 25.0,
+          "physical_threshold_ev": 48.0,
+          "chemical_yield_scale": 0.6,
+          "physical_yield_scale": 0.15,
+          "deposition_sticking": 0.2
+        },
+        "gif_sha256": "429d4c10cb8910c7b7e71457c96edd3bf449c20a3a0545be797e0fb19c365a68"
+      },
+      {
+        "material": "Si3N4",
+        "filename": "si3n4.gif",
+        "frames": 121,
+        "playback_duration_s": 12.1,
+        "simulation_duration_s": 21.0,
+        "final_net_removed_nm": 0.12059375000000001,
+        "events": 577,
+        "parameters": {
+          "site_density_m2": 7e+18,
+          "layer_nm": 0.136,
+          "sticking": 0.18,
+          "desorption_prefactor_s": 1000000.0,
+          "desorption_barrier_ev": 0.65,
+          "chemical_threshold_ev": 30.0,
+          "physical_threshold_ev": 50.0,
+          "chemical_yield_scale": 0.55,
+          "physical_yield_scale": 0.15,
+          "deposition_sticking": 0.2
+        },
+        "gif_sha256": "75adb1ab920e540174d5ebfcd7fde5df7d196322449007fa89ddb3da2adf386b"
+      }
+    ],
+    "interpretation": "Independent-column display, not an atomistic Si/SiNx lattice. Nitride rates hypothetical."
+  },
+  "python": "3.13.5",
+  "packages": {
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.6.1",
+    "matplotlib": "3.10.0"
+  },
+  "source_sha256": {
+    "__init__.py": "2eee4f408af7112f5672290d39d3f70a4f52db355976203a8cb6b15fb3c70819",
+    "animate.py": "db2df4b5e30a6a4e3f6db9f3040a86cee9d5aba2f44c6f3aadcf38b65289bdb4",
+    "benchmark.py": "1186f1fc47572d94686147aa0a3a458f1d633c58ed828f9576fcdfd848d4b413",
+    "cli.py": "7f11433f324aca2cb1889f882b489ce231995d506a6cf67fce5d8baab136c1c9",
+    "datasets.py": "8f36b228e58e360891f8a259d563cc097e9728a9748d4377eefbd9d6420def7e",
+    "io.py": "791ad99cd92f58ddfe3fdab6ce81188978da15998e202a564994351d67571068",
+    "mace_compare.py": "5bb80713258d79405d57d4c96bb6f6ee5d63e9c1c4909f4e5935181f3cb5cf30",
+    "materials.py": "d703c27bd9e131b383f0ddc5fbf2b2656ed717ab62e80a656d7ebcf403baf9a0",
+    "model.py": "77f7544b681a93eddb709877bed936859e90dc69c0e2d315ae68bc92c0b67e86",
+    "native.py": "660082c4d8fbdd4a6a7717e72a15ee1f3524d544e12bc654265530825ccd3f43",
+    "validation.py": "f4e0a98d84e7ee67873d6eef196a12d8ed14e40eacad7f6652aa59c0949fbc8c",
+    "workflows.py": "07548be9acf21130876173e0b45c7545c99c6ca42d8fcc43bcf118734194467f"
+  },
+  "data_origin": "synthetic_uncalibrated_model"
+}

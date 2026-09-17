@@ -103,10 +103,12 @@ def mean_field(phases, p=None, cycles=5):
     return rows
 
 
-def kmc(phases, p=None, cycles=5, sites=256, seed=42, max_events=2_000_000):
+def kmc(phases, p=None, cycles=5, sites=256, seed=42, max_events=2_000_000, observer=None):
     """Continuous-time Gillespie kMC on independent surface columns.
 
     Height variance is an independent-column statistic, not a feature profile.
+    Optional observer receives copied states at phase starts, events, and ends;
+    it draws no random numbers and does not change the simulation trajectory.
     """
     p = p or Parameters()
     _check_run(phases, cycles)
@@ -118,10 +120,16 @@ def kmc(phases, p=None, cycles=5, sites=256, seed=42, max_events=2_000_000):
     removed = deposited = events = 0
     elapsed = 0.0
     rows = []
+    def emit(cycle, phase, time):
+        if observer is not None:
+            observer(dict(cycle=cycle, phase=phase.name, time_s=float(time),
+                          modified=modified.copy(), heights=heights.copy(),
+                          removed=removed, deposited=deposited, events=events))
     for cycle in range(1, cycles + 1):
         for phase in phases:
             r = rates(phase, p)
             t = 0.0
+            emit(cycle, phase, elapsed)
             while t < phase.duration_s:
                 n = int(modified.sum())
                 hazards = r * np.array([sites-n, n, n, sites, sites])
@@ -147,7 +155,9 @@ def kmc(phases, p=None, cycles=5, sites=256, seed=42, max_events=2_000_000):
                 elif event == 4:
                     heights[site] += 1
                     deposited += 1
+                emit(cycle, phase, elapsed+t)
             elapsed += phase.duration_s
+            emit(cycle, phase, elapsed)
             rows.append(dict(cycle=cycle, phase=phase.name, time_s=elapsed,
                              coverage=float(modified.mean()), removed_nm=removed*p.layer_nm/sites,
                              deposited_nm=deposited*p.layer_nm/sites,
