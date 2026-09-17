@@ -1,10 +1,71 @@
-# Plasma Surface Lab
+# Plasma Surface Dynamics
 
-A local-computer research and portfolio project for **silicon atomic layer etching (ALE)**, with exploratory **SiNₓ composition scenarios**, Python analysis, and an optional C++17 solver.
+**Physics-based and machine-learning workflows for silicon and silicon-nitride atomic layer etching.**
 
-Research question: **How do surface modification, competing removal pathways, and uncertain reaction rates determine etch-per-cycle saturation and the usable ALE energy window?**
+A research software portfolio by [Ryan](https://github.com/ryanlai666), combining surface reaction kinetics, Python/C++ simulation, public atomistic data, and pretrained MACE force-field comparisons. Runs on a local CPU; a GPU or cluster is not required for the included demonstrations.
 
-This is a working scientific software foundation, not an experimentally validated process simulator. Default rates are illustrative. SiNₓ cards contain explicitly invented sensitivity hypotheses, not fitted composition-dependent material properties. Public DFT structures are kept separate from synthetic model outputs.
+**Research question:** How do surface modification, competing removal pathways, and uncertain reaction rates determine etch-per-cycle saturation and the usable ALE energy window?
+
+> **Scientific scope:** This project verifies numerical implementations and compares atomistic models. Default ALE rates are uncalibrated, and SiNx composition cards are hypothetical sensitivity scenarios. The results do not establish experimental etching accuracy.
+
+## Demonstrations
+
+### Silicon ALE: reaction kinetics across repeated cycles
+
+![Silicon ALE phase histories and ion-energy sweep](docs/results/cpp/overview.png)
+
+The left panel compares exact mean-field integration with a stochastic Gillespie simulation. The right panel shows the illustrative model's energy dependence at different modification durations. Coverage carries across process phases and cycles.
+
+```powershell
+python scripts/build_cpp.py
+python -m plasma_surface.cli demo --backend cpp
+```
+
+### Silicon nitride: explore assumptions and atomistic model disagreement
+
+![MACE energy-strain comparison for silicon and silicon nitride](docs/mace_results/comparison.png)
+
+MACE-MP-0b2 small and MACE-MPA-0 medium are evaluated on diamond Si, a public beta-Si3N4 crystal, and two unrelaxed nitrogen-vacancy probes. Energies are referenced separately within each composition. These are structural comparisons, not predicted etch rates or an accuracy ranking.
+
+[Atomistic comparison report](docs/mace_results/REPORT.md) ? [MACE setup](docs/MACE.md) ? [Hypothetical Si/SiNx kinetics comparison](docs/results/materials/comparison.png)
+
+### Numerical validation and saturation
+
+![Finite-site convergence and dose saturation](docs/results/verification.png)
+
+The stochastic ensemble scatter decreases with increasing site count. The dose sweep checks saturation within the chosen illustrative mechanism.
+
+## Recorded results
+
+| Check or comparison | Recorded result | Interpretation |
+|---|---:|---|
+| Regression suite | 19 tests passed | Analytical limits, kinetics, calibration recovery, and backend checks |
+| Python/C++ recipe comparison | 4,096 recipes | Same deterministic model evaluated by both implementations |
+| Maximum backend EPC difference | 2.22e-16 nm/cycle | Numerical agreement |
+| Stochastic ensembles | 6 of 6 within five standard errors | Agreement with the exact mean-field expectation |
+| Synthetic surrogate held-out MAE | 0.00284 nm/cycle | Approximation of the uncalibrated model |
+| Constant-baseline MAE | 0.05223 nm/cycle | Reference for the synthetic surrogate |
+| MACE structural evaluations | 24 across two checkpoints | 12 structures evaluated by each model |
+| MACE energy/force consistency | Both checks passed | Finite-difference tolerance: 1e-4 eV/angstrom |
+| Public Si-HCl DFT geometry inventory | 22 structures | Provenance and checksums retained |
+
+[Full simulation report](docs/results/REPORT.md) ? [Raw benchmark timings](docs/results/benchmark.json) ? [Research roadmap](docs/RESEARCH_PLAN.md)
+
+The C++ kMC backend uses constant-time eligible-site selection. The recorded 2,048-site, 10-cycle benchmark had median times of 2.64048 s in Python and 0.002218 s in C++. This workload-specific comparison includes the algorithm change as well as compilation; timings vary with machine load and do not imply a universal speedup.
+
+## Modeling workflow
+
+```mermaid
+flowchart LR
+    A[Public structures and literature] --> B[Atomistic model comparison]
+    B -. Future validated rates .-> C[Surface reaction kinetics]
+    C --> D[Python and C++ solvers]
+    D --> E[Verification and parameter sweeps]
+    E --> F[ML surrogate evaluation]
+    G[HiPRGen candidate reactions] -. Proposed integration .-> C
+```
+
+Solid arrows describe implemented workflows; dashed arrows require further reaction data and model development. [HiPRGen assessment](docs/HIPRGEN.md).
 
 ## Run locally
 
@@ -56,7 +117,7 @@ This compares Si, SiN₀.₈, SiN₁.₀, and Si₃N₄ tags using explicit para
 python -m plasma_surface.cli fetch-data
 ```
 
-The verified public [Si–HCl DFT archive](https://zenodo.org/records/10211009) is ~75 kB and licensed CC BY 4.0. The downloader preserves attribution, source metadata, and checksums; inventory reads the ZIP without extraction. This workspace contains 22 inventoried structures in `data/raw/si_hcl/`. These geometries do not provide a calibrated chlorine/argon ALE model.
+The verified public [Si–HCl DFT archive](https://zenodo.org/records/10211009) is ~75 kB and licensed CC BY 4.0. The downloader preserves attribution, source metadata, and checksums; inventory reads the ZIP without extraction. The recorded run inventoried 22 structures; use the download command to recreate `data/raw/si_hcl/` locally. These geometries do not provide a calibrated chlorine/argon ALE model.
 
 For SiNₓ, the [SAIT MLFF benchmark](https://github.com/SAITPublic/MLFF-Framework) is a strong public atomistic starting point. Its Si/N data must not be treated as a reactive halogen force field. Download links, suitability, limitations, and other sources are in [DATASETS.md](docs/DATASETS.md). Large archives are not downloaded automatically.
 
@@ -107,4 +168,4 @@ For optional atomistic force-field comparisons, see [MACE setup and interpretati
 | `hpc/sweep.slurm` | Optional future cluster array template; not required locally |
 | `docs/` | Equations, research milestones, datasets, validation guidance |
 
-The SLURM array shards a deterministic design by recipe ID; merging and sorting the shards reproduces serial output. It is a portability template, not evidence of a completed HPC campaign. Source code is currently local and has not been published.
+The SLURM array shards a deterministic design by recipe ID; merging and sorting the shards reproduces serial output. It is a portability template, not evidence of a completed HPC campaign. Project author and maintainer: [Ryan](https://github.com/ryanlai666).

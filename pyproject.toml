@@ -5,7 +5,8 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "plasma-surface-lab"
 version = "0.1.0"
-description = "Reproducible reduced-order and stochastic plasma-surface research workflows"
+description = "Plasma Surface Dynamics: reproducible plasma-surface research workflows"
+authors = [{name = "Ryan"}]
 requires-python = ">=3.11"
 dependencies = ["numpy>=1.26", "scipy>=1.11", "scikit-learn>=1.4", "matplotlib>=3.8"]
 
