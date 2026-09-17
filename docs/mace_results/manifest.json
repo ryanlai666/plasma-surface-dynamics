@@ -1,0 +1,40 @@
+{
+  "timestamp_utc": "2026-09-17T03:50:09.537043+00:00",
+  "models": {
+    "mp_0b2_small": {
+      "url": "https://github.com/ACEsuit/mace-foundations/releases/download/mace_mp_0b2/mace-small-density-agnesi-stress.model",
+      "sha256": "d5773bf9440e96d6eb8c598f84bd0e6369fcfa432f626a87f890e07da3c651c9",
+      "bytes": 67622684,
+      "license": "MIT; see upstream model repository"
+    },
+    "mpa_0_medium": {
+      "url": "https://github.com/ACEsuit/mace-foundations/releases/download/mace_mpa_0/mace-mpa-0-medium.model",
+      "sha256": "75428afe3a1d7d8062e19bcaabd5c433623cabf308242ec9fb493e38604fb638",
+      "bytes": 79462305,
+      "license": "MIT; see upstream model repository"
+    }
+  },
+  "packages": {
+    "mace-torch": "0.3.16",
+    "torch": "2.14.0",
+    "ase": "3.29.0",
+    "e3nn": "0.4.4",
+    "numpy": "2.5.3"
+  },
+  "device": "cpu",
+  "threads": 2,
+  "dtype": "float64",
+  "cases": 12,
+  "predictions": 24,
+  "structure_source": "https://www.crystallography.net/cod/2102550.html",
+  "structure_license": "CC0",
+  "structure_sha256": "fca30839fbe00b3c632305ad9705c41cc20fe596e525bc013d41c227299726c1",
+  "source_sha256": "5bb80713258d79405d57d4c96bb6f6ee5d63e9c1c4909f4e5935181f3cb5cf30",
+  "all_force_gradient_checks_passed": true,
+  "limitations": [
+    "No independent DFT energy/force labels: disagreement is not prediction error.",
+    "Nitrogen-vacancy structures are unrelaxed stress probes, not realistic amorphous SiNx films.",
+    "No collision trajectories, plasma chemistry, surface charging, or etch yields evaluated.",
+    "Energies referenced separately within each composition; no cross-composition stability ranking."
+  ]
+}

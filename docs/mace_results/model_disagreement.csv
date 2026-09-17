@@ -1,0 +1,13 @@
+case_id,structure,strain,force_component_rmse_between_models_ev_A
+0,Si_diamond,-0.03,9.565812361401072e-16
+1,Si_diamond,0.0,1.339044500832801e-15
+2,Si_diamond,0.03,7.373040303967207e-16
+3,beta_Si3N4,-0.03,0.08326480229302678
+4,beta_Si3N4,0.0,0.04738502174384995
+5,beta_Si3N4,0.03,0.017182426647077483
+6,Si6N6_unrelaxed_vacancies,-0.03,0.38735163286930263
+7,Si6N6_unrelaxed_vacancies,0.0,0.26400564063306414
+8,Si6N6_unrelaxed_vacancies,0.03,0.32113217886768364
+9,Si6N5_unrelaxed_vacancies,-0.03,0.4910186353369334
+10,Si6N5_unrelaxed_vacancies,0.0,0.31005622081708334
+11,Si6N5_unrelaxed_vacancies,0.03,0.28719624410170785

@@ -92,6 +92,8 @@ The generated [simulation report](docs/results/REPORT.md) and supporting results
 
 For an optional reaction-discovery extension, see the [HiPRGen assessment and proposed connection](docs/HIPRGEN.md). It is an upstream candidate generator, not a calibrated plasma rate source.
 
+For optional atomistic force-field comparisons, see [MACE setup and interpretation](docs/MACE.md).
+
 ## Project map
 
 | Location | Purpose |

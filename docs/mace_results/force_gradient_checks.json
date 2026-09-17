@@ -1,0 +1,18 @@
+[
+  {
+    "model": "mp_0b2_small",
+    "analytic_force_ev_A": -1.259192780487612,
+    "finite_difference_force_ev_A": -1.2591928146576947,
+    "abs_difference_ev_A": 3.417008276329625e-08,
+    "tolerance_ev_A": 0.0001,
+    "passed": true
+  },
+  {
+    "model": "mpa_0_medium",
+    "analytic_force_ev_A": -1.2733282694740398,
+    "finite_difference_force_ev_A": -1.27332833777416,
+    "abs_difference_ev_A": 6.830012022618348e-08,
+    "tolerance_ev_A": 0.0001,
+    "passed": true
+  }
+]
