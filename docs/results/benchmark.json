@@ -1,0 +1,105 @@
+{
+  "sites": 2048,
+  "cycles": 10,
+  "repeats": 5,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "note": "Same rates and geometry; independent RNG streams. Wall times include Python wrapping. No HPC or GPU measurement.",
+  "python": {
+    "seconds": [
+      2.4201143000100274,
+      2.784919700003229,
+      2.4547693000058644,
+      2.720361599989701,
+      2.640480799978832
+    ],
+    "median_seconds": 2.640480799978832,
+    "events": [
+      26785,
+      26713,
+      26677,
+      26683,
+      26548
+    ],
+    "net_removed_nm": [
+      0.87921875,
+      0.8769609375,
+      0.8750351562500001,
+      0.8758984375000001,
+      0.8717812500000001
+    ],
+    "median_events_per_second": 10054.22951767452
+  },
+  "cpp": {
+    "seconds": [
+      0.002379699988523498,
+      0.002280899992911145,
+      0.0020963999850209802,
+      0.0021065000037197024,
+      0.00221789997885935
+    ],
+    "median_seconds": 0.00221789997885935,
+    "events": [
+      26685,
+      26786,
+      26580,
+      26671,
+      26731
+    ],
+    "net_removed_nm": [
+      0.8754335937500001,
+      0.8790859375000001,
+      0.87198046875,
+      0.8755000000000001,
+      0.8772929687500001
+    ],
+    "median_events_per_second": 12052392.01713125
+  },
+  "wall_time_speedup": 1190.5319559707161,
+  "provenance": {
+    "config": {
+      "sites": 2048,
+      "cycles": 10,
+      "repeats": 5
+    },
+    "python": "3.13.5",
+    "packages": {
+      "numpy": "2.1.3",
+      "scipy": "1.15.3",
+      "scikit-learn": "1.6.1",
+      "matplotlib": "3.10.0"
+    },
+    "source_sha256": {
+      "__init__.py": "2eee4f408af7112f5672290d39d3f70a4f52db355976203a8cb6b15fb3c70819",
+      "benchmark.py": "1186f1fc47572d94686147aa0a3a458f1d633c58ed828f9576fcdfd848d4b413",
+      "cli.py": "7f11433f324aca2cb1889f882b489ce231995d506a6cf67fce5d8baab136c1c9",
+      "datasets.py": "8f36b228e58e360891f8a259d563cc097e9728a9748d4377eefbd9d6420def7e",
+      "io.py": "791ad99cd92f58ddfe3fdab6ce81188978da15998e202a564994351d67571068",
+      "materials.py": "d703c27bd9e131b383f0ddc5fbf2b2656ed717ab62e80a656d7ebcf403baf9a0",
+      "model.py": "eca32f536dd162b11c6084f1bd8fb639077b0f1a4bc74dd58bac15fc9d791678",
+      "native.py": "660082c4d8fbdd4a6a7717e72a15ee1f3524d544e12bc654265530825ccd3f43",
+      "validation.py": "f4e0a98d84e7ee67873d6eef196a12d8ed14e40eacad7f6652aa59c0949fbc8c",
+      "workflows.py": "07548be9acf21130876173e0b45c7545c99c6ca42d8fcc43bcf118734194467f"
+    },
+    "data_origin": "synthetic_uncalibrated_model"
+  },
+  "native_build": {
+    "command": [
+      "C:\\msys64\\ucrt64\\bin\\g++.EXE",
+      "-std=c++17",
+      "-O3",
+      "-Wall",
+      "-Wextra",
+      "-shared",
+      "-static",
+      "-static-libgcc",
+      "-static-libstdc++",
+      "C:\\Ryan\\python_code\\Dry_ALE_Sim\\cpp\\surface.cpp",
+      "-o",
+      "C:\\Ryan\\python_code\\Dry_ALE_Sim\\build\\surface.dll"
+    ],
+    "compiler": "g++.EXE (Rev8, Built by MSYS2 project) 15.2.0",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "source_sha256": "f6525e39bbce6af43360294e98483049172ca554297c5221fb4edd61f14afc93",
+    "binary_sha256": "b27dcd72dc6c4ce197994591925355e23f727716dbe70e1539fe23fa9a00c16b"
+  }
+}

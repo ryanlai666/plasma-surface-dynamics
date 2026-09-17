@@ -1,0 +1,13 @@
+{
+  "status": "hypothetical_sensitivity_scenarios_not_material_calibration",
+  "description": "x=N/Si. Each parameter change below is an explicit invented hypothesis for software exploration, not a measured composition law. Same generic modify/remove sequence for comparison only; not a validated SiNx chemistry. Bulk composition is fixed; preferential Si/N removal is not modeled.",
+  "cards": [
+    {"name": "Si_reference", "n_si_ratio": 0.0, "hydrogen_atomic_fraction": 0.0, "parameters": {}},
+    {"name": "SiN0.8_hypothesis", "n_si_ratio": 0.8, "hydrogen_atomic_fraction": 0.0,
+     "parameters": {"sticking": 0.22, "chemical_threshold_ev": 22.0, "physical_threshold_ev": 45.0, "chemical_yield_scale": 0.65}},
+    {"name": "SiN1.0_hypothesis", "n_si_ratio": 1.0, "hydrogen_atomic_fraction": 0.0,
+     "parameters": {"sticking": 0.20, "chemical_threshold_ev": 25.0, "physical_threshold_ev": 48.0, "chemical_yield_scale": 0.60}},
+    {"name": "Si3N4_hypothesis", "n_si_ratio": 1.3333333333333333, "hydrogen_atomic_fraction": 0.0,
+     "parameters": {"sticking": 0.18, "chemical_threshold_ev": 30.0, "physical_threshold_ev": 50.0, "chemical_yield_scale": 0.55}}
+  ]
+}

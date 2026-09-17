@@ -1,0 +1,137 @@
+{
+  "config": {
+    "cards": [
+      {
+        "name": "Si_reference",
+        "n_si_ratio": 0.0,
+        "hydrogen_atomic_fraction": 0.0,
+        "parameters": {},
+        "effective_parameters": {
+          "site_density_m2": 7e+18,
+          "layer_nm": 0.136,
+          "sticking": 0.25,
+          "desorption_prefactor_s": 1000000.0,
+          "desorption_barrier_ev": 0.65,
+          "chemical_threshold_ev": 15.0,
+          "physical_threshold_ev": 40.0,
+          "chemical_yield_scale": 0.8,
+          "physical_yield_scale": 0.15,
+          "deposition_sticking": 0.2
+        }
+      },
+      {
+        "name": "SiN0.8_hypothesis",
+        "n_si_ratio": 0.8,
+        "hydrogen_atomic_fraction": 0.0,
+        "parameters": {
+          "sticking": 0.22,
+          "chemical_threshold_ev": 22.0,
+          "physical_threshold_ev": 45.0,
+          "chemical_yield_scale": 0.65
+        },
+        "effective_parameters": {
+          "site_density_m2": 7e+18,
+          "layer_nm": 0.136,
+          "sticking": 0.22,
+          "desorption_prefactor_s": 1000000.0,
+          "desorption_barrier_ev": 0.65,
+          "chemical_threshold_ev": 22.0,
+          "physical_threshold_ev": 45.0,
+          "chemical_yield_scale": 0.65,
+          "physical_yield_scale": 0.15,
+          "deposition_sticking": 0.2
+        }
+      },
+      {
+        "name": "SiN1.0_hypothesis",
+        "n_si_ratio": 1.0,
+        "hydrogen_atomic_fraction": 0.0,
+        "parameters": {
+          "sticking": 0.2,
+          "chemical_threshold_ev": 25.0,
+          "physical_threshold_ev": 48.0,
+          "chemical_yield_scale": 0.6
+        },
+        "effective_parameters": {
+          "site_density_m2": 7e+18,
+          "layer_nm": 0.136,
+          "sticking": 0.2,
+          "desorption_prefactor_s": 1000000.0,
+          "desorption_barrier_ev": 0.65,
+          "chemical_threshold_ev": 25.0,
+          "physical_threshold_ev": 48.0,
+          "chemical_yield_scale": 0.6,
+          "physical_yield_scale": 0.15,
+          "deposition_sticking": 0.2
+        }
+      },
+      {
+        "name": "Si3N4_hypothesis",
+        "n_si_ratio": 1.3333333333333333,
+        "hydrogen_atomic_fraction": 0.0,
+        "parameters": {
+          "sticking": 0.18,
+          "chemical_threshold_ev": 30.0,
+          "physical_threshold_ev": 50.0,
+          "chemical_yield_scale": 0.55
+        },
+        "effective_parameters": {
+          "site_density_m2": 7e+18,
+          "layer_nm": 0.136,
+          "sticking": 0.18,
+          "desorption_prefactor_s": 1000000.0,
+          "desorption_barrier_ev": 0.65,
+          "chemical_threshold_ev": 30.0,
+          "physical_threshold_ev": 50.0,
+          "chemical_yield_scale": 0.55,
+          "physical_yield_scale": 0.15,
+          "deposition_sticking": 0.2
+        }
+      }
+    ],
+    "status": "hypothetical_sensitivity_scenarios_not_material_calibration",
+    "backend": "cpp",
+    "cards_sha256": "e4b725f9997739d237df600536e6e499dab75f5cdfa24f3a098e6219e0126906"
+  },
+  "python": "3.13.5",
+  "packages": {
+    "numpy": "2.1.3",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.6.1",
+    "matplotlib": "3.10.0"
+  },
+  "source_sha256": {
+    "__init__.py": "2eee4f408af7112f5672290d39d3f70a4f52db355976203a8cb6b15fb3c70819",
+    "benchmark.py": "1186f1fc47572d94686147aa0a3a458f1d633c58ed828f9576fcdfd848d4b413",
+    "cli.py": "7f11433f324aca2cb1889f882b489ce231995d506a6cf67fce5d8baab136c1c9",
+    "datasets.py": "8f36b228e58e360891f8a259d563cc097e9728a9748d4377eefbd9d6420def7e",
+    "io.py": "791ad99cd92f58ddfe3fdab6ce81188978da15998e202a564994351d67571068",
+    "materials.py": "d703c27bd9e131b383f0ddc5fbf2b2656ed717ab62e80a656d7ebcf403baf9a0",
+    "model.py": "eca32f536dd162b11c6084f1bd8fb639077b0f1a4bc74dd58bac15fc9d791678",
+    "native.py": "660082c4d8fbdd4a6a7717e72a15ee1f3524d544e12bc654265530825ccd3f43",
+    "validation.py": "f4e0a98d84e7ee67873d6eef196a12d8ed14e40eacad7f6652aa59c0949fbc8c",
+    "workflows.py": "07548be9acf21130876173e0b45c7545c99c6ca42d8fcc43bcf118734194467f"
+  },
+  "data_origin": "synthetic_uncalibrated_model",
+  "native_binary_sha256": "b27dcd72dc6c4ce197994591925355e23f727716dbe70e1539fe23fa9a00c16b",
+  "native_build": {
+    "command": [
+      "C:\\msys64\\ucrt64\\bin\\g++.EXE",
+      "-std=c++17",
+      "-O3",
+      "-Wall",
+      "-Wextra",
+      "-shared",
+      "-static",
+      "-static-libgcc",
+      "-static-libstdc++",
+      "C:\\Ryan\\python_code\\Dry_ALE_Sim\\cpp\\surface.cpp",
+      "-o",
+      "C:\\Ryan\\python_code\\Dry_ALE_Sim\\build\\surface.dll"
+    ],
+    "compiler": "g++.EXE (Rev8, Built by MSYS2 project) 15.2.0",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "source_sha256": "f6525e39bbce6af43360294e98483049172ca554297c5221fb4edd61f14afc93",
+    "binary_sha256": "b27dcd72dc6c4ce197994591925355e23f727716dbe70e1539fe23fa9a00c16b"
+  }
+}
