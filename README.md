@@ -2,7 +2,7 @@
 
 **Physics-based and machine-learning workflows for silicon and silicon-nitride atomic layer etching.**
 
-A research software portfolio by [Ryan](https://github.com/ryanlai666), combining surface reaction kinetics, Python/C++ simulation, public atomistic data, and pretrained MACE force-field comparisons. Runs on a local CPU; a GPU or cluster is not required for the included demonstrations.
+Combining surface reaction kinetics, Python/C++ simulation, public atomistic data, and pretrained MACE force-field comparisons. 
 
 **Research question:** How do surface modification, competing removal pathways, and uncertain reaction rates determine etch-per-cycle saturation and the usable ALE energy window?
 
