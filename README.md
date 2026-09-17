@@ -168,4 +168,4 @@ For optional atomistic force-field comparisons, see [MACE setup and interpretati
 | `hpc/sweep.slurm` | Optional future cluster array template; not required locally |
 | `docs/` | Equations, research milestones, datasets, validation guidance |
 
-The SLURM array shards a deterministic design by recipe ID; merging and sorting the shards reproduces serial output. It is a portability template, not evidence of a completed HPC campaign. Project author and maintainer: [Ryan](https://github.com/ryanlai666).
+The SLURM array shards a deterministic design by recipe ID; merging and sorting the shards reproduces serial output.
