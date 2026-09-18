@@ -1,0 +1,121 @@
+[
+  {
+    "q_A": -0.4275648779698625,
+    "radius_A": 0.9381128220575323,
+    "energy_eV": -1535.6236669549708,
+    "relative_energy_eV": 1.5916157281026244e-12,
+    "optimizer_success": true
+  },
+  {
+    "q_A": -0.3741192682236297,
+    "radius_A": 0.9542565576576423,
+    "energy_eV": -1535.6089642508493,
+    "relative_energy_eV": 0.014702704123010335,
+    "optimizer_success": true
+  },
+  {
+    "q_A": -0.3206736584773969,
+    "radius_A": 0.9686894506942625,
+    "energy_eV": -1535.571827874612,
+    "relative_energy_eV": 0.051839080360423395,
+    "optimizer_success": true
+  },
+  {
+    "q_A": -0.267228048731164,
+    "radius_A": 0.9811928566716819,
+    "energy_eV": -1535.5222017347369,
+    "relative_energy_eV": 0.10146522023546822,
+    "optimizer_success": true
+  },
+  {
+    "q_A": -0.21378243898493124,
+    "radius_A": 0.9916085751733763,
+    "energy_eV": -1535.4689943840654,
+    "relative_energy_eV": 0.15467257090699604,
+    "optimizer_success": true
+  },
+  {
+    "q_A": -0.1603368292386984,
+    "radius_A": 0.9998206399995319,
+    "energy_eV": -1535.4197275545941,
+    "relative_energy_eV": 0.20393940037820357,
+    "optimizer_success": true
+  },
+  {
+    "q_A": -0.1068912194924656,
+    "radius_A": 1.0057445931320774,
+    "energy_eV": -1535.3803214353243,
+    "relative_energy_eV": 0.2433455196480736,
+    "optimizer_success": true
+  },
+  {
+    "q_A": -0.0534456097462328,
+    "radius_A": 1.009322038062919,
+    "energy_eV": -1535.3549994822993,
+    "relative_energy_eV": 0.2686674726730871,
+    "optimizer_success": true
+  },
+  {
+    "q_A": 0.0,
+    "radius_A": 1.0105183703848404,
+    "energy_eV": -1535.346280086166,
+    "relative_energy_eV": 0.2773868688063885,
+    "optimizer_success": true
+  },
+  {
+    "q_A": 0.0534456097462328,
+    "radius_A": 1.0093220380629195,
+    "energy_eV": -1535.3549994823006,
+    "relative_energy_eV": 0.26866747267172286,
+    "optimizer_success": true
+  },
+  {
+    "q_A": 0.10689121949246566,
+    "radius_A": 1.0057445931320752,
+    "energy_eV": -1535.3803214353254,
+    "relative_energy_eV": 0.24334551964693674,
+    "optimizer_success": true
+  },
+  {
+    "q_A": 0.16033682923869846,
+    "radius_A": 0.9998206399995305,
+    "energy_eV": -1535.4197275545946,
+    "relative_energy_eV": 0.20393940037774883,
+    "optimizer_success": true
+  },
+  {
+    "q_A": 0.21378243898493127,
+    "radius_A": 0.99160857517338,
+    "energy_eV": -1535.468994384063,
+    "relative_energy_eV": 0.15467257090926978,
+    "optimizer_success": true
+  },
+  {
+    "q_A": 0.26722804873116407,
+    "radius_A": 0.9811928566716822,
+    "energy_eV": -1535.5222017347385,
+    "relative_energy_eV": 0.10146522023387661,
+    "optimizer_success": true
+  },
+  {
+    "q_A": 0.3206736584773969,
+    "radius_A": 0.9686894506942612,
+    "energy_eV": -1535.5718278746122,
+    "relative_energy_eV": 0.05183908036019602,
+    "optimizer_success": true
+  },
+  {
+    "q_A": 0.3741192682236297,
+    "radius_A": 0.9542565576576472,
+    "energy_eV": -1535.6089642508484,
+    "relative_energy_eV": 0.01470270412391983,
+    "optimizer_success": true
+  },
+  {
+    "q_A": 0.4275648779698625,
+    "radius_A": 0.9381128220575323,
+    "energy_eV": -1535.6236669549724,
+    "relative_energy_eV": 0.0,
+    "optimizer_success": true
+  }
+]

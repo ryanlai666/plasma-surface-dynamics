@@ -1,0 +1,703 @@
+{
+  "status": "candidate_reaction_catalog_not_validated_kinetic_network",
+  "species": {
+    "H2": {
+      "composition": {
+        "H": 2
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 1,
+      "role": "candidate"
+    },
+    "HF": {
+      "composition": {
+        "H": 1,
+        "F": 1
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 1,
+      "role": "candidate"
+    },
+    "HCl": {
+      "composition": {
+        "H": 1,
+        "Cl": 1
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 1,
+      "role": "candidate"
+    },
+    "Cl2": {
+      "composition": {
+        "Cl": 2
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 1,
+      "role": "candidate"
+    },
+    "F2": {
+      "composition": {
+        "F": 2
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 1,
+      "role": "candidate"
+    },
+    "N2": {
+      "composition": {
+        "N": 2
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 1,
+      "role": "candidate"
+    },
+    "NH3": {
+      "composition": {
+        "N": 1,
+        "H": 3
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 1,
+      "role": "candidate"
+    },
+    "H2O": {
+      "composition": {
+        "H": 2,
+        "O": 1
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 1,
+      "role": "candidate"
+    },
+    "SiCl2": {
+      "composition": {
+        "Si": 1,
+        "Cl": 2
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 1,
+      "role": "candidate"
+    },
+    "SiCl4": {
+      "composition": {
+        "Si": 1,
+        "Cl": 4
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 1,
+      "role": "candidate"
+    },
+    "SiHCl3": {
+      "composition": {
+        "Si": 1,
+        "H": 1,
+        "Cl": 3
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 1,
+      "role": "candidate"
+    },
+    "SiH2Cl2": {
+      "composition": {
+        "Si": 1,
+        "H": 2,
+        "Cl": 2
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 1,
+      "role": "candidate"
+    },
+    "SiF4": {
+      "composition": {
+        "Si": 1,
+        "F": 4
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 1,
+      "role": "candidate"
+    },
+    "SiHF3": {
+      "composition": {
+        "Si": 1,
+        "H": 1,
+        "F": 3
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 1,
+      "role": "candidate"
+    },
+    "SiH2F2": {
+      "composition": {
+        "Si": 1,
+        "H": 2,
+        "F": 2
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 1,
+      "role": "candidate"
+    },
+    "SiH3F": {
+      "composition": {
+        "Si": 1,
+        "H": 3,
+        "F": 1
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 1,
+      "role": "candidate"
+    },
+    "SiH4": {
+      "composition": {
+        "Si": 1,
+        "H": 4
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 1,
+      "role": "candidate"
+    },
+    "CF4": {
+      "composition": {
+        "C": 1,
+        "F": 4
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 1,
+      "role": "candidate"
+    },
+    "CH3F": {
+      "composition": {
+        "C": 1,
+        "H": 3,
+        "F": 1
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 1,
+      "role": "candidate"
+    },
+    "CF2": {
+      "composition": {
+        "C": 1,
+        "F": 2
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 1,
+      "role": "candidate"
+    },
+    "H": {
+      "composition": {
+        "H": 1
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 2,
+      "role": "radical_candidate"
+    },
+    "F": {
+      "composition": {
+        "F": 1
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 2,
+      "role": "radical_candidate"
+    },
+    "Cl": {
+      "composition": {
+        "Cl": 1
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 2,
+      "role": "radical_candidate"
+    },
+    "CH3": {
+      "composition": {
+        "C": 1,
+        "H": 3
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 2,
+      "role": "radical_candidate"
+    },
+    "CF3": {
+      "composition": {
+        "C": 1,
+        "F": 3
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 2,
+      "role": "radical_candidate"
+    },
+    "NH2": {
+      "composition": {
+        "N": 1,
+        "H": 2
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 2,
+      "role": "radical_candidate"
+    },
+    "SiF3": {
+      "composition": {
+        "Si": 1,
+        "F": 3
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 2,
+      "role": "radical_candidate"
+    },
+    "Ar": {
+      "composition": {
+        "Ar": 1
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 1,
+      "role": "inert_carrier"
+    },
+    "Ar_plus": {
+      "composition": {
+        "Ar": 1
+      },
+      "phase": "gas",
+      "charge": 1,
+      "multiplicity": 2,
+      "role": "ion"
+    },
+    "Si_surface": {
+      "composition": {
+        "Si": 1
+      },
+      "phase": "solid_or_surface_reservoir",
+      "charge": 0,
+      "multiplicity": null,
+      "role": "bookkeeping_unit_not_isolated_molecule"
+    },
+    "Si3N4_surface": {
+      "composition": {
+        "Si": 3,
+        "N": 4
+      },
+      "phase": "solid_or_surface_reservoir",
+      "charge": 0,
+      "multiplicity": null,
+      "role": "bookkeeping_unit_not_isolated_molecule"
+    },
+    "NH4F_salt": {
+      "composition": {
+        "N": 1,
+        "H": 4,
+        "F": 1
+      },
+      "phase": "solid_or_surface_reservoir",
+      "charge": 0,
+      "multiplicity": null,
+      "role": "bookkeeping_unit_not_isolated_molecule"
+    },
+    "AFS_salt": {
+      "composition": {
+        "N": 2,
+        "H": 8,
+        "Si": 1,
+        "F": 6
+      },
+      "phase": "solid_or_surface_reservoir",
+      "charge": 0,
+      "multiplicity": null,
+      "role": "bookkeeping_unit_not_isolated_molecule"
+    },
+    "CF2_film_unit": {
+      "composition": {
+        "C": 1,
+        "F": 2
+      },
+      "phase": "solid_or_surface_reservoir",
+      "charge": 0,
+      "multiplicity": null,
+      "role": "bookkeeping_unit_not_isolated_molecule"
+    },
+    "SiO2_residue": {
+      "composition": {
+        "Si": 1,
+        "O": 2
+      },
+      "phase": "solid_or_surface_reservoir",
+      "charge": 0,
+      "multiplicity": null,
+      "role": "bookkeeping_unit_not_isolated_molecule"
+    }
+  },
+  "reactions": [
+    {
+      "id": "si_hcl_net",
+      "reactants": {
+        "Si_surface": 1,
+        "HCl": 2
+      },
+      "products": {
+        "SiCl2": 1,
+        "H2": 1
+      },
+      "category": "net_etch",
+      "evidence": "published_net_stoichiometry_not_elementary_step",
+      "source": "https://doi.org/10.1016/j.apsusc.2024.159836",
+      "candidate_signal": "Si-containing chlorine isotope clusters; H2; measured thickness loss",
+      "rate_available": false,
+      "active_in_kmc": false
+    },
+    {
+      "id": "si_cl2_net",
+      "reactants": {
+        "Si_surface": 1,
+        "Cl2": 1
+      },
+      "products": {
+        "SiCl2": 1
+      },
+      "category": "net_etch",
+      "evidence": "candidate_net_balance; SiCl2 is reported product",
+      "source": "https://doi.org/10.1016/j.apsusc.2024.159836",
+      "candidate_signal": "SiClx mass pattern correlated with removal phase",
+      "rate_available": false,
+      "active_in_kmc": false
+    },
+    {
+      "id": "si_cl4_net",
+      "reactants": {
+        "Si_surface": 1,
+        "Cl2": 2
+      },
+      "products": {
+        "SiCl4": 1
+      },
+      "category": "net_etch",
+      "evidence": "candidate_net_balance; SiCl4 is reported product",
+      "source": "https://doi.org/10.1016/j.apsusc.2024.159836",
+      "candidate_signal": "SiCl4 parent/fragment pattern; verify ionizer fragmentation",
+      "rate_available": false,
+      "active_in_kmc": false
+    },
+    {
+      "id": "nitride_hf_net",
+      "reactants": {
+        "Si3N4_surface": 1,
+        "HF": 12
+      },
+      "products": {
+        "SiF4": 3,
+        "NH3": 4
+      },
+      "category": "net_etch",
+      "evidence": "atom_balanced_idealized_net_reaction; not a single DFT event",
+      "source": "https://doi.org/10.1016/j.apsusc.2024.159414",
+      "candidate_signal": "SiF4 and NH3 alongside Si/N loss; compare salt retention",
+      "rate_available": false,
+      "active_in_kmc": false
+    },
+    {
+      "id": "hf_exchange_1",
+      "reactants": {
+        "SiH4": 1,
+        "HF": 1
+      },
+      "products": {
+        "SiH3F": 1,
+        "H2": 1
+      },
+      "category": "molecular_surrogate",
+      "evidence": "hypothesis_for_future_cluster_TS; feasibility_uncomputed",
+      "source": "https://doi.org/10.1016/j.apsusc.2024.159414",
+      "candidate_signal": "Candidate Si-H fluorination surrogate; not a process recipe",
+      "rate_available": false,
+      "active_in_kmc": false
+    },
+    {
+      "id": "hf_exchange_2",
+      "reactants": {
+        "SiH3F": 1,
+        "HF": 1
+      },
+      "products": {
+        "SiH2F2": 1,
+        "H2": 1
+      },
+      "category": "molecular_surrogate",
+      "evidence": "hypothesis_for_future_cluster_TS; feasibility_uncomputed",
+      "source": "https://doi.org/10.1016/j.apsusc.2024.159414",
+      "candidate_signal": "Candidate partially fluorinated volatile",
+      "rate_available": false,
+      "active_in_kmc": false
+    },
+    {
+      "id": "hf_exchange_3",
+      "reactants": {
+        "SiH2F2": 1,
+        "HF": 1
+      },
+      "products": {
+        "SiHF3": 1,
+        "H2": 1
+      },
+      "category": "molecular_surrogate",
+      "evidence": "hypothesis_for_future_cluster_TS; feasibility_uncomputed",
+      "source": "https://doi.org/10.1016/j.apsusc.2024.159414",
+      "candidate_signal": "Candidate partially fluorinated volatile",
+      "rate_available": false,
+      "active_in_kmc": false
+    },
+    {
+      "id": "hf_exchange_4",
+      "reactants": {
+        "SiHF3": 1,
+        "HF": 1
+      },
+      "products": {
+        "SiF4": 1,
+        "H2": 1
+      },
+      "category": "molecular_surrogate",
+      "evidence": "hypothesis_for_future_cluster_TS; feasibility_uncomputed",
+      "source": "https://doi.org/10.1016/j.apsusc.2024.159414",
+      "candidate_signal": "Candidate completed fluorination",
+      "rate_available": false,
+      "active_in_kmc": false
+    },
+    {
+      "id": "nh4f_retention",
+      "reactants": {
+        "NH3": 1,
+        "HF": 1
+      },
+      "products": {
+        "NH4F_salt": 1
+      },
+      "category": "residue",
+      "evidence": "candidate_net_salt_formation; phase_and_temperature_dependent",
+      "source": "https://doi.org/10.1016/j.apsusc.2024.159414",
+      "candidate_signal": "Retained N-H/F signatures; mass gain or delayed product release",
+      "rate_available": false,
+      "active_in_kmc": false
+    },
+    {
+      "id": "afs_retention",
+      "reactants": {
+        "SiF4": 1,
+        "NH4F_salt": 2
+      },
+      "products": {
+        "AFS_salt": 1
+      },
+      "category": "residue",
+      "evidence": "published_salt_mechanism_context; net_balance",
+      "source": "https://doi.org/10.1016/j.apsusc.2024.159414",
+      "candidate_signal": "AFS-like residue with delayed desorption; distinguish from continued fluorination",
+      "rate_available": false,
+      "active_in_kmc": false
+    },
+    {
+      "id": "afs_release",
+      "reactants": {
+        "AFS_salt": 1
+      },
+      "products": {
+        "SiF4": 1,
+        "NH3": 2,
+        "HF": 2
+      },
+      "category": "residue_release",
+      "evidence": "published_net_decomposition_route_context",
+      "source": "https://doi.org/10.1016/j.apsusc.2024.159414",
+      "candidate_signal": "Correlated SiF4/NH3/HF during thermal release",
+      "rate_available": false,
+      "active_in_kmc": false
+    },
+    {
+      "id": "ch3f_fragmentation",
+      "reactants": {
+        "CH3F": 1
+      },
+      "products": {
+        "CH3": 1,
+        "F": 1
+      },
+      "category": "impact_fragmentation",
+      "evidence": "published_preferred_decomposition_pathway_in_studied_conditions",
+      "source": "https://doi.org/10.1063/5.0155929",
+      "candidate_signal": "Precursor fragments; compare neutral-only and ion-assisted exposure",
+      "rate_available": false,
+      "active_in_kmc": false
+    },
+    {
+      "id": "cf4_fragmentation",
+      "reactants": {
+        "CF4": 1
+      },
+      "products": {
+        "CF2": 1,
+        "F": 2
+      },
+      "category": "impact_fragmentation",
+      "evidence": "published_preferred_decomposition_pathway_in_studied_conditions",
+      "source": "https://doi.org/10.1063/5.0155929",
+      "candidate_signal": "CF2/F signatures; excitation is required, not implied thermal equilibrium",
+      "rate_available": false,
+      "active_in_kmc": false
+    },
+    {
+      "id": "cf2_retention",
+      "reactants": {
+        "CF2": 1
+      },
+      "products": {
+        "CF2_film_unit": 1
+      },
+      "category": "passivation_or_deposition",
+      "evidence": "candidate_repeat_unit_balance; not a polymerization_rate_law",
+      "source": "https://doi.org/10.1063/5.0155929",
+      "candidate_signal": "Increasing surface C-F and decreasing removal under repeated exposure",
+      "rate_available": false,
+      "active_in_kmc": false
+    },
+    {
+      "id": "nh3_fragmentation",
+      "reactants": {
+        "NH3": 1
+      },
+      "products": {
+        "NH2": 1,
+        "H": 1
+      },
+      "category": "gas_or_ionizer_fragmentation",
+      "evidence": "hypothesis; reactor/ionizer_origin_must_be_separated",
+      "source": "https://doi.org/10.1016/j.apsusc.2024.159414",
+      "candidate_signal": "NHx fragments alone do not identify where dissociation occurred",
+      "rate_available": false,
+      "active_in_kmc": false
+    },
+    {
+      "id": "sif4_fragmentation",
+      "reactants": {
+        "SiF4": 1
+      },
+      "products": {
+        "SiF3": 1,
+        "F": 1
+      },
+      "category": "gas_or_ionizer_fragmentation",
+      "evidence": "hypothesis; reactor/ionizer_origin_must_be_separated",
+      "source": "https://doi.org/10.1016/j.apsusc.2024.159414",
+      "candidate_signal": "SiF3 fragment cannot by itself prove SiF3 left the surface",
+      "rate_available": false,
+      "active_in_kmc": false
+    },
+    {
+      "id": "h_recombination",
+      "reactants": {
+        "H": 2
+      },
+      "products": {
+        "H2": 1
+      },
+      "category": "recombination",
+      "evidence": "candidate_wall_or_third_body_stabilized_channel; no_rate_assigned",
+      "source": null,
+      "candidate_signal": "Reduced radical availability; distinguish gas-phase and wall effects",
+      "rate_available": false,
+      "active_in_kmc": false
+    },
+    {
+      "id": "f_recombination",
+      "reactants": {
+        "F": 2
+      },
+      "products": {
+        "F2": 1
+      },
+      "category": "recombination",
+      "evidence": "candidate_wall_or_third_body_stabilized_channel; no_rate_assigned",
+      "source": null,
+      "candidate_signal": "Reduced radical availability; distinguish gas-phase and wall effects",
+      "rate_available": false,
+      "active_in_kmc": false
+    },
+    {
+      "id": "cl_recombination",
+      "reactants": {
+        "Cl": 2
+      },
+      "products": {
+        "Cl2": 1
+      },
+      "category": "recombination",
+      "evidence": "candidate_wall_or_third_body_stabilized_channel; no_rate_assigned",
+      "source": null,
+      "candidate_signal": "Reduced radical availability; distinguish gas-phase and wall effects",
+      "rate_available": false,
+      "active_in_kmc": false
+    },
+    {
+      "id": "hf_recombination",
+      "reactants": {
+        "H": 1,
+        "F": 1
+      },
+      "products": {
+        "HF": 1
+      },
+      "category": "recombination",
+      "evidence": "candidate_wall_or_third_body_stabilized_channel; no_rate_assigned",
+      "source": null,
+      "candidate_signal": "HF formation can compete with radical delivery",
+      "rate_available": false,
+      "active_in_kmc": false
+    },
+    {
+      "id": "sif4_hydrolysis",
+      "reactants": {
+        "SiF4": 1,
+        "H2O": 2
+      },
+      "products": {
+        "SiO2_residue": 1,
+        "HF": 4
+      },
+      "category": "contamination_control",
+      "evidence": "balanced_candidate_for_moisture_artifact; not assessed kinetic pathway",
+      "source": null,
+      "candidate_signal": "Moisture/background dependence and oxygen-containing residue",
+      "rate_available": false,
+      "active_in_kmc": false
+    }
+  ],
+  "notes": [
+    "Gas-phase multiplicities are initial reference-state choices; compare relevant excited/spin states for plasma fragments",
+    "Surface/salt entries are stoichiometric bookkeeping reservoirs, not molecule geometries",
+    "Atom/charge balance is necessary but does not establish thermodynamics, kinetics, or an elementary mechanism",
+    "Excitation, walls or third bodies may supply energy or stabilization; omitted from net stoichiometry",
+    "A literature context link does not mean every hypothetical channel was demonstrated by that paper"
+  ]
+}

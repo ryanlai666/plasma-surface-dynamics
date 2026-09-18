@@ -1,0 +1,3 @@
+# Isolated Linux/WSL molecular reference environment
+pyscf==2.12.1
+ase==3.29.0

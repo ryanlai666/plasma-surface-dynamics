@@ -1,0 +1,86 @@
+{
+  "barrier_eV": 0.2773868688047969,
+  "minimum_energy_eV": -1535.6236669549724,
+  "saddle_energy_eV": -1535.3462800861676,
+  "minimum_radius_A": 0.9381128220575323,
+  "minimum_q_A": 0.4275648779698625,
+  "saddle_radius_A": 1.0105183703848377,
+  "minimum_max_force_eV_A": 5.996872974848544e-06,
+  "saddle_max_force_eV_A": 1.883146989978295e-05,
+  "saddle_cartesian_hessian_eigenvalues_eV_A2": {
+    "0.005": [
+      -8.202478759804542,
+      -0.0008313564759720544,
+      -5.8157817400536076e-06,
+      -1.012822815448097e-07,
+      2.908127013068071e-06,
+      0.0005759289829271229,
+      0.0005849754702755902,
+      11.312398282661988,
+      11.314253252888623,
+      46.69076310360794,
+      121.69075769604811,
+      121.69504976949301
+    ],
+    "0.01": [
+      -8.194460583018113,
+      -0.0032914330420410268,
+      -9.303889327309593e-07,
+      -4.103739209911041e-07,
+      2.320453971535025e-06,
+      0.0023062081853366507,
+      0.002310707904438535,
+      11.30603688703638,
+      11.312765351234699,
+      46.70362234457399,
+      121.71333934429269,
+      121.72750047501265
+    ]
+  },
+  "minimum_hessian_eigenvalues_eV_A2": [
+    -0.0012777005123884605,
+    -0.0010548073825344959,
+    -0.00012307458070001044,
+    -5.322115433870504e-08,
+    3.7291084112060193e-06,
+    2.615476846194023e-05,
+    9.93309248632389,
+    12.476355129704844,
+    12.477544471267983,
+    56.91713154309563,
+    94.07307321688346,
+    94.07494428823225
+  ],
+  "negative_mode_cutoff_eV_A2": -0.01,
+  "connections": [
+    {
+      "q_A": -0.4275647293949251,
+      "radius_A": 0.9381128805893052,
+      "energy_eV": -1535.623666954977,
+      "optimizer_success": true
+    },
+    {
+      "q_A": 0.42756472939487566,
+      "radius_A": 0.9381128805893261,
+      "energy_eV": -1535.6236669549728,
+      "optimizer_success": true
+    }
+  ],
+  "checks": {
+    "minimum_optimizer": true,
+    "saddle_optimizer": true,
+    "minimum_stationary": true,
+    "saddle_stationary": true,
+    "one_negative_mode_both_steps": true,
+    "minimum_no_negative_modes": true,
+    "endpoint_connections": true,
+    "scan_optimizers": true
+  },
+  "limitations": [
+    "No ZPE or finite-temperature free-energy correction",
+    "Symmetry-specific saddle search, not a general TS algorithm",
+    "Two-sided relaxation is a connectivity check, not a full IRC",
+    "NH3 inversion is not a surface diffusion or etching event",
+    "PBE reference differs from OMol25 training functional and basis"
+  ]
+}

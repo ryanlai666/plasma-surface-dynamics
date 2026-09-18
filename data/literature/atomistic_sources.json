@@ -1,0 +1,93 @@
+{
+  "checked": "2026-09-18",
+  "sources": [
+    {
+      "id": "si_hcl",
+      "priority": 1,
+      "url": "https://zenodo.org/records/10211009",
+      "doi": "10.5281/zenodo.10211009",
+      "license": "CC BY 4.0",
+      "contents": "22 geometries, 15 source-named TS",
+      "status": "collected_indexed",
+      "limitation": "CONTCARs have no energies, forces or Hessians; need associated paper reaction mapping"
+    },
+    {
+      "id": "sevennet_nano",
+      "priority": 1,
+      "url": "https://zenodo.org/records/19491140",
+      "doi": "10.5281/zenodo.19491140",
+      "license": "CC BY 4.0",
+      "contents": "Si/O/C/F DFT energy-force snapshots and quasi-static drag configurations",
+      "status": "70_frame_subset_collected_from_verified_local_archive",
+      "limitation": "No nitrogen; QSD is not a minimum-energy path; method audit pending"
+    },
+    {
+      "id": "sin_hf",
+      "priority": 1,
+      "url": "https://doi.org/10.1016/j.apsusc.2024.159414",
+      "poster": "https://avssymposium.org/ALD2024/Sessions/SupplementalDocumentDownload/80689?sessionId=79078",
+      "contents": "Hydrogenated amorphous SiN/HF reaction barriers",
+      "status": "two_poster_entries_previously_collected",
+      "license": "source rights retained; numerical factual extract only",
+      "limitation": "Different hydrogen fraction and chemistry; no full reaction geometry set acquired"
+    },
+    {
+      "id": "cl_diffusion",
+      "priority": 1,
+      "url": "https://doi.org/10.1016/j.apsusc.2012.07.015",
+      "contents": "Cl hopping and SiCl complex diffusion barriers on Si(111)-(5x5)",
+      "status": "two_abstract_values_collected",
+      "license": "source rights retained; numerical factual extract only",
+      "limitation": "No coordinate path or prefactors acquired; not transferable to Si(001) or SiNx"
+    },
+    {
+      "id": "sait_sin",
+      "priority": 2,
+      "url": "https://github.com/SAITPublic/MLFF-Framework",
+      "download": "https://drive.google.com/file/d/1l9nsie40Bpm8CNW4sx94yAuvmMkUfM3b/view",
+      "contents": "SiN DFT energies and forces across composition, temperature, strain and defects",
+      "status": "provider_link_identified_not_downloaded",
+      "license": "verify dataset-specific license before redistribution",
+      "limitation": "Structural training data, not guaranteed reactive halogen or TS coverage; Drive browser requires sign-in in inspected response"
+    },
+    {
+      "id": "transition1x",
+      "priority": 2,
+      "url": "https://www.nature.com/articles/s41597-022-01870-w",
+      "code": "https://gitlab.com/matschreiner/Transition1x",
+      "download": "https://figshare.com/ndownloader/files/36035789",
+      "contents": "DFT reaction paths and transition-state regions for small organic reactions",
+      "status": "not_downloaded",
+      "license": "verify provider metadata for selected release",
+      "limitation": "Approximately 6.6 GB full file; organic benchmark rather than semiconductor surface chemistry; audit training overlap"
+    },
+    {
+      "id": "omol25",
+      "priority": 2,
+      "url": "https://fair-chem.github.io/omol25/",
+      "download": "https://huggingface.co/facebook/OMol25",
+      "contents": "Molecular DFT energy/force data at wB97M-V/def2-TZVPD",
+      "status": "existing_DPA_OMol25_checkpoint_used; bulk_dataset_not_downloaded",
+      "license": "dataset CC BY 4.0; follow provider access terms",
+      "limitation": "Molecular data not periodic surface calibration; total charge and spin must be explicit; not every frame is a TS"
+    },
+    {
+      "id": "omol25_electronic",
+      "priority": 3,
+      "url": "https://fair-chem.github.io/omol25-elec/",
+      "contents": "Raw ORCA outputs, electronic structures, wavefunctions",
+      "status": "not_downloaded",
+      "license": "see provider dataset terms",
+      "limitation": "Multi-million calculation collection on Globus; request/select tiny chemistry-specific files, not entire collection"
+    },
+    {
+      "id": "dpa_model",
+      "priority": 1,
+      "url": "https://huggingface.co/deepmodelingcommunity/DPA-3.3-1M",
+      "contents": "Existing multi-head ML potential with explicit OMol25 task",
+      "status": "local_checkpoint_reused_read_only",
+      "license": "CC BY 4.0 model card",
+      "limitation": "ML inference is not a new DFT calculation; validate saddle and chemical domain"
+    }
+  ]
+}

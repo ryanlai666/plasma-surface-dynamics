@@ -1,0 +1,49 @@
+{
+  "created_utc": "2026-09-18T23:35:05.396877+00:00",
+  "script_sha256": "d23b8bb264477605cafe9b7b8f4f68aca09a3290b01086cdc01044919d9b0d77",
+  "sources": [
+    {
+      "doi": "10.5281/zenodo.19491140",
+      "url": "https://zenodo.org/records/19491140",
+      "license": "CC BY 4.0",
+      "authors": [
+        "Sangmin Oh",
+        "Jinmu You",
+        "Jaesun Kim",
+        "Jiho Lee",
+        "Seungwu Han",
+        "Youngho Kang"
+      ],
+      "archive_sha256": "7e436876cc3f8f7385ce483c801b14427f592ac6e0e34398e584bff4b27d923e"
+    },
+    {
+      "doi": "10.5281/zenodo.10211009",
+      "url": "https://zenodo.org/records/10211009",
+      "license": "CC BY 4.0",
+      "authors": [
+        "Biel Martinez i Diaz",
+        "Jing Li",
+        "Hector Prats",
+        "Benoit Sklenard"
+      ],
+      "archive_sha256": "96d2f90bd46cb8f64824406cf8b67d847913d2e255da34b6f111e7b4f6b712e0"
+    }
+  ],
+  "selection": "Five evenly spaced source frames per non-QSD member; all frames from six lexicographically first QSD groups; all HCl CONTCARs",
+  "published_DFT_frames": 70,
+  "geometry_only_frames": 22,
+  "source_named_TS": 15,
+  "limitations": [
+    "No new physical validation from subsampling",
+    "QSD peaks are not transition-state barriers",
+    "HCl archive lacks energies/forces in CONTCAR files",
+    "No nitrogen in the Si/O/C/F DFT subset",
+    "XC and pseudopotential details require paper audit before combining with other DFT sources",
+    "Etch snapshots were generated with an ML potential then labeled with DFT; not AIMD",
+    "Split by complete trajectory/configuration family to avoid train-test leakage"
+  ],
+  "output_sha256": {
+    "dft_subset.extxyz": "02a254c31ee811504600e4f6e64ae6016e023de12952b6c654d00b6b8328aad9",
+    "hcl_geometries.extxyz": "72edb922f6b751f8ea45bd983697738de2056f3473a63cc0fbc1a33407a2c484"
+  }
+}

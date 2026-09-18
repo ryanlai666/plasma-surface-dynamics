@@ -10,3 +10,5 @@ build/
 
 .venv-mace/
 .cache/
+
+.venv-dft-wsl/

@@ -1,6 +1,6 @@
 # Public data register
 
-Checked 2026-09-16. Source availability and reuse rights are separate questions. Preserve authors, version, license, retrieved date, original units, and checksum for every acquisition. The downloader stores the full source metadata.
+Checked 2026-09-18. Source availability and reuse rights are separate questions. Preserve authors, version, license, retrieved date, original units, and checksum for every acquisition. The downloader stores the full source metadata.
 
 | Source | Contents and planned use | Limits / acquisition |
 |---|---|---|
@@ -26,3 +26,7 @@ python -m plasma_surface.cli inventory data/raw/si_hcl/data.zip
 Begin with the provider's sampled SiN archive rather than raw trajectories. Inspect available composition counts and reference energy/force conventions. Use a small deterministic subset for analysis; keep all snapshots from a trajectory together. Preserve the provider's out-of-distribution split and add composition-held-out evaluation. If labels lack reactive species, restrict the claim to Si/N structural energetics. A bulk cohesive energy cannot be substituted for an ion-assisted etching barrier.
 
 For digitized literature curves, retain figure/table identifiers, digitizer settings, axis calibration, inferred uncertainty, process conditions, and license notes. Do not silently combine thermal ALE, continuous etching, ion beams, and plasma ALE into one target.
+
+## Collected atomistic subset and new calculations
+
+The [atomistic acquisition guide](ATOMISTIC_DATA.md) now links a 70-frame public DFT energy/force subset, indexed Si-H-Cl geometries including 15 source-named transition states, and two cited Cl diffusion barriers. See the [computed molecular saddle report](barrier_results/REPORT.md) for separate local ML/DFT calculations and [candidate fragments and experiment sets](REACTION_CANDIDATES.md) for follow-up research.

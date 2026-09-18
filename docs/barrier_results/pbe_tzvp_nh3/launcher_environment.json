@@ -1,0 +1,7 @@
+{
+  "OMP_NUM_THREADS": "4",
+  "OPENBLAS_NUM_THREADS": "1",
+  "MKL_NUM_THREADS": "4",
+  "os": "Ubuntu under WSL",
+  "note": "Explicit environment passed to the recorded successful launcher"
+}

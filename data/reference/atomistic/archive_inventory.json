@@ -1,0 +1,72 @@
+[
+  {
+    "member": "dft/FC/CF0.2_d2.3.extxyz",
+    "frames": 215,
+    "selected": 5,
+    "sha256": "0ef8272bb92f3d5469f5ef9faab7d44a62442b9c39c90e48d1ea90aab3da0a32",
+    "interpretation": "DFT single-point labels"
+  },
+  {
+    "member": "dft/FC/CF0.2_d3.2.extxyz",
+    "frames": 215,
+    "selected": 5,
+    "sha256": "62e92eeca1d033fc3a49d540d0521ceb6d96bc51ab4b953d1d66844b32727382",
+    "interpretation": "DFT single-point labels"
+  },
+  {
+    "member": "dft/FC/CF0.4_d2.3.extxyz",
+    "frames": 215,
+    "selected": 5,
+    "sha256": "47731cdac70b7badc7de09483d6ed8c37c0133acf7c60f6c4baa58c44e9d7a75",
+    "interpretation": "DFT single-point labels"
+  },
+  {
+    "member": "dft/FC/CF0.4_d3.2.extxyz",
+    "frames": 215,
+    "selected": 5,
+    "sha256": "f1a18c318f2355fe3bebea85ce10883ff014c53d4c4814e5ec57ddfbe6e60367",
+    "interpretation": "DFT single-point labels"
+  },
+  {
+    "member": "dft/etch/trj_CF2_30eV.extxyz",
+    "frames": 1000,
+    "selected": 5,
+    "sha256": "88db4ce247a74e0282a7902a29e5fd863eb4a103a1a5f46b22247034a3e5d263",
+    "interpretation": "DFT single-point labels"
+  },
+  {
+    "member": "dft/etch/trj_CF3_30eV.extxyz",
+    "frames": 1000,
+    "selected": 5,
+    "sha256": "c6dbcc5c2b058049d881089a677a659295b26038f908e3cdda66b14c96cbadb2",
+    "interpretation": "DFT single-point labels"
+  },
+  {
+    "member": "dft/mqa/mqa_Si.extxyz",
+    "frames": 620,
+    "selected": 5,
+    "sha256": "30f216860a17a9f4874d2f233eb04b41d2c52884e103efc2577acda5448a8db5",
+    "interpretation": "DFT single-point labels"
+  },
+  {
+    "member": "dft/mqa/mqa_SiC.extxyz",
+    "frames": 620,
+    "selected": 5,
+    "sha256": "2885994f1eb756b935adff60fc61b35091ccaaaafb7330da1a41ea510702a4a4",
+    "interpretation": "DFT single-point labels"
+  },
+  {
+    "member": "dft/mqa/mqa_SiO2.extxyz",
+    "frames": 720,
+    "selected": 5,
+    "sha256": "3041a4297512f3d83a4ebb96a0a9ebb35ec44552601b221e1325a1d00f351a0a",
+    "interpretation": "DFT single-point labels"
+  },
+  {
+    "member": "dft/qsd/qsd_data.extxyz",
+    "frames": 1343,
+    "selected": 25,
+    "sha256": "09d957304f1cec6b61a27b4f659ea7793212c318c3a3c4ebe2a59701b38d09e4",
+    "interpretation": "DFT quasi-static drag, not validated TS"
+  }
+]

@@ -1,0 +1,222 @@
+[
+  {
+    "frame": 0,
+    "source_member": "data/TS/t1/CONTCAR",
+    "sha256": "5b3b9acc32fea3c13408da4c91fb3fba2cae40924b61651bf5867718825b1d44",
+    "natoms": 179,
+    "formula": "H49ClSi129",
+    "role": "source_named_TS_unverified_here",
+    "has_energy": false,
+    "has_forces": false
+  },
+  {
+    "frame": 1,
+    "source_member": "data/TS/t10/CONTCAR",
+    "sha256": "b57f1470f08eb4445dbeefe7ad4186f2f4b4fb42f98d8cd2fee91f91e7fb7de6",
+    "natoms": 181,
+    "formula": "H49Cl3Si129",
+    "role": "source_named_TS_unverified_here",
+    "has_energy": false,
+    "has_forces": false
+  },
+  {
+    "frame": 2,
+    "source_member": "data/TS/t11/CONTCAR",
+    "sha256": "94978db9c4c784612581b46977273731138f1e5362f86d81647f3b30358e716f",
+    "natoms": 181,
+    "formula": "H50Cl2Si129",
+    "role": "source_named_TS_unverified_here",
+    "has_energy": false,
+    "has_forces": false
+  },
+  {
+    "frame": 3,
+    "source_member": "data/TS/t12/CONTCAR",
+    "sha256": "8202e6f15d6f1583d6401a548802258a79529354b7c53fe496ee18f812acfa75",
+    "natoms": 181,
+    "formula": "H50Cl2Si129",
+    "role": "source_named_TS_unverified_here",
+    "has_energy": false,
+    "has_forces": false
+  },
+  {
+    "frame": 4,
+    "source_member": "data/TS/t13/CONTCAR",
+    "sha256": "9f0fec8bf6d00d8ba087c3e71c2b76e4ad99523bac193eef79c859682432dd11",
+    "natoms": 181,
+    "formula": "H51ClSi129",
+    "role": "source_named_TS_unverified_here",
+    "has_energy": false,
+    "has_forces": false
+  },
+  {
+    "frame": 5,
+    "source_member": "data/TS/t19/CONTCAR",
+    "sha256": "7c63a595d43ed0f60f84446dc92839756f57e20704994e1470871141090a1ec4",
+    "natoms": 181,
+    "formula": "H49Cl3Si129",
+    "role": "source_named_TS_unverified_here",
+    "has_energy": false,
+    "has_forces": false
+  },
+  {
+    "frame": 6,
+    "source_member": "data/TS/t2/CONTCAR",
+    "sha256": "283ec1169f02405c3d162861031e6a63bff558e6b10b33b0deb92c73643b20a5",
+    "natoms": 179,
+    "formula": "H49ClSi129",
+    "role": "source_named_TS_unverified_here",
+    "has_energy": false,
+    "has_forces": false
+  },
+  {
+    "frame": 7,
+    "source_member": "data/TS/t20/CONTCAR",
+    "sha256": "5bb48c37e4e7334830bd7c7a7af5aff1b002e933a0eb4c9f6e5fd1bb683056ba",
+    "natoms": 181,
+    "formula": "H50Cl2Si129",
+    "role": "source_named_TS_unverified_here",
+    "has_energy": false,
+    "has_forces": false
+  },
+  {
+    "frame": 8,
+    "source_member": "data/TS/t3/CONTCAR",
+    "sha256": "82335a6a9986654ba13a5c6a1abc0c231d8376fec7786412fe7af7300c9cfbe5",
+    "natoms": 179,
+    "formula": "H48Cl2Si129",
+    "role": "source_named_TS_unverified_here",
+    "has_energy": false,
+    "has_forces": false
+  },
+  {
+    "frame": 9,
+    "source_member": "data/TS/t4/CONTCAR",
+    "sha256": "271886218d1d07dff6619f148c536ffaf60e1d9c0d2d3cc5c25c4e3adee798df",
+    "natoms": 179,
+    "formula": "H48Cl2Si129",
+    "role": "source_named_TS_unverified_here",
+    "has_energy": false,
+    "has_forces": false
+  },
+  {
+    "frame": 10,
+    "source_member": "data/TS/t5/CONTCAR",
+    "sha256": "0908159600cf0441b7efd1a287e1a6c1b2c48a2ae909dddff9d8e380b003e966",
+    "natoms": 179,
+    "formula": "H49ClSi129",
+    "role": "source_named_TS_unverified_here",
+    "has_energy": false,
+    "has_forces": false
+  },
+  {
+    "frame": 11,
+    "source_member": "data/TS/t6/CONTCAR",
+    "sha256": "cbe890cd1aecff9212bdba5a248a46b5bb87ae5a2a773714382fc34665ef78ba",
+    "natoms": 179,
+    "formula": "H47Cl3Si129",
+    "role": "source_named_TS_unverified_here",
+    "has_energy": false,
+    "has_forces": false
+  },
+  {
+    "frame": 12,
+    "source_member": "data/TS/t7/CONTCAR",
+    "sha256": "65472222eddaacdf5bafc36783b3e585e5f5a3f3b65211176fe01cf3fea27e93",
+    "natoms": 179,
+    "formula": "H48Cl2Si129",
+    "role": "source_named_TS_unverified_here",
+    "has_energy": false,
+    "has_forces": false
+  },
+  {
+    "frame": 13,
+    "source_member": "data/TS/t8/CONTCAR",
+    "sha256": "8e2782c24cff1b51aa9cefaeecaf78f0a9df0ff86f00d57f7bb7ea643a03f182",
+    "natoms": 181,
+    "formula": "H48Cl4Si129",
+    "role": "source_named_TS_unverified_here",
+    "has_energy": false,
+    "has_forces": false
+  },
+  {
+    "frame": 14,
+    "source_member": "data/TS/t9/CONTCAR",
+    "sha256": "9f278743d4b8dc055a3402a3f7cef29dbe0f08a98235dec42b5212648e70ba79",
+    "natoms": 181,
+    "formula": "H49Cl3Si129",
+    "role": "source_named_TS_unverified_here",
+    "has_energy": false,
+    "has_forces": false
+  },
+  {
+    "frame": 15,
+    "source_member": "data/adsorbates/SiCl2/CONTCAR",
+    "sha256": "03b95cc6a2095a40353f79c872b331a4c57e791b8aa20ba9278c6c16d4e55925",
+    "natoms": 177,
+    "formula": "H46Cl2Si129",
+    "role": "adsorbate_geometry",
+    "has_energy": false,
+    "has_forces": false
+  },
+  {
+    "frame": 16,
+    "source_member": "data/adsorbates/SiCl2H/CONTCAR",
+    "sha256": "fba94d404854267efb8ae2d6afb93a15bee97ff5e03e2607e6efc42871da9896",
+    "natoms": 179,
+    "formula": "H48Cl2Si129",
+    "role": "adsorbate_geometry",
+    "has_energy": false,
+    "has_forces": false
+  },
+  {
+    "frame": 17,
+    "source_member": "data/adsorbates/SiCl3/CONTCAR",
+    "sha256": "60bfa347d277d7192cd3e577738b90f89da44f54ad946f9d889485d27a03383c",
+    "natoms": 179,
+    "formula": "H47Cl3Si129",
+    "role": "adsorbate_geometry",
+    "has_energy": false,
+    "has_forces": false
+  },
+  {
+    "frame": 18,
+    "source_member": "data/adsorbates/SiClH/CONTCAR",
+    "sha256": "ca7b444266bc28c6398fad275682cbf8305ce15ea4429980dc3ed79ee04d6554",
+    "natoms": 177,
+    "formula": "H47ClSi129",
+    "role": "adsorbate_geometry",
+    "has_energy": false,
+    "has_forces": false
+  },
+  {
+    "frame": 19,
+    "source_member": "data/adsorbates/SiClH2/CONTCAR",
+    "sha256": "73c3a68500f3bafdffd31504aa0698c67d6a7669025a24c3e33f63a87bb5d558",
+    "natoms": 179,
+    "formula": "H49ClSi129",
+    "role": "adsorbate_geometry",
+    "has_energy": false,
+    "has_forces": false
+  },
+  {
+    "frame": 20,
+    "source_member": "data/adsorbates/SiH2/CONTCAR",
+    "sha256": "d7375265a282b1ead430f176bb1288947c0c74dbae620cad206f22cfdde70c10",
+    "natoms": 177,
+    "formula": "H48Si129",
+    "role": "adsorbate_geometry",
+    "has_energy": false,
+    "has_forces": false
+  },
+  {
+    "frame": 21,
+    "source_member": "data/adsorbates/SiH3/CONTCAR",
+    "sha256": "816c0e64cff80de3451657c3152c51e844caa27f2ac19eb2709172bdb5775c0f",
+    "natoms": 179,
+    "formula": "H50Si129",
+    "role": "adsorbate_geometry",
+    "has_energy": false,
+    "has_forces": false
+  }
+]

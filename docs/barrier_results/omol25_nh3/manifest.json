@@ -1,0 +1,29 @@
+{
+  "started_utc": "2026-09-18T23:32:49.044331+00:00",
+  "backend": "deepmd",
+  "formula": "NH3",
+  "charge": 0,
+  "multiplicity": 1,
+  "periodic": false,
+  "threads": 4,
+  "python": "3.11.14",
+  "status": "verified",
+  "purpose": "Gas-phase umbrella-inversion saddle diagnostic; not a SiN surface reaction",
+  "source_sha256": "4d28c6e55c7e127fe1ccef11b441c05408f7fd6655afdc6911ccf317d8e8813d",
+  "method": "Symmetry-reduced minimum and planar saddle optimization; relaxed umbrella scan; full Cartesian finite-difference Hessian",
+  "model": "DPA-3.3-1M",
+  "head": "OMol25",
+  "label_kind": "ML_prediction",
+  "checkpoint_sha256": "36fe440c111108d60cda54aa7d3fccac743794de25abef4d49564b9fb896a55b",
+  "source": "https://huggingface.co/deepmodelingcommunity/DPA-3.3-1M",
+  "packages": {
+    "deepmd-kit": "3.2.0",
+    "torch": "2.11.0",
+    "ase": "3.26.0",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1"
+  },
+  "evaluations": 321,
+  "elapsed_s": 33.72946040000534,
+  "finished_utc": "2026-09-18T23:33:22.774214+00:00"
+}

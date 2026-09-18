@@ -1,0 +1,28 @@
+{
+  "started_utc": "2026-09-18T23:47:58.666986+00:00",
+  "backend": "pyscf",
+  "formula": "NH3",
+  "charge": 0,
+  "multiplicity": 1,
+  "periodic": false,
+  "threads": 4,
+  "python": "3.12.3",
+  "status": "verified",
+  "purpose": "Gas-phase umbrella-inversion saddle diagnostic; not a SiN surface reaction",
+  "source_sha256": "4d28c6e55c7e127fe1ccef11b441c05408f7fd6655afdc6911ccf317d8e8813d",
+  "method": "Symmetry-reduced minimum and planar saddle optimization; relaxed umbrella scan; full Cartesian finite-difference Hessian",
+  "label_kind": "new_DFT",
+  "functional": "PBE",
+  "basis": "def2-tzvp",
+  "scf_tolerance_hartree": 1e-10,
+  "grid_level": 4,
+  "packages": {
+    "pyscf": "2.12.1",
+    "ase": "3.29.0",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "evaluations": 220,
+  "elapsed_s": 313.51825179699995,
+  "finished_utc": "2026-09-18T23:53:12.185535+00:00"
+}

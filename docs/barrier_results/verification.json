@@ -1,0 +1,26 @@
+{
+  "regression_tests": 25,
+  "pytest_status": "passed",
+  "candidate_reactions_balanced": 21,
+  "published_DFT_frames": 70,
+  "finite_energy_force_frames": 70,
+  "source_convergence_flag_true": 45,
+  "source_convergence_flag_unspecified": 25,
+  "geometry_only_frames": 22,
+  "source_named_TS_geometries": 15,
+  "checks": "Source/archive/output hashes; atom and charge accounting; finite labels; local-file links; molecular saddle checks in per-run summaries",
+  "molecular_runs": {
+    "omol25_nh3": {
+      "all_saddle_checks_passed": true,
+      "electronic_barrier_eV": 0.19650398194789886
+    },
+    "pbe_svp_nh3": {
+      "all_saddle_checks_passed": true,
+      "electronic_barrier_eV": 0.2773868688047969
+    },
+    "pbe_tzvp_nh3": {
+      "all_saddle_checks_passed": true,
+      "electronic_barrier_eV": 0.21537754201585813
+    }
+  }
+}

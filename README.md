@@ -8,7 +8,7 @@ Combining surface reaction kinetics, Python/C++ simulation, public atomistic dat
 
 > **Scientific scope:** This project verifies numerical implementations and compares atomistic models. Default ALE rates are uncalibrated, and SiNx composition cards are hypothetical sensitivity scenarios. The results do not establish experimental etching accuracy.
 
-[Animations](#animation-gallery) | [Quick start](#quick-start) | [Results](#recorded-results) | [Equations and literature](#physical-hypotheses-equations-and-literature-support) | [Documentation](#documentation-and-project-map)
+[Animations](#animation-gallery) | [Quick start](#quick-start) | [Results](#recorded-results) | [DFT/TS](#dft-data-and-transition-state-results) | [Equations and literature](#physical-hypotheses-equations-and-literature-support) | [Documentation](#documentation-and-project-map)
 
 ## Animation gallery
 
@@ -87,7 +87,7 @@ The C++ build requires a C++17 GCC/Clang compiler. [Detailed setup, benchmarking
 
 | Check or comparison | Recorded result | Interpretation |
 |---|---:|---|
-| Regression suite | 22 tests passed | Analytical limits, kinetics, calibration recovery, backend checks, and animation-state fidelity |
+| Regression suite | 25 tests passed | Analytical limits, kinetics, calibration recovery, backend checks, and animation-state fidelity |
 | Python/C++ recipe comparison | 4,096 recipes | Same deterministic model evaluated by both implementations |
 | Maximum backend EPC difference | 2.22e-16 nm/cycle | Numerical agreement |
 | Stochastic ensembles | 6 of 6 within five standard errors | Agreement with the exact mean-field expectation |
@@ -131,6 +131,35 @@ MACE-MP-0b2 small and MACE-MPA-0 medium are evaluated on diamond Si, beta-Si3N4,
 Ensemble scatter decreases as the number of sites increases. The dose sweep checks saturation within the assumed mechanism.
 
 </details>
+
+<!-- BEGIN ATOMISTIC RESULTS -->
+## DFT data and transition-state results
+
+A small NH3 inversion calculation tests the molecular saddle workflow using **direct DFT** and the existing **OMol25-trained DPA model**:
+
+| Method | Electronic barrier (eV) | TS max force (eV/A) | Saddle checks |
+|---|---:|---:|---|
+| DPA-3.3 / OMol25 | 0.196504 | 7.86e-07 | Passed |
+| DFT PBE / def2-SVP | 0.277387 | 1.88e-05 | Passed |
+| DFT PBE / def2-TZVP | 0.215378 | 3.15e-05 | Passed |
+
+Changing PBE from def2-SVP to def2-TZVP changes this electronic barrier by -0.062009 eV. This two-basis comparison does not establish the complete-basis limit.
+
+
+![Direct DFT and OMol25 molecular inversion paths](docs/barrier_results/comparison.png)
+
+All reported saddles pass full-force, negative-curvature, and two-sided relaxation checks. NH3 inversion is a molecular workflow diagnostic, **not a SiN surface etching barrier**. The comparison uses different reference methods and excludes zero-point/free-energy corrections.
+
+| Collected reference data | Contents |
+|---|---|
+| Published Si/O/C/F DFT | 70 energy/force frames, including 25 quasi-static drag configurations; drag peaks are not validated TS barriers |
+| Si-H-Cl source geometries | 22 structures, including 15 source-named TS; the archive lacks energy/force/Hessian labels |
+| Published Cl diffusion on Si(111)-(5x5) | 1.73 eV hopping and 1.34 eV SiCl-complex diffusion, with sources and applicability limits |
+| Fragment/side-reaction catalog | 35 species/bookkeeping units, 21 balanced candidate reactions, and eight proposed experiment sets |
+
+[Computed results and reproduction](docs/barrier_results/REPORT.md) | [Data, diffusion equations, and sources](docs/ATOMISTIC_DATA.md) | [Fragments and experiment sets](docs/REACTION_CANDIDATES.md).
+
+<!-- END ATOMISTIC RESULTS -->
 
 ## Physical hypotheses, equations, and literature support
 
@@ -178,7 +207,7 @@ Solid arrows describe implemented workflows; dashed arrows require further react
 
 ## Public data and scientific scope
 
-The project uses public structures and explicitly synthetic kinetic campaigns. The [Si-HCl DFT archive](https://zenodo.org/records/10211009) contains 22 inventoried geometries with CC BY 4.0 attribution and checksums. Two [public HF/SiN DFT barrier entries](data/literature/sin_hf_barriers.csv) are retained as reference data and are not loaded into the solver. See [dataset sources and suitability](docs/DATASETS.md).
+The project combines public atomistic references, local molecular DFT/ML calculations, and explicitly synthetic kinetic campaigns. The [Si-HCl DFT archive](https://zenodo.org/records/10211009) contains 22 inventoried geometries with CC BY 4.0 attribution and checksums. Two [public HF/SiN DFT barrier entries](data/literature/sin_hf_barriers.csv) are retained as reference data and are not loaded into the solver. See [dataset sources and suitability](docs/DATASETS.md).
 
 Composition is metadata in the current [Si/SiNx cards](configs/materials.json). Hydrogen content, preferential Si/N removal, film density, product speciation, and lateral interactions do not drive the kinetics. The inherited thickness conversion is illustrative for nitrides. The generic growth channel is not a validated PECVD/PEALD mechanism. Experimental calibration requires measurements matched to the implemented recipe and chemistry; none are fabricated or bundled.
 
@@ -187,6 +216,8 @@ Composition is metadata in the current [Si/SiNx cards](configs/materials.json). 
 | Topic | Location |
 |---|---|
 | Equations and exact integration | [Model](docs/MODEL.md) |
+| DFT/TS data and computed molecular barriers | [Acquisition](docs/ATOMISTIC_DATA.md), [results](docs/barrier_results/REPORT.md) |
+| Fragments, side reactions, and experiment sets | [Candidate mechanisms](docs/REACTION_CANDIDATES.md) |
 | DFT/AIMD evidence, parameter audit, and hypotheses | [Literature](docs/LITERATURE.md) |
 | Reproduction and extended command examples | [Usage guide](docs/USAGE.md) |
 | Animation interpretation and settings | [Animations](docs/ANIMATIONS.md) |
