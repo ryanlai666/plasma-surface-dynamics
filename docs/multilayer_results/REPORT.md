@@ -55,6 +55,18 @@ Twelve controls vary the allowed access depth (0, 1, 2, 4 angstrom) over three r
 
 [Run metadata and control results](summary.json), [full event history and snapshots](../../data/multilayer/demo_trajectory.json), [animation provenance](animation_manifest.json), [initial graph](../../data/multilayer/sin_graph.json).
 
+## Why deeper layers stop etching in the next cycle
+
+![Cycle-by-cycle depth diagnosis](cycle_depth_diagnosis.png)
+
+A separately recorded **12-cycle / 36 s run uses unchanged rates, seed and access assumptions**. Cycle 1 removes 21 atoms from B5; cycle 2 removes three from B5 and one from B4. Cycles 3-12 show no further removal. Continued HF adsorption/desorption is not continued etching.
+
+All 21 reachable Si atoms at the final plateau have three F terminations and one remaining Si-N bond. Probing one adsorbed HF at a time exposes 13 bare-N and eight NH2 final-cleavage candidates, all assigned zero rate because their barriers are missing. These are hypothetical candidate probes on the saved final state, not additional executed events. The code allows newly exposed deeper sites to react, but this missing A3 branch blocks further progression in this run.
+
+This plateau cannot be cited as physical self-limiting ALE. Repeating doses does not erase the actual residual connectivity or regenerate an arbitrary reactive motif. Matched IS/FS and TS evidence for these backbonds is the next rate priority; coadsorbate and salt branches may provide alternatives but also need their own evidence.
+
+[Per-cycle counts and all 21 local environments](cycle_diagnosis.json) | [Compressed full extended trajectory](../../data/multilayer/extended_12cycle_trajectory.json.gz) | [Reproduce the diagnostic](../../scripts/analyze_multilayer_stall.py).
+
 ## Improving rates instead of transferring one barrier everywhere
 
 1. **Identify the actual environment.** Each event gets a two-shell descriptor containing reacting-atom roles, Si/N connectivity, H/F/Cl counts, HF occupancy, substrate bond lengths and temperature. This is a candidate-grouping key, not a unique relaxed adsorbate geometry or electronic state.

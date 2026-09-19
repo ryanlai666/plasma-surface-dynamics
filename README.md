@@ -6,14 +6,14 @@ Combining surface reaction kinetics, Python/C++ simulation, public atomistic dat
 
 **Research question:** How do surface modification, competing removal pathways, and uncertain reaction rates determine etch-per-cycle saturation and the usable ALE energy window?
 
-[Status](#current-status) | [Workflow](#research-workflow) | [kMC flowchart](#kmc-sampling-flowchart) | [kMC animation](#species-resolved-kmc) | [Reaction network](#complete-kmc-network) | [Atomistic results](#beyond-rigid-approach-scans) | [Run locally](#run-locally)
+[Repository guide](docs/README.md) | [Parameters](docs/KINETIC_PARAMETERS.md) | [Status](#current-status) | [Workflow](#research-workflow) | [kMC flowchart](#kmc-sampling-flowchart) | [kMC animation](#species-resolved-kmc) | [Reaction network](#complete-kmc-network) | [Atomistic results](#beyond-rigid-approach-scans) | [Run locally](#run-locally)
 
 ## Current status
 
 <!-- BEGIN CURRENT STATUS -->
 | Component | Current status |
 |---|---|
-| Numerical checks | **77 tests passed**; atom conservation, independent master equation, Python/C++ statistical agreement and artifact provenance. |
+| Numerical checks | **82 tests passed**; atom conservation, independent master equation, Python/C++ statistical agreement and artifact provenance. |
 | Species-resolved kMC | **45 states / 55 enabled events**, 16 source pathways; **512 C++ trajectories** across 325-450 K. Conditional kinetics, not calibrated ALE. |
 | Network discovery | HiPRGen pilot: **40 forward + 40 reverse candidates**, with missing-intermediate audit; no automatic rate assignment. |
 | Atomistic evidence | MACE surface paths and molecular screening; OMol25 local models and direct DFT diagnostics. Convergence limits retained. |
@@ -82,6 +82,10 @@ flowchart TD
 
 [Equations, zero-rate behavior, snapshot timing and the motif-model distinction](docs/KMC_ALGORITHM.md) | [Multilayer implementation](plasma_surface/multilayer.py).
 
+## Rates, activation energies and free energies
+
+[Complete parameter audit](docs/KINETIC_PARAMETERS.md) lists **183 parameter records**, all **220 event/temperature rates**, diffusion references, assumed prefactors, and missing thermochemical inputs. Published DFT barriers are used conditionally; **AIMD-derived rates and full activation free energies have not been established**. The new thermal-rate helpers calculate Arrhenius/HTST rates, gas arrival and hop diffusivity from explicit inputs without automatically enabling unsupported chemistry.
+
 ## Species-resolved kMC
 
 ![Species-resolved kMC: actual recorded top-view and perspective snapshots](docs/species_kmc_results/species_kmc.gif)
@@ -130,6 +134,12 @@ The 9 s demonstration recorded **1097 events**, **9 Si + 16 N removals**, and **
 <!-- END MULTILAYER STATUS -->
 
 **This is an explicit demonstration, not calibrated multilayer ALE.** Crystal host positions stay fixed, accessibility uses a column approximation, and rates are unvalidated transfers or assumptions. Default library calls use `validated_only`: unmatched environments stay disabled. The earlier 45-state animation remains the reproducible single-inventory baseline; it is not the multilayer solver.
+
+**Why does the next cycle not keep removing lower layers?** A 12-cycle run with unchanged parameters removes 21 B5 atoms in cycle 1 and 3 B5 + 1 B4 atoms in cycle 2; cycles 3-12 remove none. The 21 reachable Si sites then have three F caps and one remaining Si-N backbond: 13 to bare N and 8 to NH2. Their final-cleavage rates are missing and disabled. This is a **mechanism gap, not demonstrated ALE self-limitation**. Newly exposed atoms retain their actual bonds and terminations; the solver does not reset them to a fresh top-layer state.
+
+![Cycle-by-cycle removal and blocked backbonds](docs/multilayer_results/cycle_depth_diagnosis.png)
+
+[12-cycle event data and environment diagnosis](docs/multilayer_results/cycle_diagnosis.json).
 
 [Multilayer results, depth controls, equations and limitations](docs/multilayer_results/REPORT.md) | [Initial Si/N graph](data/multilayer/sin_graph.json) | [Environment-specific IS/FS calculation queue](data/multilayer/rate_requests/index.json).
 

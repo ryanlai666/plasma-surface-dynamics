@@ -1,0 +1,184 @@
+model,parameter,value,unit,status,source,meaning
+generic_two_state,site_density_m2,7e+18,m^-2,illustrative_unfitted,plasma_surface/model.py,Generic baseline only; not graph chemistry
+generic_two_state,layer_nm,0.136,nm,illustrative_unfitted,plasma_surface/model.py,Generic baseline only; not graph chemistry
+generic_two_state,sticking,0.25,1,illustrative_unfitted,plasma_surface/model.py,Generic baseline only; not graph chemistry
+generic_two_state,desorption_prefactor_s,1000000.0,s^-1,illustrative_unfitted,plasma_surface/model.py,Generic baseline only; not graph chemistry
+generic_two_state,desorption_barrier_ev,0.65,eV,illustrative_unfitted,plasma_surface/model.py,Generic baseline only; not graph chemistry
+generic_two_state,chemical_threshold_ev,15.0,eV,illustrative_unfitted,plasma_surface/model.py,Generic baseline only; not graph chemistry
+generic_two_state,physical_threshold_ev,40.0,eV,illustrative_unfitted,plasma_surface/model.py,Generic baseline only; not graph chemistry
+generic_two_state,chemical_yield_scale,0.8,1,illustrative_unfitted,plasma_surface/model.py,Generic baseline only; not graph chemistry
+generic_two_state,physical_yield_scale,0.15,1,illustrative_unfitted,plasma_surface/model.py,Generic baseline only; not graph chemistry
+generic_two_state,deposition_sticking,0.2,1,illustrative_unfitted,plasma_surface/model.py,Generic baseline only; not graph chemistry
+generic_recipe_modify,duration_s,2.0,s,assumed_recipe,plasma_surface/model.py,Default ale_recipe; purge appears twice
+generic_recipe_modify,radical_flux_m2_s,2e+19,m^-2 s^-1,assumed_recipe,plasma_surface/model.py,Default ale_recipe; purge appears twice
+generic_recipe_modify,ion_flux_m2_s,0.0,m^-2 s^-1,assumed_recipe,plasma_surface/model.py,Default ale_recipe; purge appears twice
+generic_recipe_modify,ion_energy_ev,0.0,eV,assumed_recipe,plasma_surface/model.py,Default ale_recipe; purge appears twice
+generic_recipe_modify,precursor_flux_m2_s,0.0,m^-2 s^-1,assumed_recipe,plasma_surface/model.py,Default ale_recipe; purge appears twice
+generic_recipe_modify,temperature_k,300.0,K,assumed_recipe,plasma_surface/model.py,Default ale_recipe; purge appears twice
+generic_recipe_purge,duration_s,0.5,s,assumed_recipe,plasma_surface/model.py,Default ale_recipe; purge appears twice
+generic_recipe_purge,radical_flux_m2_s,0.0,m^-2 s^-1,assumed_recipe,plasma_surface/model.py,Default ale_recipe; purge appears twice
+generic_recipe_purge,ion_flux_m2_s,0.0,m^-2 s^-1,assumed_recipe,plasma_surface/model.py,Default ale_recipe; purge appears twice
+generic_recipe_purge,ion_energy_ev,0.0,eV,assumed_recipe,plasma_surface/model.py,Default ale_recipe; purge appears twice
+generic_recipe_purge,precursor_flux_m2_s,0.0,m^-2 s^-1,assumed_recipe,plasma_surface/model.py,Default ale_recipe; purge appears twice
+generic_recipe_purge,temperature_k,300.0,K,assumed_recipe,plasma_surface/model.py,Default ale_recipe; purge appears twice
+generic_recipe_remove,duration_s,2.0,s,assumed_recipe,plasma_surface/model.py,Default ale_recipe; purge appears twice
+generic_recipe_remove,radical_flux_m2_s,0.0,m^-2 s^-1,assumed_recipe,plasma_surface/model.py,Default ale_recipe; purge appears twice
+generic_recipe_remove,ion_flux_m2_s,2e+19,m^-2 s^-1,assumed_recipe,plasma_surface/model.py,Default ale_recipe; purge appears twice
+generic_recipe_remove,ion_energy_ev,28.0,eV,assumed_recipe,plasma_surface/model.py,Default ale_recipe; purge appears twice
+generic_recipe_remove,precursor_flux_m2_s,0.0,m^-2 s^-1,assumed_recipe,plasma_surface/model.py,Default ale_recipe; purge appears twice
+generic_recipe_remove,temperature_k,300.0,K,assumed_recipe,plasma_surface/model.py,Default ale_recipe; purge appears twice
+generic_recipe_purge,duration_s,0.5,s,assumed_recipe,plasma_surface/model.py,Default ale_recipe; purge appears twice
+generic_recipe_purge,radical_flux_m2_s,0.0,m^-2 s^-1,assumed_recipe,plasma_surface/model.py,Default ale_recipe; purge appears twice
+generic_recipe_purge,ion_flux_m2_s,0.0,m^-2 s^-1,assumed_recipe,plasma_surface/model.py,Default ale_recipe; purge appears twice
+generic_recipe_purge,ion_energy_ev,0.0,eV,assumed_recipe,plasma_surface/model.py,Default ale_recipe; purge appears twice
+generic_recipe_purge,precursor_flux_m2_s,0.0,m^-2 s^-1,assumed_recipe,plasma_surface/model.py,Default ale_recipe; purge appears twice
+generic_recipe_purge,temperature_k,300.0,K,assumed_recipe,plasma_surface/model.py,Default ale_recipe; purge appears twice
+Si_reference,n_si_ratio,0.0,1,invented_composition_scenario,configs/materials.json,Not a fitted composition law
+Si_reference,hydrogen_atomic_fraction,0.0,1,invented_composition_scenario,configs/materials.json,Not a fitted composition law
+SiN0.8_hypothesis,n_si_ratio,0.8,1,invented_composition_scenario,configs/materials.json,Not a fitted composition law
+SiN0.8_hypothesis,hydrogen_atomic_fraction,0.0,1,invented_composition_scenario,configs/materials.json,Not a fitted composition law
+SiN0.8_hypothesis,sticking,0.22,1,invented_composition_scenario,configs/materials.json,Not a fitted composition law
+SiN0.8_hypothesis,chemical_threshold_ev,22.0,eV,invented_composition_scenario,configs/materials.json,Not a fitted composition law
+SiN0.8_hypothesis,physical_threshold_ev,45.0,eV,invented_composition_scenario,configs/materials.json,Not a fitted composition law
+SiN0.8_hypothesis,chemical_yield_scale,0.65,1,invented_composition_scenario,configs/materials.json,Not a fitted composition law
+SiN1.0_hypothesis,n_si_ratio,1.0,1,invented_composition_scenario,configs/materials.json,Not a fitted composition law
+SiN1.0_hypothesis,hydrogen_atomic_fraction,0.0,1,invented_composition_scenario,configs/materials.json,Not a fitted composition law
+SiN1.0_hypothesis,sticking,0.2,1,invented_composition_scenario,configs/materials.json,Not a fitted composition law
+SiN1.0_hypothesis,chemical_threshold_ev,25.0,eV,invented_composition_scenario,configs/materials.json,Not a fitted composition law
+SiN1.0_hypothesis,physical_threshold_ev,48.0,eV,invented_composition_scenario,configs/materials.json,Not a fitted composition law
+SiN1.0_hypothesis,chemical_yield_scale,0.6,1,invented_composition_scenario,configs/materials.json,Not a fitted composition law
+Si3N4_hypothesis,n_si_ratio,1.3333333333333333,1,invented_composition_scenario,configs/materials.json,Not a fitted composition law
+Si3N4_hypothesis,hydrogen_atomic_fraction,0.0,1,invented_composition_scenario,configs/materials.json,Not a fitted composition law
+Si3N4_hypothesis,sticking,0.18,1,invented_composition_scenario,configs/materials.json,Not a fitted composition law
+Si3N4_hypothesis,chemical_threshold_ev,30.0,eV,invented_composition_scenario,configs/materials.json,Not a fitted composition law
+Si3N4_hypothesis,physical_threshold_ev,50.0,eV,invented_composition_scenario,configs/materials.json,Not a fitted composition law
+Si3N4_hypothesis,chemical_yield_scale,0.55,1,invented_composition_scenario,configs/materials.json,Not a fitted composition law
+45_state,prefactor,1000000000000.0,s^-1,assumed,docs/species_kmc_results/summary.json,No entropy or pressure-derived correction applied
+45_state,HF_arrival,5.0,s^-1,assumed,docs/species_kmc_results/summary.json,No entropy or pressure-derived correction applied
+45_state,HF_desorption,100.0,s^-1,assumed,docs/species_kmc_results/summary.json,No entropy or pressure-derived correction applied
+45_state,exposure,2.0,s,assumed,docs/species_kmc_results/summary.json,No entropy or pressure-derived correction applied
+45_state,purge,1.0,s,assumed,docs/species_kmc_results/summary.json,No entropy or pressure-derived correction applied
+45_state,initial_fraction_bridge_NH_F0,0.3,1,assumed,configs/species_kmc_network.json,Fixed initial motif population
+45_state,initial_fraction_terminal_NH2_F0,0.15,1,assumed,configs/species_kmc_network.json,Fixed initial motif population
+45_state,initial_fraction_Si_H_rich_F0,0.1,1,assumed,configs/species_kmc_network.json,Fixed initial motif population
+45_state,initial_fraction_bridge_N_F0,0.15,1,assumed,configs/species_kmc_network.json,Fixed initial motif population
+45_state,initial_fraction_pre_SiH2F,0.1,1,assumed,configs/species_kmc_network.json,Fixed initial motif population
+45_state,initial_fraction_pre_SiHF2,0.1,1,assumed,configs/species_kmc_network.json,Fixed initial motif population
+45_state,initial_fraction_Si_Si_F1,0.1,1,assumed,configs/species_kmc_network.json,Fixed initial motif population
+45_state,temperature,325.0,K,chosen_control,docs/species_kmc_results/summary.json,Temperature ensemble
+45_state,temperature,350.0,K,chosen_control,docs/species_kmc_results/summary.json,Temperature ensemble
+45_state,temperature,400.0,K,chosen_control,docs/species_kmc_results/summary.json,Temperature ensemble
+45_state,temperature,450.0,K,chosen_control,docs/species_kmc_results/summary.json,Temperature ensemble
+SiN_HF_source,P1a_activation_energy_eV,0.45,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,SiNH2* + HF -> SiF* + NH3
+SiN_HF_source,P1a_physisorption_energy_eV,-1.09,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,SiNH2* + HF -> SiF* + NH3
+SiN_HF_source,P1a_reaction_energy_eV,-0.24,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,SiNH2* + HF -> SiF* + NH3
+SiN_HF_source,P1b_activation_energy_eV,2.1,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,SiH* + HF -> SiF* + H2
+SiN_HF_source,P1b_physisorption_energy_eV,-0.83,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,SiH* + HF -> SiF* + H2
+SiN_HF_source,P1b_reaction_energy_eV,-0.63,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,SiH* + HF -> SiF* + H2
+SiN_HF_source,P1c_activation_energy_eV,0.02,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,Si-NH*-Si + HF -> SiF* + SiNH2*
+SiN_HF_source,P1c_physisorption_energy_eV,-0.91,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,Si-NH*-Si + HF -> SiF* + SiNH2*
+SiN_HF_source,P1c_reaction_energy_eV,-1.4,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,Si-NH*-Si + HF -> SiF* + SiNH2*
+SiN_HF_source,P1d_activation_energy_eV,0.72,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,Si-N-Si + HF -> SiF* + SiNH*
+SiN_HF_source,P1d_physisorption_energy_eV,-0.9,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,Si-N-Si + HF -> SiF* + SiNH*
+SiN_HF_source,P1d_reaction_energy_eV,-0.97,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,Si-N-Si + HF -> SiF* + SiNH*
+SiN_HF_source,P2a_activation_energy_eV,0.68,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,Si(NH2)F* + HF -> SiF2* + NH3
+SiN_HF_source,P2a_physisorption_energy_eV,-0.54,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,Si(NH2)F* + HF -> SiF2* + NH3
+SiN_HF_source,P2a_reaction_energy_eV,-0.76,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,Si(NH2)F* + HF -> SiF2* + NH3
+SiN_HF_source,P2b_activation_energy_eV,1.8,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,SiHF* + HF -> SiF2* + H2
+SiN_HF_source,P2b_physisorption_energy_eV,-0.42,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,SiHF* + HF -> SiF2* + H2
+SiN_HF_source,P2b_reaction_energy_eV,-0.65,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,SiHF* + HF -> SiF2* + H2
+SiN_HF_source,P2c_activation_energy_eV,0.79,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,SiF*-NH*-Si + HF -> SiF2* + SiNH2*
+SiN_HF_source,P2c_physisorption_energy_eV,-0.35,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,SiF*-NH*-Si + HF -> SiF2* + SiNH2*
+SiN_HF_source,P2c_reaction_energy_eV,-0.24,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,SiF*-NH*-Si + HF -> SiF2* + SiNH2*
+SiN_HF_source,P2d_activation_energy_eV,0.75,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,SiF*-N-Si + HF -> SiF2* + SiNH*
+SiN_HF_source,P2d_physisorption_energy_eV,-0.51,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,SiF*-N-Si + HF -> SiF2* + SiNH*
+SiN_HF_source,P2d_reaction_energy_eV,-0.96,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,SiF*-N-Si + HF -> SiF2* + SiNH*
+SiN_HF_source,P2e_activation_energy_eV,0.81,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,Si-N-SiH2F* + HF -> SiH2F2 + SiNH*
+SiN_HF_source,P2e_physisorption_energy_eV,-0.51,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,Si-N-SiH2F* + HF -> SiH2F2 + SiNH*
+SiN_HF_source,P2e_reaction_energy_eV,-1.29,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,Si-N-SiH2F* + HF -> SiH2F2 + SiNH*
+SiN_HF_source,P2f_activation_energy_eV,0.79,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,SiF*-Si + HF -> SiF2* + SiH*
+SiN_HF_source,P2f_physisorption_energy_eV,-0.25,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,SiF*-Si + HF -> SiF2* + SiH*
+SiN_HF_source,P2f_reaction_energy_eV,-1.31,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,SiF*-Si + HF -> SiF2* + SiH*
+SiN_HF_source,P3a_activation_energy_eV,0.88,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,Si(NH2)F2* + HF -> SiF3* + NH3
+SiN_HF_source,P3a_physisorption_energy_eV,-0.64,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,Si(NH2)F2* + HF -> SiF3* + NH3
+SiN_HF_source,P3a_reaction_energy_eV,-0.42,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,Si(NH2)F2* + HF -> SiF3* + NH3
+SiN_HF_source,P3b_activation_energy_eV,1.54,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,SiHF2* + HF -> SiF3* + H2
+SiN_HF_source,P3b_physisorption_energy_eV,-0.29,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,SiHF2* + HF -> SiF3* + H2
+SiN_HF_source,P3b_reaction_energy_eV,-1.08,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,SiHF2* + HF -> SiF3* + H2
+SiN_HF_source,P3c_activation_energy_eV,0.74,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,SiF2*-NH*-Si + HF -> SiF3* + SiNH2*
+SiN_HF_source,P3c_physisorption_energy_eV,-0.37,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,SiF2*-NH*-Si + HF -> SiF3* + SiNH2*
+SiN_HF_source,P3c_reaction_energy_eV,-0.67,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,SiF2*-NH*-Si + HF -> SiF3* + SiNH2*
+SiN_HF_source,P3d_activation_energy_eV,0.9,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,SiF2-N-Si + HF -> SiF3* + SiNH*
+SiN_HF_source,P3d_physisorption_energy_eV,-0.3,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,SiF2-N-Si + HF -> SiF3* + SiNH*
+SiN_HF_source,P3d_reaction_energy_eV,-0.56,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,SiF2-N-Si + HF -> SiF3* + SiNH*
+SiN_HF_source,P3e_activation_energy_eV,0.96,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,Si-N-SiHF2* + HF -> SiHF3 + SiNH*
+SiN_HF_source,P3e_physisorption_energy_eV,-0.39,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,Si-N-SiHF2* + HF -> SiHF3 + SiNH*
+SiN_HF_source,P3e_reaction_energy_eV,-1.13,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,Si-N-SiHF2* + HF -> SiHF3 + SiNH*
+SiN_HF_source,P4_activation_energy_eV,0.53,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,Si-NH*-SiF3* + HF -> SiF4 + SiNH2*
+SiN_HF_source,P4_physisorption_energy_eV,-0.32,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,Si-NH*-SiF3* + HF -> SiF4 + SiNH2*
+SiN_HF_source,P4_reaction_energy_eV,-0.77,eV,"published_DFT; Ea conditionally used, other energies reference-only",data/literature/sin_hf_pathways.csv,Si-NH*-SiF3* + HF -> SiF4 + SiNH2*
+multilayer,temperature_K,450.0,K,assumed_control,docs/multilayer_results/summary.json,Arrival attenuates with local depth; zero during purge
+multilayer,arrival_s,5.0,s^-1,assumed_control,docs/multilayer_results/summary.json,Arrival attenuates with local depth; zero during purge
+multilayer,desorption_s,100.0,s^-1,assumed_control,docs/multilayer_results/summary.json,Arrival attenuates with local depth; zero during purge
+multilayer,penetration_A,2.0,angstrom,assumed_control,docs/multilayer_results/summary.json,Arrival attenuates with local depth; zero during purge
+multilayer,attenuation_A,1.0,angstrom,assumed_control,docs/multilayer_results/summary.json,Arrival attenuates with local depth; zero during purge
+multilayer,dose_s,2.0,s,assumed_control,docs/multilayer_results/summary.json,Arrival attenuates with local depth; zero during purge
+multilayer,purge_s,1.0,s,assumed_control,docs/multilayer_results/summary.json,Arrival attenuates with local depth; zero during purge
+multilayer,thermal_prefactor,1000000000000.0,s^-1,assumed_model,plasma_surface/multilayer.py; scripts/build_multilayer_graph.py,All demonstration thermal events
+multilayer,Si_molecule_release_barrier,0.53,eV,assumed_model,plasma_surface/multilayer.py; scripts/build_multilayer_graph.py,"Assumed desorption, not literature P4"
+multilayer,NH3_release_barrier,0.45,eV,assumed_model,plasma_surface/multilayer.py; scripts/build_multilayer_graph.py,Assumed detached NH3 desorption
+multilayer,SiCl_exchange_barrier,0.75,eV,assumed_model,plasma_surface/multilayer.py; scripts/build_multilayer_graph.py,Assumed exchange
+multilayer,Si_N_bond_cutoff,2.05,angstrom,assumed_model,plasma_surface/multilayer.py; scripts/build_multilayer_graph.py,Initial graph construction
+multilayer,lateral_columns,36,1,assumed_model,plasma_surface/multilayer.py; scripts/build_multilayer_graph.py,6 by 6 moving accessibility columns
+multilayer,depth_bands,6,1,assumed_model,plasma_surface/multilayer.py; scripts/build_multilayer_graph.py,"Unit-cell bands, not atomic monolayers"
+multilayer,fixed_bottom_bands,1,1,assumed_model,plasma_surface/multilayer.py; scripts/build_multilayer_graph.py,56 fixed host atoms
+multilayer,initial_Si_cap_probability_H,0.2,1,assumed,scripts/build_multilayer_graph.py,N dangling valences initially capped with H
+multilayer,initial_Si_cap_probability_F,0.5,1,assumed,scripts/build_multilayer_graph.py,N dangling valences initially capped with H
+multilayer,initial_Si_cap_probability_Cl,0.3,1,assumed,scripts/build_multilayer_graph.py,N dangling valences initially capped with H
+diffusion_reference,Asari2013_Cl_hop,1.73,eV,not used in active kMC; prefactor missing,10.1016/j.apsusc.2012.07.015,Cl/Si(111)-(5x5); Cl atom hopping
+diffusion_reference,Asari2013_SiCl_complex,1.34,eV,not used in active kMC; prefactor missing,10.1016/j.apsusc.2012.07.015,Cl/Si(111)-(5x5); SiCl complex diffusion
+F2_first_event_r100,barrier_eV,0.13,eV,published cluster DFT/TST fit; separate first-event model,data/literature/si_f2_kinetics.json,Fit range 298.15-1000 K; not multilayer ALE
+F2_first_event_r100,A0_m3_s,8.82e-21,m^3 s^-1,published cluster DFT/TST fit; separate first-event model,data/literature/si_f2_kinetics.json,Fit range 298.15-1000 K; not multilayer ALE
+F2_first_event_r100,n1,2.2,1,published cluster DFT/TST fit; separate first-event model,data/literature/si_f2_kinetics.json,Fit range 298.15-1000 K; not multilayer ALE
+F2_first_event_r100,gamma0,0.0011,1,published cluster DFT/TST fit; separate first-event model,data/literature/si_f2_kinetics.json,Fit range 298.15-1000 K; not multilayer ALE
+F2_first_event_r100,n2,1.6,1,published cluster DFT/TST fit; separate first-event model,data/literature/si_f2_kinetics.json,Fit range 298.15-1000 K; not multilayer ALE
+F2_first_event_r100,reference_temperature_K,298.15,K,published cluster DFT/TST fit; separate first-event model,data/literature/si_f2_kinetics.json,Fit range 298.15-1000 K; not multilayer ALE
+F2_first_event_u100,barrier_eV,0.31,eV,published cluster DFT/TST fit; separate first-event model,data/literature/si_f2_kinetics.json,Fit range 298.15-1000 K; not multilayer ALE
+F2_first_event_u100,A0_m3_s,1.23e-20,m^3 s^-1,published cluster DFT/TST fit; separate first-event model,data/literature/si_f2_kinetics.json,Fit range 298.15-1000 K; not multilayer ALE
+F2_first_event_u100,n1,2.2,1,published cluster DFT/TST fit; separate first-event model,data/literature/si_f2_kinetics.json,Fit range 298.15-1000 K; not multilayer ALE
+F2_first_event_u100,gamma0,0.0016,1,published cluster DFT/TST fit; separate first-event model,data/literature/si_f2_kinetics.json,Fit range 298.15-1000 K; not multilayer ALE
+F2_first_event_u100,n2,1.7,1,published cluster DFT/TST fit; separate first-event model,data/literature/si_f2_kinetics.json,Fit range 298.15-1000 K; not multilayer ALE
+F2_first_event_u100,reference_temperature_K,298.15,K,published cluster DFT/TST fit; separate first-event model,data/literature/si_f2_kinetics.json,Fit range 298.15-1000 K; not multilayer ALE
+F2_first_event_110,barrier_eV,0.35,eV,published cluster DFT/TST fit; separate first-event model,data/literature/si_f2_kinetics.json,Fit range 298.15-1000 K; not multilayer ALE
+F2_first_event_110,A0_m3_s,7.52e-20,m^3 s^-1,published cluster DFT/TST fit; separate first-event model,data/literature/si_f2_kinetics.json,Fit range 298.15-1000 K; not multilayer ALE
+F2_first_event_110,n1,2.5,1,published cluster DFT/TST fit; separate first-event model,data/literature/si_f2_kinetics.json,Fit range 298.15-1000 K; not multilayer ALE
+F2_first_event_110,gamma0,0.0096,1,published cluster DFT/TST fit; separate first-event model,data/literature/si_f2_kinetics.json,Fit range 298.15-1000 K; not multilayer ALE
+F2_first_event_110,n2,1.96,1,published cluster DFT/TST fit; separate first-event model,data/literature/si_f2_kinetics.json,Fit range 298.15-1000 K; not multilayer ALE
+F2_first_event_110,reference_temperature_K,298.15,K,published cluster DFT/TST fit; separate first-event model,data/literature/si_f2_kinetics.json,Fit range 298.15-1000 K; not multilayer ALE
+F2_first_event_111,barrier_eV,0.57,eV,published cluster DFT/TST fit; separate first-event model,data/literature/si_f2_kinetics.json,Fit range 298.15-1000 K; not multilayer ALE
+F2_first_event_111,A0_m3_s,3.9e-20,m^3 s^-1,published cluster DFT/TST fit; separate first-event model,data/literature/si_f2_kinetics.json,Fit range 298.15-1000 K; not multilayer ALE
+F2_first_event_111,n1,2.5,1,published cluster DFT/TST fit; separate first-event model,data/literature/si_f2_kinetics.json,Fit range 298.15-1000 K; not multilayer ALE
+F2_first_event_111,gamma0,0.005,1,published cluster DFT/TST fit; separate first-event model,data/literature/si_f2_kinetics.json,Fit range 298.15-1000 K; not multilayer ALE
+F2_first_event_111,n2,1.96,1,published cluster DFT/TST fit; separate first-event model,data/literature/si_f2_kinetics.json,Fit range 298.15-1000 K; not multilayer ALE
+F2_first_event_111,reference_temperature_K,298.15,K,published cluster DFT/TST fit; separate first-event model,data/literature/si_f2_kinetics.json,Fit range 298.15-1000 K; not multilayer ALE
+salt_reference,S1_reaction_energy_eV,-0.06,eV,reference-only; desorption energies are not TS barriers,https://doi.org/10.1016/j.apsusc.2024.159414,SiF4 + NH4F -> NH4+ + SiF5-
+salt_reference,S1_activation_energy_eV,0.4,eV,reference-only; desorption energies are not TS barriers,https://doi.org/10.1016/j.apsusc.2024.159414,SiF4 + NH4F -> NH4+ + SiF5-
+salt_reference,S2_reaction_energy_eV,-0.31,eV,reference-only; desorption energies are not TS barriers,https://doi.org/10.1016/j.apsusc.2024.159414,NH4+ + SiF5- + NH4F -> 2NH4+ + SiF6(2-)
+salt_reference,S2_activation_energy_eV,0.07,eV,reference-only; desorption energies are not TS barriers,https://doi.org/10.1016/j.apsusc.2024.159414,NH4+ + SiF5- + NH4F -> 2NH4+ + SiF6(2-)
+salt_reference,D1_desorption_energy_eV,1.98,eV,reference-only; desorption energies are not TS barriers,https://doi.org/10.1016/j.apsusc.2024.159414,AFS(surface) -> AFS(g)
+salt_reference,D1_source_crossover_C,526,C,reference-only; desorption energies are not TS barriers,https://doi.org/10.1016/j.apsusc.2024.159414,AFS(surface) -> AFS(g)
+salt_reference,D2_desorption_energy_eV,4.79,eV,reference-only; desorption energies are not TS barriers,https://doi.org/10.1016/j.apsusc.2024.159414,AFS(surface) -> 2NH3(g) + 2HF(g) + SiF4(g)
+salt_reference,D2_source_crossover_C,152,C,reference-only; desorption energies are not TS barriers,https://doi.org/10.1016/j.apsusc.2024.159414,AFS(surface) -> 2NH3(g) + 2HF(g) + SiF4(g)
+salt_reference,D3a_desorption_energy_eV,1.97,eV,reference-only; desorption energies are not TS barriers,https://doi.org/10.1016/j.apsusc.2024.159414,AFS(surface) -> NH5F2(surface) + NH3(g) + SiF4(g)
+salt_reference,D3a_source_crossover_C,102,C,reference-only; desorption energies are not TS barriers,https://doi.org/10.1016/j.apsusc.2024.159414,AFS(surface) -> NH5F2(surface) + NH3(g) + SiF4(g)
+salt_reference,D3b_desorption_energy_eV,2.81,eV,reference-only; desorption energies are not TS barriers,https://doi.org/10.1016/j.apsusc.2024.159414,NH5F2(surface) -> NH3(g) + 2HF(g)
+salt_reference,D3b_source_crossover_C,200,C,reference-only; desorption energies are not TS barriers,https://doi.org/10.1016/j.apsusc.2024.159414,NH5F2(surface) -> NH3(g) + 2HF(g)
+missing,activation_DeltaG,,eV,not computed or not supplied,plasma_surface/thermal_kinetics.py,No matched full IS/TS Gibbs free energies supplied
+missing,activation_DeltaF,,eV,not computed or not supplied,plasma_surface/thermal_kinetics.py,No full matched IS/TS harmonic mode sets supplied
+missing,ZPE_correction,,eV,not computed or not supplied,plasma_surface/thermal_kinetics.py,Not evaluated for active kMC barriers
+missing,activation_entropy,,eV/K,not computed or not supplied,plasma_surface/thermal_kinetics.py,Not available; prefactor 1e12 is an assumption
+missing,transmission_coefficient,,1,not computed or not supplied,plasma_surface/thermal_kinetics.py,Unknown; helper default 1 is an explicit TST assumption
+missing,diffusion_hop_rate,,s^-1,not computed or not supplied,plasma_surface/thermal_kinetics.py,No enabled hop events in active engines
+missing,diffusion_coefficient,,m^2/s,not computed or not supplied,plasma_surface/thermal_kinetics.py,No matched hop network or diffusive trajectory fit
+missing,AIMD_rate,,s^-1,not computed or not supplied,plasma_surface/thermal_kinetics.py,No AIMD event-time ensemble generated
+missing,gas_chemical_potentials,,eV,not computed or not supplied,plasma_surface/thermal_kinetics.py,No pressure/standard-state thermochemistry in graph model

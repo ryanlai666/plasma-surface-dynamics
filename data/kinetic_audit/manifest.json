@@ -1,0 +1,36 @@
+{
+  "parameter_rows": 183,
+  "species_event_rate_rows": 220,
+  "multilayer_rule_rows": 18,
+  "published_rate_rows": 16,
+  "temperatures_K": [
+    325.0,
+    350.0,
+    400.0,
+    450.0
+  ],
+  "runner": "scripts/audit_kinetic_parameters.py",
+  "runner_sha256": "e5b2d5a74851266b8a9f0be9e4508d7292896f970509a966f452d73d45a9343b",
+  "input_sha256": {
+    "plasma_surface/model.py": "77f7544b681a93eddb709877bed936859e90dc69c0e2d315ae68bc92c0b67e86",
+    "plasma_surface/multilayer.py": "14ba968dd934da3853a6d3575bced9b545ac6f925b1d4a048a2258bfe511792f",
+    "plasma_surface/species_kmc.py": "c4a086698150b81f4f8c76b0bb953feaa3f095864d72d94ced55931c4f345b62",
+    "plasma_surface/thermal_kinetics.py": "4fc15d540de514f11dd857c237ecef6ef8ad89f509869d534131ce17ea6f3a78",
+    "configs/materials.json": "e4b725f9997739d237df600536e6e499dab75f5cdfa24f3a098e6219e0126906",
+    "configs/species_kmc_network.json": "1491e3cb022cf2fb24fb6299abfacc029a61592d75f13e399119c89ca0c54ce3",
+    "data/literature/sin_hf_pathways.csv": "3ad70780d0426b1a5d02169c1d4eb548ccdf1043c2233f5e90173501fe524fe0",
+    "data/literature/si_f2_kinetics.json": "3da82d9a7ad9592616f85142ea2a5b12b212f9e9211115ecd39df552e5245002",
+    "data/literature/diffusion_barriers.csv": "3ae3ee59df3d6578839e34cf77971c4e809a2d4bc9f1e7fd59488e46f90daef6",
+    "data/literature/jung2020_coadsorption_rates.json": "01508571b8c4fc93613cd7f849b45648f576a66c3eca20223b1e22922c5269dc",
+    "data/literature/sin_salt_energetics.json": "6249998206a2398d11148afb2c6d7c29913f9580d68934947f834a1708b7499d",
+    "docs/multilayer_results/summary.json": "f9e57f67b1083c88e49ff137b6bf25ed6ae5a354e35db04ce47b10fdb43dd6fc",
+    "docs/species_kmc_results/summary.json": "5058b537615c083015488abb55dc0b642d0f5bffbe1d0671c9ab6339501b7c9d"
+  },
+  "scope": "Current physical kinetics parameters and retained literature energetic inputs; optimizer settings and full model weights remain in per-calculation manifests",
+  "zero_event_100ps_one_site_example": {
+    "rate_s": 0.0,
+    "upper_rate_s": 29957322735.539894,
+    "one_sided_confidence": 0.95,
+    "qualified_for_kmc": false
+  }
+}

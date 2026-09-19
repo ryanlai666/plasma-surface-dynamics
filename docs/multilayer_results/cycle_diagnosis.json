@@ -1,0 +1,1662 @@
+{
+  "original_trajectory_sha256": "ffaef13f586b461172381975e962c36fa094bd33071e75cfad39d1a7ea2ef427",
+  "extended_trajectory": "data/multilayer/extended_12cycle_trajectory.json.gz",
+  "extended_trajectory_sha256": "0e8feaad775bb2a9979c6d8a9bf4d67c9cf33588eaf6aff9952470e464aa1c02",
+  "parameters": {
+    "temperature_K": 450.0,
+    "arrival_s": 5.0,
+    "desorption_s": 100.0,
+    "penetration_A": 2.0,
+    "attenuation_A": 1.0,
+    "dose_s": 2.0,
+    "purge_s": 1.0
+  },
+  "policy": "demonstration",
+  "cycles": [
+    {
+      "cycle": 1,
+      "events": 361,
+      "removed_by_band": {
+        "5": 21
+      },
+      "removed_by_element": {
+        "N": 13,
+        "Si": 8
+      },
+      "newly_exposed_ids": [
+        57,
+        60,
+        61,
+        63,
+        68,
+        69,
+        78,
+        80,
+        160,
+        164,
+        229,
+        231,
+        237,
+        238,
+        246,
+        330
+      ]
+    },
+    {
+      "cycle": 2,
+      "events": 374,
+      "removed_by_band": {
+        "5": 3,
+        "4": 1
+      },
+      "removed_by_element": {
+        "N": 3,
+        "Si": 1
+      },
+      "newly_exposed_ids": [
+        70,
+        141,
+        144,
+        152
+      ]
+    },
+    {
+      "cycle": 3,
+      "events": 362,
+      "removed_by_band": {},
+      "removed_by_element": {},
+      "newly_exposed_ids": []
+    },
+    {
+      "cycle": 4,
+      "events": 336,
+      "removed_by_band": {},
+      "removed_by_element": {},
+      "newly_exposed_ids": []
+    },
+    {
+      "cycle": 5,
+      "events": 358,
+      "removed_by_band": {},
+      "removed_by_element": {},
+      "newly_exposed_ids": []
+    },
+    {
+      "cycle": 6,
+      "events": 358,
+      "removed_by_band": {},
+      "removed_by_element": {},
+      "newly_exposed_ids": []
+    },
+    {
+      "cycle": 7,
+      "events": 376,
+      "removed_by_band": {},
+      "removed_by_element": {},
+      "newly_exposed_ids": []
+    },
+    {
+      "cycle": 8,
+      "events": 354,
+      "removed_by_band": {},
+      "removed_by_element": {},
+      "newly_exposed_ids": []
+    },
+    {
+      "cycle": 9,
+      "events": 314,
+      "removed_by_band": {},
+      "removed_by_element": {},
+      "newly_exposed_ids": []
+    },
+    {
+      "cycle": 10,
+      "events": 420,
+      "removed_by_band": {},
+      "removed_by_element": {},
+      "newly_exposed_ids": []
+    },
+    {
+      "cycle": 11,
+      "events": 378,
+      "removed_by_band": {},
+      "removed_by_element": {},
+      "newly_exposed_ids": []
+    },
+    {
+      "cycle": 12,
+      "events": 402,
+      "removed_by_band": {},
+      "removed_by_element": {},
+      "newly_exposed_ids": []
+    }
+  ],
+  "blocked_final_cleavages": [
+    {
+      "site": 57,
+      "partner": 231,
+      "initial_band": 4,
+      "remaining_substrate_bonds": 1,
+      "F_terminations": 3,
+      "partner_H": 0,
+      "depth_A": 0.0,
+      "rate_s": 0.0,
+      "rate_status": "disabled_missing_final_cleavage_barrier",
+      "environment": {
+        "key": "f39a308898df2d667abeb7f0cf866bf50084de1d910fbc421155027418c35202",
+        "descriptor": {
+          "reaction": "SiN_cleavage",
+          "temperature_K": 450.0,
+          "root_labels": [
+            "3a2490025f402f9fff3ca55ec389c34428b510ba6e40725e0b0d400d0eb95a48",
+            "83c1904d0c5195598ad8cc40636815ce3cc64338aaae6d0d6246c4cc3918aa24"
+          ],
+          "shell_labels": [
+            "3a2490025f402f9fff3ca55ec389c34428b510ba6e40725e0b0d400d0eb95a48",
+            "83c1904d0c5195598ad8cc40636815ce3cc64338aaae6d0d6246c4cc3918aa24",
+            "b3726f22e4c797ee827345bc26a3d492f24a2528fb573e88cf02e34f7e5f8442",
+            "c11a9d0d526fc67d0557772ba434348181c842723d888a70be661ffdaa76f1aa",
+            "c7e3094e6321a45b4b9892881a8bc9440b4ce293ac9ec2ded661bb16d05077ab",
+            "c7e3094e6321a45b4b9892881a8bc9440b4ce293ac9ec2ded661bb16d05077ab",
+            "e94307254c0c0f43c0b9d058330e94c50e42f6a17002bf4686d2b60c3fe45de4"
+          ],
+          "bond_geometry": [
+            [
+              "3a2490025f402f9fff3ca55ec389c34428b510ba6e40725e0b0d400d0eb95a48",
+              "83c1904d0c5195598ad8cc40636815ce3cc64338aaae6d0d6246c4cc3918aa24",
+              1.736
+            ],
+            [
+              "3a2490025f402f9fff3ca55ec389c34428b510ba6e40725e0b0d400d0eb95a48",
+              "b3726f22e4c797ee827345bc26a3d492f24a2528fb573e88cf02e34f7e5f8442",
+              1.736
+            ],
+            [
+              "3a2490025f402f9fff3ca55ec389c34428b510ba6e40725e0b0d400d0eb95a48",
+              "c11a9d0d526fc67d0557772ba434348181c842723d888a70be661ffdaa76f1aa",
+              1.736
+            ],
+            [
+              "b3726f22e4c797ee827345bc26a3d492f24a2528fb573e88cf02e34f7e5f8442",
+              "c7e3094e6321a45b4b9892881a8bc9440b4ce293ac9ec2ded661bb16d05077ab",
+              1.73
+            ],
+            [
+              "b3726f22e4c797ee827345bc26a3d492f24a2528fb573e88cf02e34f7e5f8442",
+              "c7e3094e6321a45b4b9892881a8bc9440b4ce293ac9ec2ded661bb16d05077ab",
+              1.736
+            ],
+            [
+              "b3726f22e4c797ee827345bc26a3d492f24a2528fb573e88cf02e34f7e5f8442",
+              "e94307254c0c0f43c0b9d058330e94c50e42f6a17002bf4686d2b60c3fe45de4",
+              1.736
+            ]
+          ],
+          "description": "Two-shell labelled graph plus substrate bond lengths; not a unique relaxed adsorbate geometry or electronic state"
+        },
+        "atom_ids": [
+          57,
+          217,
+          226,
+          231,
+          232,
+          236,
+          240
+        ],
+        "central_site": 57,
+        "partner": 231,
+        "central_termination": {
+          "F": 3
+        },
+        "central_coordination": 1,
+        "partner_termination": {}
+      }
+    },
+    {
+      "site": 60,
+      "partner": 150,
+      "initial_band": 4,
+      "remaining_substrate_bonds": 1,
+      "F_terminations": 3,
+      "partner_H": 0,
+      "depth_A": 0.0,
+      "rate_s": 0.0,
+      "rate_status": "disabled_missing_final_cleavage_barrier",
+      "environment": {
+        "key": "caad422981c7be5aed436856e4efdb87248add550282edfe3c56170e47e71e33",
+        "descriptor": {
+          "reaction": "SiN_cleavage",
+          "temperature_K": 450.0,
+          "root_labels": [
+            "67623d4f4207f3505ce931c965f3ebf64214c715ff551b93f8eb20e7d58ae008",
+            "cc1bd26095fc526f3d80db9cd73e6d9541f3092da2c20639207ac883b26f3319"
+          ],
+          "shell_labels": [
+            "6115182b44f9a494958d83ae6be811ffed91a97fe2165bad643acbedc77cfaac",
+            "67623d4f4207f3505ce931c965f3ebf64214c715ff551b93f8eb20e7d58ae008",
+            "80c70b6f3dfdd71ad4d269553d875ee5e9c699cd4f50a3744531c7856813adaf",
+            "80c70b6f3dfdd71ad4d269553d875ee5e9c699cd4f50a3744531c7856813adaf",
+            "80c70b6f3dfdd71ad4d269553d875ee5e9c699cd4f50a3744531c7856813adaf",
+            "9781611e1a3057ea6ef88d5bd16d31692e01e5e133f4a71f3db01ecddd314e1b",
+            "cc1bd26095fc526f3d80db9cd73e6d9541f3092da2c20639207ac883b26f3319"
+          ],
+          "bond_geometry": [
+            [
+              "6115182b44f9a494958d83ae6be811ffed91a97fe2165bad643acbedc77cfaac",
+              "67623d4f4207f3505ce931c965f3ebf64214c715ff551b93f8eb20e7d58ae008",
+              1.736
+            ],
+            [
+              "67623d4f4207f3505ce931c965f3ebf64214c715ff551b93f8eb20e7d58ae008",
+              "9781611e1a3057ea6ef88d5bd16d31692e01e5e133f4a71f3db01ecddd314e1b",
+              1.736
+            ],
+            [
+              "67623d4f4207f3505ce931c965f3ebf64214c715ff551b93f8eb20e7d58ae008",
+              "cc1bd26095fc526f3d80db9cd73e6d9541f3092da2c20639207ac883b26f3319",
+              1.736
+            ],
+            [
+              "80c70b6f3dfdd71ad4d269553d875ee5e9c699cd4f50a3744531c7856813adaf",
+              "9781611e1a3057ea6ef88d5bd16d31692e01e5e133f4a71f3db01ecddd314e1b",
+              1.73
+            ],
+            [
+              "80c70b6f3dfdd71ad4d269553d875ee5e9c699cd4f50a3744531c7856813adaf",
+              "9781611e1a3057ea6ef88d5bd16d31692e01e5e133f4a71f3db01ecddd314e1b",
+              1.736
+            ],
+            [
+              "80c70b6f3dfdd71ad4d269553d875ee5e9c699cd4f50a3744531c7856813adaf",
+              "9781611e1a3057ea6ef88d5bd16d31692e01e5e133f4a71f3db01ecddd314e1b",
+              1.736
+            ]
+          ],
+          "description": "Two-shell labelled graph plus substrate bond lengths; not a unique relaxed adsorbate geometry or electronic state"
+        },
+        "atom_ids": [
+          60,
+          127,
+          136,
+          139,
+          141,
+          150,
+          301
+        ],
+        "central_site": 60,
+        "partner": 150,
+        "central_termination": {
+          "F": 3
+        },
+        "central_coordination": 1,
+        "partner_termination": {}
+      }
+    },
+    {
+      "site": 70,
+      "partner": 67,
+      "initial_band": 5,
+      "remaining_substrate_bonds": 1,
+      "F_terminations": 3,
+      "partner_H": 0,
+      "depth_A": 0.0,
+      "rate_s": 0.0,
+      "rate_status": "disabled_missing_final_cleavage_barrier",
+      "environment": {
+        "key": "f84008b772abac0698999ffab6763301c87c8397566d28720d60428a8274d424",
+        "descriptor": {
+          "reaction": "SiN_cleavage",
+          "temperature_K": 450.0,
+          "root_labels": [
+            "979d1767678054866ed5b20b045582bd2cc739b3c3f23f0f4572714b32786419",
+            "c7371c37aee239fdfa7f77882892ef7db5f890371b44cee82dcddc6dc19e35a1"
+          ],
+          "shell_labels": [
+            "525bfd4ea45aa835014e7a92c3d9bb890b4aed6fd4f86e72787d0fcffd723aa6",
+            "525bfd4ea45aa835014e7a92c3d9bb890b4aed6fd4f86e72787d0fcffd723aa6",
+            "60c1b1b45ce5fa70af6533527ea4a01329ca2940addb00233a80ac8b33d9410f",
+            "79d55092ebd351248b56b00790150a06ccdfa7ad5eb39de0a6b9f4532ef01ddd",
+            "979d1767678054866ed5b20b045582bd2cc739b3c3f23f0f4572714b32786419",
+            "bafd806db6c68b0e2a464b47a44c9d72eeafcfe6ad6d316e382db0871ade5ee0",
+            "c7371c37aee239fdfa7f77882892ef7db5f890371b44cee82dcddc6dc19e35a1",
+            "d0e4c340c3f2a28fc312c6b6f9b7cf4da8108eefb87c66b869b171bf2ee7e5f4",
+            "dfa48e200a485d3791d46a3d2de753f7edf2e2b12f669b315001e93c4619b6e7",
+            "ee62a62c88ace0f00504f37c4126d2cd1b15d929b7dc63370be365f46b452e1c"
+          ],
+          "bond_geometry": [
+            [
+              "525bfd4ea45aa835014e7a92c3d9bb890b4aed6fd4f86e72787d0fcffd723aa6",
+              "d0e4c340c3f2a28fc312c6b6f9b7cf4da8108eefb87c66b869b171bf2ee7e5f4",
+              1.736
+            ],
+            [
+              "525bfd4ea45aa835014e7a92c3d9bb890b4aed6fd4f86e72787d0fcffd723aa6",
+              "d0e4c340c3f2a28fc312c6b6f9b7cf4da8108eefb87c66b869b171bf2ee7e5f4",
+              1.736
+            ],
+            [
+              "60c1b1b45ce5fa70af6533527ea4a01329ca2940addb00233a80ac8b33d9410f",
+              "d0e4c340c3f2a28fc312c6b6f9b7cf4da8108eefb87c66b869b171bf2ee7e5f4",
+              1.73
+            ],
+            [
+              "79d55092ebd351248b56b00790150a06ccdfa7ad5eb39de0a6b9f4532ef01ddd",
+              "979d1767678054866ed5b20b045582bd2cc739b3c3f23f0f4572714b32786419",
+              1.736
+            ],
+            [
+              "79d55092ebd351248b56b00790150a06ccdfa7ad5eb39de0a6b9f4532ef01ddd",
+              "bafd806db6c68b0e2a464b47a44c9d72eeafcfe6ad6d316e382db0871ade5ee0",
+              1.736
+            ],
+            [
+              "79d55092ebd351248b56b00790150a06ccdfa7ad5eb39de0a6b9f4532ef01ddd",
+              "dfa48e200a485d3791d46a3d2de753f7edf2e2b12f669b315001e93c4619b6e7",
+              1.736
+            ],
+            [
+              "79d55092ebd351248b56b00790150a06ccdfa7ad5eb39de0a6b9f4532ef01ddd",
+              "ee62a62c88ace0f00504f37c4126d2cd1b15d929b7dc63370be365f46b452e1c",
+              1.73
+            ],
+            [
+              "979d1767678054866ed5b20b045582bd2cc739b3c3f23f0f4572714b32786419",
+              "c7371c37aee239fdfa7f77882892ef7db5f890371b44cee82dcddc6dc19e35a1",
+              1.736
+            ],
+            [
+              "979d1767678054866ed5b20b045582bd2cc739b3c3f23f0f4572714b32786419",
+              "d0e4c340c3f2a28fc312c6b6f9b7cf4da8108eefb87c66b869b171bf2ee7e5f4",
+              1.736
+            ]
+          ],
+          "description": "Two-shell labelled graph plus substrate bond lengths; not a unique relaxed adsorbate geometry or electronic state"
+        },
+        "atom_ids": [
+          53,
+          56,
+          67,
+          68,
+          70,
+          145,
+          148,
+          153,
+          162,
+          230
+        ],
+        "central_site": 70,
+        "partner": 67,
+        "central_termination": {
+          "F": 3
+        },
+        "central_coordination": 1,
+        "partner_termination": {}
+      }
+    },
+    {
+      "site": 72,
+      "partner": 63,
+      "initial_band": 5,
+      "remaining_substrate_bonds": 1,
+      "F_terminations": 3,
+      "partner_H": 0,
+      "depth_A": 0.0,
+      "rate_s": 0.0,
+      "rate_status": "disabled_missing_final_cleavage_barrier",
+      "environment": {
+        "key": "5c679a6f875233575257219690c7d3d4be342790728f4f73a8c7bf2fcdf2deef",
+        "descriptor": {
+          "reaction": "SiN_cleavage",
+          "temperature_K": 450.0,
+          "root_labels": [
+            "7f7fc7af152ba6f0244bb4bec926e2c0a4e081d8f5747f9add7edd68e7dac4b8",
+            "e921d40a7c9fcfb7849bee6a3e4d6e4798eec24ff53ecc38cfddd93db120d0fe"
+          ],
+          "shell_labels": [
+            "30ef4f9a75a70d8aebb328af7dfc24a6ce9c13dc556751d11a3ccab7ecae1827",
+            "30ef4f9a75a70d8aebb328af7dfc24a6ce9c13dc556751d11a3ccab7ecae1827",
+            "35feb0a53e94b4f644f7855b23d2f8f83530f05ab229d0d4548bb5ee3dc0b67d",
+            "439b3ae6391cc8c7874e1e3a24688ff17b876d968f03f3db336330fb320c78c2",
+            "7f7fc7af152ba6f0244bb4bec926e2c0a4e081d8f5747f9add7edd68e7dac4b8",
+            "844498f1e99e0d98bf160741f2e1560508df07fbdc3a77dc2e82cb843573ca0a",
+            "844498f1e99e0d98bf160741f2e1560508df07fbdc3a77dc2e82cb843573ca0a",
+            "844498f1e99e0d98bf160741f2e1560508df07fbdc3a77dc2e82cb843573ca0a",
+            "b650a18adb42bc9fdb6c91187e47607597b0238f08e466adc243957b4fbd6a6b",
+            "e921d40a7c9fcfb7849bee6a3e4d6e4798eec24ff53ecc38cfddd93db120d0fe"
+          ],
+          "bond_geometry": [
+            [
+              "30ef4f9a75a70d8aebb328af7dfc24a6ce9c13dc556751d11a3ccab7ecae1827",
+              "35feb0a53e94b4f644f7855b23d2f8f83530f05ab229d0d4548bb5ee3dc0b67d",
+              1.73
+            ],
+            [
+              "30ef4f9a75a70d8aebb328af7dfc24a6ce9c13dc556751d11a3ccab7ecae1827",
+              "35feb0a53e94b4f644f7855b23d2f8f83530f05ab229d0d4548bb5ee3dc0b67d",
+              1.736
+            ],
+            [
+              "35feb0a53e94b4f644f7855b23d2f8f83530f05ab229d0d4548bb5ee3dc0b67d",
+              "439b3ae6391cc8c7874e1e3a24688ff17b876d968f03f3db336330fb320c78c2",
+              1.736
+            ],
+            [
+              "35feb0a53e94b4f644f7855b23d2f8f83530f05ab229d0d4548bb5ee3dc0b67d",
+              "e921d40a7c9fcfb7849bee6a3e4d6e4798eec24ff53ecc38cfddd93db120d0fe",
+              1.736
+            ],
+            [
+              "7f7fc7af152ba6f0244bb4bec926e2c0a4e081d8f5747f9add7edd68e7dac4b8",
+              "e921d40a7c9fcfb7849bee6a3e4d6e4798eec24ff53ecc38cfddd93db120d0fe",
+              1.736
+            ],
+            [
+              "844498f1e99e0d98bf160741f2e1560508df07fbdc3a77dc2e82cb843573ca0a",
+              "b650a18adb42bc9fdb6c91187e47607597b0238f08e466adc243957b4fbd6a6b",
+              1.73
+            ],
+            [
+              "844498f1e99e0d98bf160741f2e1560508df07fbdc3a77dc2e82cb843573ca0a",
+              "b650a18adb42bc9fdb6c91187e47607597b0238f08e466adc243957b4fbd6a6b",
+              1.736
+            ],
+            [
+              "844498f1e99e0d98bf160741f2e1560508df07fbdc3a77dc2e82cb843573ca0a",
+              "b650a18adb42bc9fdb6c91187e47607597b0238f08e466adc243957b4fbd6a6b",
+              1.736
+            ],
+            [
+              "b650a18adb42bc9fdb6c91187e47607597b0238f08e466adc243957b4fbd6a6b",
+              "e921d40a7c9fcfb7849bee6a3e4d6e4798eec24ff53ecc38cfddd93db120d0fe",
+              1.736
+            ]
+          ],
+          "description": "Two-shell labelled graph plus substrate bond lengths; not a unique relaxed adsorbate geometry or electronic state"
+        },
+        "atom_ids": [
+          49,
+          58,
+          63,
+          64,
+          68,
+          72,
+          225,
+          234,
+          237,
+          248
+        ],
+        "central_site": 72,
+        "partner": 63,
+        "central_termination": {
+          "F": 3
+        },
+        "central_coordination": 1,
+        "partner_termination": {}
+      }
+    },
+    {
+      "site": 73,
+      "partner": 79,
+      "initial_band": 5,
+      "remaining_substrate_bonds": 1,
+      "F_terminations": 3,
+      "partner_H": 2,
+      "depth_A": 0.0,
+      "rate_s": 0.0,
+      "rate_status": "disabled_missing_final_cleavage_barrier",
+      "environment": {
+        "key": "9cf19e9fdf28c3f601019932ae6c72053fe1e2a698b791cb8c7de0f29c7eef90",
+        "descriptor": {
+          "reaction": "SiN_cleavage",
+          "temperature_K": 450.0,
+          "root_labels": [
+            "655c7b5a450b9ca7785c35f746300b3d6bf406899210ee2786b3b2b59870b717",
+            "72e8d3c914bfbdca9e8a536fe1252ee0e279eebb813f0b515538fb15656a1c67"
+          ],
+          "shell_labels": [
+            "655c7b5a450b9ca7785c35f746300b3d6bf406899210ee2786b3b2b59870b717",
+            "72e8d3c914bfbdca9e8a536fe1252ee0e279eebb813f0b515538fb15656a1c67"
+          ],
+          "bond_geometry": [
+            [
+              "655c7b5a450b9ca7785c35f746300b3d6bf406899210ee2786b3b2b59870b717",
+              "72e8d3c914bfbdca9e8a536fe1252ee0e279eebb813f0b515538fb15656a1c67",
+              1.736
+            ]
+          ],
+          "description": "Two-shell labelled graph plus substrate bond lengths; not a unique relaxed adsorbate geometry or electronic state"
+        },
+        "atom_ids": [
+          73,
+          79
+        ],
+        "central_site": 73,
+        "partner": 79,
+        "central_termination": {
+          "F": 3
+        },
+        "central_coordination": 1,
+        "partner_termination": {
+          "H": 2
+        }
+      }
+    },
+    {
+      "site": 141,
+      "partner": 150,
+      "initial_band": 4,
+      "remaining_substrate_bonds": 1,
+      "F_terminations": 3,
+      "partner_H": 0,
+      "depth_A": 0.0,
+      "rate_s": 0.0,
+      "rate_status": "disabled_missing_final_cleavage_barrier",
+      "environment": {
+        "key": "caad422981c7be5aed436856e4efdb87248add550282edfe3c56170e47e71e33",
+        "descriptor": {
+          "reaction": "SiN_cleavage",
+          "temperature_K": 450.0,
+          "root_labels": [
+            "67623d4f4207f3505ce931c965f3ebf64214c715ff551b93f8eb20e7d58ae008",
+            "cc1bd26095fc526f3d80db9cd73e6d9541f3092da2c20639207ac883b26f3319"
+          ],
+          "shell_labels": [
+            "6115182b44f9a494958d83ae6be811ffed91a97fe2165bad643acbedc77cfaac",
+            "67623d4f4207f3505ce931c965f3ebf64214c715ff551b93f8eb20e7d58ae008",
+            "80c70b6f3dfdd71ad4d269553d875ee5e9c699cd4f50a3744531c7856813adaf",
+            "80c70b6f3dfdd71ad4d269553d875ee5e9c699cd4f50a3744531c7856813adaf",
+            "80c70b6f3dfdd71ad4d269553d875ee5e9c699cd4f50a3744531c7856813adaf",
+            "9781611e1a3057ea6ef88d5bd16d31692e01e5e133f4a71f3db01ecddd314e1b",
+            "cc1bd26095fc526f3d80db9cd73e6d9541f3092da2c20639207ac883b26f3319"
+          ],
+          "bond_geometry": [
+            [
+              "6115182b44f9a494958d83ae6be811ffed91a97fe2165bad643acbedc77cfaac",
+              "67623d4f4207f3505ce931c965f3ebf64214c715ff551b93f8eb20e7d58ae008",
+              1.736
+            ],
+            [
+              "67623d4f4207f3505ce931c965f3ebf64214c715ff551b93f8eb20e7d58ae008",
+              "9781611e1a3057ea6ef88d5bd16d31692e01e5e133f4a71f3db01ecddd314e1b",
+              1.736
+            ],
+            [
+              "67623d4f4207f3505ce931c965f3ebf64214c715ff551b93f8eb20e7d58ae008",
+              "cc1bd26095fc526f3d80db9cd73e6d9541f3092da2c20639207ac883b26f3319",
+              1.736
+            ],
+            [
+              "80c70b6f3dfdd71ad4d269553d875ee5e9c699cd4f50a3744531c7856813adaf",
+              "9781611e1a3057ea6ef88d5bd16d31692e01e5e133f4a71f3db01ecddd314e1b",
+              1.73
+            ],
+            [
+              "80c70b6f3dfdd71ad4d269553d875ee5e9c699cd4f50a3744531c7856813adaf",
+              "9781611e1a3057ea6ef88d5bd16d31692e01e5e133f4a71f3db01ecddd314e1b",
+              1.736
+            ],
+            [
+              "80c70b6f3dfdd71ad4d269553d875ee5e9c699cd4f50a3744531c7856813adaf",
+              "9781611e1a3057ea6ef88d5bd16d31692e01e5e133f4a71f3db01ecddd314e1b",
+              1.736
+            ]
+          ],
+          "description": "Two-shell labelled graph plus substrate bond lengths; not a unique relaxed adsorbate geometry or electronic state"
+        },
+        "atom_ids": [
+          60,
+          127,
+          136,
+          139,
+          141,
+          150,
+          301
+        ],
+        "central_site": 141,
+        "partner": 150,
+        "central_termination": {
+          "F": 3
+        },
+        "central_coordination": 1,
+        "partner_termination": {}
+      }
+    },
+    {
+      "site": 144,
+      "partner": 135,
+      "initial_band": 4,
+      "remaining_substrate_bonds": 1,
+      "F_terminations": 3,
+      "partner_H": 0,
+      "depth_A": 0.0,
+      "rate_s": 0.0,
+      "rate_status": "disabled_missing_final_cleavage_barrier",
+      "environment": {
+        "key": "015af80a808a927ea4da3cae0f059571ed9e1f7775b5efb729c43cb2721d1aac",
+        "descriptor": {
+          "reaction": "SiN_cleavage",
+          "temperature_K": 450.0,
+          "root_labels": [
+            "0dc270204cfc484e352a355e223e987f93801bbe22dfd64a639e8f4c25c6d61e",
+            "bacadb962428fd5e84ecbd07f3e24f68af100ac9bb11d44d9a601c031badd524"
+          ],
+          "shell_labels": [
+            "0dc270204cfc484e352a355e223e987f93801bbe22dfd64a639e8f4c25c6d61e",
+            "4fc3cffbf0f834e608c59e4f4ea7f65d3251f3c6d519740292710b6c5549d9e8",
+            "4fc3cffbf0f834e608c59e4f4ea7f65d3251f3c6d519740292710b6c5549d9e8",
+            "844498f1e99e0d98bf160741f2e1560508df07fbdc3a77dc2e82cb843573ca0a",
+            "844498f1e99e0d98bf160741f2e1560508df07fbdc3a77dc2e82cb843573ca0a",
+            "844498f1e99e0d98bf160741f2e1560508df07fbdc3a77dc2e82cb843573ca0a",
+            "844498f1e99e0d98bf160741f2e1560508df07fbdc3a77dc2e82cb843573ca0a",
+            "844498f1e99e0d98bf160741f2e1560508df07fbdc3a77dc2e82cb843573ca0a",
+            "844498f1e99e0d98bf160741f2e1560508df07fbdc3a77dc2e82cb843573ca0a",
+            "bacadb962428fd5e84ecbd07f3e24f68af100ac9bb11d44d9a601c031badd524"
+          ],
+          "bond_geometry": [
+            [
+              "0dc270204cfc484e352a355e223e987f93801bbe22dfd64a639e8f4c25c6d61e",
+              "4fc3cffbf0f834e608c59e4f4ea7f65d3251f3c6d519740292710b6c5549d9e8",
+              1.736
+            ],
+            [
+              "0dc270204cfc484e352a355e223e987f93801bbe22dfd64a639e8f4c25c6d61e",
+              "4fc3cffbf0f834e608c59e4f4ea7f65d3251f3c6d519740292710b6c5549d9e8",
+              1.736
+            ],
+            [
+              "0dc270204cfc484e352a355e223e987f93801bbe22dfd64a639e8f4c25c6d61e",
+              "bacadb962428fd5e84ecbd07f3e24f68af100ac9bb11d44d9a601c031badd524",
+              1.736
+            ],
+            [
+              "4fc3cffbf0f834e608c59e4f4ea7f65d3251f3c6d519740292710b6c5549d9e8",
+              "844498f1e99e0d98bf160741f2e1560508df07fbdc3a77dc2e82cb843573ca0a",
+              1.73
+            ],
+            [
+              "4fc3cffbf0f834e608c59e4f4ea7f65d3251f3c6d519740292710b6c5549d9e8",
+              "844498f1e99e0d98bf160741f2e1560508df07fbdc3a77dc2e82cb843573ca0a",
+              1.73
+            ],
+            [
+              "4fc3cffbf0f834e608c59e4f4ea7f65d3251f3c6d519740292710b6c5549d9e8",
+              "844498f1e99e0d98bf160741f2e1560508df07fbdc3a77dc2e82cb843573ca0a",
+              1.736
+            ],
+            [
+              "4fc3cffbf0f834e608c59e4f4ea7f65d3251f3c6d519740292710b6c5549d9e8",
+              "844498f1e99e0d98bf160741f2e1560508df07fbdc3a77dc2e82cb843573ca0a",
+              1.736
+            ],
+            [
+              "4fc3cffbf0f834e608c59e4f4ea7f65d3251f3c6d519740292710b6c5549d9e8",
+              "844498f1e99e0d98bf160741f2e1560508df07fbdc3a77dc2e82cb843573ca0a",
+              1.736
+            ],
+            [
+              "4fc3cffbf0f834e608c59e4f4ea7f65d3251f3c6d519740292710b6c5549d9e8",
+              "844498f1e99e0d98bf160741f2e1560508df07fbdc3a77dc2e82cb843573ca0a",
+              1.736
+            ]
+          ],
+          "description": "Two-shell labelled graph plus substrate bond lengths; not a unique relaxed adsorbate geometry or electronic state"
+        },
+        "atom_ids": [
+          52,
+          121,
+          129,
+          130,
+          132,
+          135,
+          138,
+          139,
+          144,
+          146
+        ],
+        "central_site": 144,
+        "partner": 135,
+        "central_termination": {
+          "F": 3
+        },
+        "central_coordination": 1,
+        "partner_termination": {}
+      }
+    },
+    {
+      "site": 154,
+      "partner": 165,
+      "initial_band": 5,
+      "remaining_substrate_bonds": 1,
+      "F_terminations": 3,
+      "partner_H": 2,
+      "depth_A": 1.4531499999999973,
+      "rate_s": 0.0,
+      "rate_status": "disabled_missing_final_cleavage_barrier",
+      "environment": {
+        "key": "9cf19e9fdf28c3f601019932ae6c72053fe1e2a698b791cb8c7de0f29c7eef90",
+        "descriptor": {
+          "reaction": "SiN_cleavage",
+          "temperature_K": 450.0,
+          "root_labels": [
+            "655c7b5a450b9ca7785c35f746300b3d6bf406899210ee2786b3b2b59870b717",
+            "72e8d3c914bfbdca9e8a536fe1252ee0e279eebb813f0b515538fb15656a1c67"
+          ],
+          "shell_labels": [
+            "655c7b5a450b9ca7785c35f746300b3d6bf406899210ee2786b3b2b59870b717",
+            "72e8d3c914bfbdca9e8a536fe1252ee0e279eebb813f0b515538fb15656a1c67"
+          ],
+          "bond_geometry": [
+            [
+              "655c7b5a450b9ca7785c35f746300b3d6bf406899210ee2786b3b2b59870b717",
+              "72e8d3c914bfbdca9e8a536fe1252ee0e279eebb813f0b515538fb15656a1c67",
+              1.736
+            ]
+          ],
+          "description": "Two-shell labelled graph plus substrate bond lengths; not a unique relaxed adsorbate geometry or electronic state"
+        },
+        "atom_ids": [
+          154,
+          165
+        ],
+        "central_site": 154,
+        "partner": 165,
+        "central_termination": {
+          "F": 3
+        },
+        "central_coordination": 1,
+        "partner_termination": {
+          "H": 2
+        }
+      }
+    },
+    {
+      "site": 156,
+      "partner": 147,
+      "initial_band": 5,
+      "remaining_substrate_bonds": 1,
+      "F_terminations": 3,
+      "partner_H": 0,
+      "depth_A": 0.0,
+      "rate_s": 0.0,
+      "rate_status": "disabled_missing_final_cleavage_barrier",
+      "environment": {
+        "key": "5e43231f7dc1bb6227afc65e505cc118677d040b646c5ee416b3c74ec661ee26",
+        "descriptor": {
+          "reaction": "SiN_cleavage",
+          "temperature_K": 450.0,
+          "root_labels": [
+            "0c78f17d4ae0ccd059aa9b699b4204dbad48bdd4eeb43de4ddf88469f270bb1d",
+            "4ca8295beeff8f8b0553c58bb18e7126204e6f3f6d6b5af666799ac87d804aac"
+          ],
+          "shell_labels": [
+            "0c78f17d4ae0ccd059aa9b699b4204dbad48bdd4eeb43de4ddf88469f270bb1d",
+            "4ca8295beeff8f8b0553c58bb18e7126204e6f3f6d6b5af666799ac87d804aac",
+            "525bfd4ea45aa835014e7a92c3d9bb890b4aed6fd4f86e72787d0fcffd723aa6",
+            "525bfd4ea45aa835014e7a92c3d9bb890b4aed6fd4f86e72787d0fcffd723aa6",
+            "55d70fc7be031625b02a29bde603f0c733b57d2e091c650eb34a9bb8a48d4228",
+            "56e9b6d1099824e6b226e21daac9c1efa8918e2e05a829319fbcce563aac2806",
+            "60c1b1b45ce5fa70af6533527ea4a01329ca2940addb00233a80ac8b33d9410f",
+            "90be80c62fcaffccf0b67ffcdc38ef100817b015b92113ceb1806aecd02b8397",
+            "90be80c62fcaffccf0b67ffcdc38ef100817b015b92113ceb1806aecd02b8397",
+            "f2cec3d45bee3a6bfbb567ed2bbff91424eed59069afb82489c9e0a3c1e86d9e"
+          ],
+          "bond_geometry": [
+            [
+              "0c78f17d4ae0ccd059aa9b699b4204dbad48bdd4eeb43de4ddf88469f270bb1d",
+              "4ca8295beeff8f8b0553c58bb18e7126204e6f3f6d6b5af666799ac87d804aac",
+              1.736
+            ],
+            [
+              "0c78f17d4ae0ccd059aa9b699b4204dbad48bdd4eeb43de4ddf88469f270bb1d",
+              "56e9b6d1099824e6b226e21daac9c1efa8918e2e05a829319fbcce563aac2806",
+              1.736
+            ],
+            [
+              "0c78f17d4ae0ccd059aa9b699b4204dbad48bdd4eeb43de4ddf88469f270bb1d",
+              "f2cec3d45bee3a6bfbb567ed2bbff91424eed59069afb82489c9e0a3c1e86d9e",
+              1.736
+            ],
+            [
+              "525bfd4ea45aa835014e7a92c3d9bb890b4aed6fd4f86e72787d0fcffd723aa6",
+              "f2cec3d45bee3a6bfbb567ed2bbff91424eed59069afb82489c9e0a3c1e86d9e",
+              1.736
+            ],
+            [
+              "525bfd4ea45aa835014e7a92c3d9bb890b4aed6fd4f86e72787d0fcffd723aa6",
+              "f2cec3d45bee3a6bfbb567ed2bbff91424eed59069afb82489c9e0a3c1e86d9e",
+              1.736
+            ],
+            [
+              "55d70fc7be031625b02a29bde603f0c733b57d2e091c650eb34a9bb8a48d4228",
+              "56e9b6d1099824e6b226e21daac9c1efa8918e2e05a829319fbcce563aac2806",
+              1.736
+            ],
+            [
+              "56e9b6d1099824e6b226e21daac9c1efa8918e2e05a829319fbcce563aac2806",
+              "90be80c62fcaffccf0b67ffcdc38ef100817b015b92113ceb1806aecd02b8397",
+              1.73
+            ],
+            [
+              "56e9b6d1099824e6b226e21daac9c1efa8918e2e05a829319fbcce563aac2806",
+              "90be80c62fcaffccf0b67ffcdc38ef100817b015b92113ceb1806aecd02b8397",
+              1.736
+            ],
+            [
+              "60c1b1b45ce5fa70af6533527ea4a01329ca2940addb00233a80ac8b33d9410f",
+              "f2cec3d45bee3a6bfbb567ed2bbff91424eed59069afb82489c9e0a3c1e86d9e",
+              1.73
+            ]
+          ],
+          "description": "Two-shell labelled graph plus substrate bond lengths; not a unique relaxed adsorbate geometry or electronic state"
+        },
+        "atom_ids": [
+          133,
+          142,
+          147,
+          148,
+          152,
+          156,
+          309,
+          318,
+          321,
+          332
+        ],
+        "central_site": 156,
+        "partner": 147,
+        "central_termination": {
+          "F": 3
+        },
+        "central_coordination": 1,
+        "partner_termination": {}
+      }
+    },
+    {
+      "site": 157,
+      "partner": 167,
+      "initial_band": 5,
+      "remaining_substrate_bonds": 1,
+      "F_terminations": 3,
+      "partner_H": 2,
+      "depth_A": 0.0,
+      "rate_s": 0.0,
+      "rate_status": "disabled_missing_final_cleavage_barrier",
+      "environment": {
+        "key": "a2f4b3715c707b60d9df1c73175e254e50e0cb304778c92caa1ce9070a0d51b2",
+        "descriptor": {
+          "reaction": "SiN_cleavage",
+          "temperature_K": 450.0,
+          "root_labels": [
+            "655c7b5a450b9ca7785c35f746300b3d6bf406899210ee2786b3b2b59870b717",
+            "72e8d3c914bfbdca9e8a536fe1252ee0e279eebb813f0b515538fb15656a1c67"
+          ],
+          "shell_labels": [
+            "655c7b5a450b9ca7785c35f746300b3d6bf406899210ee2786b3b2b59870b717",
+            "72e8d3c914bfbdca9e8a536fe1252ee0e279eebb813f0b515538fb15656a1c67"
+          ],
+          "bond_geometry": [
+            [
+              "655c7b5a450b9ca7785c35f746300b3d6bf406899210ee2786b3b2b59870b717",
+              "72e8d3c914bfbdca9e8a536fe1252ee0e279eebb813f0b515538fb15656a1c67",
+              1.73
+            ]
+          ],
+          "description": "Two-shell labelled graph plus substrate bond lengths; not a unique relaxed adsorbate geometry or electronic state"
+        },
+        "atom_ids": [
+          157,
+          167
+        ],
+        "central_site": 157,
+        "partner": 167,
+        "central_termination": {
+          "F": 3
+        },
+        "central_coordination": 1,
+        "partner_termination": {
+          "H": 2
+        }
+      }
+    },
+    {
+      "site": 229,
+      "partner": 237,
+      "initial_band": 4,
+      "remaining_substrate_bonds": 1,
+      "F_terminations": 3,
+      "partner_H": 0,
+      "depth_A": 0.0,
+      "rate_s": 0.0,
+      "rate_status": "disabled_missing_final_cleavage_barrier",
+      "environment": {
+        "key": "d13f74337916e6c48be7c45e0b86d72dfabe18f7396432e61b7eedc0b3c69fa8",
+        "descriptor": {
+          "reaction": "SiN_cleavage",
+          "temperature_K": 450.0,
+          "root_labels": [
+            "3d5b74b729fff27684fc036f0e4247a12c396906418ffac337c0a80b837feeb1",
+            "b538a15c20175fb08a942b8a4c0798c5d633c3beb73ee8b17514447a475d83a5"
+          ],
+          "shell_labels": [
+            "00f018e7fbb2e8ff30e085dc64d2e530018e0c40991afac03eb0c0d573ae79e7",
+            "3d5b74b729fff27684fc036f0e4247a12c396906418ffac337c0a80b837feeb1",
+            "844498f1e99e0d98bf160741f2e1560508df07fbdc3a77dc2e82cb843573ca0a",
+            "844498f1e99e0d98bf160741f2e1560508df07fbdc3a77dc2e82cb843573ca0a",
+            "844498f1e99e0d98bf160741f2e1560508df07fbdc3a77dc2e82cb843573ca0a",
+            "84ddd4c9fccc32a0adc2b8a3cff7d47f4dadd4cea1190b68939d9e3a7112a715",
+            "b538a15c20175fb08a942b8a4c0798c5d633c3beb73ee8b17514447a475d83a5",
+            "bafd806db6c68b0e2a464b47a44c9d72eeafcfe6ad6d316e382db0871ade5ee0",
+            "dfa48e200a485d3791d46a3d2de753f7edf2e2b12f669b315001e93c4619b6e7",
+            "ee62a62c88ace0f00504f37c4126d2cd1b15d929b7dc63370be365f46b452e1c"
+          ],
+          "bond_geometry": [
+            [
+              "00f018e7fbb2e8ff30e085dc64d2e530018e0c40991afac03eb0c0d573ae79e7",
+              "3d5b74b729fff27684fc036f0e4247a12c396906418ffac337c0a80b837feeb1",
+              1.73
+            ],
+            [
+              "00f018e7fbb2e8ff30e085dc64d2e530018e0c40991afac03eb0c0d573ae79e7",
+              "bafd806db6c68b0e2a464b47a44c9d72eeafcfe6ad6d316e382db0871ade5ee0",
+              1.736
+            ],
+            [
+              "00f018e7fbb2e8ff30e085dc64d2e530018e0c40991afac03eb0c0d573ae79e7",
+              "dfa48e200a485d3791d46a3d2de753f7edf2e2b12f669b315001e93c4619b6e7",
+              1.736
+            ],
+            [
+              "00f018e7fbb2e8ff30e085dc64d2e530018e0c40991afac03eb0c0d573ae79e7",
+              "ee62a62c88ace0f00504f37c4126d2cd1b15d929b7dc63370be365f46b452e1c",
+              1.736
+            ],
+            [
+              "3d5b74b729fff27684fc036f0e4247a12c396906418ffac337c0a80b837feeb1",
+              "84ddd4c9fccc32a0adc2b8a3cff7d47f4dadd4cea1190b68939d9e3a7112a715",
+              1.73
+            ],
+            [
+              "3d5b74b729fff27684fc036f0e4247a12c396906418ffac337c0a80b837feeb1",
+              "b538a15c20175fb08a942b8a4c0798c5d633c3beb73ee8b17514447a475d83a5",
+              1.73
+            ],
+            [
+              "844498f1e99e0d98bf160741f2e1560508df07fbdc3a77dc2e82cb843573ca0a",
+              "84ddd4c9fccc32a0adc2b8a3cff7d47f4dadd4cea1190b68939d9e3a7112a715",
+              1.736
+            ],
+            [
+              "844498f1e99e0d98bf160741f2e1560508df07fbdc3a77dc2e82cb843573ca0a",
+              "84ddd4c9fccc32a0adc2b8a3cff7d47f4dadd4cea1190b68939d9e3a7112a715",
+              1.736
+            ],
+            [
+              "844498f1e99e0d98bf160741f2e1560508df07fbdc3a77dc2e82cb843573ca0a",
+              "84ddd4c9fccc32a0adc2b8a3cff7d47f4dadd4cea1190b68939d9e3a7112a715",
+              1.736
+            ]
+          ],
+          "description": "Two-shell labelled graph plus substrate bond lengths; not a unique relaxed adsorbate geometry or electronic state"
+        },
+        "atom_ids": [
+          63,
+          225,
+          227,
+          229,
+          230,
+          233,
+          234,
+          237,
+          244,
+          248
+        ],
+        "central_site": 229,
+        "partner": 237,
+        "central_termination": {
+          "F": 3
+        },
+        "central_coordination": 1,
+        "partner_termination": {}
+      }
+    },
+    {
+      "site": 238,
+      "partner": 250,
+      "initial_band": 5,
+      "remaining_substrate_bonds": 1,
+      "F_terminations": 3,
+      "partner_H": 2,
+      "depth_A": 0.0,
+      "rate_s": 0.0,
+      "rate_status": "disabled_missing_final_cleavage_barrier",
+      "environment": {
+        "key": "a2f4b3715c707b60d9df1c73175e254e50e0cb304778c92caa1ce9070a0d51b2",
+        "descriptor": {
+          "reaction": "SiN_cleavage",
+          "temperature_K": 450.0,
+          "root_labels": [
+            "655c7b5a450b9ca7785c35f746300b3d6bf406899210ee2786b3b2b59870b717",
+            "72e8d3c914bfbdca9e8a536fe1252ee0e279eebb813f0b515538fb15656a1c67"
+          ],
+          "shell_labels": [
+            "655c7b5a450b9ca7785c35f746300b3d6bf406899210ee2786b3b2b59870b717",
+            "72e8d3c914bfbdca9e8a536fe1252ee0e279eebb813f0b515538fb15656a1c67"
+          ],
+          "bond_geometry": [
+            [
+              "655c7b5a450b9ca7785c35f746300b3d6bf406899210ee2786b3b2b59870b717",
+              "72e8d3c914bfbdca9e8a536fe1252ee0e279eebb813f0b515538fb15656a1c67",
+              1.73
+            ]
+          ],
+          "description": "Two-shell labelled graph plus substrate bond lengths; not a unique relaxed adsorbate geometry or electronic state"
+        },
+        "atom_ids": [
+          238,
+          250
+        ],
+        "central_site": 238,
+        "partner": 250,
+        "central_termination": {
+          "F": 3
+        },
+        "central_coordination": 1,
+        "partner_termination": {
+          "H": 2
+        }
+      }
+    },
+    {
+      "site": 239,
+      "partner": 248,
+      "initial_band": 5,
+      "remaining_substrate_bonds": 1,
+      "F_terminations": 3,
+      "partner_H": 0,
+      "depth_A": 0.0,
+      "rate_s": 0.0,
+      "rate_status": "disabled_missing_final_cleavage_barrier",
+      "environment": {
+        "key": "caad422981c7be5aed436856e4efdb87248add550282edfe3c56170e47e71e33",
+        "descriptor": {
+          "reaction": "SiN_cleavage",
+          "temperature_K": 450.0,
+          "root_labels": [
+            "67623d4f4207f3505ce931c965f3ebf64214c715ff551b93f8eb20e7d58ae008",
+            "cc1bd26095fc526f3d80db9cd73e6d9541f3092da2c20639207ac883b26f3319"
+          ],
+          "shell_labels": [
+            "6115182b44f9a494958d83ae6be811ffed91a97fe2165bad643acbedc77cfaac",
+            "67623d4f4207f3505ce931c965f3ebf64214c715ff551b93f8eb20e7d58ae008",
+            "80c70b6f3dfdd71ad4d269553d875ee5e9c699cd4f50a3744531c7856813adaf",
+            "80c70b6f3dfdd71ad4d269553d875ee5e9c699cd4f50a3744531c7856813adaf",
+            "80c70b6f3dfdd71ad4d269553d875ee5e9c699cd4f50a3744531c7856813adaf",
+            "9781611e1a3057ea6ef88d5bd16d31692e01e5e133f4a71f3db01ecddd314e1b",
+            "cc1bd26095fc526f3d80db9cd73e6d9541f3092da2c20639207ac883b26f3319"
+          ],
+          "bond_geometry": [
+            [
+              "6115182b44f9a494958d83ae6be811ffed91a97fe2165bad643acbedc77cfaac",
+              "67623d4f4207f3505ce931c965f3ebf64214c715ff551b93f8eb20e7d58ae008",
+              1.736
+            ],
+            [
+              "67623d4f4207f3505ce931c965f3ebf64214c715ff551b93f8eb20e7d58ae008",
+              "9781611e1a3057ea6ef88d5bd16d31692e01e5e133f4a71f3db01ecddd314e1b",
+              1.736
+            ],
+            [
+              "67623d4f4207f3505ce931c965f3ebf64214c715ff551b93f8eb20e7d58ae008",
+              "cc1bd26095fc526f3d80db9cd73e6d9541f3092da2c20639207ac883b26f3319",
+              1.736
+            ],
+            [
+              "80c70b6f3dfdd71ad4d269553d875ee5e9c699cd4f50a3744531c7856813adaf",
+              "9781611e1a3057ea6ef88d5bd16d31692e01e5e133f4a71f3db01ecddd314e1b",
+              1.73
+            ],
+            [
+              "80c70b6f3dfdd71ad4d269553d875ee5e9c699cd4f50a3744531c7856813adaf",
+              "9781611e1a3057ea6ef88d5bd16d31692e01e5e133f4a71f3db01ecddd314e1b",
+              1.736
+            ],
+            [
+              "80c70b6f3dfdd71ad4d269553d875ee5e9c699cd4f50a3744531c7856813adaf",
+              "9781611e1a3057ea6ef88d5bd16d31692e01e5e133f4a71f3db01ecddd314e1b",
+              1.736
+            ]
+          ],
+          "description": "Two-shell labelled graph plus substrate bond lengths; not a unique relaxed adsorbate geometry or electronic state"
+        },
+        "atom_ids": [
+          63,
+          225,
+          234,
+          237,
+          239,
+          248,
+          326
+        ],
+        "central_site": 239,
+        "partner": 248,
+        "central_termination": {
+          "F": 3
+        },
+        "central_coordination": 1,
+        "partner_termination": {}
+      }
+    },
+    {
+      "site": 240,
+      "partner": 231,
+      "initial_band": 5,
+      "remaining_substrate_bonds": 1,
+      "F_terminations": 3,
+      "partner_H": 0,
+      "depth_A": 0.0,
+      "rate_s": 0.0,
+      "rate_status": "disabled_missing_final_cleavage_barrier",
+      "environment": {
+        "key": "f39a308898df2d667abeb7f0cf866bf50084de1d910fbc421155027418c35202",
+        "descriptor": {
+          "reaction": "SiN_cleavage",
+          "temperature_K": 450.0,
+          "root_labels": [
+            "3a2490025f402f9fff3ca55ec389c34428b510ba6e40725e0b0d400d0eb95a48",
+            "83c1904d0c5195598ad8cc40636815ce3cc64338aaae6d0d6246c4cc3918aa24"
+          ],
+          "shell_labels": [
+            "3a2490025f402f9fff3ca55ec389c34428b510ba6e40725e0b0d400d0eb95a48",
+            "83c1904d0c5195598ad8cc40636815ce3cc64338aaae6d0d6246c4cc3918aa24",
+            "b3726f22e4c797ee827345bc26a3d492f24a2528fb573e88cf02e34f7e5f8442",
+            "c11a9d0d526fc67d0557772ba434348181c842723d888a70be661ffdaa76f1aa",
+            "c7e3094e6321a45b4b9892881a8bc9440b4ce293ac9ec2ded661bb16d05077ab",
+            "c7e3094e6321a45b4b9892881a8bc9440b4ce293ac9ec2ded661bb16d05077ab",
+            "e94307254c0c0f43c0b9d058330e94c50e42f6a17002bf4686d2b60c3fe45de4"
+          ],
+          "bond_geometry": [
+            [
+              "3a2490025f402f9fff3ca55ec389c34428b510ba6e40725e0b0d400d0eb95a48",
+              "83c1904d0c5195598ad8cc40636815ce3cc64338aaae6d0d6246c4cc3918aa24",
+              1.736
+            ],
+            [
+              "3a2490025f402f9fff3ca55ec389c34428b510ba6e40725e0b0d400d0eb95a48",
+              "b3726f22e4c797ee827345bc26a3d492f24a2528fb573e88cf02e34f7e5f8442",
+              1.736
+            ],
+            [
+              "3a2490025f402f9fff3ca55ec389c34428b510ba6e40725e0b0d400d0eb95a48",
+              "c11a9d0d526fc67d0557772ba434348181c842723d888a70be661ffdaa76f1aa",
+              1.736
+            ],
+            [
+              "b3726f22e4c797ee827345bc26a3d492f24a2528fb573e88cf02e34f7e5f8442",
+              "c7e3094e6321a45b4b9892881a8bc9440b4ce293ac9ec2ded661bb16d05077ab",
+              1.73
+            ],
+            [
+              "b3726f22e4c797ee827345bc26a3d492f24a2528fb573e88cf02e34f7e5f8442",
+              "c7e3094e6321a45b4b9892881a8bc9440b4ce293ac9ec2ded661bb16d05077ab",
+              1.736
+            ],
+            [
+              "b3726f22e4c797ee827345bc26a3d492f24a2528fb573e88cf02e34f7e5f8442",
+              "e94307254c0c0f43c0b9d058330e94c50e42f6a17002bf4686d2b60c3fe45de4",
+              1.736
+            ]
+          ],
+          "description": "Two-shell labelled graph plus substrate bond lengths; not a unique relaxed adsorbate geometry or electronic state"
+        },
+        "atom_ids": [
+          57,
+          217,
+          226,
+          231,
+          232,
+          236,
+          240
+        ],
+        "central_site": 240,
+        "partner": 231,
+        "central_termination": {
+          "F": 3
+        },
+        "central_coordination": 1,
+        "partner_termination": {}
+      }
+    },
+    {
+      "site": 241,
+      "partner": 247,
+      "initial_band": 5,
+      "remaining_substrate_bonds": 1,
+      "F_terminations": 3,
+      "partner_H": 2,
+      "depth_A": 0.0,
+      "rate_s": 0.0,
+      "rate_status": "disabled_missing_final_cleavage_barrier",
+      "environment": {
+        "key": "9cf19e9fdf28c3f601019932ae6c72053fe1e2a698b791cb8c7de0f29c7eef90",
+        "descriptor": {
+          "reaction": "SiN_cleavage",
+          "temperature_K": 450.0,
+          "root_labels": [
+            "655c7b5a450b9ca7785c35f746300b3d6bf406899210ee2786b3b2b59870b717",
+            "72e8d3c914bfbdca9e8a536fe1252ee0e279eebb813f0b515538fb15656a1c67"
+          ],
+          "shell_labels": [
+            "655c7b5a450b9ca7785c35f746300b3d6bf406899210ee2786b3b2b59870b717",
+            "72e8d3c914bfbdca9e8a536fe1252ee0e279eebb813f0b515538fb15656a1c67"
+          ],
+          "bond_geometry": [
+            [
+              "655c7b5a450b9ca7785c35f746300b3d6bf406899210ee2786b3b2b59870b717",
+              "72e8d3c914bfbdca9e8a536fe1252ee0e279eebb813f0b515538fb15656a1c67",
+              1.736
+            ]
+          ],
+          "description": "Two-shell labelled graph plus substrate bond lengths; not a unique relaxed adsorbate geometry or electronic state"
+        },
+        "atom_ids": [
+          241,
+          247
+        ],
+        "central_site": 241,
+        "partner": 247,
+        "central_termination": {
+          "F": 3
+        },
+        "central_coordination": 1,
+        "partner_termination": {
+          "H": 2
+        }
+      }
+    },
+    {
+      "site": 322,
+      "partner": 333,
+      "initial_band": 5,
+      "remaining_substrate_bonds": 1,
+      "F_terminations": 3,
+      "partner_H": 2,
+      "depth_A": 1.4531499999999973,
+      "rate_s": 0.0,
+      "rate_status": "disabled_missing_final_cleavage_barrier",
+      "environment": {
+        "key": "9cf19e9fdf28c3f601019932ae6c72053fe1e2a698b791cb8c7de0f29c7eef90",
+        "descriptor": {
+          "reaction": "SiN_cleavage",
+          "temperature_K": 450.0,
+          "root_labels": [
+            "655c7b5a450b9ca7785c35f746300b3d6bf406899210ee2786b3b2b59870b717",
+            "72e8d3c914bfbdca9e8a536fe1252ee0e279eebb813f0b515538fb15656a1c67"
+          ],
+          "shell_labels": [
+            "655c7b5a450b9ca7785c35f746300b3d6bf406899210ee2786b3b2b59870b717",
+            "72e8d3c914bfbdca9e8a536fe1252ee0e279eebb813f0b515538fb15656a1c67"
+          ],
+          "bond_geometry": [
+            [
+              "655c7b5a450b9ca7785c35f746300b3d6bf406899210ee2786b3b2b59870b717",
+              "72e8d3c914bfbdca9e8a536fe1252ee0e279eebb813f0b515538fb15656a1c67",
+              1.736
+            ]
+          ],
+          "description": "Two-shell labelled graph plus substrate bond lengths; not a unique relaxed adsorbate geometry or electronic state"
+        },
+        "atom_ids": [
+          322,
+          333
+        ],
+        "central_site": 322,
+        "partner": 333,
+        "central_termination": {
+          "F": 3
+        },
+        "central_coordination": 1,
+        "partner_termination": {
+          "H": 2
+        }
+      }
+    },
+    {
+      "site": 323,
+      "partner": 161,
+      "initial_band": 5,
+      "remaining_substrate_bonds": 1,
+      "F_terminations": 3,
+      "partner_H": 2,
+      "depth_A": 0.0,
+      "rate_s": 0.0,
+      "rate_status": "disabled_missing_final_cleavage_barrier",
+      "environment": {
+        "key": "9cf19e9fdf28c3f601019932ae6c72053fe1e2a698b791cb8c7de0f29c7eef90",
+        "descriptor": {
+          "reaction": "SiN_cleavage",
+          "temperature_K": 450.0,
+          "root_labels": [
+            "655c7b5a450b9ca7785c35f746300b3d6bf406899210ee2786b3b2b59870b717",
+            "72e8d3c914bfbdca9e8a536fe1252ee0e279eebb813f0b515538fb15656a1c67"
+          ],
+          "shell_labels": [
+            "655c7b5a450b9ca7785c35f746300b3d6bf406899210ee2786b3b2b59870b717",
+            "72e8d3c914bfbdca9e8a536fe1252ee0e279eebb813f0b515538fb15656a1c67"
+          ],
+          "bond_geometry": [
+            [
+              "655c7b5a450b9ca7785c35f746300b3d6bf406899210ee2786b3b2b59870b717",
+              "72e8d3c914bfbdca9e8a536fe1252ee0e279eebb813f0b515538fb15656a1c67",
+              1.736
+            ]
+          ],
+          "description": "Two-shell labelled graph plus substrate bond lengths; not a unique relaxed adsorbate geometry or electronic state"
+        },
+        "atom_ids": [
+          161,
+          323
+        ],
+        "central_site": 323,
+        "partner": 161,
+        "central_termination": {
+          "F": 3
+        },
+        "central_coordination": 1,
+        "partner_termination": {
+          "H": 2
+        }
+      }
+    },
+    {
+      "site": 324,
+      "partner": 330,
+      "initial_band": 5,
+      "remaining_substrate_bonds": 1,
+      "F_terminations": 3,
+      "partner_H": 0,
+      "depth_A": 0.0,
+      "rate_s": 0.0,
+      "rate_status": "disabled_missing_final_cleavage_barrier",
+      "environment": {
+        "key": "f39a308898df2d667abeb7f0cf866bf50084de1d910fbc421155027418c35202",
+        "descriptor": {
+          "reaction": "SiN_cleavage",
+          "temperature_K": 450.0,
+          "root_labels": [
+            "3a2490025f402f9fff3ca55ec389c34428b510ba6e40725e0b0d400d0eb95a48",
+            "83c1904d0c5195598ad8cc40636815ce3cc64338aaae6d0d6246c4cc3918aa24"
+          ],
+          "shell_labels": [
+            "3a2490025f402f9fff3ca55ec389c34428b510ba6e40725e0b0d400d0eb95a48",
+            "83c1904d0c5195598ad8cc40636815ce3cc64338aaae6d0d6246c4cc3918aa24",
+            "b3726f22e4c797ee827345bc26a3d492f24a2528fb573e88cf02e34f7e5f8442",
+            "c11a9d0d526fc67d0557772ba434348181c842723d888a70be661ffdaa76f1aa",
+            "c7e3094e6321a45b4b9892881a8bc9440b4ce293ac9ec2ded661bb16d05077ab",
+            "c7e3094e6321a45b4b9892881a8bc9440b4ce293ac9ec2ded661bb16d05077ab",
+            "e94307254c0c0f43c0b9d058330e94c50e42f6a17002bf4686d2b60c3fe45de4"
+          ],
+          "bond_geometry": [
+            [
+              "3a2490025f402f9fff3ca55ec389c34428b510ba6e40725e0b0d400d0eb95a48",
+              "83c1904d0c5195598ad8cc40636815ce3cc64338aaae6d0d6246c4cc3918aa24",
+              1.736
+            ],
+            [
+              "3a2490025f402f9fff3ca55ec389c34428b510ba6e40725e0b0d400d0eb95a48",
+              "b3726f22e4c797ee827345bc26a3d492f24a2528fb573e88cf02e34f7e5f8442",
+              1.736
+            ],
+            [
+              "3a2490025f402f9fff3ca55ec389c34428b510ba6e40725e0b0d400d0eb95a48",
+              "c11a9d0d526fc67d0557772ba434348181c842723d888a70be661ffdaa76f1aa",
+              1.736
+            ],
+            [
+              "b3726f22e4c797ee827345bc26a3d492f24a2528fb573e88cf02e34f7e5f8442",
+              "c7e3094e6321a45b4b9892881a8bc9440b4ce293ac9ec2ded661bb16d05077ab",
+              1.73
+            ],
+            [
+              "b3726f22e4c797ee827345bc26a3d492f24a2528fb573e88cf02e34f7e5f8442",
+              "c7e3094e6321a45b4b9892881a8bc9440b4ce293ac9ec2ded661bb16d05077ab",
+              1.736
+            ],
+            [
+              "b3726f22e4c797ee827345bc26a3d492f24a2528fb573e88cf02e34f7e5f8442",
+              "e94307254c0c0f43c0b9d058330e94c50e42f6a17002bf4686d2b60c3fe45de4",
+              1.736
+            ]
+          ],
+          "description": "Two-shell labelled graph plus substrate bond lengths; not a unique relaxed adsorbate geometry or electronic state"
+        },
+        "atom_ids": [
+          235,
+          313,
+          316,
+          321,
+          324,
+          327,
+          330
+        ],
+        "central_site": 324,
+        "partner": 330,
+        "central_termination": {
+          "F": 3
+        },
+        "central_coordination": 1,
+        "partner_termination": {}
+      }
+    },
+    {
+      "site": 325,
+      "partner": 331,
+      "initial_band": 5,
+      "remaining_substrate_bonds": 1,
+      "F_terminations": 3,
+      "partner_H": 2,
+      "depth_A": 0.0,
+      "rate_s": 0.0,
+      "rate_status": "disabled_missing_final_cleavage_barrier",
+      "environment": {
+        "key": "9cf19e9fdf28c3f601019932ae6c72053fe1e2a698b791cb8c7de0f29c7eef90",
+        "descriptor": {
+          "reaction": "SiN_cleavage",
+          "temperature_K": 450.0,
+          "root_labels": [
+            "655c7b5a450b9ca7785c35f746300b3d6bf406899210ee2786b3b2b59870b717",
+            "72e8d3c914bfbdca9e8a536fe1252ee0e279eebb813f0b515538fb15656a1c67"
+          ],
+          "shell_labels": [
+            "655c7b5a450b9ca7785c35f746300b3d6bf406899210ee2786b3b2b59870b717",
+            "72e8d3c914bfbdca9e8a536fe1252ee0e279eebb813f0b515538fb15656a1c67"
+          ],
+          "bond_geometry": [
+            [
+              "655c7b5a450b9ca7785c35f746300b3d6bf406899210ee2786b3b2b59870b717",
+              "72e8d3c914bfbdca9e8a536fe1252ee0e279eebb813f0b515538fb15656a1c67",
+              1.736
+            ]
+          ],
+          "description": "Two-shell labelled graph plus substrate bond lengths; not a unique relaxed adsorbate geometry or electronic state"
+        },
+        "atom_ids": [
+          325,
+          331
+        ],
+        "central_site": 325,
+        "partner": 331,
+        "central_termination": {
+          "F": 3
+        },
+        "central_coordination": 1,
+        "partner_termination": {
+          "H": 2
+        }
+      }
+    },
+    {
+      "site": 326,
+      "partner": 248,
+      "initial_band": 5,
+      "remaining_substrate_bonds": 1,
+      "F_terminations": 3,
+      "partner_H": 0,
+      "depth_A": 0.0,
+      "rate_s": 0.0,
+      "rate_status": "disabled_missing_final_cleavage_barrier",
+      "environment": {
+        "key": "caad422981c7be5aed436856e4efdb87248add550282edfe3c56170e47e71e33",
+        "descriptor": {
+          "reaction": "SiN_cleavage",
+          "temperature_K": 450.0,
+          "root_labels": [
+            "67623d4f4207f3505ce931c965f3ebf64214c715ff551b93f8eb20e7d58ae008",
+            "cc1bd26095fc526f3d80db9cd73e6d9541f3092da2c20639207ac883b26f3319"
+          ],
+          "shell_labels": [
+            "6115182b44f9a494958d83ae6be811ffed91a97fe2165bad643acbedc77cfaac",
+            "67623d4f4207f3505ce931c965f3ebf64214c715ff551b93f8eb20e7d58ae008",
+            "80c70b6f3dfdd71ad4d269553d875ee5e9c699cd4f50a3744531c7856813adaf",
+            "80c70b6f3dfdd71ad4d269553d875ee5e9c699cd4f50a3744531c7856813adaf",
+            "80c70b6f3dfdd71ad4d269553d875ee5e9c699cd4f50a3744531c7856813adaf",
+            "9781611e1a3057ea6ef88d5bd16d31692e01e5e133f4a71f3db01ecddd314e1b",
+            "cc1bd26095fc526f3d80db9cd73e6d9541f3092da2c20639207ac883b26f3319"
+          ],
+          "bond_geometry": [
+            [
+              "6115182b44f9a494958d83ae6be811ffed91a97fe2165bad643acbedc77cfaac",
+              "67623d4f4207f3505ce931c965f3ebf64214c715ff551b93f8eb20e7d58ae008",
+              1.736
+            ],
+            [
+              "67623d4f4207f3505ce931c965f3ebf64214c715ff551b93f8eb20e7d58ae008",
+              "9781611e1a3057ea6ef88d5bd16d31692e01e5e133f4a71f3db01ecddd314e1b",
+              1.736
+            ],
+            [
+              "67623d4f4207f3505ce931c965f3ebf64214c715ff551b93f8eb20e7d58ae008",
+              "cc1bd26095fc526f3d80db9cd73e6d9541f3092da2c20639207ac883b26f3319",
+              1.736
+            ],
+            [
+              "80c70b6f3dfdd71ad4d269553d875ee5e9c699cd4f50a3744531c7856813adaf",
+              "9781611e1a3057ea6ef88d5bd16d31692e01e5e133f4a71f3db01ecddd314e1b",
+              1.73
+            ],
+            [
+              "80c70b6f3dfdd71ad4d269553d875ee5e9c699cd4f50a3744531c7856813adaf",
+              "9781611e1a3057ea6ef88d5bd16d31692e01e5e133f4a71f3db01ecddd314e1b",
+              1.736
+            ],
+            [
+              "80c70b6f3dfdd71ad4d269553d875ee5e9c699cd4f50a3744531c7856813adaf",
+              "9781611e1a3057ea6ef88d5bd16d31692e01e5e133f4a71f3db01ecddd314e1b",
+              1.736
+            ]
+          ],
+          "description": "Two-shell labelled graph plus substrate bond lengths; not a unique relaxed adsorbate geometry or electronic state"
+        },
+        "atom_ids": [
+          63,
+          225,
+          234,
+          237,
+          239,
+          248,
+          326
+        ],
+        "central_site": 326,
+        "partner": 248,
+        "central_termination": {
+          "F": 3
+        },
+        "central_coordination": 1,
+        "partner_termination": {}
+      }
+    },
+    {
+      "site": 327,
+      "partner": 330,
+      "initial_band": 5,
+      "remaining_substrate_bonds": 1,
+      "F_terminations": 3,
+      "partner_H": 0,
+      "depth_A": 0.0,
+      "rate_s": 0.0,
+      "rate_status": "disabled_missing_final_cleavage_barrier",
+      "environment": {
+        "key": "f39a308898df2d667abeb7f0cf866bf50084de1d910fbc421155027418c35202",
+        "descriptor": {
+          "reaction": "SiN_cleavage",
+          "temperature_K": 450.0,
+          "root_labels": [
+            "3a2490025f402f9fff3ca55ec389c34428b510ba6e40725e0b0d400d0eb95a48",
+            "83c1904d0c5195598ad8cc40636815ce3cc64338aaae6d0d6246c4cc3918aa24"
+          ],
+          "shell_labels": [
+            "3a2490025f402f9fff3ca55ec389c34428b510ba6e40725e0b0d400d0eb95a48",
+            "83c1904d0c5195598ad8cc40636815ce3cc64338aaae6d0d6246c4cc3918aa24",
+            "b3726f22e4c797ee827345bc26a3d492f24a2528fb573e88cf02e34f7e5f8442",
+            "c11a9d0d526fc67d0557772ba434348181c842723d888a70be661ffdaa76f1aa",
+            "c7e3094e6321a45b4b9892881a8bc9440b4ce293ac9ec2ded661bb16d05077ab",
+            "c7e3094e6321a45b4b9892881a8bc9440b4ce293ac9ec2ded661bb16d05077ab",
+            "e94307254c0c0f43c0b9d058330e94c50e42f6a17002bf4686d2b60c3fe45de4"
+          ],
+          "bond_geometry": [
+            [
+              "3a2490025f402f9fff3ca55ec389c34428b510ba6e40725e0b0d400d0eb95a48",
+              "83c1904d0c5195598ad8cc40636815ce3cc64338aaae6d0d6246c4cc3918aa24",
+              1.736
+            ],
+            [
+              "3a2490025f402f9fff3ca55ec389c34428b510ba6e40725e0b0d400d0eb95a48",
+              "b3726f22e4c797ee827345bc26a3d492f24a2528fb573e88cf02e34f7e5f8442",
+              1.736
+            ],
+            [
+              "3a2490025f402f9fff3ca55ec389c34428b510ba6e40725e0b0d400d0eb95a48",
+              "c11a9d0d526fc67d0557772ba434348181c842723d888a70be661ffdaa76f1aa",
+              1.736
+            ],
+            [
+              "b3726f22e4c797ee827345bc26a3d492f24a2528fb573e88cf02e34f7e5f8442",
+              "c7e3094e6321a45b4b9892881a8bc9440b4ce293ac9ec2ded661bb16d05077ab",
+              1.73
+            ],
+            [
+              "b3726f22e4c797ee827345bc26a3d492f24a2528fb573e88cf02e34f7e5f8442",
+              "c7e3094e6321a45b4b9892881a8bc9440b4ce293ac9ec2ded661bb16d05077ab",
+              1.736
+            ],
+            [
+              "b3726f22e4c797ee827345bc26a3d492f24a2528fb573e88cf02e34f7e5f8442",
+              "e94307254c0c0f43c0b9d058330e94c50e42f6a17002bf4686d2b60c3fe45de4",
+              1.736
+            ]
+          ],
+          "description": "Two-shell labelled graph plus substrate bond lengths; not a unique relaxed adsorbate geometry or electronic state"
+        },
+        "atom_ids": [
+          235,
+          313,
+          316,
+          321,
+          324,
+          327,
+          330
+        ],
+        "central_site": 327,
+        "partner": 330,
+        "central_termination": {
+          "F": 3
+        },
+        "central_coordination": 1,
+        "partner_termination": {}
+      }
+    }
+  ],
+  "probe": "One hypothetical adsorbed HF at a time on the unchanged final graph; these are candidate probes, not executed events",
+  "conclusion": "No further removal after cycle 2 under unchanged assumptions; missing final-cleavage rates prevent depth progression. Not evidence of physical self-limiting ALE.",
+  "runner": "scripts/analyze_multilayer_stall.py",
+  "runner_sha256": "30b75e40fbc7826209b7aa6fc6e3984d6bceddd5aec8e8b275039b0c1d84870f",
+  "engine_sha256": "14ba968dd934da3853a6d3575bced9b545ac6f925b1d4a048a2258bfe511792f"
+}

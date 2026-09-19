@@ -1,0 +1,33 @@
+{
+  "scope": "Independent software check on synthetic mode energies; not physical SiN data",
+  "mode_energies_eV": [
+    0.01,
+    0.05,
+    0.15,
+    0.3
+  ],
+  "tolerance_eV": 1e-07,
+  "helper_kB_eV_K": 8.617333262145e-05,
+  "ASE_kB_eV_K": 8.617330337217213e-05,
+  "note": "ASE and helper use slightly different physical-constant vintages",
+  "results": [
+    {
+      "temperature_K": 300.0,
+      "helper_eV": 0.22149182270075482,
+      "ASE_eV": 0.2214918442840792,
+      "absolute_error_eV": 2.1583324377738577e-08
+    },
+    {
+      "temperature_K": 400.0,
+      "helper_eV": 0.19780446412817212,
+      "ASE_eV": 0.197804499504802,
+      "absolute_error_eV": 3.5376629875516485e-08
+    },
+    {
+      "temperature_K": 600.0,
+      "helper_eV": 0.1373207584905785,
+      "ASE_eV": 0.1373208280211285,
+      "absolute_error_eV": 6.953054998426467e-08
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
-  "passed": 77,
+  "passed": 82,
   "command": "python -m pytest -q -p no:cacheprovider",
-  "scope": "Full suite including both kinetics engines, multilayer ledgers, rate evidence gates, and surface-drawing inventories, multilayer visualization counts and exposure provenance",
+  "scope": "Full suite including kinetics engines, cycle-depth stall diagnosis, thermal-rate formulas, parameter provenance and visualization checks",
   "date": "2026-09-19"
 }

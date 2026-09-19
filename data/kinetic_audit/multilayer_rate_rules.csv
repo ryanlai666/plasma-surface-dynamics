@@ -1,0 +1,19 @@
+event,condition,pathway,barrier_eV,prefactor_s,status
+SiN_cleavage,Si F count 0; N with at least 2 H,P1a,0.45,1000000000000.0,unvalidated environment transfer
+SiN_cleavage,Si F count 0; N with 1 H,P1c,0.02,1000000000000.0,unvalidated environment transfer
+SiN_cleavage,Si F count 0; N with 0 H,P1d,0.72,1000000000000.0,unvalidated environment transfer
+SiH_exchange,Stage 1; stage capped at 3,P1b,2.1,1000000000000.0,unvalidated environment transfer
+SiN_cleavage,Si F count 1; N with at least 2 H,P2a,0.68,1000000000000.0,unvalidated environment transfer
+SiN_cleavage,Si F count 1; N with 1 H,P2c,0.79,1000000000000.0,unvalidated environment transfer
+SiN_cleavage,Si F count 1; N with 0 H,P2d,0.75,1000000000000.0,unvalidated environment transfer
+SiH_exchange,Stage 2; stage capped at 3,P2b,1.8,1000000000000.0,unvalidated environment transfer
+SiN_cleavage,Si F count 2; N with at least 2 H,P3a,0.88,1000000000000.0,unvalidated environment transfer
+SiN_cleavage,Si F count 2; N with 1 H,P3c,0.74,1000000000000.0,unvalidated environment transfer
+SiN_cleavage,Si F count 2; N with 0 H,P3d,0.9,1000000000000.0,unvalidated environment transfer
+SiH_exchange,Stage 3; stage capped at 3,P3b,1.54,1000000000000.0,unvalidated environment transfer
+SiSi_cleavage,eligible Si-Si bond,P2f,0.79,1000000000000.0,unvalidated environment transfer
+SiN_cleavage,Si F >=3 and partner N H=1,P4,0.53,1000000000000.0,unvalidated environment transfer
+SiN_cleavage,Si F >=3 and partner N H=0 or >=2,,,,disabled: missing matched final barrier
+SiCl_exchange,adsorbed HF and Si-Cl cap,,0.75,1000000000000.0,assumed
+Si_molecule_release,zero backbonds; four ligands; no HF precursor,,0.53,1000000000000.0,assumed
+NH3_release,zero backbonds; N with 3 H,,0.45,1000000000000.0,assumed

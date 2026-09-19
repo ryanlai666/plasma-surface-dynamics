@@ -119,3 +119,27 @@ def test_multilayer_visualization_matches_saved_states_and_event_exposure():
         assert r['HF_occupancy']==sum(p and a for p,a in zip(s['precursors'],s['active']))
         assert r['termination_counts']=={e:sum(t.get(e,0) for t,a in zip(s['terminations'],s['active']) if a) for e in ('H','F','Cl')}
         assert r['drawn_bonds']+r['periodic_bonds_omitted']==len(s['bonds'])
+
+
+def test_extended_cycle_plateau_is_traced_to_missing_final_cleavage_rates():
+    import gzip
+    d=json.loads((ROOT/'docs/multilayer_results/cycle_diagnosis.json').read_text())
+    path=ROOT/d['extended_trajectory']
+    assert hashlib.sha256(path.read_bytes()).hexdigest()==d['extended_trajectory_sha256']
+    assert hashlib.sha256((ROOT/d['runner']).read_bytes()).hexdigest()==d['runner_sha256']
+    assert hashlib.sha256((ROOT/'plasma_surface/multilayer.py').read_bytes()).hexdigest()==d['engine_sha256']
+    r=json.loads(gzip.decompress(path.read_bytes()))
+    original=json.loads((ROOT/'data/multilayer/demo_trajectory.json').read_text())
+    assert r['snapshots'][:len(original['snapshots'])]==original['snapshots']
+    assert len(r['snapshots'])==145 and r['snapshots'][-1]['time_s']==36.
+    for c in d['cycles']:
+        events=[e for e in r['events'] if 3*(c['cycle']-1)<=e['time_s']<3*c['cycle']]
+        removal=Counter(str(r['initial']['nodes'][e['site']]['layer']) for e in events if e['kind'].endswith('release'))
+        assert dict(removal)==c['removed_by_band']
+    assert all(not c['removed_by_band'] for c in d['cycles'][2:])
+    assert Counter(x['partner_H'] for x in d['blocked_final_cleavages'])=={0:13,2:8}
+    for x in d['blocked_final_cleavages']:
+        prec=np.zeros(len(r['final']['nodes']),bool);prec[x['site']]=True
+        event=next(e for e in candidates(r['final'],prec,policy='demonstration') if e['kind']=='SiN_cleavage' and e['site']==x['site'] and e['partner']==x['partner'])
+        assert event['rate_s']==x['rate_s']==0
+        assert event['rate_status']=='disabled_missing_final_cleavage_barrier'
