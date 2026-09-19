@@ -10,6 +10,16 @@ def main():
 
 ![Actual multilayer graph snapshots](multilayer_kmc.gif)
 
+## Reading the animation
+
+The large perspective retains the substrate Si/N identities. Red rings mean currently exposed hosts; teal stars mean hosts first exposed since the preceding saved snapshot and still present; gold diamonds mean adsorbed HF. Gray hollow circles mark removed host coordinates. Exposure stars come from the event log, including changes between saved states. The cumulative counter counts distinct newly exposed atoms, including any subsequently removed.
+
+The cross-section uses the same fractional-y strip `[2/6, 3/6)` in every frame. It shows only bonds whose two endpoints lie in that strip; it is not a projection through all y. Labels B0-B5 identify initial unit-cell depth bands, with B0 fixed. No cutaway implies deletion of the hidden substrate. Periodic wrap bonds are omitted from the drawings to avoid long lines across the cell; they remain in the simulation and active-bond counter.
+
+Termination counts include all retained hosts and count H, F and Cl independently, preserving mixed caps. HF occupancy is separate. The host coordinates are fixed and ligand coordinates are not supplied by this graph model, so no invented molecular placements or relaxed motion are drawn. The phase strip shows three 2 s doses and 1 s purges. The animation contains exactly 37 saved states, with a longer pause at completion.
+
+[Full-size final frame](multilayer_preview.png) | [Four-stage storyboard](multilayer_storyboard.png) | [Per-frame counts, selection and hashes](animation_manifest.json).
+
 ## What changed physically in the model
 
 | Requirement | Implemented behavior | Remaining limitation |

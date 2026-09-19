@@ -95,3 +95,27 @@ def test_rate_evidence_rejects_bad_context_artifacts_uncertainty_and_saddle(monk
     rr=deepcopy(r);rr['checks']['connectivity']=False;assert qualified_rate(rr,env,event,context)[0] is None
     rr=deepcopy(r);rr['uncertainty']['rate_s_interval']=[2.,3.];assert qualified_rate(rr,env,event,context)[0] is None
     p.write_text('changed');assert qualified_rate(r,env,event,context)[0] is None
+
+
+def test_multilayer_visualization_matches_saved_states_and_event_exposure():
+    from PIL import Image
+    d=json.loads((ROOT/'data/multilayer/demo_trajectory.json').read_text())
+    out=ROOT/'docs/multilayer_results'
+    m=json.loads((out/'animation_manifest.json').read_text())
+    assert m['renderer_sha256']==hashlib.sha256((ROOT/'scripts/render_multilayer.py').read_bytes()).hexdigest()
+    assert m['gif_sha256']==hashlib.sha256((out/'multilayer_kmc.gif').read_bytes()).hexdigest()
+    assert Image.open(out/'multilayer_kmc.gif').n_frames==len(d['snapshots'])==len(m['frames'])
+    gif=Image.open(out/'multilayer_kmc.gif');gif.seek(4)
+    assert np.any(np.all(np.asarray(gif.convert('RGB'))==[230,165,26],axis=-1))  # HF gold survives GIF palette
+
+    assert m['cross_section']['node_ids']==[n['id'] for n in d['initial']['nodes'] if n['column']//6==2]
+    seen=set()
+    for k,(s,r) in enumerate(zip(d['snapshots'],m['frames'])):
+        expected={i for e in d['events'] if e['time_s']<=s['time_s'] for i in e['newly_exposed']}
+        assert set(r['ever_exposed_ids'])==expected
+        assert set(r['first_exposed_ids'])==expected-seen
+        seen=expected
+        assert r['removed']==dict(Counter(n['element'] for n,a in zip(d['initial']['nodes'],s['active']) if not a))
+        assert r['HF_occupancy']==sum(p and a for p,a in zip(s['precursors'],s['active']))
+        assert r['termination_counts']=={e:sum(t.get(e,0) for t,a in zip(s['terminations'],s['active']) if a) for e in ('H','F','Cl')}
+        assert r['drawn_bonds']+r['periodic_bonds_omitted']==len(s['bonds'])

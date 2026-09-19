@@ -1,6 +1,6 @@
 {
-  "passed": 76,
+  "passed": 77,
   "command": "python -m pytest -q -p no:cacheprovider",
-  "scope": "Full suite including both kinetics engines, multilayer ledgers, rate evidence gates, and surface-drawing inventories",
-  "date": "2026-09-18"
+  "scope": "Full suite including both kinetics engines, multilayer ledgers, rate evidence gates, and surface-drawing inventories, multilayer visualization counts and exposure provenance",
+  "date": "2026-09-19"
 }

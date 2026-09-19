@@ -41,6 +41,1420 @@
   ],
   "interpolated_frames": 0,
   "trajectory_sha256": "ffaef13f586b461172381975e962c36fa094bd33071e75cfad39d1a7ea2ef427",
-  "gif_sha256": "bc833d400e5de6384c26186b8ade40e781a319aa49bba25616ce5bc944dff385",
-  "renderer_sha256": "d1af4fc0d04b8aed795ec992ae6e6f668c1512667664fc140719dfe7fd83f1dc"
+  "gif_sha256": "a15c6fed7b51292fd77d806ae911e658fc1a894e7a8f2b177ecf504ac5af6071",
+  "renderer_sha256": "b357d5cdf8a6b99c4181f637cc99fd1825b052878b4b99ab37532bc885a68fb5",
+  "cross_section": {
+    "fractional_y_interval": [
+      0.3333333333333333,
+      0.5
+    ],
+    "node_ids": [
+      1,
+      5,
+      7,
+      8,
+      10,
+      13,
+      15,
+      19,
+      21,
+      22,
+      24,
+      27,
+      29,
+      33,
+      35,
+      36,
+      38,
+      41,
+      43,
+      47,
+      49,
+      50,
+      52,
+      55,
+      57,
+      61,
+      63,
+      64,
+      66,
+      69,
+      71,
+      75,
+      77,
+      78,
+      80,
+      83,
+      169,
+      173,
+      175,
+      176,
+      178,
+      181,
+      183,
+      187,
+      189,
+      190,
+      192,
+      195,
+      197,
+      201,
+      203,
+      204,
+      206,
+      209,
+      211,
+      215,
+      217,
+      218,
+      220,
+      223,
+      225,
+      229,
+      231,
+      232,
+      234,
+      237,
+      239,
+      243,
+      245,
+      246,
+      248,
+      251
+    ]
+  },
+  "new_exposure_definition": "First appearance in event newly_exposed before this snapshot, after preceding snapshot; stars only for hosts still active",
+  "frames": [
+    {
+      "snapshot_index": 0,
+      "time_s": 0.0,
+      "removed": {},
+      "first_exposed_ids": [],
+      "ever_exposed_ids": [],
+      "termination_counts": {
+        "H": 27,
+        "F": 17,
+        "Cl": 4
+      },
+      "HF_occupancy": 0,
+      "drawn_bonds": 504,
+      "periodic_bonds_omitted": 48
+    },
+    {
+      "snapshot_index": 1,
+      "time_s": 0.25,
+      "removed": {
+        "N": 4
+      },
+      "first_exposed_ids": [
+        78,
+        160,
+        238,
+        246
+      ],
+      "ever_exposed_ids": [
+        78,
+        160,
+        238,
+        246
+      ],
+      "termination_counts": {
+        "H": 35,
+        "F": 37,
+        "Cl": 4
+      },
+      "HF_occupancy": 0,
+      "drawn_bonds": 487,
+      "periodic_bonds_omitted": 45
+    },
+    {
+      "snapshot_index": 2,
+      "time_s": 0.5,
+      "removed": {
+        "Si": 1,
+        "N": 4
+      },
+      "first_exposed_ids": [],
+      "ever_exposed_ids": [
+        78,
+        160,
+        238,
+        246
+      ],
+      "termination_counts": {
+        "H": 48,
+        "F": 49,
+        "Cl": 3
+      },
+      "HF_occupancy": 0,
+      "drawn_bonds": 474,
+      "periodic_bonds_omitted": 44
+    },
+    {
+      "snapshot_index": 3,
+      "time_s": 0.75,
+      "removed": {
+        "Si": 2,
+        "N": 4
+      },
+      "first_exposed_ids": [
+        80
+      ],
+      "ever_exposed_ids": [
+        78,
+        80,
+        160,
+        238,
+        246
+      ],
+      "termination_counts": {
+        "H": 57,
+        "F": 54,
+        "Cl": 3
+      },
+      "HF_occupancy": 1,
+      "drawn_bonds": 465,
+      "periodic_bonds_omitted": 44
+    },
+    {
+      "snapshot_index": 4,
+      "time_s": 1.0,
+      "removed": {
+        "Si": 4,
+        "N": 10
+      },
+      "first_exposed_ids": [
+        57,
+        61,
+        63,
+        69,
+        330
+      ],
+      "ever_exposed_ids": [
+        57,
+        61,
+        63,
+        69,
+        78,
+        80,
+        160,
+        238,
+        246,
+        330
+      ],
+      "termination_counts": {
+        "H": 50,
+        "F": 57,
+        "Cl": 3
+      },
+      "HF_occupancy": 1,
+      "drawn_bonds": 456,
+      "periodic_bonds_omitted": 42
+    },
+    {
+      "snapshot_index": 5,
+      "time_s": 1.25,
+      "removed": {
+        "Si": 6,
+        "N": 10
+      },
+      "first_exposed_ids": [
+        229,
+        237
+      ],
+      "ever_exposed_ids": [
+        57,
+        61,
+        63,
+        69,
+        78,
+        80,
+        160,
+        229,
+        237,
+        238,
+        246,
+        330
+      ],
+      "termination_counts": {
+        "H": 55,
+        "F": 55,
+        "Cl": 2
+      },
+      "HF_occupancy": 0,
+      "drawn_bonds": 451,
+      "periodic_bonds_omitted": 42
+    },
+    {
+      "snapshot_index": 6,
+      "time_s": 1.5,
+      "removed": {
+        "Si": 6,
+        "N": 11
+      },
+      "first_exposed_ids": [
+        231
+      ],
+      "ever_exposed_ids": [
+        57,
+        61,
+        63,
+        69,
+        78,
+        80,
+        160,
+        229,
+        231,
+        237,
+        238,
+        246,
+        330
+      ],
+      "termination_counts": {
+        "H": 56,
+        "F": 59,
+        "Cl": 2
+      },
+      "HF_occupancy": 0,
+      "drawn_bonds": 448,
+      "periodic_bonds_omitted": 41
+    },
+    {
+      "snapshot_index": 7,
+      "time_s": 1.75,
+      "removed": {
+        "Si": 7,
+        "N": 12
+      },
+      "first_exposed_ids": [
+        164
+      ],
+      "ever_exposed_ids": [
+        57,
+        61,
+        63,
+        69,
+        78,
+        80,
+        160,
+        164,
+        229,
+        231,
+        237,
+        238,
+        246,
+        330
+      ],
+      "termination_counts": {
+        "H": 58,
+        "F": 62,
+        "Cl": 2
+      },
+      "HF_occupancy": 1,
+      "drawn_bonds": 443,
+      "periodic_bonds_omitted": 40
+    },
+    {
+      "snapshot_index": 8,
+      "time_s": 2.0,
+      "removed": {
+        "Si": 8,
+        "N": 13
+      },
+      "first_exposed_ids": [
+        60,
+        68
+      ],
+      "ever_exposed_ids": [
+        57,
+        60,
+        61,
+        63,
+        68,
+        69,
+        78,
+        80,
+        160,
+        164,
+        229,
+        231,
+        237,
+        238,
+        246,
+        330
+      ],
+      "termination_counts": {
+        "H": 58,
+        "F": 61,
+        "Cl": 2
+      },
+      "HF_occupancy": 1,
+      "drawn_bonds": 440,
+      "periodic_bonds_omitted": 40
+    },
+    {
+      "snapshot_index": 9,
+      "time_s": 2.25,
+      "removed": {
+        "Si": 8,
+        "N": 13
+      },
+      "first_exposed_ids": [],
+      "ever_exposed_ids": [
+        57,
+        60,
+        61,
+        63,
+        68,
+        69,
+        78,
+        80,
+        160,
+        164,
+        229,
+        231,
+        237,
+        238,
+        246,
+        330
+      ],
+      "termination_counts": {
+        "H": 58,
+        "F": 61,
+        "Cl": 2
+      },
+      "HF_occupancy": 0,
+      "drawn_bonds": 440,
+      "periodic_bonds_omitted": 40
+    },
+    {
+      "snapshot_index": 10,
+      "time_s": 2.5,
+      "removed": {
+        "Si": 8,
+        "N": 13
+      },
+      "first_exposed_ids": [],
+      "ever_exposed_ids": [
+        57,
+        60,
+        61,
+        63,
+        68,
+        69,
+        78,
+        80,
+        160,
+        164,
+        229,
+        231,
+        237,
+        238,
+        246,
+        330
+      ],
+      "termination_counts": {
+        "H": 58,
+        "F": 61,
+        "Cl": 2
+      },
+      "HF_occupancy": 0,
+      "drawn_bonds": 440,
+      "periodic_bonds_omitted": 40
+    },
+    {
+      "snapshot_index": 11,
+      "time_s": 2.75,
+      "removed": {
+        "Si": 8,
+        "N": 13
+      },
+      "first_exposed_ids": [],
+      "ever_exposed_ids": [
+        57,
+        60,
+        61,
+        63,
+        68,
+        69,
+        78,
+        80,
+        160,
+        164,
+        229,
+        231,
+        237,
+        238,
+        246,
+        330
+      ],
+      "termination_counts": {
+        "H": 58,
+        "F": 61,
+        "Cl": 2
+      },
+      "HF_occupancy": 0,
+      "drawn_bonds": 440,
+      "periodic_bonds_omitted": 40
+    },
+    {
+      "snapshot_index": 12,
+      "time_s": 3.0,
+      "removed": {
+        "Si": 8,
+        "N": 13
+      },
+      "first_exposed_ids": [],
+      "ever_exposed_ids": [
+        57,
+        60,
+        61,
+        63,
+        68,
+        69,
+        78,
+        80,
+        160,
+        164,
+        229,
+        231,
+        237,
+        238,
+        246,
+        330
+      ],
+      "termination_counts": {
+        "H": 58,
+        "F": 61,
+        "Cl": 2
+      },
+      "HF_occupancy": 0,
+      "drawn_bonds": 440,
+      "periodic_bonds_omitted": 40
+    },
+    {
+      "snapshot_index": 13,
+      "time_s": 3.25,
+      "removed": {
+        "Si": 8,
+        "N": 14
+      },
+      "first_exposed_ids": [
+        70
+      ],
+      "ever_exposed_ids": [
+        57,
+        60,
+        61,
+        63,
+        68,
+        69,
+        70,
+        78,
+        80,
+        160,
+        164,
+        229,
+        231,
+        237,
+        238,
+        246,
+        330
+      ],
+      "termination_counts": {
+        "H": 61,
+        "F": 67,
+        "Cl": 2
+      },
+      "HF_occupancy": 2,
+      "drawn_bonds": 435,
+      "periodic_bonds_omitted": 39
+    },
+    {
+      "snapshot_index": 14,
+      "time_s": 3.5,
+      "removed": {
+        "Si": 8,
+        "N": 14
+      },
+      "first_exposed_ids": [],
+      "ever_exposed_ids": [
+        57,
+        60,
+        61,
+        63,
+        68,
+        69,
+        70,
+        78,
+        80,
+        160,
+        164,
+        229,
+        231,
+        237,
+        238,
+        246,
+        330
+      ],
+      "termination_counts": {
+        "H": 62,
+        "F": 68,
+        "Cl": 2
+      },
+      "HF_occupancy": 1,
+      "drawn_bonds": 434,
+      "periodic_bonds_omitted": 39
+    },
+    {
+      "snapshot_index": 15,
+      "time_s": 3.75,
+      "removed": {
+        "Si": 8,
+        "N": 14
+      },
+      "first_exposed_ids": [],
+      "ever_exposed_ids": [
+        57,
+        60,
+        61,
+        63,
+        68,
+        69,
+        70,
+        78,
+        80,
+        160,
+        164,
+        229,
+        231,
+        237,
+        238,
+        246,
+        330
+      ],
+      "termination_counts": {
+        "H": 62,
+        "F": 68,
+        "Cl": 2
+      },
+      "HF_occupancy": 3,
+      "drawn_bonds": 434,
+      "periodic_bonds_omitted": 39
+    },
+    {
+      "snapshot_index": 16,
+      "time_s": 4.0,
+      "removed": {
+        "Si": 8,
+        "N": 14
+      },
+      "first_exposed_ids": [],
+      "ever_exposed_ids": [
+        57,
+        60,
+        61,
+        63,
+        68,
+        69,
+        70,
+        78,
+        80,
+        160,
+        164,
+        229,
+        231,
+        237,
+        238,
+        246,
+        330
+      ],
+      "termination_counts": {
+        "H": 62,
+        "F": 68,
+        "Cl": 2
+      },
+      "HF_occupancy": 0,
+      "drawn_bonds": 434,
+      "periodic_bonds_omitted": 39
+    },
+    {
+      "snapshot_index": 17,
+      "time_s": 4.25,
+      "removed": {
+        "Si": 8,
+        "N": 14
+      },
+      "first_exposed_ids": [],
+      "ever_exposed_ids": [
+        57,
+        60,
+        61,
+        63,
+        68,
+        69,
+        70,
+        78,
+        80,
+        160,
+        164,
+        229,
+        231,
+        237,
+        238,
+        246,
+        330
+      ],
+      "termination_counts": {
+        "H": 62,
+        "F": 68,
+        "Cl": 2
+      },
+      "HF_occupancy": 1,
+      "drawn_bonds": 434,
+      "periodic_bonds_omitted": 39
+    },
+    {
+      "snapshot_index": 18,
+      "time_s": 4.5,
+      "removed": {
+        "Si": 8,
+        "N": 14
+      },
+      "first_exposed_ids": [],
+      "ever_exposed_ids": [
+        57,
+        60,
+        61,
+        63,
+        68,
+        69,
+        70,
+        78,
+        80,
+        160,
+        164,
+        229,
+        231,
+        237,
+        238,
+        246,
+        330
+      ],
+      "termination_counts": {
+        "H": 62,
+        "F": 68,
+        "Cl": 2
+      },
+      "HF_occupancy": 0,
+      "drawn_bonds": 434,
+      "periodic_bonds_omitted": 39
+    },
+    {
+      "snapshot_index": 19,
+      "time_s": 4.75,
+      "removed": {
+        "Si": 9,
+        "N": 16
+      },
+      "first_exposed_ids": [
+        141,
+        144,
+        152
+      ],
+      "ever_exposed_ids": [
+        57,
+        60,
+        61,
+        63,
+        68,
+        69,
+        70,
+        78,
+        80,
+        141,
+        144,
+        152,
+        160,
+        164,
+        229,
+        231,
+        237,
+        238,
+        246,
+        330
+      ],
+      "termination_counts": {
+        "H": 63,
+        "F": 71,
+        "Cl": 2
+      },
+      "HF_occupancy": 0,
+      "drawn_bonds": 427,
+      "periodic_bonds_omitted": 39
+    },
+    {
+      "snapshot_index": 20,
+      "time_s": 5.0,
+      "removed": {
+        "Si": 9,
+        "N": 16
+      },
+      "first_exposed_ids": [],
+      "ever_exposed_ids": [
+        57,
+        60,
+        61,
+        63,
+        68,
+        69,
+        70,
+        78,
+        80,
+        141,
+        144,
+        152,
+        160,
+        164,
+        229,
+        231,
+        237,
+        238,
+        246,
+        330
+      ],
+      "termination_counts": {
+        "H": 64,
+        "F": 72,
+        "Cl": 2
+      },
+      "HF_occupancy": 0,
+      "drawn_bonds": 426,
+      "periodic_bonds_omitted": 39
+    },
+    {
+      "snapshot_index": 21,
+      "time_s": 5.25,
+      "removed": {
+        "Si": 9,
+        "N": 16
+      },
+      "first_exposed_ids": [],
+      "ever_exposed_ids": [
+        57,
+        60,
+        61,
+        63,
+        68,
+        69,
+        70,
+        78,
+        80,
+        141,
+        144,
+        152,
+        160,
+        164,
+        229,
+        231,
+        237,
+        238,
+        246,
+        330
+      ],
+      "termination_counts": {
+        "H": 64,
+        "F": 72,
+        "Cl": 2
+      },
+      "HF_occupancy": 0,
+      "drawn_bonds": 426,
+      "periodic_bonds_omitted": 39
+    },
+    {
+      "snapshot_index": 22,
+      "time_s": 5.5,
+      "removed": {
+        "Si": 9,
+        "N": 16
+      },
+      "first_exposed_ids": [],
+      "ever_exposed_ids": [
+        57,
+        60,
+        61,
+        63,
+        68,
+        69,
+        70,
+        78,
+        80,
+        141,
+        144,
+        152,
+        160,
+        164,
+        229,
+        231,
+        237,
+        238,
+        246,
+        330
+      ],
+      "termination_counts": {
+        "H": 64,
+        "F": 72,
+        "Cl": 2
+      },
+      "HF_occupancy": 0,
+      "drawn_bonds": 426,
+      "periodic_bonds_omitted": 39
+    },
+    {
+      "snapshot_index": 23,
+      "time_s": 5.75,
+      "removed": {
+        "Si": 9,
+        "N": 16
+      },
+      "first_exposed_ids": [],
+      "ever_exposed_ids": [
+        57,
+        60,
+        61,
+        63,
+        68,
+        69,
+        70,
+        78,
+        80,
+        141,
+        144,
+        152,
+        160,
+        164,
+        229,
+        231,
+        237,
+        238,
+        246,
+        330
+      ],
+      "termination_counts": {
+        "H": 64,
+        "F": 72,
+        "Cl": 2
+      },
+      "HF_occupancy": 0,
+      "drawn_bonds": 426,
+      "periodic_bonds_omitted": 39
+    },
+    {
+      "snapshot_index": 24,
+      "time_s": 6.0,
+      "removed": {
+        "Si": 9,
+        "N": 16
+      },
+      "first_exposed_ids": [],
+      "ever_exposed_ids": [
+        57,
+        60,
+        61,
+        63,
+        68,
+        69,
+        70,
+        78,
+        80,
+        141,
+        144,
+        152,
+        160,
+        164,
+        229,
+        231,
+        237,
+        238,
+        246,
+        330
+      ],
+      "termination_counts": {
+        "H": 64,
+        "F": 72,
+        "Cl": 2
+      },
+      "HF_occupancy": 0,
+      "drawn_bonds": 426,
+      "periodic_bonds_omitted": 39
+    },
+    {
+      "snapshot_index": 25,
+      "time_s": 6.25,
+      "removed": {
+        "Si": 9,
+        "N": 16
+      },
+      "first_exposed_ids": [],
+      "ever_exposed_ids": [
+        57,
+        60,
+        61,
+        63,
+        68,
+        69,
+        70,
+        78,
+        80,
+        141,
+        144,
+        152,
+        160,
+        164,
+        229,
+        231,
+        237,
+        238,
+        246,
+        330
+      ],
+      "termination_counts": {
+        "H": 64,
+        "F": 72,
+        "Cl": 2
+      },
+      "HF_occupancy": 2,
+      "drawn_bonds": 426,
+      "periodic_bonds_omitted": 39
+    },
+    {
+      "snapshot_index": 26,
+      "time_s": 6.5,
+      "removed": {
+        "Si": 9,
+        "N": 16
+      },
+      "first_exposed_ids": [],
+      "ever_exposed_ids": [
+        57,
+        60,
+        61,
+        63,
+        68,
+        69,
+        70,
+        78,
+        80,
+        141,
+        144,
+        152,
+        160,
+        164,
+        229,
+        231,
+        237,
+        238,
+        246,
+        330
+      ],
+      "termination_counts": {
+        "H": 64,
+        "F": 72,
+        "Cl": 2
+      },
+      "HF_occupancy": 1,
+      "drawn_bonds": 426,
+      "periodic_bonds_omitted": 39
+    },
+    {
+      "snapshot_index": 27,
+      "time_s": 6.75,
+      "removed": {
+        "Si": 9,
+        "N": 16
+      },
+      "first_exposed_ids": [],
+      "ever_exposed_ids": [
+        57,
+        60,
+        61,
+        63,
+        68,
+        69,
+        70,
+        78,
+        80,
+        141,
+        144,
+        152,
+        160,
+        164,
+        229,
+        231,
+        237,
+        238,
+        246,
+        330
+      ],
+      "termination_counts": {
+        "H": 64,
+        "F": 72,
+        "Cl": 2
+      },
+      "HF_occupancy": 1,
+      "drawn_bonds": 426,
+      "periodic_bonds_omitted": 39
+    },
+    {
+      "snapshot_index": 28,
+      "time_s": 7.0,
+      "removed": {
+        "Si": 9,
+        "N": 16
+      },
+      "first_exposed_ids": [],
+      "ever_exposed_ids": [
+        57,
+        60,
+        61,
+        63,
+        68,
+        69,
+        70,
+        78,
+        80,
+        141,
+        144,
+        152,
+        160,
+        164,
+        229,
+        231,
+        237,
+        238,
+        246,
+        330
+      ],
+      "termination_counts": {
+        "H": 64,
+        "F": 72,
+        "Cl": 2
+      },
+      "HF_occupancy": 0,
+      "drawn_bonds": 426,
+      "periodic_bonds_omitted": 39
+    },
+    {
+      "snapshot_index": 29,
+      "time_s": 7.25,
+      "removed": {
+        "Si": 9,
+        "N": 16
+      },
+      "first_exposed_ids": [],
+      "ever_exposed_ids": [
+        57,
+        60,
+        61,
+        63,
+        68,
+        69,
+        70,
+        78,
+        80,
+        141,
+        144,
+        152,
+        160,
+        164,
+        229,
+        231,
+        237,
+        238,
+        246,
+        330
+      ],
+      "termination_counts": {
+        "H": 64,
+        "F": 72,
+        "Cl": 2
+      },
+      "HF_occupancy": 0,
+      "drawn_bonds": 426,
+      "periodic_bonds_omitted": 39
+    },
+    {
+      "snapshot_index": 30,
+      "time_s": 7.5,
+      "removed": {
+        "Si": 9,
+        "N": 16
+      },
+      "first_exposed_ids": [],
+      "ever_exposed_ids": [
+        57,
+        60,
+        61,
+        63,
+        68,
+        69,
+        70,
+        78,
+        80,
+        141,
+        144,
+        152,
+        160,
+        164,
+        229,
+        231,
+        237,
+        238,
+        246,
+        330
+      ],
+      "termination_counts": {
+        "H": 64,
+        "F": 72,
+        "Cl": 2
+      },
+      "HF_occupancy": 1,
+      "drawn_bonds": 426,
+      "periodic_bonds_omitted": 39
+    },
+    {
+      "snapshot_index": 31,
+      "time_s": 7.75,
+      "removed": {
+        "Si": 9,
+        "N": 16
+      },
+      "first_exposed_ids": [],
+      "ever_exposed_ids": [
+        57,
+        60,
+        61,
+        63,
+        68,
+        69,
+        70,
+        78,
+        80,
+        141,
+        144,
+        152,
+        160,
+        164,
+        229,
+        231,
+        237,
+        238,
+        246,
+        330
+      ],
+      "termination_counts": {
+        "H": 64,
+        "F": 72,
+        "Cl": 2
+      },
+      "HF_occupancy": 1,
+      "drawn_bonds": 426,
+      "periodic_bonds_omitted": 39
+    },
+    {
+      "snapshot_index": 32,
+      "time_s": 8.0,
+      "removed": {
+        "Si": 9,
+        "N": 16
+      },
+      "first_exposed_ids": [],
+      "ever_exposed_ids": [
+        57,
+        60,
+        61,
+        63,
+        68,
+        69,
+        70,
+        78,
+        80,
+        141,
+        144,
+        152,
+        160,
+        164,
+        229,
+        231,
+        237,
+        238,
+        246,
+        330
+      ],
+      "termination_counts": {
+        "H": 64,
+        "F": 72,
+        "Cl": 2
+      },
+      "HF_occupancy": 0,
+      "drawn_bonds": 426,
+      "periodic_bonds_omitted": 39
+    },
+    {
+      "snapshot_index": 33,
+      "time_s": 8.25,
+      "removed": {
+        "Si": 9,
+        "N": 16
+      },
+      "first_exposed_ids": [],
+      "ever_exposed_ids": [
+        57,
+        60,
+        61,
+        63,
+        68,
+        69,
+        70,
+        78,
+        80,
+        141,
+        144,
+        152,
+        160,
+        164,
+        229,
+        231,
+        237,
+        238,
+        246,
+        330
+      ],
+      "termination_counts": {
+        "H": 64,
+        "F": 72,
+        "Cl": 2
+      },
+      "HF_occupancy": 0,
+      "drawn_bonds": 426,
+      "periodic_bonds_omitted": 39
+    },
+    {
+      "snapshot_index": 34,
+      "time_s": 8.5,
+      "removed": {
+        "Si": 9,
+        "N": 16
+      },
+      "first_exposed_ids": [],
+      "ever_exposed_ids": [
+        57,
+        60,
+        61,
+        63,
+        68,
+        69,
+        70,
+        78,
+        80,
+        141,
+        144,
+        152,
+        160,
+        164,
+        229,
+        231,
+        237,
+        238,
+        246,
+        330
+      ],
+      "termination_counts": {
+        "H": 64,
+        "F": 72,
+        "Cl": 2
+      },
+      "HF_occupancy": 0,
+      "drawn_bonds": 426,
+      "periodic_bonds_omitted": 39
+    },
+    {
+      "snapshot_index": 35,
+      "time_s": 8.75,
+      "removed": {
+        "Si": 9,
+        "N": 16
+      },
+      "first_exposed_ids": [],
+      "ever_exposed_ids": [
+        57,
+        60,
+        61,
+        63,
+        68,
+        69,
+        70,
+        78,
+        80,
+        141,
+        144,
+        152,
+        160,
+        164,
+        229,
+        231,
+        237,
+        238,
+        246,
+        330
+      ],
+      "termination_counts": {
+        "H": 64,
+        "F": 72,
+        "Cl": 2
+      },
+      "HF_occupancy": 0,
+      "drawn_bonds": 426,
+      "periodic_bonds_omitted": 39
+    },
+    {
+      "snapshot_index": 36,
+      "time_s": 9.0,
+      "removed": {
+        "Si": 9,
+        "N": 16
+      },
+      "first_exposed_ids": [],
+      "ever_exposed_ids": [
+        57,
+        60,
+        61,
+        63,
+        68,
+        69,
+        70,
+        78,
+        80,
+        141,
+        144,
+        152,
+        160,
+        164,
+        229,
+        231,
+        237,
+        238,
+        246,
+        330
+      ],
+      "termination_counts": {
+        "H": 64,
+        "F": 72,
+        "Cl": 2
+      },
+      "HF_occupancy": 0,
+      "drawn_bonds": 426,
+      "periodic_bonds_omitted": 39
+    }
+  ]
 }

@@ -13,7 +13,7 @@ Combining surface reaction kinetics, Python/C++ simulation, public atomistic dat
 <!-- BEGIN CURRENT STATUS -->
 | Component | Current status |
 |---|---|
-| Numerical checks | **76 tests passed**; atom conservation, independent master equation, Python/C++ statistical agreement and artifact provenance. |
+| Numerical checks | **77 tests passed**; atom conservation, independent master equation, Python/C++ statistical agreement and artifact provenance. |
 | Species-resolved kMC | **45 states / 55 enabled events**, 16 source pathways; **512 C++ trajectories** across 325-450 K. Conditional kinetics, not calibrated ALE. |
 | Network discovery | HiPRGen pilot: **40 forward + 40 reverse candidates**, with missing-intermediate audit; no automatic rate assignment. |
 | Atomistic evidence | MACE surface paths and molecular screening; OMol25 local models and direct DFT diagnostics. Convergence limits retained. |
@@ -79,6 +79,10 @@ The function-level HiPRGen pilot retains 40 forward and 40 reverse substitutions
 The separate multilayer prototype now represents **336 Si/N substrate atoms across six unit-cell depth bands**, with explicit H/F/Cl terminations. Bond cleavage changes neighboring coordination; product release exposes deeper sites. Modification depends on depth below the moving local surface, and every event conserves Si/N/H/F/Cl with gas products.
 
 ![Actual multilayer bond-graph kMC snapshots](docs/multilayer_results/multilayer_kmc.gif)
+
+**Read the multilayer view:** Si/N colors identify substrate atoms; red rings mark current exposure, teal stars mark first exposure during the preceding saved interval, gold diamonds mark adsorbed HF, and hollow gray circles retain removed-site locations. The fixed thin cross-section reveals the lower bands without projecting the entire slab onto one plane. Separate counters retain mixed H/F/Cl chemistry; the depth bars show how many hosts were actually removed. B0-B5 are unit-cell depth bands, not atomic monolayers.
+
+[Enlarged final frame](docs/multilayer_results/multilayer_preview.png) | [Four-stage storyboard](docs/multilayer_results/multilayer_storyboard.png).
 
 <!-- BEGIN MULTILAYER STATUS -->
 The 9 s demonstration recorded **1097 events**, **9 Si + 16 N removals**, and **20 newly exposed atoms**. Twelve access-depth/seed controls accompany it. The rate audit identifies **246 distinct missing-rate environments**, with separate IS/FS connectivity requests for priority cases.
