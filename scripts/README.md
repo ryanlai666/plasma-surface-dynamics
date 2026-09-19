@@ -18,3 +18,14 @@ Run scripts from the repository root, using the appropriate installed environmen
 | Refresh generated overview blocks | `update_research_readme.py` | Status sections only |
 
 Review each script's arguments and output policy before rerunning expensive work. Many calculations intentionally preserve existing outputs. Changes to calculation code require fresh artifacts or explicit provenance; editing a report must not relabel an unconverged path as a validated transition state.
+
+## Follow-up evidence campaigns
+
+| Workflow | Calculation scripts | Report |
+|---|---|---|
+| HF/HF and HF/H2O candidates | `relax_coadsorbate_intermediates.py`, `refine_coadsorbate_intermediates.py`, `validate_coadsorbate_minima.py` | `report_coadsorbate_intermediates.py`, `report_followup_validation.py` |
+| Final-cleavage molecular proxy | `final_cleavage_proxy.py`, `refine_final_cleavage_neb.py`, `check_proxy_dft.py`, `check_proxy_force_consistency.py` | `report_followup_validation.py` |
+| Fixed-frame local coordinate scan | `scan_final_cleavage_fixed_frame.py`, with `fixed_frame_constraints.py` | Same follow-up report; not a TS calculation |
+| NIST gas chemical potentials | `report_gas_thermochemistry.py` | `docs/GAS_THERMOCHEMISTRY.md` |
+
+Atomistic calculators require their separate MACE, DeepMD or PySCF environments and checkpoint paths. Scripts intentionally refuse to overwrite completed calculation directories. The older `scan_final_cleavage_coordinates.py` is retained only to reproduce an invalidated constraint-ordering diagnostic; use the fixed-frame replacement for new work.

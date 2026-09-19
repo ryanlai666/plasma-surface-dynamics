@@ -1,0 +1,99 @@
+{
+  "converged": true,
+  "steps": 57,
+  "energy_eV": -289.5607740863841,
+  "max_mobile_force_eV_A": 0.01982107106752623,
+  "elapsed_s": 21.669748699991032,
+  "frames": 58,
+  "surface": "alpha_quartz_001",
+  "coadsorbate": "H2O",
+  "start": 2,
+  "gap_ids": [
+    "A1",
+    "A5"
+  ],
+  "source": "data/surface_paths/alpha_quartz_001/HF/relaxed_adsorption/start_2/trajectory.extxyz",
+  "source_sha256": "6578b0afae029e5f4ae5a59251511903c2fed29ccc11c5481f6b443b5510c168",
+  "fixed_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26
+  ],
+  "host_atoms": 36,
+  "adsorbate_atoms": 5,
+  "formula": "H3FO25Si12",
+  "initial_min_cross_distance_A": 1.3944172885876052,
+  "incremental_association_energy_eV": -0.7734191107032107,
+  "reference": {
+    "converged": true,
+    "steps": 0,
+    "energy_eV": -274.6163735738692,
+    "max_mobile_force_eV_A": 0.019760179063690635,
+    "folder": "data/intermediate_campaign/alpha_quartz_001/parent_2/refinement",
+    "source_sha256": "ef00b4e00743975f40103c8241c8dafcfb3545df483e1f3fcfa1a053e1499f99",
+    "final_sha256": "384879dc96580acf942530f2e42d6b82a8372497b865def6582d7b675b61801a"
+  },
+  "gas_reference": {
+    "converged": true,
+    "steps": 38,
+    "energy_eV": -14.170981401811636,
+    "max_mobile_force_eV_A": 0.0029035375721481785,
+    "elapsed_s": 1.200850699970033,
+    "frames": 39
+  },
+  "geometry": {
+    "parent_HF_distance_A": 1.0437429008607126,
+    "added_bond_distances_A": [
+      0.9791688307262152,
+      0.980103268426376
+    ],
+    "closest_added_heavy_to_parent_H_A": 3.6391712166899786,
+    "minimum_added_to_host_A": 3.8378655684477296
+  },
+  "adsorbate_curvature": {
+    "displacement_A": 0.01,
+    "block": "adsorbate Cartesian coordinates; every host coordinate held fixed",
+    "eigenvalues_eV_A2": [
+      0.0018265891789112467,
+      0.066713596203079,
+      0.24675893308502453,
+      0.381971696473069,
+      0.5135836190025299,
+      0.6645376171880288,
+      0.7558144634630036,
+      1.4589940386434705,
+      2.9655443954952045,
+      5.156796256714567,
+      5.820378595316802,
+      15.162068443938601,
+      34.68038055016209,
+      70.915791068615,
+      97.90062200947486
+    ],
+    "negative_eigenvalues_below_minus_0p02": 0,
+    "minimum_eigenvalue_eV_A2": 0.0018265891789112467,
+    "scope": "Partial curvature screen only; no full mobile-host Hessian or vibrational thermochemistry"
+  },
+  "folder": "data/intermediate_campaign/alpha_quartz_001/HF_H2O/start_2/refinement",
+  "trajectory_sha256": "a9e2da435a7a5815e88377da169fc6cd8425913b948893a743747e10ecd1904f",
+  "final_sha256": "61de12518bcd2785de5ab71291f409a822a865527f01fb65114443f718c0b19a",
+  "status": "relaxed_candidate_not_TS_or_rate_evidence",
+  "rate_enabled": false,
+  "initial_attempt": "data/intermediate_campaign/alpha_quartz_001/HF_H2O/start_2",
+  "initial_attempt_sha256": "68dc3676ee0c992933d7b7cb231566a9b0e687d24221c259d353a800b202ba17"
+}

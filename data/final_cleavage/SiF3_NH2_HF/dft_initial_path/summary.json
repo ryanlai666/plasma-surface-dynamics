@@ -1,0 +1,170 @@
+{
+  "source": "/mnt/c/Ryan/python_code/Dry_ALE_Sim/data/final_cleavage/SiF3_NH2_HF/omol25/DFT_check_geometries.extxyz",
+  "source_sha256": "1d7dc8d0498244cbd53c4dc6e8a8fbc8bf34c047136a8c83b83650c4fb495621",
+  "runner": "scripts/check_proxy_dft.py",
+  "runner_sha256": "f9ec294852a1a69807e9f3e8c073716956ee7a32ef05ceb8ea44e99f6148d8d7",
+  "scope": "DFT single points and forces on saved ML structures; not DFT-optimized endpoints or TS",
+  "charge": 0,
+  "multiplicity": 1,
+  "results": [
+    {
+      "basis": "def2-svp",
+      "functional": "PBE",
+      "density_fitting": true,
+      "grid_level": 3,
+      "SCF_tolerance_Hartree": 1e-09,
+      "frames": [
+        {
+          "image": 0,
+          "DFT_energy_eV": -20261.46407772377,
+          "ML_energy_eV": -20293.54988718033,
+          "max_mobile_DFT_force_eV_A": 0.7651191457516536,
+          "mobile_force_RMSE_eV_A": 0.35767419272961093,
+          "SCF_converged": true,
+          "internal_stable": true,
+          "external_spin_stability_checked": false,
+          "SCF_attempts": [
+            {
+              "energy_Hartree": -744.5950772070206,
+              "internal_stable": true
+            }
+          ],
+          "elapsed_s": 85.25558334
+        },
+        {
+          "image": 1,
+          "DFT_energy_eV": -20259.31975273055,
+          "ML_energy_eV": -20291.151531279087,
+          "max_mobile_DFT_force_eV_A": 1.7481700543206093,
+          "mobile_force_RMSE_eV_A": 0.49727430469457207,
+          "SCF_converged": true,
+          "internal_stable": true,
+          "external_spin_stability_checked": false,
+          "SCF_attempts": [
+            {
+              "energy_Hartree": -744.5162747163537,
+              "internal_stable": true
+            }
+          ],
+          "elapsed_s": 87.291269912
+        },
+        {
+          "image": 2,
+          "DFT_energy_eV": -20261.794229602307,
+          "ML_energy_eV": -20294.135435149074,
+          "max_mobile_DFT_force_eV_A": 1.69561609283931,
+          "mobile_force_RMSE_eV_A": 0.5818758108795966,
+          "SCF_converged": true,
+          "internal_stable": true,
+          "external_spin_stability_checked": false,
+          "SCF_attempts": [
+            {
+              "energy_Hartree": -744.6072100648707,
+              "internal_stable": true
+            }
+          ],
+          "elapsed_s": 81.14598902
+        }
+      ],
+      "relative_DFT_energies_eV": [
+        0.0,
+        2.144324993219925,
+        -0.33015187853743555
+      ],
+      "relative_ML_energies_eV": [
+        0.0,
+        2.3983559012413025,
+        -0.5855479687452316
+      ],
+      "relative_energy_disagreement_eV": [
+        0.0,
+        0.2540309080213774,
+        -0.2553960902077961
+      ],
+      "energies_are_barriers": false
+    },
+    {
+      "basis": "def2-tzvp",
+      "functional": "PBE",
+      "density_fitting": true,
+      "grid_level": 3,
+      "SCF_tolerance_Hartree": 1e-09,
+      "frames": [
+        {
+          "image": 0,
+          "DFT_energy_eV": -20280.549753561405,
+          "ML_energy_eV": -20293.54988718033,
+          "max_mobile_DFT_force_eV_A": 0.6276952487659508,
+          "mobile_force_RMSE_eV_A": 0.26090392965837994,
+          "SCF_converged": true,
+          "internal_stable": true,
+          "external_spin_stability_checked": false,
+          "SCF_attempts": [
+            {
+              "energy_Hartree": -745.2964628630303,
+              "internal_stable": true
+            }
+          ],
+          "elapsed_s": 259.194517422
+        },
+        {
+          "image": 1,
+          "DFT_energy_eV": -20278.35519230316,
+          "ML_energy_eV": -20291.151531279087,
+          "max_mobile_DFT_force_eV_A": 1.9817148224219476,
+          "mobile_force_RMSE_eV_A": 0.29078867947463327,
+          "SCF_converged": true,
+          "internal_stable": true,
+          "external_spin_stability_checked": false,
+          "SCF_attempts": [
+            {
+              "energy_Hartree": -745.21581422366,
+              "internal_stable": true
+            }
+          ],
+          "elapsed_s": 264.3399576390001
+        },
+        {
+          "image": 2,
+          "DFT_energy_eV": -20281.095683563777,
+          "ML_energy_eV": -20294.135435149074,
+          "max_mobile_DFT_force_eV_A": 0.6508211937311627,
+          "mobile_force_RMSE_eV_A": 0.26449877349062756,
+          "SCF_converged": true,
+          "internal_stable": true,
+          "external_spin_stability_checked": false,
+          "SCF_attempts": [
+            {
+              "energy_Hartree": -745.3165254207363,
+              "internal_stable": true
+            }
+          ],
+          "elapsed_s": 235.54143299500004
+        }
+      ],
+      "relative_DFT_energies_eV": [
+        0.0,
+        2.1945612582458125,
+        -0.545930002372188
+      ],
+      "relative_ML_energies_eV": [
+        0.0,
+        2.3983559012413025,
+        -0.5855479687452316
+      ],
+      "relative_energy_disagreement_eV": [
+        0.0,
+        0.20379464299549,
+        -0.0396179663730436
+      ],
+      "energies_are_barriers": false
+    }
+  ],
+  "status": "complete",
+  "limitations": [
+    "Same closed-shell electronic sector only; no external spin-stability proof",
+    "Two basis sets at PBE, no functional-convergence claim",
+    "No DFT geometry optimization, saddle verification or thermochemistry",
+    "Fixed molecular SiF3 frame is not an embedded surface environment"
+  ]
+}

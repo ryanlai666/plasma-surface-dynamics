@@ -1,0 +1,69 @@
+{
+  "converged": false,
+  "steps": 400,
+  "energy_eV": -234.36986852157906,
+  "max_mobile_force_eV_A": 0.2764935998756831,
+  "elapsed_s": 144.11308679997455,
+  "frames": 401,
+  "surface": "beta_Si3N4_001",
+  "coadsorbate": "H2O",
+  "start": 1,
+  "gap_ids": [
+    "A1",
+    "A5"
+  ],
+  "source": "data/surface_paths/beta_Si3N4_001/HF/relaxed_adsorption/start_1/trajectory.extxyz",
+  "source_sha256": "e2140311f59dc8dff8dda8f692f172d666c9d1c787df14e902d4011a9de98722",
+  "fixed_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "host_atoms": 28,
+  "adsorbate_atoms": 5,
+  "formula": "H3FN16OSi12",
+  "initial_min_cross_distance_A": 1.8000000000000014,
+  "incremental_association_energy_eV": null,
+  "reference": {
+    "converged": true,
+    "steps": 14,
+    "energy_eV": -219.6502482702018,
+    "max_mobile_force_eV_A": 0.023543128152639512,
+    "elapsed_s": 2.09325059998082,
+    "frames": 15
+  },
+  "gas_reference": {
+    "converged": true,
+    "steps": 38,
+    "energy_eV": -14.170981401811636,
+    "max_mobile_force_eV_A": 0.0029035375721481785,
+    "elapsed_s": 1.200850699970033,
+    "frames": 39
+  },
+  "geometry": {
+    "parent_HF_distance_A": 0.9731220367013189,
+    "added_bond_distances_A": [
+      0.9698206668241508,
+      0.9757854017712445
+    ],
+    "closest_added_heavy_to_parent_H_A": 1.6372244202101673,
+    "minimum_added_to_host_A": 4.561368431058447
+  },
+  "adsorbate_curvature": null,
+  "folder": "data/intermediate_campaign/beta_Si3N4_001/HF_H2O/start_1",
+  "trajectory_sha256": "606f5c4ad274c6170ab19ad0e66429d6a1f26ac4abeca8000f8dea5cb8aeee96",
+  "final_sha256": "0bac4e31fd77d55a289121abae85ee5b86d886272ccd455434e5279774d8bed2",
+  "status": "unconverged_candidate",
+  "rate_enabled": false
+}

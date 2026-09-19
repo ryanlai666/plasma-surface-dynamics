@@ -1,0 +1,9 @@
+{
+  "converged": true,
+  "steps": 10,
+  "energy_eV": -274.60821739827776,
+  "max_mobile_force_eV_A": 0.01948724113551307,
+  "folder": "data/intermediate_campaign/alpha_quartz_001/parent_1/refinement",
+  "source_sha256": "03844ddaaab20c83716df5793993ffd1f8f33f4e1fec9a6acca0e9d3d8adabcb",
+  "final_sha256": "b2ee9d26e45df6b04ada31f33afb8cae58b6757945b2c3e1ec5ea87c3452722e"
+}

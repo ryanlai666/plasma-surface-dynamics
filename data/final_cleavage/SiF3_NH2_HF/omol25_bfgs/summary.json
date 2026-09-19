@@ -1,0 +1,32 @@
+{
+  "runner": "scripts/refine_final_cleavage_neb.py",
+  "runner_sha256": "6a7f0f0f1d296c9d3ceb9d32d029e55366f92a89fc93f86ab8e6fa2f8f29d5d8",
+  "source": "data/final_cleavage/SiF3_NH2_HF/omol25/images.extxyz",
+  "source_sha256": "601c401a134f3e8bcb395860e028465ebf04314b020b258f8a52eee3fc6a7200",
+  "model_sha256": "36fe440c111108d60cda54aa7d3fccac743794de25abef4d49564b9fb896a55b",
+  "status": "neb_unconverged",
+  "max_neb_force_eV_A": 5.323139898471179,
+  "peak_image": 4,
+  "peak_above_IS_eV": 6.1575586050748825,
+  "FS_minus_IS_eV": -0.5855476260185242,
+  "peak_eigenvalues_eV_A2": [
+    -0.5314632509987132,
+    -0.11479045017501997,
+    -0.0010608346860887157,
+    0.0011525292827547404,
+    0.005334565084849673,
+    0.028254895259825365,
+    1.6252672854041845,
+    1.6482613408503857,
+    1.7738334900193442,
+    2.282135807786184,
+    4.147523502306191,
+    12.932014674193027,
+    47.5490361164639,
+    70.04107954207423,
+    106.99606178967076
+  ],
+  "index_one_mobile_subspace": false,
+  "rate_enabled": false,
+  "scope": "Fixed SiF3 molecular frame; bare-N environments not represented; no DFT stationary-point validation"
+}

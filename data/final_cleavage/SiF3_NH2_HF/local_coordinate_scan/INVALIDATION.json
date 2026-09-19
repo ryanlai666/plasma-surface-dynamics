@@ -1,0 +1,8 @@
+{
+  "status": "invalid_fixed_frame_constraint",
+  "maximum_fixed_atom_displacement_A": 1.7477768072538091,
+  "reason": "Sequential FixAtoms then FixBondLengths repositioned fixed Si; excludes all original two-coordinate energies from fixed-frame comparisons",
+  "replacement": "../fixed_frame_three_coordinate_scan",
+  "rates_enabled": false,
+  "source_sha256": "22d93dfc613d2a6de9ff608da71f01c5ab260e3caaf06a21728a29a78c0044da"
+}

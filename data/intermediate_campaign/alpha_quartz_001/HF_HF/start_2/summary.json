@@ -1,0 +1,92 @@
+{
+  "converged": true,
+  "steps": 179,
+  "energy_eV": -282.84847370013966,
+  "max_mobile_force_eV_A": 0.024843610403433573,
+  "elapsed_s": 38.33340150001459,
+  "frames": 180,
+  "surface": "alpha_quartz_001",
+  "coadsorbate": "HF",
+  "start": 2,
+  "gap_ids": [
+    "A1",
+    "A5"
+  ],
+  "source": "data/surface_paths/alpha_quartz_001/HF/relaxed_adsorption/start_2/trajectory.extxyz",
+  "source_sha256": "6578b0afae029e5f4ae5a59251511903c2fed29ccc11c5481f6b443b5510c168",
+  "fixed_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26
+  ],
+  "host_atoms": 36,
+  "adsorbate_atoms": 4,
+  "formula": "H2F2O24Si12",
+  "initial_min_cross_distance_A": 1.3944172885876052,
+  "incremental_association_energy_eV": -0.597235973417459,
+  "reference": {
+    "converged": true,
+    "steps": 28,
+    "energy_eV": -274.61637357393914,
+    "max_mobile_force_eV_A": 0.019760153632698306,
+    "elapsed_s": 5.652707900037058,
+    "frames": 29
+  },
+  "gas_reference": {
+    "converged": true,
+    "steps": 27,
+    "energy_eV": -7.634864152783062,
+    "max_mobile_force_eV_A": 0.004912889770400636,
+    "elapsed_s": 1.2358435000060126,
+    "frames": 28
+  },
+  "geometry": {
+    "parent_HF_distance_A": 1.049950368812127,
+    "added_bond_distances_A": [
+      0.9975035273257911
+    ],
+    "closest_added_heavy_to_parent_H_A": 3.201013407349827,
+    "minimum_added_to_host_A": 3.4501395368251004
+  },
+  "adsorbate_curvature": {
+    "displacement_A": 0.01,
+    "block": "adsorbate Cartesian coordinates; every host coordinate held fixed",
+    "eigenvalues_eV_A2": [
+      0.04041586621049289,
+      0.05403597333273167,
+      0.2454463531858056,
+      0.2903916004538234,
+      1.4531906166386375,
+      2.738392874364109,
+      3.2490131186495614,
+      4.541588892068516,
+      4.913774589510239,
+      8.306715096256529,
+      33.11508235784436,
+      68.24459759857507
+    ],
+    "negative_eigenvalues_below_minus_0p02": 0,
+    "minimum_eigenvalue_eV_A2": 0.04041586621049289,
+    "scope": "Partial curvature screen only; no full mobile-host Hessian or vibrational thermochemistry"
+  },
+  "folder": "data/intermediate_campaign/alpha_quartz_001/HF_HF/start_2",
+  "trajectory_sha256": "4d5a883999dde1e160085876c9faee732625e0ed702ad2eaad17aedf53428b81",
+  "final_sha256": "9f8ce19bc75ab2905d5fb8af30612d294d3c84124708913695ed47536cc30764",
+  "status": "relaxed_candidate_not_TS_or_rate_evidence",
+  "rate_enabled": false
+}

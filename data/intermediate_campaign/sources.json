@@ -1,0 +1,26 @@
+[
+  {
+    "id": "Jung2020",
+    "doi": "10.1116/1.5125569",
+    "url": "https://cpseg.eecs.umich.edu/pub/articles/JVSTA_38_023008_2020.pdf",
+    "evidence": "Full author-hosted paper, Table I and pp. 3-4",
+    "insight": "Coadsorbed HF/HF and HF/H2O require distinct states; distinguish ground-state chemistry from assumed HF vibrational assistance.",
+    "constraint": "Fluorinated capped clusters; desorption prefactors and sticking include fitted quantities."
+  },
+  {
+    "id": "Lill2024",
+    "doi": "10.1116/6.0004019",
+    "url": "https://collaborate.princeton.edu/en/publications/low-temperature-etching-of-silicon-oxide-and-silicon-nitride-with/",
+    "evidence": "Author institution publication abstract",
+    "insight": "Water coadsorption enhances thermal HF etching of SiN; water also weakens AFS binding in reported calculations.",
+    "constraint": "Water effects may involve salt retention as well as elementary cleavage; this work does not model AFS."
+  },
+  {
+    "id": "Khumaini2024",
+    "doi": "10.1016/j.apsusc.2024.159414",
+    "url": "https://www.sciencedirect.com/science/article/pii/S0169433224001284",
+    "evidence": "Publisher abstract and highlights",
+    "insight": "Hydrogenated amorphous nitride pathways and salt formation make film composition and retained products essential.",
+    "constraint": "25 at.% H amorphous model cannot be replaced by ideal beta-Si3N4."
+  }
+]

@@ -1,0 +1,111 @@
+{
+  "source_sha256": "5f2420e86f1c878aec85e8157378eb6ba690f9b8be880613565d9faa39f2e04b",
+  "threshold_eV_A2": -0.02,
+  "force_tolerance_eV_A": 0.02,
+  "results": [
+    {
+      "surface": "beta_Si3N4_001",
+      "coadsorbate": "HF",
+      "start": 1,
+      "parent_minimum_curvature_eV_A2": -0.35402367524850414,
+      "candidate_minimum_curvature_eV_A2": 0.003104498227200856,
+      "candidate_force_eV_A": 0.016387874125862897,
+      "raw_energy_difference_eV": -1.5558814555105487,
+      "passes_force_and_appreciable_curvature_screen": false,
+      "screened_association_energy_eV": null,
+      "rate_enabled": false,
+      "structure": "data/intermediate_campaign/beta_Si3N4_001/HF_HF/start_1/refinement/full_stability/final.extxyz"
+    },
+    {
+      "surface": "beta_Si3N4_001",
+      "coadsorbate": "H2O",
+      "start": 1,
+      "parent_minimum_curvature_eV_A2": -0.35402367524850414,
+      "candidate_minimum_curvature_eV_A2": 0.04448238589994686,
+      "candidate_force_eV_A": 0.016225691847193736,
+      "raw_energy_difference_eV": -2.443567593134512,
+      "passes_force_and_appreciable_curvature_screen": false,
+      "screened_association_energy_eV": null,
+      "rate_enabled": false,
+      "structure": "data/intermediate_campaign/beta_Si3N4_001/HF_H2O/start_1/refinement/full_stability/final.extxyz"
+    },
+    {
+      "surface": "beta_Si3N4_001",
+      "coadsorbate": "HF",
+      "start": 2,
+      "parent_minimum_curvature_eV_A2": 0.36929687231950775,
+      "candidate_minimum_curvature_eV_A2": 0.34972343646623477,
+      "candidate_force_eV_A": 0.0188565842001871,
+      "raw_energy_difference_eV": -3.7423878674505504,
+      "passes_force_and_appreciable_curvature_screen": true,
+      "screened_association_energy_eV": -3.7423878674505504,
+      "rate_enabled": false,
+      "structure": "data/intermediate_campaign/beta_Si3N4_001/HF_HF/start_2/refinement/full_stability/final.extxyz"
+    },
+    {
+      "surface": "beta_Si3N4_001",
+      "coadsorbate": "H2O",
+      "start": 2,
+      "parent_minimum_curvature_eV_A2": 0.36929687231950775,
+      "candidate_minimum_curvature_eV_A2": 0.3645870734163833,
+      "candidate_force_eV_A": 0.01892456703232544,
+      "raw_energy_difference_eV": -1.0253845382346842,
+      "passes_force_and_appreciable_curvature_screen": true,
+      "screened_association_energy_eV": -1.0253845382346842,
+      "rate_enabled": false,
+      "structure": "data/intermediate_campaign/beta_Si3N4_001/HF_H2O/start_2/refinement/full_stability/final.extxyz"
+    },
+    {
+      "surface": "alpha_quartz_001",
+      "coadsorbate": "HF",
+      "start": 1,
+      "parent_minimum_curvature_eV_A2": 0.04485530953965361,
+      "candidate_minimum_curvature_eV_A2": 0.01865449161389783,
+      "candidate_force_eV_A": 0.009949743699947635,
+      "raw_energy_difference_eV": -0.8259080358065392,
+      "passes_force_and_appreciable_curvature_screen": true,
+      "screened_association_energy_eV": -0.8259080358065392,
+      "rate_enabled": false,
+      "structure": "data/intermediate_campaign/alpha_quartz_001/HF_HF/start_1/refinement/full_stability/final.extxyz"
+    },
+    {
+      "surface": "alpha_quartz_001",
+      "coadsorbate": "H2O",
+      "start": 1,
+      "parent_minimum_curvature_eV_A2": 0.04485530953965361,
+      "candidate_minimum_curvature_eV_A2": 0.006485407195940303,
+      "candidate_force_eV_A": 0.00827519886636158,
+      "raw_energy_difference_eV": -0.7539453177030655,
+      "passes_force_and_appreciable_curvature_screen": true,
+      "screened_association_energy_eV": -0.7539453177030655,
+      "rate_enabled": false,
+      "structure": "data/intermediate_campaign/alpha_quartz_001/HF_H2O/start_1/refinement/full_stability/final.extxyz"
+    },
+    {
+      "surface": "alpha_quartz_001",
+      "coadsorbate": "HF",
+      "start": 2,
+      "parent_minimum_curvature_eV_A2": -0.01574630505904653,
+      "candidate_minimum_curvature_eV_A2": 0.03860178806566136,
+      "candidate_force_eV_A": 0.018405830053142648,
+      "raw_energy_difference_eV": -0.6778941609917881,
+      "passes_force_and_appreciable_curvature_screen": true,
+      "screened_association_energy_eV": -0.6778941609917881,
+      "rate_enabled": false,
+      "structure": "data/intermediate_campaign/alpha_quartz_001/HF_HF/start_2/refinement/full_stability/final.extxyz"
+    },
+    {
+      "surface": "alpha_quartz_001",
+      "coadsorbate": "H2O",
+      "start": 2,
+      "parent_minimum_curvature_eV_A2": -0.01574630505904653,
+      "candidate_minimum_curvature_eV_A2": -0.0005535772150791128,
+      "candidate_force_eV_A": 0.01982103160223622,
+      "raw_energy_difference_eV": -0.7734191107826209,
+      "passes_force_and_appreciable_curvature_screen": true,
+      "screened_association_energy_eV": -0.7734191107826209,
+      "rate_enabled": false,
+      "structure": "data/intermediate_campaign/alpha_quartz_001/HF_H2O/start_2/refinement/full_stability/final.extxyz"
+    }
+  ]
+}

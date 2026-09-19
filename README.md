@@ -13,7 +13,7 @@ Combining surface reaction kinetics, Python/C++ simulation, public atomistic dat
 <!-- BEGIN CURRENT STATUS -->
 | Component | Current status |
 |---|---|
-| Numerical checks | **82 tests passed**; atom conservation, independent master equation, Python/C++ statistical agreement and artifact provenance. |
+| Numerical checks | **95 core tests passed**, plus **2 ASE constraint tests** (the core environment skips that optional module); atom conservation, independent master equation, Python/C++ statistical agreement and artifact provenance. |
 | Species-resolved kMC | **45 states / 55 enabled events**, 16 source pathways; **512 C++ trajectories** across 325-450 K. Conditional kinetics, not calibrated ALE. |
 | Network discovery | HiPRGen pilot: **40 forward + 40 reverse candidates**, with missing-intermediate audit; no automatic rate assignment. |
 | Atomistic evidence | MACE surface paths and molecular screening; OMol25 local models and direct DFT diagnostics. Convergence limits retained. |
@@ -84,7 +84,7 @@ flowchart TD
 
 ## Rates, activation energies and free energies
 
-[Complete parameter audit](docs/KINETIC_PARAMETERS.md) lists **183 parameter records**, all **220 event/temperature rates**, diffusion references, assumed prefactors, and missing thermochemical inputs. Published DFT barriers are used conditionally; **AIMD-derived rates and full activation free energies have not been established**. The new thermal-rate helpers calculate Arrhenius/HTST rates, gas arrival and hop diffusivity from explicit inputs without automatically enabling unsupported chemistry.
+[Complete parameter audit](docs/KINETIC_PARAMETERS.md) lists **183 parameter records**, all **220 event/temperature rates**, diffusion references, assumed prefactors, and missing thermochemical inputs. Published DFT barriers are used conditionally; **AIMD-derived rates and full activation free energies have not been established**. The new thermal-rate helpers calculate Arrhenius/HTST rates, gas arrival and hop diffusivity from explicit inputs without automatically enabling unsupported chemistry. The [NIST gas thermochemistry module](docs/GAS_THERMOCHEMISTRY.md) adds 81 source-bounded gas states for six species, with explicit pressure and energy references; it does not supply surface activation free energies.
 
 ## Species-resolved kMC
 
@@ -163,6 +163,18 @@ Rigid scans screen possible starting sites and orientations; they cannot establi
 ![Evaluated N-to-N hydrogen-transfer path beside Si-OH](data/surface_paths/beta_Si3N4_001/H2O/mace_local_saddle/path.gif)
 
 [All molecular systems, energy tables, equations and hypotheses](docs/dry_etch_results/MOLECULAR_SURFACES.md) | [DFT/TS report](docs/dry_etch_results/TRANSITION_STATES.md) | [Literature and AIMD support](docs/LITERATURE.md).
+
+## Intermediate-gap calculations
+
+Eight **HF/HF and HF/H2O candidates on nitride and oxide** meet the original force criterion. Full mobile-coordinate Hessians then exposed an unstable nitride reference; its association energies are excluded from the screened set. Following negative modes improves some oxide candidates, but none supplies a DFT-validated surface rate.
+
+[Structures and original refinement](docs/intermediate_results/REPORT.md) | [Full stability checks](docs/intermediate_results/FULL_STABILITY.md) | [Intermediate-gap register](data/reaction_network/intermediate_gaps.csv).
+
+The final Si-N cleavage campaign now includes **direct PBE/def2-SVP and def2-TZVP energies and forces**, two unsuccessful OMol25 NEB searches, and a corrected three-coordinate relaxed scan. These are diagnostics, not validated TS barriers. The scan's fixed-frame constraint is explicitly checked; an earlier defective run is retained with an invalidation record.
+
+![DFT comparison and evaluated local cleavage scan](docs/final_cleavage_results/dft_and_path_checks.png)
+
+[DFT results, energy table and path-search limitations](docs/final_cleavage_results/REPORT.md) | [Material and mechanism decisions from independent literature](docs/MATERIAL_MODEL_DECISIONS.md).
 
 ## What the new checks reveal
 

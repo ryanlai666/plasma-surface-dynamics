@@ -1,0 +1,88 @@
+{
+  "converged": true,
+  "steps": 237,
+  "energy_eV": -231.16111956549474,
+  "max_mobile_force_eV_A": 0.02462539673898959,
+  "elapsed_s": 69.53918909997446,
+  "frames": 238,
+  "surface": "beta_Si3N4_001",
+  "coadsorbate": "HF",
+  "start": 2,
+  "gap_ids": [
+    "A1",
+    "A5"
+  ],
+  "source": "data/surface_paths/beta_Si3N4_001/HF/relaxed_adsorption/start_2/trajectory.extxyz",
+  "source_sha256": "ff614c72bd122229b4b2c1a0bdcc6ceed7816ef886f6d5bf0ca3f1d7cafa01fa",
+  "fixed_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "host_atoms": 28,
+  "adsorbate_atoms": 4,
+  "formula": "H2F2N16Si12",
+  "initial_min_cross_distance_A": 1.7999999999999983,
+  "incremental_association_energy_eV": null,
+  "reference": {
+    "converged": false,
+    "steps": 400,
+    "energy_eV": -222.69295961895085,
+    "max_mobile_force_eV_A": 1.537466778047295,
+    "elapsed_s": 116.58129529998405,
+    "frames": 401
+  },
+  "gas_reference": {
+    "converged": true,
+    "steps": 27,
+    "energy_eV": -7.634864152783062,
+    "max_mobile_force_eV_A": 0.004912889770400636,
+    "elapsed_s": 1.2358435000060126,
+    "frames": 28
+  },
+  "geometry": {
+    "parent_HF_distance_A": 2.931296435318672,
+    "added_bond_distances_A": [
+      0.9476086347701966
+    ],
+    "closest_added_heavy_to_parent_H_A": 1.9484833455821227,
+    "minimum_added_to_host_A": 2.931193249501553
+  },
+  "adsorbate_curvature": {
+    "displacement_A": 0.01,
+    "block": "adsorbate Cartesian coordinates; every host coordinate held fixed",
+    "eigenvalues_eV_A2": [
+      0.10316095847947636,
+      0.25548803489337374,
+      0.7913405502461168,
+      1.0150418463113942,
+      1.0888773453088434,
+      2.157923079173187,
+      2.552111506875721,
+      3.179671406336453,
+      4.030460157195207,
+      26.75855254443932,
+      39.991940248003836,
+      112.24076020800581
+    ],
+    "negative_eigenvalues_below_minus_0p02": 0,
+    "minimum_eigenvalue_eV_A2": 0.10316095847947636,
+    "scope": "Partial curvature screen only; no full mobile-host Hessian or vibrational thermochemistry"
+  },
+  "folder": "data/intermediate_campaign/beta_Si3N4_001/HF_HF/start_2",
+  "trajectory_sha256": "6f591052a1760ad7eb020dfd71eac9324f428a474a6af99f948de2f931814e20",
+  "final_sha256": "28db355a436567c7ea8909703f78dcfe26b9a69993098bb2bc4be0fe7255c82c",
+  "status": "relaxed_candidate_not_TS_or_rate_evidence",
+  "rate_enabled": false
+}

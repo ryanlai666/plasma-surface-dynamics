@@ -31,6 +31,8 @@ The result is **40 forward substitutions and 40 reverse candidates**. Filters re
 
 ## Do we have enough intermediates?
 
+Update: the [coadsorbate campaign](intermediate_results/REPORT.md) adds eight actual optimized candidate structures and curvature checks. The [12-cycle stall analysis](multilayer_results/cycle_diagnosis.json) identifies missing final-cleavage rates as the immediate depth-progression blocker. These results extend the gap audit; HiPRGen has not verified their kinetics.
+
 **Not for a complete predictive dry-etch/ALE mechanism.** We have a bounded candidate library and a focused conditional kinetics model. The [intermediate gap table](../data/reaction_network/intermediate_gaps.csv) names the missing structural and kinetic evidence. A large node count is not evidence of completeness.
 
 The highest-priority additions are explicit HF precursor complexes and protonation states; successive fluorination with remaining backbonds retained; separate final-release states for bridging NH, bare N and terminal NH2; hydrogenated Si product release; coadsorbed HF/H2O; and retained NH3/fluoride salts. Chlorine, fluorocarbon, defective/amorphous surfaces and ion-assisted events require separate branches and matching data.

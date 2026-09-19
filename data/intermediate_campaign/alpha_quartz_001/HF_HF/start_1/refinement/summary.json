@@ -1,0 +1,95 @@
+{
+  "converged": true,
+  "steps": 16,
+  "energy_eV": -282.9534778711125,
+  "max_mobile_force_eV_A": 0.017289343283402064,
+  "elapsed_s": 5.423352900019381,
+  "frames": 17,
+  "surface": "alpha_quartz_001",
+  "coadsorbate": "HF",
+  "start": 1,
+  "gap_ids": [
+    "A1",
+    "A5"
+  ],
+  "source": "data/surface_paths/alpha_quartz_001/HF/relaxed_adsorption/start_1/trajectory.extxyz",
+  "source_sha256": "4dfceacb13c83f6545f4236b0da466e7f77bc0448e7c0809ea8e49520eb45480",
+  "fixed_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26
+  ],
+  "host_atoms": 36,
+  "adsorbate_atoms": 4,
+  "formula": "H2F2O24Si12",
+  "initial_min_cross_distance_A": 1.4485420600918992,
+  "incremental_association_energy_eV": -0.7103963200516903,
+  "reference": {
+    "converged": true,
+    "steps": 10,
+    "energy_eV": -274.60821739827776,
+    "max_mobile_force_eV_A": 0.01948724113551307,
+    "folder": "data/intermediate_campaign/alpha_quartz_001/parent_1/refinement",
+    "source_sha256": "03844ddaaab20c83716df5793993ffd1f8f33f4e1fec9a6acca0e9d3d8adabcb",
+    "final_sha256": "b2ee9d26e45df6b04ada31f33afb8cae58b6757945b2c3e1ec5ea87c3452722e"
+  },
+  "gas_reference": {
+    "converged": true,
+    "steps": 27,
+    "energy_eV": -7.634864152783062,
+    "max_mobile_force_eV_A": 0.004912889770400636,
+    "elapsed_s": 1.2358435000060126,
+    "frames": 28
+  },
+  "geometry": {
+    "parent_HF_distance_A": 1.1042909743187526,
+    "added_bond_distances_A": [
+      1.0336533760815494
+    ],
+    "closest_added_heavy_to_parent_H_A": 3.0913575629178833,
+    "minimum_added_to_host_A": 3.287255289742673
+  },
+  "adsorbate_curvature": {
+    "displacement_A": 0.01,
+    "block": "adsorbate Cartesian coordinates; every host coordinate held fixed",
+    "eigenvalues_eV_A2": [
+      0.059618252399783134,
+      0.08412182842712043,
+      0.14109251722169486,
+      0.35370120994389626,
+      1.1678776018811217,
+      4.401642956936919,
+      4.939405258033568,
+      6.538606691904311,
+      7.117683015089031,
+      11.284545657428213,
+      20.678156232923524,
+      50.35491684253927
+    ],
+    "negative_eigenvalues_below_minus_0p02": 0,
+    "minimum_eigenvalue_eV_A2": 0.059618252399783134,
+    "scope": "Partial curvature screen only; no full mobile-host Hessian or vibrational thermochemistry"
+  },
+  "folder": "data/intermediate_campaign/alpha_quartz_001/HF_HF/start_1/refinement",
+  "trajectory_sha256": "5f913268041e3c2739e5c2b4326a41d6a3a26f16d19b03e1af90dd149f4a4f8d",
+  "final_sha256": "b4a794cdaa14dd69cc63a9be15cd326ba1c3a1af5ee89d86e28c5929e5729932",
+  "status": "relaxed_candidate_not_TS_or_rate_evidence",
+  "rate_enabled": false,
+  "initial_attempt": "data/intermediate_campaign/alpha_quartz_001/HF_HF/start_1",
+  "initial_attempt_sha256": "3282bff0351a88b07350e5ac7cf81fb473726ab892ad19735f0b160675ffdd94"
+}

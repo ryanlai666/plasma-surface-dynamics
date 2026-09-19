@@ -1,0 +1,91 @@
+{
+  "converged": true,
+  "steps": 100,
+  "energy_eV": -228.8419230369335,
+  "max_mobile_force_eV_A": 0.016387831478652283,
+  "elapsed_s": 36.39375559997279,
+  "frames": 101,
+  "surface": "beta_Si3N4_001",
+  "coadsorbate": "HF",
+  "start": 1,
+  "gap_ids": [
+    "A1",
+    "A5"
+  ],
+  "source": "data/surface_paths/beta_Si3N4_001/HF/relaxed_adsorption/start_1/trajectory.extxyz",
+  "source_sha256": "e2140311f59dc8dff8dda8f692f172d666c9d1c787df14e902d4011a9de98722",
+  "fixed_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "host_atoms": 28,
+  "adsorbate_atoms": 4,
+  "formula": "H2F2N16Si12",
+  "initial_min_cross_distance_A": 1.8000000000000014,
+  "incremental_association_energy_eV": -1.5558814554240046,
+  "reference": {
+    "converged": true,
+    "steps": 2,
+    "energy_eV": -219.65117742872644,
+    "max_mobile_force_eV_A": 0.017510145355795738,
+    "folder": "data/intermediate_campaign/beta_Si3N4_001/parent_1/refinement",
+    "source_sha256": "822c9b6659b0d31c7f14e601bc2964a2be95d2dd5b37ccb5df4bddad7b9949ef",
+    "final_sha256": "ceb8973a734962c1531cd1054724a16871ec92b32818e08fd08a62cffccfe1d3"
+  },
+  "gas_reference": {
+    "converged": true,
+    "steps": 27,
+    "energy_eV": -7.634864152783062,
+    "max_mobile_force_eV_A": 0.004912889770400636,
+    "elapsed_s": 1.2358435000060126,
+    "frames": 28
+  },
+  "geometry": {
+    "parent_HF_distance_A": 0.9963361125622521,
+    "added_bond_distances_A": [
+      0.9477370228554711
+    ],
+    "closest_added_heavy_to_parent_H_A": 1.6068876575615365,
+    "minimum_added_to_host_A": 2.989346863742789
+  },
+  "adsorbate_curvature": {
+    "displacement_A": 0.01,
+    "block": "adsorbate Cartesian coordinates; every host coordinate held fixed",
+    "eigenvalues_eV_A2": [
+      0.004771643309501128,
+      0.16444277792060963,
+      0.5520307942116925,
+      0.8787539842410804,
+      0.9460225412410397,
+      1.1704948151131294,
+      2.696502341454656,
+      3.0748357727389704,
+      4.4756441775207,
+      9.343926525097245,
+      56.23740831317413,
+      111.68944350596871
+    ],
+    "negative_eigenvalues_below_minus_0p02": 0,
+    "minimum_eigenvalue_eV_A2": 0.004771643309501128,
+    "scope": "Partial curvature screen only; no full mobile-host Hessian or vibrational thermochemistry"
+  },
+  "folder": "data/intermediate_campaign/beta_Si3N4_001/HF_HF/start_1/refinement",
+  "trajectory_sha256": "6b935e53b46862616cc71d13bfdd8e3d1f12e77e510c5d252317dcca3d7d6313",
+  "final_sha256": "e9eac46b0a4dc981b10cb9966477aba7b060ed471288f3d3924d34c933e8075d",
+  "status": "relaxed_candidate_not_TS_or_rate_evidence",
+  "rate_enabled": false,
+  "initial_attempt": "data/intermediate_campaign/beta_Si3N4_001/HF_HF/start_1",
+  "initial_attempt_sha256": "02de5495c932f8cfc834f3ad8ea5be1a241b3d9b0cb6d4367a60ab50a109aec6"
+}

@@ -1,0 +1,747 @@
+{
+  "source_sha256": "1d7dc8d0498244cbd53c4dc6e8a8fbc8bf34c047136a8c83b83650c4fb495621",
+  "runner": "scripts/check_proxy_force_consistency.py",
+  "runner_sha256": "e38113c18cc293f8196a69ebbe1baa00b46cedbaf1b2490336eadbd2ceee1e28",
+  "model_sha256": "36fe440c111108d60cda54aa7d3fccac743794de25abef4d49564b9fb896a55b",
+  "results": [
+    {
+      "frame": 0,
+      "max_absolute_error_eV_A": 0.0019859895110130314,
+      "checks": [
+        {
+          "atom": 4,
+          "axis": 0,
+          "delta_A": 0.001,
+          "force_eV_A": 0.001478530466556549,
+          "energy_difference_force_eV_A": 0.0012293457984924316,
+          "error_eV_A": -0.00024918466806411743
+        },
+        {
+          "atom": 4,
+          "axis": 1,
+          "delta_A": 0.001,
+          "force_eV_A": -2.948050337181485e-07,
+          "energy_difference_force_eV_A": -0.00012665987014770508,
+          "error_eV_A": -0.00012636506511398693
+        },
+        {
+          "atom": 4,
+          "axis": 2,
+          "delta_A": 0.001,
+          "force_eV_A": -0.0021978914737701416,
+          "energy_difference_force_eV_A": -0.0017620623111724854,
+          "error_eV_A": 0.00043582916259765625
+        },
+        {
+          "atom": 5,
+          "axis": 0,
+          "delta_A": 0.001,
+          "force_eV_A": 3.290921449661255e-05,
+          "energy_difference_force_eV_A": -0.0003390014171600342,
+          "error_eV_A": -0.00037191063165664673
+        },
+        {
+          "atom": 5,
+          "axis": 1,
+          "delta_A": 0.001,
+          "force_eV_A": -1.7087268133764155e-07,
+          "energy_difference_force_eV_A": 2.2351741790771484e-05,
+          "error_eV_A": 2.2522614472109126e-05
+        },
+        {
+          "atom": 5,
+          "axis": 2,
+          "delta_A": 0.001,
+          "force_eV_A": 0.0028596222400665283,
+          "energy_difference_force_eV_A": 0.002905726432800293,
+          "error_eV_A": 4.610419273376465e-05
+        },
+        {
+          "atom": 6,
+          "axis": 0,
+          "delta_A": 0.001,
+          "force_eV_A": -0.0015399008989334106,
+          "energy_difference_force_eV_A": -0.0014677643775939941,
+          "error_eV_A": 7.21365213394165e-05
+        },
+        {
+          "atom": 6,
+          "axis": 1,
+          "delta_A": 0.001,
+          "force_eV_A": -1.2215046751862246e-08,
+          "energy_difference_force_eV_A": -0.00024959444999694824,
+          "error_eV_A": -0.0002495822349501964
+        },
+        {
+          "atom": 6,
+          "axis": 2,
+          "delta_A": 0.001,
+          "force_eV_A": 0.0016056299209594727,
+          "energy_difference_force_eV_A": 0.001650303602218628,
+          "error_eV_A": 4.4673681259155273e-05
+        },
+        {
+          "atom": 7,
+          "axis": 0,
+          "delta_A": 0.001,
+          "force_eV_A": 0.004401320591568947,
+          "energy_difference_force_eV_A": 0.004500150680541992,
+          "error_eV_A": 9.883008897304535e-05
+        },
+        {
+          "atom": 7,
+          "axis": 1,
+          "delta_A": 0.001,
+          "force_eV_A": 1.3786048214115e-07,
+          "energy_difference_force_eV_A": 0.00035390257835388184,
+          "error_eV_A": 0.0003537647178717407
+        },
+        {
+          "atom": 7,
+          "axis": 2,
+          "delta_A": 0.001,
+          "force_eV_A": 0.01140236109495163,
+          "energy_difference_force_eV_A": 0.011198222637176514,
+          "error_eV_A": -0.00020413845777511597
+        },
+        {
+          "atom": 8,
+          "axis": 0,
+          "delta_A": 0.001,
+          "force_eV_A": -0.003947094082832336,
+          "energy_difference_force_eV_A": -0.0030919909477233887,
+          "error_eV_A": 0.0008551031351089478
+        },
+        {
+          "atom": 8,
+          "axis": 1,
+          "delta_A": 0.001,
+          "force_eV_A": -1.1735491511899454e-07,
+          "energy_difference_force_eV_A": 0.0001601874828338623,
+          "error_eV_A": 0.0001603048377489813
+        },
+        {
+          "atom": 8,
+          "axis": 2,
+          "delta_A": 0.001,
+          "force_eV_A": -0.012041274458169937,
+          "energy_difference_force_eV_A": -0.012237578630447388,
+          "error_eV_A": -0.00019630417227745056
+        },
+        {
+          "atom": 4,
+          "axis": 0,
+          "delta_A": 0.0003,
+          "force_eV_A": 0.001478530466556549,
+          "energy_difference_force_eV_A": 0.0034645199775695805,
+          "error_eV_A": 0.0019859895110130314
+        },
+        {
+          "atom": 4,
+          "axis": 1,
+          "delta_A": 0.0003,
+          "force_eV_A": -2.948050337181485e-07,
+          "energy_difference_force_eV_A": 0.00022351741790771487,
+          "error_eV_A": 0.00022381222294143302
+        },
+        {
+          "atom": 4,
+          "axis": 2,
+          "delta_A": 0.0003,
+          "force_eV_A": -0.0021978914737701416,
+          "energy_difference_force_eV_A": -0.0026201208432515464,
+          "error_eV_A": -0.00042222936948140477
+        },
+        {
+          "atom": 5,
+          "axis": 0,
+          "delta_A": 0.0003,
+          "force_eV_A": 3.290921449661255e-05,
+          "energy_difference_force_eV_A": 0.001663962999979655,
+          "error_eV_A": 0.0016310537854830425
+        },
+        {
+          "atom": 5,
+          "axis": 1,
+          "delta_A": 0.0003,
+          "force_eV_A": -1.7087268133764155e-07,
+          "energy_difference_force_eV_A": 0.0007202227910359701,
+          "error_eV_A": 0.0007203936637173077
+        },
+        {
+          "atom": 5,
+          "axis": 2,
+          "delta_A": 0.0003,
+          "force_eV_A": 0.0028596222400665283,
+          "energy_difference_force_eV_A": 0.0024586915969848633,
+          "error_eV_A": -0.00040093064308166504
+        },
+        {
+          "atom": 6,
+          "axis": 0,
+          "delta_A": 0.0003,
+          "force_eV_A": -0.0015399008989334106,
+          "energy_difference_force_eV_A": -0.0035017728805541997,
+          "error_eV_A": -0.001961871981620789
+        },
+        {
+          "atom": 6,
+          "axis": 1,
+          "delta_A": 0.0003,
+          "force_eV_A": -1.2215046751862246e-08,
+          "energy_difference_force_eV_A": -0.00014901161193847656,
+          "error_eV_A": -0.0001489993968917247
+        },
+        {
+          "atom": 6,
+          "axis": 2,
+          "delta_A": 0.0003,
+          "force_eV_A": 0.0016056299209594727,
+          "energy_difference_force_eV_A": 7.450580596923828e-05,
+          "error_eV_A": -0.0015311241149902344
+        },
+        {
+          "atom": 7,
+          "axis": 0,
+          "delta_A": 0.0003,
+          "force_eV_A": 0.004401320591568947,
+          "energy_difference_force_eV_A": 0.004172325134277344,
+          "error_eV_A": -0.0002289954572916031
+        },
+        {
+          "atom": 7,
+          "axis": 1,
+          "delta_A": 0.0003,
+          "force_eV_A": 1.3786048214115e-07,
+          "energy_difference_force_eV_A": 0.0010554989178975425,
+          "error_eV_A": 0.0010553610574154013
+        },
+        {
+          "atom": 7,
+          "axis": 2,
+          "delta_A": 0.0003,
+          "force_eV_A": 0.01140236109495163,
+          "energy_difference_force_eV_A": 0.011399388313293459,
+          "error_eV_A": -2.9727816581708727e-06
+        },
+        {
+          "atom": 8,
+          "axis": 0,
+          "delta_A": 0.0003,
+          "force_eV_A": -0.003947094082832336,
+          "energy_difference_force_eV_A": -0.005376835664113363,
+          "error_eV_A": -0.0014297415812810268
+        },
+        {
+          "atom": 8,
+          "axis": 1,
+          "delta_A": 0.0003,
+          "force_eV_A": -1.1735491511899454e-07,
+          "energy_difference_force_eV_A": 0.0005712111790974935,
+          "error_eV_A": 0.0005713285340126125
+        },
+        {
+          "atom": 8,
+          "axis": 2,
+          "delta_A": 0.0003,
+          "force_eV_A": -0.012041274458169937,
+          "energy_difference_force_eV_A": -0.012032687664031984,
+          "error_eV_A": 8.586794137952977e-06
+        }
+      ]
+    },
+    {
+      "frame": 1,
+      "max_absolute_error_eV_A": 0.002699573834737179,
+      "checks": [
+        {
+          "atom": 4,
+          "axis": 0,
+          "delta_A": 0.001,
+          "force_eV_A": -0.3488726019859314,
+          "energy_difference_force_eV_A": -0.3487318754196167,
+          "error_eV_A": 0.00014072656631469727
+        },
+        {
+          "atom": 4,
+          "axis": 1,
+          "delta_A": 0.001,
+          "force_eV_A": -0.48851650953292847,
+          "energy_difference_force_eV_A": -0.48832595348358154,
+          "error_eV_A": 0.00019055604934692383
+        },
+        {
+          "atom": 4,
+          "axis": 2,
+          "delta_A": 0.001,
+          "force_eV_A": 1.0996180772781372,
+          "energy_difference_force_eV_A": 1.0988041758537292,
+          "error_eV_A": -0.000813901424407959
+        },
+        {
+          "atom": 5,
+          "axis": 0,
+          "delta_A": 0.001,
+          "force_eV_A": -0.0743766725063324,
+          "energy_difference_force_eV_A": -0.07470697164535522,
+          "error_eV_A": -0.00033029913902282715
+        },
+        {
+          "atom": 5,
+          "axis": 1,
+          "delta_A": 0.001,
+          "force_eV_A": 0.1888144612312317,
+          "energy_difference_force_eV_A": 0.18899142742156982,
+          "error_eV_A": 0.00017696619033813477
+        },
+        {
+          "atom": 5,
+          "axis": 2,
+          "delta_A": 0.001,
+          "force_eV_A": 0.6211646795272827,
+          "energy_difference_force_eV_A": 0.620722770690918,
+          "error_eV_A": -0.0004419088363647461
+        },
+        {
+          "atom": 6,
+          "axis": 0,
+          "delta_A": 0.001,
+          "force_eV_A": 0.2999551594257355,
+          "energy_difference_force_eV_A": 0.2989470958709717,
+          "error_eV_A": -0.001008063554763794
+        },
+        {
+          "atom": 6,
+          "axis": 1,
+          "delta_A": 0.001,
+          "force_eV_A": -0.08293795585632324,
+          "energy_difference_force_eV_A": -0.08230656385421753,
+          "error_eV_A": 0.0006313920021057129
+        },
+        {
+          "atom": 6,
+          "axis": 2,
+          "delta_A": 0.001,
+          "force_eV_A": 0.8583986759185791,
+          "energy_difference_force_eV_A": 0.8585900068283081,
+          "error_eV_A": 0.0001913309097290039
+        },
+        {
+          "atom": 7,
+          "axis": 0,
+          "delta_A": 0.001,
+          "force_eV_A": -2.020048141479492,
+          "energy_difference_force_eV_A": -2.0206719636917114,
+          "error_eV_A": -0.0006238222122192383
+        },
+        {
+          "atom": 7,
+          "axis": 1,
+          "delta_A": 0.001,
+          "force_eV_A": 0.9288961887359619,
+          "energy_difference_force_eV_A": 0.9295344352722168,
+          "error_eV_A": 0.0006382465362548828
+        },
+        {
+          "atom": 7,
+          "axis": 2,
+          "delta_A": 0.001,
+          "force_eV_A": -1.051771640777588,
+          "energy_difference_force_eV_A": -1.051485538482666,
+          "error_eV_A": 0.000286102294921875
+        },
+        {
+          "atom": 8,
+          "axis": 0,
+          "delta_A": 0.001,
+          "force_eV_A": -2.297457218170166,
+          "energy_difference_force_eV_A": -2.2964105010032654,
+          "error_eV_A": 0.0010467171669006348
+        },
+        {
+          "atom": 8,
+          "axis": 1,
+          "delta_A": 0.001,
+          "force_eV_A": -0.35623034834861755,
+          "energy_difference_force_eV_A": -0.3564208745956421,
+          "error_eV_A": -0.00019052624702453613
+        },
+        {
+          "atom": 8,
+          "axis": 2,
+          "delta_A": 0.001,
+          "force_eV_A": 0.32257014513015747,
+          "energy_difference_force_eV_A": 0.3233104944229126,
+          "error_eV_A": 0.000740349292755127
+        },
+        {
+          "atom": 4,
+          "axis": 0,
+          "delta_A": 0.0003,
+          "force_eV_A": -0.3488726019859314,
+          "energy_difference_force_eV_A": -0.34843881924947107,
+          "error_eV_A": 0.00043378273646033083
+        },
+        {
+          "atom": 4,
+          "axis": 1,
+          "delta_A": 0.0003,
+          "force_eV_A": -0.48851650953292847,
+          "energy_difference_force_eV_A": -0.4881123701731364,
+          "error_eV_A": 0.00040413935979205506
+        },
+        {
+          "atom": 4,
+          "axis": 2,
+          "delta_A": 0.0003,
+          "force_eV_A": 1.0996180772781372,
+          "energy_difference_force_eV_A": 1.100475589434306,
+          "error_eV_A": 0.0008575121561686938
+        },
+        {
+          "atom": 5,
+          "axis": 0,
+          "delta_A": 0.0003,
+          "force_eV_A": -0.0743766725063324,
+          "energy_difference_force_eV_A": -0.07458031177520752,
+          "error_eV_A": -0.00020363926887512207
+        },
+        {
+          "atom": 5,
+          "axis": 1,
+          "delta_A": 0.0003,
+          "force_eV_A": 0.1888144612312317,
+          "energy_difference_force_eV_A": 0.18869837125142416,
+          "error_eV_A": -0.00011608997980752656
+        },
+        {
+          "atom": 5,
+          "axis": 2,
+          "delta_A": 0.0003,
+          "force_eV_A": 0.6211646795272827,
+          "energy_difference_force_eV_A": 0.6195157766342163,
+          "error_eV_A": -0.0016489028930664062
+        },
+        {
+          "atom": 6,
+          "axis": 0,
+          "delta_A": 0.0003,
+          "force_eV_A": 0.2999551594257355,
+          "energy_difference_force_eV_A": 0.30150016148885095,
+          "error_eV_A": 0.0015450020631154748
+        },
+        {
+          "atom": 6,
+          "axis": 1,
+          "delta_A": 0.0003,
+          "force_eV_A": -0.08293795585632324,
+          "energy_difference_force_eV_A": -0.08329749107360841,
+          "error_eV_A": -0.00035953521728517013
+        },
+        {
+          "atom": 6,
+          "axis": 2,
+          "delta_A": 0.0003,
+          "force_eV_A": 0.8583986759185791,
+          "energy_difference_force_eV_A": 0.8579591910044353,
+          "error_eV_A": -0.0004394849141438062
+        },
+        {
+          "atom": 7,
+          "axis": 0,
+          "delta_A": 0.0003,
+          "force_eV_A": -2.020048141479492,
+          "energy_difference_force_eV_A": -2.0182629426320395,
+          "error_eV_A": 0.0017851988474526514
+        },
+        {
+          "atom": 7,
+          "axis": 1,
+          "delta_A": 0.0003,
+          "force_eV_A": 0.9288961887359619,
+          "energy_difference_force_eV_A": 0.9315957625706991,
+          "error_eV_A": 0.002699573834737179
+        },
+        {
+          "atom": 7,
+          "axis": 2,
+          "delta_A": 0.0003,
+          "force_eV_A": -1.051771640777588,
+          "energy_difference_force_eV_A": -1.0530153910319011,
+          "error_eV_A": -0.001243750254313225
+        },
+        {
+          "atom": 8,
+          "axis": 0,
+          "delta_A": 0.0003,
+          "force_eV_A": -2.297457218170166,
+          "energy_difference_force_eV_A": -2.297833561897278,
+          "error_eV_A": -0.0003763437271118164
+        },
+        {
+          "atom": 8,
+          "axis": 1,
+          "delta_A": 0.0003,
+          "force_eV_A": -0.35623034834861755,
+          "energy_difference_force_eV_A": -0.3558397293090821,
+          "error_eV_A": 0.00039061903953546695
+        },
+        {
+          "atom": 8,
+          "axis": 2,
+          "delta_A": 0.0003,
+          "force_eV_A": 0.32257014513015747,
+          "energy_difference_force_eV_A": 0.3224114576975505,
+          "error_eV_A": -0.00015868743260699647
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "max_absolute_error_eV_A": 0.0012722437774452071,
+      "checks": [
+        {
+          "atom": 4,
+          "axis": 0,
+          "delta_A": 0.001,
+          "force_eV_A": 5.956925451755524e-05,
+          "energy_difference_force_eV_A": 5.21540641784668e-05,
+          "error_eV_A": -7.41519033908844e-06
+        },
+        {
+          "atom": 4,
+          "axis": 1,
+          "delta_A": 0.001,
+          "force_eV_A": -0.0009012222290039062,
+          "energy_difference_force_eV_A": -0.0011324882507324219,
+          "error_eV_A": -0.00023126602172851562
+        },
+        {
+          "atom": 4,
+          "axis": 2,
+          "delta_A": 0.001,
+          "force_eV_A": 0.0027410387992858887,
+          "energy_difference_force_eV_A": 0.00311434268951416,
+          "error_eV_A": 0.0003733038902282715
+        },
+        {
+          "atom": 5,
+          "axis": 0,
+          "delta_A": 0.001,
+          "force_eV_A": -0.0024921074509620667,
+          "energy_difference_force_eV_A": -0.002600252628326416,
+          "error_eV_A": -0.00010814517736434937
+        },
+        {
+          "atom": 5,
+          "axis": 1,
+          "delta_A": 0.001,
+          "force_eV_A": -0.0014663636684417725,
+          "energy_difference_force_eV_A": -0.001087784767150879,
+          "error_eV_A": 0.00037857890129089355
+        },
+        {
+          "atom": 5,
+          "axis": 2,
+          "delta_A": 0.001,
+          "force_eV_A": -0.0031903237104415894,
+          "energy_difference_force_eV_A": -0.003516674041748047,
+          "error_eV_A": -0.0003263503313064575
+        },
+        {
+          "atom": 6,
+          "axis": 0,
+          "delta_A": 0.001,
+          "force_eV_A": 0.002506934106349945,
+          "energy_difference_force_eV_A": 0.0022724270820617676,
+          "error_eV_A": -0.0002345070242881775
+        },
+        {
+          "atom": 6,
+          "axis": 1,
+          "delta_A": 0.001,
+          "force_eV_A": -0.0014790147542953491,
+          "energy_difference_force_eV_A": -0.00130385160446167,
+          "error_eV_A": 0.0001751631498336792
+        },
+        {
+          "atom": 6,
+          "axis": 2,
+          "delta_A": 0.001,
+          "force_eV_A": -0.0032153725624084473,
+          "energy_difference_force_eV_A": -0.0028014183044433594,
+          "error_eV_A": 0.0004139542579650879
+        },
+        {
+          "atom": 7,
+          "axis": 0,
+          "delta_A": 0.001,
+          "force_eV_A": -0.0005023504490964115,
+          "energy_difference_force_eV_A": -0.00043213367462158203,
+          "error_eV_A": 7.021677447482944e-05
+        },
+        {
+          "atom": 7,
+          "axis": 1,
+          "delta_A": 0.001,
+          "force_eV_A": -0.0009787017479538918,
+          "energy_difference_force_eV_A": -0.0009685754776000977,
+          "error_eV_A": 1.0126270353794098e-05
+        },
+        {
+          "atom": 7,
+          "axis": 2,
+          "delta_A": 0.001,
+          "force_eV_A": -0.00045230239629745483,
+          "energy_difference_force_eV_A": -0.0003501772880554199,
+          "error_eV_A": 0.00010212510824203491
+        },
+        {
+          "atom": 8,
+          "axis": 0,
+          "delta_A": 0.001,
+          "force_eV_A": -9.184237569570541e-05,
+          "energy_difference_force_eV_A": -0.00040978193283081055,
+          "error_eV_A": -0.00031793955713510513
+        },
+        {
+          "atom": 8,
+          "axis": 1,
+          "delta_A": 0.001,
+          "force_eV_A": 0.0037474632263183594,
+          "energy_difference_force_eV_A": 0.004038214683532715,
+          "error_eV_A": 0.00029075145721435547
+        },
+        {
+          "atom": 8,
+          "axis": 2,
+          "delta_A": 0.001,
+          "force_eV_A": 0.00432094931602478,
+          "energy_difference_force_eV_A": 0.0042691826820373535,
+          "error_eV_A": -5.176663398742676e-05
+        },
+        {
+          "atom": 4,
+          "axis": 0,
+          "delta_A": 0.0003,
+          "force_eV_A": 5.956925451755524e-05,
+          "energy_difference_force_eV_A": 0.000521540641784668,
+          "error_eV_A": 0.00046197138726711273
+        },
+        {
+          "atom": 4,
+          "axis": 1,
+          "delta_A": 0.0003,
+          "force_eV_A": -0.0009012222290039062,
+          "energy_difference_force_eV_A": -0.0005712111790974935,
+          "error_eV_A": 0.0003300110499064127
+        },
+        {
+          "atom": 4,
+          "axis": 2,
+          "delta_A": 0.0003,
+          "force_eV_A": 0.0027410387992858887,
+          "energy_difference_force_eV_A": 0.002110997835795085,
+          "error_eV_A": -0.0006300409634908037
+        },
+        {
+          "atom": 5,
+          "axis": 0,
+          "delta_A": 0.0003,
+          "force_eV_A": -0.0024921074509620667,
+          "energy_difference_force_eV_A": -0.0028560558954874677,
+          "error_eV_A": -0.0003639484445254011
+        },
+        {
+          "atom": 5,
+          "axis": 1,
+          "delta_A": 0.0003,
+          "force_eV_A": -0.0014663636684417725,
+          "energy_difference_force_eV_A": -0.0010927518208821616,
+          "error_eV_A": 0.00037361184755961086
+        },
+        {
+          "atom": 5,
+          "axis": 2,
+          "delta_A": 0.0003,
+          "force_eV_A": -0.0031903237104415894,
+          "energy_difference_force_eV_A": -0.002707044283548991,
+          "error_eV_A": 0.0004832794268925982
+        },
+        {
+          "atom": 6,
+          "axis": 0,
+          "delta_A": 0.0003,
+          "force_eV_A": 0.002506934106349945,
+          "energy_difference_force_eV_A": 0.002185503641764323,
+          "error_eV_A": -0.00032143046458562186
+        },
+        {
+          "atom": 6,
+          "axis": 1,
+          "delta_A": 0.0003,
+          "force_eV_A": -0.0014790147542953491,
+          "energy_difference_force_eV_A": -0.0019619862238566084,
+          "error_eV_A": -0.00048297146956125924
+        },
+        {
+          "atom": 6,
+          "axis": 2,
+          "delta_A": 0.0003,
+          "force_eV_A": -0.0032153725624084473,
+          "energy_difference_force_eV_A": -0.00422199567159017,
+          "error_eV_A": -0.0010066231091817226
+        },
+        {
+          "atom": 7,
+          "axis": 0,
+          "delta_A": 0.0003,
+          "force_eV_A": -0.0005023504490964115,
+          "energy_difference_force_eV_A": 0.0007698933283487956,
+          "error_eV_A": 0.0012722437774452071
+        },
+        {
+          "atom": 7,
+          "axis": 1,
+          "delta_A": 0.0003,
+          "force_eV_A": -0.0009787017479538918,
+          "energy_difference_force_eV_A": -0.002185503641764323,
+          "error_eV_A": -0.0012068018938104315
+        },
+        {
+          "atom": 7,
+          "axis": 2,
+          "delta_A": 0.0003,
+          "force_eV_A": -0.00045230239629745483,
+          "energy_difference_force_eV_A": 0.0006953875223795574,
+          "error_eV_A": 0.0011476899186770122
+        },
+        {
+          "atom": 8,
+          "axis": 0,
+          "delta_A": 0.0003,
+          "force_eV_A": -9.184237569570541e-05,
+          "energy_difference_force_eV_A": -0.000521540641784668,
+          "error_eV_A": -0.00042969826608896255
+        },
+        {
+          "atom": 8,
+          "axis": 1,
+          "delta_A": 0.0003,
+          "force_eV_A": 0.0037474632263183594,
+          "energy_difference_force_eV_A": 0.002831220626831055,
+          "error_eV_A": -0.0009162425994873043
+        },
+        {
+          "atom": 8,
+          "axis": 2,
+          "delta_A": 0.0003,
+          "force_eV_A": 0.00432094931602478,
+          "energy_difference_force_eV_A": 0.0032037496566772465,
+          "error_eV_A": -0.0011171996593475337
+        }
+      ]
+    }
+  ],
+  "scope": "Calculator consistency only; not accuracy against DFT"
+}

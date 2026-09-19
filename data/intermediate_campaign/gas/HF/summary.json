@@ -1,0 +1,8 @@
+{
+  "converged": true,
+  "steps": 27,
+  "energy_eV": -7.634864152783062,
+  "max_mobile_force_eV_A": 0.004912889770400636,
+  "elapsed_s": 1.2358435000060126,
+  "frames": 28
+}

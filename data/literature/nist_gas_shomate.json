@@ -1,0 +1,123 @@
+{
+  "source": "NIST Chemistry WebBook SRD 69; Chase 1998 Shomate fits",
+  "accessed": "2026-09-19",
+  "coefficient_order": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H"
+  ],
+  "units": "Cp and S J/mol/K; H and enthalpy increment kJ/mol; t=T/1000",
+  "standard_pressure_Pa": 100000.0,
+  "reference": "H coefficient is formation enthalpy at 298.15 K; chemical potentials use elemental enthalpy zeros at 298.15 K",
+  "uncertainty": "No fit covariance supplied in retrieved coefficient tables",
+  "species": {
+    "HF": {
+      "temperature_range_K": [
+        298.0,
+        1000.0
+      ],
+      "coefficients": [
+        30.11693,
+        -3.246612,
+        2.868116,
+        0.457914,
+        -0.024861,
+        -281.4912,
+        210.9226,
+        -272.5462
+      ],
+      "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7664393&Mask=35"
+    },
+    "SiF4": {
+      "temperature_range_K": [
+        298.0,
+        1000.0
+      ],
+      "coefficients": [
+        42.986,
+        159.2803,
+        -151.1374,
+        51.60629,
+        -0.42704,
+        -1635.04,
+        291.1445,
+        -1614.94
+      ],
+      "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7783611&Mask=3FB7&Units=SI"
+    },
+    "NH3": {
+      "temperature_range_K": [
+        298.0,
+        1400.0
+      ],
+      "coefficients": [
+        19.99563,
+        49.77119,
+        -15.37599,
+        1.921168,
+        0.189174,
+        -53.30667,
+        203.8591,
+        -45.89806
+      ],
+      "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7664417&Plot=on&Type=JANAFG"
+    },
+    "H2": {
+      "temperature_range_K": [
+        298.0,
+        1000.0
+      ],
+      "coefficients": [
+        33.066178,
+        -11.363417,
+        11.432816,
+        -2.772874,
+        -0.158558,
+        -9.980797,
+        172.707974,
+        0.0
+      ],
+      "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C1333740&Table=on&Type=JANAFG"
+    },
+    "HCl": {
+      "temperature_range_K": [
+        298.0,
+        1200.0
+      ],
+      "coefficients": [
+        32.12392,
+        -13.45805,
+        19.86852,
+        -6.853936,
+        -0.049672,
+        -101.6206,
+        228.6866,
+        -92.31201
+      ],
+      "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7647010&Mask=7",
+      "conversion": "None; coefficients transcribed from SI table"
+    },
+    "H2O": {
+      "temperature_range_K": [
+        500.0,
+        1700.0
+      ],
+      "coefficients": [
+        30.092,
+        6.832514,
+        6.793435,
+        -2.53448,
+        0.082139,
+        -250.881,
+        223.3967,
+        -241.8264
+      ],
+      "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7732185&Table=on&Type=JANAFG"
+    }
+  }
+}

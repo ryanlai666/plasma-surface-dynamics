@@ -1,6 +1,12 @@
 {
-  "passed": 82,
+  "passed": 95,
   "command": "python -m pytest -q -p no:cacheprovider",
-  "scope": "Full suite including kinetics engines, cycle-depth stall diagnosis, thermal-rate formulas, parameter provenance and visualization checks",
-  "date": "2026-09-19"
+  "scope": "Full core suite, including DFT artifact provenance, full-host Hessian eligibility, gas thermochemistry and fixed-frame trajectory invariants",
+  "date": "2026-09-19",
+  "skipped": 1,
+  "optional_ASE_constraint_tests": {
+    "passed": 2,
+    "reason_for_separate_run": "ASE not installed in the core interpreter",
+    "command": ".venv-mace Python with pytest from system site-packages: tests/test_fixed_frame_constraints.py"
+  }
 }

@@ -1,0 +1,7 @@
+{
+  "rows": 81,
+  "source_sha256": "f715b80a9b1f69e3b9d4f7fcfbe1bc9b218d395c74f952ac562d63389b07c987",
+  "code_sha256": "53a82900b6edd4cd768631e276058ffd47fdc8ae26a98c6e85dcc6bcb453ccd4",
+  "scope": "Ideal-gas chemical-potential terms on source reference; no surface free energies or barriers inferred",
+  "water_below_500K": "Excluded: not in retrieved Shomate fit range"
+}

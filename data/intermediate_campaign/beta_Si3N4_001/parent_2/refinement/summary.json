@@ -1,0 +1,9 @@
+{
+  "converged": true,
+  "steps": 49,
+  "energy_eV": -222.98814132870123,
+  "max_mobile_force_eV_A": 0.01764009215910925,
+  "folder": "data/intermediate_campaign/beta_Si3N4_001/parent_2/refinement",
+  "source_sha256": "80d245d2daea09916d23b304766ebc2763af3c0418997b8396d1d6f6143edc12",
+  "final_sha256": "9994dc01136db8d73f731e1be1300eca41ebe1b6c48b42a04051254caec33081"
+}

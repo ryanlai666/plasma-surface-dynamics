@@ -20,10 +20,18 @@ Start with the [project overview](../README.md), then use the relevant model and
 
 ## Unresolved chemistry and next calculations
 
+- [New coadsorbate structures and calculations](intermediate_results/REPORT.md).
 - [Intermediate gap register](../data/reaction_network/intermediate_gaps.csv) and [HiPRGen audit](HIPRGEN.md).
 - [Cycle-depth stall diagnosis](multilayer_results/cycle_diagnosis.json): 13 bare-N and eight NH2 final-cleavage sites block continued recession.
 - [Environment-specific calculation queue](../data/multilayer/rate_requests/index.json).
 - [Scientific critique](SCIENTIFIC_REVIEW.md), [fragment and side-reaction hypotheses](REACTION_CANDIDATES.md), [research plan](RESEARCH_PLAN.md).
+
+## New assumption checks
+
+- [Full coadsorbate stability](intermediate_results/FULL_STABILITY.md): mobile-host Hessians and unstable-reference exclusions.
+- [Final-cleavage DFT comparison](final_cleavage_results/REPORT.md): two basis sets, failed NEBs and a checked constrained scan.
+- [Gas thermochemistry](GAS_THERMOCHEMISTRY.md): NIST coefficients, pressure corrections and reference limits.
+- [Material/model decisions](MATERIAL_MODEL_DECISIONS.md): independent literature and discriminating tests.
 
 ## Folder map
 
@@ -36,6 +44,8 @@ Start with the [project overview](../README.md), then use the relevant model and
 | `data/surface_paths/` | Per-system evaluated atomistic structures and energies |
 | `data/reaction_network/` | Candidate-network evidence and intermediate gaps |
 | `data/multilayer/` | Explicit graph, trajectories and rate requests |
+| `data/intermediate_campaign/` | Per-surface coadsorbate calculations, references and candidate connectivity |
+| `data/final_cleavage/` | Molecular-proxy paths, DFT diagnostics and explicit invalidation records |
 | `data/kinetic_audit/` | Units, provenance, parameters and evaluated conditional rates |
 | `docs/*_results/`, `docs/reaction_network/` | Reports, plots, animations and rendering provenance |
 | `scripts/` | [Reproducible calculation/report workflows](../scripts/README.md) |
