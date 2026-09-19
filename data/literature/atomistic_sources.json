@@ -2,6 +2,32 @@
   "checked": "2026-09-18",
   "sources": [
     {
+      "id": "si_f2_rates",
+      "priority": 1,
+      "url": "https://arxiv.org/abs/2305.09037",
+      "contents": "Four facet-specific DFT/TST barrier and prefactor laws, Table 1",
+      "status": "extracted_and_implemented_first_event_kinetics",
+      "limitation": "F2 chemical dry etch, not Cl2/Ar ALE; complete removal sequence and branching unavailable"
+    },
+    {
+      "id": "sicl4_surface_ts",
+      "priority": 1,
+      "url": "https://doi.org/10.3390/sym15010213",
+      "contents": "17 stationary structures, six matched IS/TS/FS paths",
+      "status": "coordinates_and_energies_collected; six_GIFs_rendered",
+      "license": "CC BY 4.0",
+      "limitation": "Readsorption/recombination side channel; no full NEB images, Hessians or supplied cell vectors"
+    },
+    {
+      "id": "sin_hf_mlip",
+      "priority": 1,
+      "url": "https://doi.org/10.1021/acsami.4c07949.s001",
+      "contents": "Six HF impact yields and seven state-specific area coefficients",
+      "status": "public_SI_inspected_and_factual_numeric_tables_extracted",
+      "license": "CC BY-NC 4.0 source; original PDF not redistributed",
+      "limitation": "ML-MD labels, not DFT TS; full S4 conditions pending; no checkpoint or raw dataset in SI"
+    },
+    {
       "id": "si_hcl",
       "priority": 1,
       "url": "https://zenodo.org/records/10211009",
@@ -26,8 +52,8 @@
       "priority": 1,
       "url": "https://doi.org/10.1016/j.apsusc.2024.159414",
       "poster": "https://avssymposium.org/ALD2024/Sessions/SupplementalDocumentDownload/80689?sessionId=79078",
-      "contents": "Hydrogenated amorphous SiN/HF reaction barriers",
-      "status": "two_poster_entries_previously_collected",
+      "contents": "Ea, Ephy and DeltaE for 16 surface fluorination paths; two salt-formation barriers and four desorption-energy branches",
+      "status": "16_fluorination_paths_plus_salt_energetics_collected",
       "license": "source rights retained; numerical factual extract only",
       "limitation": "Different hydrogen fraction and chemistry; no full reaction geometry set acquired"
     },
@@ -52,7 +78,7 @@
     },
     {
       "id": "transition1x",
-      "priority": 2,
+      "priority": 3,
       "url": "https://www.nature.com/articles/s41597-022-01870-w",
       "code": "https://gitlab.com/matschreiner/Transition1x",
       "download": "https://figshare.com/ndownloader/files/36035789",
@@ -63,7 +89,7 @@
     },
     {
       "id": "omol25",
-      "priority": 2,
+      "priority": 3,
       "url": "https://fair-chem.github.io/omol25/",
       "download": "https://huggingface.co/facebook/OMol25",
       "contents": "Molecular DFT energy/force data at wB97M-V/def2-TZVPD",
@@ -82,10 +108,10 @@
     },
     {
       "id": "dpa_model",
-      "priority": 1,
+      "priority": 3,
       "url": "https://huggingface.co/deepmodelingcommunity/DPA-3.3-1M",
       "contents": "Existing multi-head ML potential with explicit OMol25 task",
-      "status": "local_checkpoint_reused_read_only",
+      "status": "NH3 diagnostic archived; not used for dry-etch parameter validation",
       "license": "CC BY 4.0 model card",
       "limitation": "ML inference is not a new DFT calculation; validate saddle and chemical domain"
     }

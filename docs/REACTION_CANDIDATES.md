@@ -1,6 +1,6 @@
 # Fragments, side reactions, and discriminating experiment sets
 
-The [machine-readable catalog](../configs/reaction_candidates.json) contains 35 species/bookkeeping units and 21 atom- and charge-balanced candidate reactions. These are a research shortlist, not a validated kinetic mechanism. No channel probabilities or rate constants are assigned. Literature-supported products and hypothetical side reactions are explicitly labeled per entry. The [checker](../scripts/check_reaction_catalog.py) verifies conservation; it does not prove a reaction occurs.
+The [machine-readable catalog](../configs/reaction_candidates.json) contains 63 species/bookkeeping units and 45 atom- and charge-balanced candidate reactions. These are a research shortlist, not a validated kinetic mechanism. No channel probabilities or rate constants are assigned. Literature-supported products and hypothetical side reactions are explicitly labeled per entry. The [checker](../scripts/check_reaction_catalog.py) verifies conservation; it does not prove a reaction occurs.
 
 ## Candidate fragments by chemistry
 
@@ -42,10 +42,34 @@ Track Si, N, H, F/Cl and C balances separately, including retained film, volatil
 
 ## Computational sequence for these sets
 
-1. Use the NH3 inversion result to verify the saddle/force/Hessian workflow on a small nitride-related gas product. It does not estimate NH3 release from a nitride surface.
+1. Begin with a defined surface event and matched IS/TS/FS. Use the [published surface triplets](dry_etch_results/TRANSITION_STATES.md) for a real surface-path example and the [dry-etch parameter audit](DRY_ETCH_PARAMETERS.md) to select relevant kinetics. The archived molecular inversion result supplies no etch parameter.
 2. Rank **candidate calculations**, not predicted reactor yield: adsorbed HF attack on a hydrogenated Si-N bridge; fluorination of Si-H groups; Cl migration on a defined reconstructed Si surface; fragment-assisted Si-N cleavage; salt formation/decomposition where relevant.
 3. For cheap initial screening, the catalog includes successive `SiH4 + HF -> SiH3F + H2`-type molecular exchanges. These are atom-balanced surrogate hypotheses, not established surface pathways. Their TS and reaction energies are not yet calculated.
 4. For each selected real surface event, compute matched reactant, saddle and product energies, verify the saddle and connectivity, then evaluate local-environment and charge/spin dependence. Check ML candidates with DFT before constructing rates.
 5. Fit a richer state model only after observations discriminate bare, modified, damaged, fluorocarbon-covered and salt-retaining states. Keep diffusion as explicit hops rather than folding it into etch yield.
 
-Reproduce the catalog check with `python scripts/check_reaction_catalog.py`. Links: [data acquisition and diffusion theory](ATOMISTIC_DATA.md), [computed molecular results](barrier_results/REPORT.md), [earlier mechanism evidence](LITERATURE.md).
+Reproduce the catalog check with `python scripts/check_reaction_catalog.py`. Links: [data acquisition and diffusion theory](ATOMISTIC_DATA.md), [dry-etch rate results](dry_etch_results/REPORT.md), [earlier mechanism evidence](LITERATURE.md).
+
+## Expanded fragments: evidence and reactions to distinguish
+
+| Family | Evidence and likely role | What is still a hypothesis |
+|---|---|---|
+| SiF, SiF2, SiF4, Si2F6 | [Humbird and Graves MD](https://doi.org/10.1063/1.1753657) reports condition-dependent Si fluoride products; [radical detection study](https://doi.org/10.1016/0009-2614(87)87112-9) identifies SiF/SiF2 | The catalog's `2 SiF3 -> Si2F6` is a proposed stabilized association, not an established gas-phase branching fraction |
+| SiCl, SiCl2, SiCl3, SiCl4 | [HCl mechanism](https://doi.org/10.1016/j.apsusc.2024.159836), [chlorine-etch DFT](https://doi.org/10.1016/S0039-6028(99)00610-X), and [matched SiCl4 surface TS](https://doi.org/10.3390/sym15010213) | Electron/ion fragmentation versus neutral desorption must be separated; source adsorption reversal does not establish substrate removal |
+| CH2F, CHF2, CF, CF2, CF3 | [HFC beam study](https://ir.library.osaka-u.ac.jp/repo/ouka/all/78472/JVacSciTechnolA_29_05_050601.pdf) and [HFC/O2 ALE MD](https://www.sony.com/en/SonyInfo/technology/publications/molecular-dynamics-simulations-of-plasma-enhanced-atomic-layer-etching-of-silicon-nitride-using-hydrofluorocarbon-and-oxygen-plasmas/) motivate fragment-specific treatment | Incoming neutral and ion identities require plasma diagnostics; equal feed-gas dose does not imply equal fragment flux |
+| HCN, FCN, CNx | [Beam measurements and proposed H-assisted mechanism](https://ir.library.osaka-u.ac.jp/repo/ouka/all/78472/JVacSciTechnolA_29_05_050601.pdf); [CH3F/O2 and CH3F/CO2 plasma-beam study](https://www.chee.uh.edu/sites/chbe/files/faculty/economou/kaler_plasma_beams_jvst_2016.pdf) discusses HCN/FCN pathways | Balanced catalog reactions are lumped product channels; their individual TS and rates remain uncomputed |
+| CO, CO2 | The HFC/O2 ALE MD study links O-assisted carbon removal to COx and recovery from etch stop | Carbon removal may also oxidize SiN; a carbon-cleaning step is not automatically selective |
+| NFx, NO, N2O, N2 | [Remote Ar/NF3/O2 mechanism](https://cpseg.eecs.umich.edu/pub/articles/JVSTA_36_021305_2018.pdf) motivates N/O/F chemistry; NO-assisted nitrogen removal differs from HF chemistry | Fragmentation entries need excitation/collision energy and validated branching. Do not mix the remote-plasma network into Cl2/Ar ALE |
+| NH3, HF, SiHF3, SiH2F2, AFS, NH5F2 | [SiN:H/HF DFT](https://doi.org/10.1016/j.apsusc.2024.159414): fluorination, volatile release and competing retained salt | Salt free-energy crossover temperatures are not TS barriers. NH3 inversion does not predict NH3 detachment |
+
+The catalogue contains explicitly separated **elementary source pathways**, **net stoichiometric bookkeeping**, and **hypotheses**. A balanced reaction is not proof of an accessible pathway. Entries with missing rates remain disabled in the generic kMC solver. The 16 source surface-motif reactions are retained in a separate [table](../data/literature/sin_hf_pathways.csv), because hidden slab bonds cannot be represented honestly as complete isolated gas molecules.
+
+## Additional discriminating experiment sets
+
+| Set | Controlled comparison | Readout and interpretation |
+|---|---|---|
+| E8: oxygen-assisted carbon clearing | Matched HFC dose and ion fluence, with/without a separate O step; include O-only controls | Surface carbon loss plus COx evolution and sustained removal versus SiOx growth. Tests passivation removal rather than simply increasing ion energy |
+| E9: molecular versus atomic F | Characterized F2 versus F exposure on known Si facets, with comparable measured fluence | Reaction probability, SiFx/Si2F6 product patterns and orientation dependence. Source F2 rates predict the first reaction only; escaped F can reduce anisotropy |
+| E10: nitrogen-containing products | Compare HFC/H and separately NF3/O2 chemistries; retain distinct process datasets | Phase-resolved HCN/FCN/CNx or NO/N2O signatures, surface N balance and H/C/O content. Do not assign all nitrogen loss to NH3 |
+
+Gas signals must be interpreted using calibrated fragmentation patterns and isotopes where available. Product-sensitive data are needed alongside EPC: fitting EPC alone cannot distinguish modifier stripping, salt retention, preferential N loss, carbon buildup and useful Si removal.

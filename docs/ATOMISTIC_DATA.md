@@ -1,6 +1,6 @@
 # Collecting DFT, transition-state, and diffusion data
 
-This collection separates **published DFT labels**, **published geometry-only structures**, **literature barriers**, **new local DFT**, and **ML predictions**. None is silently substituted for a calibrated plasma etch rate. Source register checked 2026-09-18: [machine-readable catalog](../data/literature/atomistic_sources.json).
+This collection separates **published DFT labels**, **published geometry-only structures**, **literature barriers**, **reaction-specific literature rates**, and **ML predictions**. None is silently substituted for a calibrated plasma etch rate. Source register checked 2026-09-18: [machine-readable catalog](../data/literature/atomistic_sources.json).
 
 ## What is now available
 
@@ -9,8 +9,8 @@ This collection separates **published DFT labels**, **published geometry-only st
 | Public Si/O/C/F DFT subset | [70 frames with energy and force labels](../data/reference/atomistic/dft_subset.extxyz), [index](../data/reference/atomistic/frame_index.json) | 45 evenly sampled frames from nine bulk/etching members plus all 25 configurations from six quasi-static drag groups |
 | Public Si-H-Cl geometries | [22 geometries](../data/reference/atomistic/hcl_geometries.extxyz), [index](../data/reference/atomistic/hcl_geometry_index.json) | Seven adsorbates and 15 structures named TS by their authors; no source energy/force/Hessian labels in these CONTCAR files |
 | Surface diffusion reference | [Two diffusion barriers](../data/literature/diffusion_barriers.csv) | Cl hopping and SiCl-complex diffusion on the specified Si(111)-(5x5) surface; no prefactors or path coordinates acquired |
-| Existing SiN:H/HF reference | [Two DFT pathway entries](../data/literature/sin_hf_barriers.csv) | Chemistry-specific author-poster values; kept separate from chlorine chemistry |
-| Local molecular saddle calculation | [Computed results](barrier_results/REPORT.md) | NH3 umbrella inversion using the existing OMol25-trained model and an isolated direct-DFT workflow; a method diagnostic, not a surface event |
+| Existing SiN:H/HF reference | [Original two DFT pathway entries; expanded to [all 16](../data/literature/sin_hf_pathways.csv)](../data/literature/sin_hf_barriers.csv) | Chemistry-specific author-poster values; kept separate from chlorine chemistry |
+| Dry-etch reaction parameters and paths | [Surface TS and rates](DRY_ETCH_PARAMETERS.md) | Four F2/Si rate laws, 16 SiN:H/HF fluorination pathways, six matched SiCl4 surface triplets, and relevant impact/salt data |
 
 ### Published labels and provenance
 
@@ -68,11 +68,6 @@ Do not substitute a per-neighbor rate for Gamma without its coordination factor.
 
 The local inventory found DPA-3.3-1M with an **OMol25 head**, not UMA. [The checkpoint's official model card](https://huggingface.co/deepmodelingcommunity/DPA-3.3-1M) specifies molecular task selection and `[charge, multiplicity]` inputs. Existing MACE-MP and NequIP materials checkpoints should not be relabeled as molecular OMol25 potentials. No existing benchmark environment or checkpoint was replaced.
 
-A useful progression is:
+Start with a defined dry-etch surface event and matched IS/TS/FS, not a gas-product conformational change. The current [parameter audit and source-specific calculations](DRY_ETCH_PARAMETERS.md) identify what can actually enter a kinetic model. Obtain a consistent cell, constraints, coverage and charge/spin state, relax matching endpoints, run CI-NEB and saddle refinement, then verify the mobile-subspace Hessian and connectivity. Check cluster-size/termination effects if a cluster is used. Compute vibrational corrections/prefactors before promoting electronic barriers to production rates.
 
-1. **Small molecular diagnostic:** optimize minima and a saddle, evaluate forces and Hessian modes, and check both downhill connections. Compare ML with direct DFT while recording functional/basis differences. The NH3 calculation implements this step.
-2. **Chemically relevant cluster:** define a terminated Si/N/H/F or Si/H/Cl fragment and a specific elementary event. Converge cluster size and termination; include relevant charge/spin states. ML can propose a path, but refine its saddle and endpoints with DFT.
-3. **Surface reaction or diffusion:** construct matching periodic endpoints with identical cell and atom order. Relax endpoints with consistent fixed-bottom constraints; run CI-NEB, then refine the saddle and verify the mobile-subspace Hessian and endpoint connections. Preserve slab orientation, coverage, reconstruction, lateral size and vacuum.
-4. **Rates:** add zero-point and vibrational/free-energy corrections and a justified prefactor. Test barrier and rate sensitivity across surface configurations. Do not feed a molecular electronic barrier directly into an ion-yield threshold.
-
-A short AIMD trajectory does not replace a rare-event search. For SiNx, begin with several amorphous configurations at each N/Si and H fraction; a single crystal or isolated cluster cannot establish the material's barrier distribution. A full 177-181 atom HCl slab DFT/NEB calculation is substantially more expensive than the local four-atom diagnostic and has not been run here.
+A short AIMD trajectory does not replace a rare-event search. For SiNx, begin with several amorphous configurations at each N/Si and H fraction; a single crystal or isolated cluster cannot establish the material's barrier distribution. A full 177-181 atom HCl slab DFT/NEB calculation is substantially more expensive than a molecular calculation and has not been run here.

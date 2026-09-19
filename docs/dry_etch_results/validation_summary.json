@@ -1,0 +1,11 @@
+{
+  "regression_tests_passed": 29,
+  "balanced_reactions": 45,
+  "source_structures": 17,
+  "source_surface_triplets": 6,
+  "animation_frames_each": 41,
+  "source_hashes_verified": true,
+  "source_energy_difference_identity_checked": true,
+  "new_periodic_DFT_runs": 0,
+  "limitations": "Source stationary points and interpolated GIFs, not a new NEB or validated full ALE process"
+}

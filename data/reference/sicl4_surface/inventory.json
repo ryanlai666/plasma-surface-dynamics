@@ -1,0 +1,104 @@
+[
+  {
+    "label": "clean_surface",
+    "natoms": 112,
+    "formula": "H32Si80",
+    "sha256": "067d0aa4d1c1714ed6ad880ca83755ecc8d07a4dda02c0e078cd35ce74772000"
+  },
+  {
+    "label": "STC",
+    "natoms": 5,
+    "formula": "Cl4Si",
+    "sha256": "0b3d667573f9385f57f49dbbb8942f0db5cfb52b91b58898ddc994e84f7d9771"
+  },
+  {
+    "label": "VDW1",
+    "natoms": 117,
+    "formula": "H32Cl4Si81",
+    "sha256": "4ab411e4f88a0306ac7c94a4ca486a9b1797b3aceb2e4f9dc759e64d7034f885"
+  },
+  {
+    "label": "P1",
+    "natoms": 117,
+    "formula": "H32Cl4Si81",
+    "sha256": "2194087283fe0f5b11400dd863f71ee00edca484d2384f93ed6ccd5c6b0f45ff"
+  },
+  {
+    "label": "TS1",
+    "natoms": 117,
+    "formula": "H32Cl4Si81",
+    "sha256": "131d3dc2dc0ed2fc098ba5a486348fbdada3eb1c10aa8fedace2453c505f74df"
+  },
+  {
+    "label": "TS2",
+    "natoms": 117,
+    "formula": "H32Cl4Si81",
+    "sha256": "ba009f959c69b80f6262128bf876941d7c6b76a71eb21811288849fa0d49f723"
+  },
+  {
+    "label": "TS3",
+    "natoms": 117,
+    "formula": "H32Cl4Si81",
+    "sha256": "03432deb490880d785b4ea6f1f30821dd0dcae768ec8c541035118a91a30d8a4"
+  },
+  {
+    "label": "IM1",
+    "natoms": 117,
+    "formula": "H32Cl4Si81",
+    "sha256": "901f3a182a3434329656801f163ece8f4988218169f252bd9b9a509b0541c2f7"
+  },
+  {
+    "label": "VDW2",
+    "natoms": 117,
+    "formula": "H32Cl4Si81",
+    "sha256": "1d3ef369989ee2ea6965c90a5437d35ef4599d53eedb157ba251be3e95684b7b"
+  },
+  {
+    "label": "VDW3",
+    "natoms": 117,
+    "formula": "H32Cl4Si81",
+    "sha256": "45125f738d28b6085ee35a509fca7a2b2fd7e8bf92b54c46a0d2c182322c4f5b"
+  },
+  {
+    "label": "P2",
+    "natoms": 117,
+    "formula": "H32Cl4Si81",
+    "sha256": "6b18546a32584c829fbce054d1d2c44c9e39d6b5b3601b48432514e9f226af83"
+  },
+  {
+    "label": "P3",
+    "natoms": 117,
+    "formula": "H32Cl4Si81",
+    "sha256": "e4f040f5358419f8f98acd2a10fbba17a09a932c58152b40456993f9e0cd9eb3"
+  },
+  {
+    "label": "TS4",
+    "natoms": 117,
+    "formula": "H32Cl4Si81",
+    "sha256": "fac8b549fd2936fb2e611fb8b500c7e6571e1cc1e877c1c0ba4211f0c7802d5c"
+  },
+  {
+    "label": "TS5",
+    "natoms": 117,
+    "formula": "H32Cl4Si81",
+    "sha256": "b9d4b9cd69ffa0a00c0eac4f8c11bab69c04f22a2a9e201ef20fb41c87507a44"
+  },
+  {
+    "label": "VDW4",
+    "natoms": 117,
+    "formula": "H32Cl4Si81",
+    "sha256": "f7e21c4ccc685dc5e5d2fe96bbe23dfc84644652b9ab8da56327be15c6ec7dab"
+  },
+  {
+    "label": "P4",
+    "natoms": 117,
+    "formula": "H32Cl4Si81",
+    "sha256": "e0b4146fbe15464c13b38173615959cfd1244e9fbd39938369ccc8a06246d670"
+  },
+  {
+    "label": "TS6",
+    "natoms": 117,
+    "formula": "H32Cl4Si81",
+    "sha256": "cc60d8199bc8b2d1ff9ddbf99926ddcaf9a23a3637cabfe76de03f1a66821be5"
+  }
+]

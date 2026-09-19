@@ -1,0 +1,113 @@
+{
+  "source": "https://doi.org/10.3390/sym15010213",
+  "license": "CC BY 4.0",
+  "authors": "Jianxun Zhang, Quan Zhu and Jun Li",
+  "energy_zero": "Separated SiCl4 and clean Si(100)-c(4x2), no ZPE",
+  "energy_unit": "kcal/mol",
+  "conversion_kcal_mol_per_eV": 23.060547830619,
+  "paths": [
+    {
+      "id": "IR_direct",
+      "states": [
+        "VDW1",
+        "TS1",
+        "P1"
+      ],
+      "relative_energies_kcal_mol": [
+        -15.6,
+        12.8,
+        -49.8
+      ],
+      "barrier_forward_eV": 1.231540560467148,
+      "barrier_reverse_eV": 2.7145929255367416,
+      "reaction_energy_eV": -1.4830523650695937,
+      "source_figure": 4
+    },
+    {
+      "id": "IR_flip",
+      "states": [
+        "VDW1",
+        "TS2",
+        "IM1"
+      ],
+      "relative_energies_kcal_mol": [
+        -15.6,
+        -14.9,
+        -15.4
+      ],
+      "barrier_forward_eV": 0.030354872969260663,
+      "barrier_reverse_eV": 0.021682052120900495,
+      "reaction_energy_eV": 0.008672820848360166,
+      "source_figure": 4
+    },
+    {
+      "id": "IR_after_flip",
+      "states": [
+        "IM1",
+        "TS3",
+        "P1"
+      ],
+      "relative_energies_kcal_mol": [
+        -15.4,
+        0.7,
+        -49.8
+      ],
+      "barrier_forward_eV": 0.6981620782929959,
+      "barrier_reverse_eV": 2.18988726421095,
+      "reaction_energy_eV": -1.4917251859179539,
+      "source_figure": 4
+    },
+    {
+      "id": "ID_2",
+      "states": [
+        "VDW2",
+        "TS4",
+        "P2"
+      ],
+      "relative_energies_kcal_mol": [
+        -14.0,
+        -2.8,
+        -44.0
+      ],
+      "barrier_forward_eV": 0.48567796750817105,
+      "barrier_reverse_eV": 1.7866010947622009,
+      "reaction_energy_eV": -1.3009231272540296,
+      "source_figure": 9
+    },
+    {
+      "id": "ID_3",
+      "states": [
+        "VDW3",
+        "TS5",
+        "P3"
+      ],
+      "relative_energies_kcal_mol": [
+        -14.3,
+        1.2,
+        -50.3
+      ],
+      "barrier_forward_eV": 0.6721436157479154,
+      "barrier_reverse_eV": 2.233251368452751,
+      "reaction_energy_eV": -1.5611077527048356,
+      "source_figure": 9
+    },
+    {
+      "id": "OD",
+      "states": [
+        "VDW4",
+        "TS6",
+        "P4"
+      ],
+      "relative_energies_kcal_mol": [
+        -8.7,
+        -5.0,
+        -60.4
+      ],
+      "barrier_forward_eV": 0.16044718569466362,
+      "barrier_reverse_eV": 2.402371374995775,
+      "reaction_energy_eV": -2.2419241893011113,
+      "source_figure": 10
+    }
+  ],
+  "note": "Reverse paths recombine adsorbed SiCl3 and Cl into physisorbed SiCl4; this removes a previously adsorbed molecule, not demonstrated bulk Si. Only source stationary points are available."
+}

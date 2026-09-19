@@ -8,7 +8,7 @@ Combining surface reaction kinetics, Python/C++ simulation, public atomistic dat
 
 > **Scientific scope:** This project verifies numerical implementations and compares atomistic models. Default ALE rates are uncalibrated, and SiNx composition cards are hypothetical sensitivity scenarios. The results do not establish experimental etching accuracy.
 
-[Animations](#animation-gallery) | [Quick start](#quick-start) | [Results](#recorded-results) | [DFT/TS](#dft-data-and-transition-state-results) | [Equations and literature](#physical-hypotheses-equations-and-literature-support) | [Documentation](#documentation-and-project-map)
+[Animations](#animation-gallery) | [Quick start](#quick-start) | [Results](#recorded-results) | [DFT/TS](#dry-etch-transition-states-and-reaction-parameters) | [Equations and literature](#physical-hypotheses-equations-and-literature-support) | [Documentation](#documentation-and-project-map)
 
 ## Animation gallery
 
@@ -75,6 +75,7 @@ On Linux/macOS, activate with `source .venv/bin/activate`. The demo writes phase
 |---|---|
 | Generate the 2D and 3D animations | `python -m plasma_surface.animate` |
 | Compare the four material cards | `python -m plasma_surface.cli materials` |
+| Run published F2/Si first-reaction kinetics | `python -m plasma_surface.dry_etch` |
 | Fetch the public DFT geometries | `python -m plasma_surface.cli fetch-data` |
 | Run regression tests | `python -m pytest -q --basetemp=outputs/pytest-run` |
 | Build the optional C++ backend | `python scripts/build_cpp.py` |
@@ -87,7 +88,7 @@ The C++ build requires a C++17 GCC/Clang compiler. [Detailed setup, benchmarking
 
 | Check or comparison | Recorded result | Interpretation |
 |---|---:|---|
-| Regression suite | 25 tests passed | Analytical limits, kinetics, calibration recovery, backend checks, and animation-state fidelity |
+| Regression suite | 29 tests passed | Analytical limits, kinetics, calibration recovery, backend checks, and animation-state fidelity |
 | Python/C++ recipe comparison | 4,096 recipes | Same deterministic model evaluated by both implementations |
 | Maximum backend EPC difference | 2.22e-16 nm/cycle | Numerical agreement |
 | Stochastic ensembles | 6 of 6 within five standard errors | Agreement with the exact mean-field expectation |
@@ -133,31 +134,31 @@ Ensemble scatter decreases as the number of sites increases. The dose sweep chec
 </details>
 
 <!-- BEGIN ATOMISTIC RESULTS -->
-## DFT data and transition-state results
+## Dry-etch transition states and reaction parameters
 
-A small NH3 inversion calculation tests the molecular saddle workflow using **direct DFT** and the existing **OMol25-trained DPA model**:
+Surface reaction data now support a separate literature-based kinetics workflow:
 
-| Method | Electronic barrier (eV) | TS max force (eV/A) | Saddle checks |
-|---|---:|---:|---|
-| DPA-3.3 / OMol25 | 0.196504 | 7.86e-07 | Passed |
-| DFT PBE / def2-SVP | 0.277387 | 1.88e-05 | Passed |
-| DFT PBE / def2-TZVP | 0.215378 | 3.15e-05 | Passed |
+| System and event | Published result | Current use |
+|---|---|---|
+| F2 activation on Si: reconstructed (100), unreconstructed (100), (110), (111) | Ea = 0.13, 0.31, 0.35, 0.57 eV, with fitted prefactors | Implemented first-reaction rates and Gillespie verification |
+| HF on amorphous SiN:H | 16 fluorination paths; SiH2F2/SiHF3/SiF4 release barriers 0.81/0.96/0.53 eV | Reaction-specific reference table and prefactor sensitivity |
+| SiCl4 / Si(100) | Six matched surface IS/TS/FS pathways, 17 structures | Source-based animations and forward/reverse barriers |
+| HF impacts on Si3N4 | Six published ML-MD yields and seven surface-state coefficients | Reference with original units and conditions retained |
+| Competing chemistry | 63 species/bookkeeping units, 45 balanced candidate reactions, 11 experiment sets | Fragments, recombination, carbon retention/removal and salt pathways |
 
-Changing PBE from def2-SVP to def2-TZVP changes this electronic barrier by -0.062009 eV. This two-basis comparison does not establish the complete-basis limit.
+[Sources, full parameter audit and equations](docs/DRY_ETCH_PARAMETERS.md) | [Dry-etch rate results](docs/dry_etch_results/REPORT.md) | [Fragments and experiment sets](docs/REACTION_CANDIDATES.md).
 
+### Surface IS -> TS -> FS animation
 
-![Direct DFT and OMol25 molecular inversion paths](docs/barrier_results/comparison.png)
+![SiCl4 surface recombination through published TS6](docs/dry_etch_results/animations/od.gif)
 
-All reported saddles pass full-force, negative-curvature, and two-sided relaxation checks. NH3 inversion is a molecular workflow diagnostic, **not a SiN surface etching barrier**. The comparison uses different reference methods and excludes zero-point/free-energy corrections.
+**SiCl3* + Cl* -> SiCl4(physisorbed)** on reconstructed Si(100): the displayed reverse barrier is **2.4024 eV**. IS, TS and FS are published DFT structures; intermediate frames are geometric interpolation. This is a competing recombination/readsorption channel, **not proof of substrate Si removal**. [All six animations, barrier table and attribution](docs/dry_etch_results/TRANSITION_STATES.md).
 
-| Collected reference data | Contents |
-|---|---|
-| Published Si/O/C/F DFT | 70 energy/force frames, including 25 quasi-static drag configurations; drag peaks are not validated TS barriers |
-| Si-H-Cl source geometries | 22 structures, including 15 source-named TS; the archive lacks energy/force/Hessian labels |
-| Published Cl diffusion on Si(111)-(5x5) | 1.73 eV hopping and 1.34 eV SiCl-complex diffusion, with sources and applicability limits |
-| Fragment/side-reaction catalog | 35 species/bookkeeping units, 21 balanced candidate reactions, and eight proposed experiment sets |
+### Literature-parameterized dry-etch kinetics
 
-[Computed results and reproduction](docs/barrier_results/REPORT.md) | [Data, diffusion equations, and sources](docs/ATOMISTIC_DATA.md) | [Fragments and experiment sets](docs/REACTION_CANDIDATES.md).
+![F2/Si rates and first-event kinetics](docs/dry_etch_results/f2_surface_kinetics.png)
+
+Reproduce with `python -m plasma_surface.dry_etch`. The F2 calculation uses published barriers and prefactors over their 298.15-1000 K fit range. It predicts the first reaction of susceptible sites; it does not yet predict a complete ALE cycle or EPC. The generic Cl2/Ar-inspired cards remain uncalibrated: thermal barriers cannot be substituted for ion-impact thresholds.
 
 <!-- END ATOMISTIC RESULTS -->
 
@@ -207,7 +208,7 @@ Solid arrows describe implemented workflows; dashed arrows require further react
 
 ## Public data and scientific scope
 
-The project combines public atomistic references, local molecular DFT/ML calculations, and explicitly synthetic kinetic campaigns. The [Si-HCl DFT archive](https://zenodo.org/records/10211009) contains 22 inventoried geometries with CC BY 4.0 attribution and checksums. Two [public HF/SiN DFT barrier entries](data/literature/sin_hf_barriers.csv) are retained as reference data and are not loaded into the solver. See [dataset sources and suitability](docs/DATASETS.md).
+The project combines public surface-reaction data, literature-parameterized dry-etch rates, structural ML comparisons, and explicitly synthetic ALE campaigns. The [Si-HCl DFT archive](https://zenodo.org/records/10211009) contains 22 inventoried geometries with CC BY 4.0 attribution and checksums. The [16 HF/SiN fluorination pathways](data/literature/sin_hf_pathways.csv) retain their source energy references; the separate F2 kinetic model uses published prefactors. See [dataset sources and suitability](docs/DATASETS.md).
 
 Composition is metadata in the current [Si/SiNx cards](configs/materials.json). Hydrogen content, preferential Si/N removal, film density, product speciation, and lateral interactions do not drive the kinetics. The inherited thickness conversion is illustrative for nitrides. The generic growth channel is not a validated PECVD/PEALD mechanism. Experimental calibration requires measurements matched to the implemented recipe and chemistry; none are fabricated or bundled.
 
@@ -216,7 +217,7 @@ Composition is metadata in the current [Si/SiNx cards](configs/materials.json). 
 | Topic | Location |
 |---|---|
 | Equations and exact integration | [Model](docs/MODEL.md) |
-| DFT/TS data and computed molecular barriers | [Acquisition](docs/ATOMISTIC_DATA.md), [results](docs/barrier_results/REPORT.md) |
+| Dry-etch parameters and surface transition states | [Parameter audit](docs/DRY_ETCH_PARAMETERS.md), [rates](docs/dry_etch_results/REPORT.md), [IS/TS/FS GIFs](docs/dry_etch_results/TRANSITION_STATES.md) |
 | Fragments, side reactions, and experiment sets | [Candidate mechanisms](docs/REACTION_CANDIDATES.md) |
 | DFT/AIMD evidence, parameter audit, and hypotheses | [Literature](docs/LITERATURE.md) |
 | Reproduction and extended command examples | [Usage guide](docs/USAGE.md) |

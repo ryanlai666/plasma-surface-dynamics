@@ -1,0 +1,67 @@
+{
+  "status": "No current generic ALE parameter is validated by NH3 or by substituting a thermal surface barrier for an ion threshold",
+  "parameters": [
+    {
+      "parameter": "site_density_m2",
+      "value": 7e+18,
+      "status": "illustrative_unfitted",
+      "needed_evidence": "Defined reaction-site density on the actual facet or amorphous film; not transferable from arbitrary columns"
+    },
+    {
+      "parameter": "layer_nm",
+      "value": 0.136,
+      "status": "illustrative_unfitted",
+      "needed_evidence": "Removed Si/N counts and density/area conversion; do not equate first bond cleavage with layer removal"
+    },
+    {
+      "parameter": "sticking",
+      "value": 0.25,
+      "status": "illustrative_unfitted",
+      "needed_evidence": "Species/facet/termination-specific dissociation probability; F2 laws available in separate model, not for Cl radicals"
+    },
+    {
+      "parameter": "desorption_prefactor_s",
+      "value": 1000000.0,
+      "status": "illustrative_unfitted",
+      "needed_evidence": "Vibrational partition functions for an identified modifier desorption event"
+    },
+    {
+      "parameter": "desorption_barrier_ev",
+      "value": 0.65,
+      "status": "illustrative_unfitted",
+      "needed_evidence": "Matched IS/TS/FS for departure of the actual modifier; current modifier is unspecified"
+    },
+    {
+      "parameter": "chemical_threshold_ev",
+      "value": 15.0,
+      "status": "illustrative_unfitted",
+      "needed_evidence": "Energy/angle-resolved impact ensembles on modified surface, including preferential Cl loss"
+    },
+    {
+      "parameter": "physical_threshold_ev",
+      "value": 40.0,
+      "status": "illustrative_unfitted",
+      "needed_evidence": "Bare-film sputtering yield versus ion energy and incidence angle"
+    },
+    {
+      "parameter": "chemical_yield_scale",
+      "value": 0.8,
+      "status": "illustrative_unfitted",
+      "needed_evidence": "Counts of substrate atoms removed per incident ion, matched to surface stoichiometry"
+    },
+    {
+      "parameter": "physical_yield_scale",
+      "value": 0.15,
+      "status": "illustrative_unfitted",
+      "needed_evidence": "Ion-only removal yield and event-to-thickness conversion"
+    },
+    {
+      "parameter": "deposition_sticking",
+      "value": 0.2,
+      "status": "illustrative_unfitted",
+      "needed_evidence": "Separate fragment adsorption, retention and polymerization kinetics"
+    }
+  ],
+  "usable_new_model": "plasma_surface.dry_etch implements source F2 first-reaction rate laws only",
+  "new_DFT_calculations_this_update": 0
+}

@@ -1,0 +1,51 @@
+{
+  "status": "passed",
+  "source": "https://arxiv.org/abs/2305.09037v2",
+  "source_sha256": "3da82d9a7ad9592616f85142ea2a5b12b212f9e9211115ecd39df552e5245002",
+  "code_sha256": "60a8904dc2d574babc2686269a64f3deca120b68f3052c733e901c9b37a61801",
+  "checks": [
+    {
+      "facet": "r100",
+      "temperature_K": 500.0,
+      "hazard_s": 25.998806365569617,
+      "sites": 512,
+      "replicates": 128,
+      "max_standard_errors": 2.008346227727908,
+      "passed": true,
+      "seed_policy": "1000..1127; common random numbers across facets"
+    },
+    {
+      "facet": "u100",
+      "temperature_K": 500.0,
+      "hazard_s": 0.5559935955918103,
+      "sites": 512,
+      "replicates": 128,
+      "max_standard_errors": 2.008346227727908,
+      "passed": true,
+      "seed_policy": "1000..1127; common random numbers across facets"
+    },
+    {
+      "facet": "110",
+      "temperature_K": 500.0,
+      "hazard_s": 1.5687755806823007,
+      "sites": 512,
+      "replicates": 128,
+      "max_standard_errors": 2.008346227727908,
+      "passed": true,
+      "seed_policy": "1000..1127; common random numbers across facets"
+    },
+    {
+      "facet": "111",
+      "temperature_K": 500.0,
+      "hazard_s": 0.004930661466528284,
+      "sites": 512,
+      "replicates": 128,
+      "max_standard_errors": 2.008346227727908,
+      "passed": true,
+      "seed_policy": "1000..1127; common random numbers across facets"
+    }
+  ],
+  "scope": "Numerical reproduction of a published dry-etch first-event rate law; not new DFT, independent experimental validation or calibrated ALE EPC",
+  "f2_rate_rows": 484,
+  "hf_sensitivity_rows": 192
+}

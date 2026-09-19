@@ -1,6 +1,6 @@
 # Literature, hypotheses, and parameter provenance
 
-This document separates published atomistic evidence from this repository's coarse-grained assumptions. Literature checked 2026-09-16. The original literature review added no DFT calculations. Separate local molecular saddle calculations and additional public data are documented in the [atomistic acquisition guide](ATOMISTIC_DATA.md) and [computed results](barrier_results/REPORT.md); they do not calibrate the surface model. The existing MACE calculations are structural probes, not DFT reaction validation. Publisher abstracts/previews and the public author poster below support the extracted claims; inaccessible full texts were not treated as reviewed.
+This document separates published atomistic evidence from this repository's coarse-grained assumptions. Literature checked 2026-09-16. The original literature review added no DFT calculations. The expanded [dry-etch parameter audit](DRY_ETCH_PARAMETERS.md) now adds actual surface pathway data, IS/TS/FS animations and an implemented literature F2 rate law. The unrelated molecular diagnostic is archived and supplies no ALE parameter. The existing MACE calculations are structural probes, not DFT reaction validation. Publisher abstracts/previews and the public author poster below support the extracted claims; inaccessible full texts were not treated as reviewed.
 
 ## Evidence and applicability
 

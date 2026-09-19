@@ -1,0 +1,7 @@
+energy_eV,incidence_angle_deg,substrate,yield_Si3N4_per_HF
+20,0,H-terminated,0.04
+20,0,pristine,0.039
+50,0,H-terminated,0.067
+50,0,pristine,0.071
+50,75,H-terminated,0.026
+50,75,pristine,0.028

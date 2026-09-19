@@ -1,0 +1,49 @@
+{
+  "source": "https://doi.org/10.1021/acsami.4c07949.s001",
+  "source_url": "https://api.figshare.com/v2/articles/26867071",
+  "authors": "Hong et al.",
+  "source_tables": "S3 and S4",
+  "source_pdf_md5": "aaef3f38822481240fc0c2b3d41a4dfd",
+  "source_license": "CC BY-NC 4.0; factual numeric extract only; PDF not redistributed",
+  "label_kind": "published ML-potential MD, not DFT transition-state labels",
+  "impact_yield_units": "Si3N4/HF, not Si atoms/ion or column removal/ion",
+  "surface_coefficients": [
+    {
+      "species": "SiF0",
+      "desorption_area_nm2_per_HF": 0.00077349,
+      "reaction_area_nm2_per_HF": 0.020672
+    },
+    {
+      "species": "SiF1",
+      "desorption_area_nm2_per_HF": 0.0023288000000000002,
+      "reaction_area_nm2_per_HF": 0.01557
+    },
+    {
+      "species": "SiF2",
+      "desorption_area_nm2_per_HF": 0.0097272,
+      "reaction_area_nm2_per_HF": 0.019934
+    },
+    {
+      "species": "SiF3",
+      "desorption_area_nm2_per_HF": 0.054605,
+      "reaction_area_nm2_per_HF": null
+    },
+    {
+      "species": "NH0",
+      "desorption_area_nm2_per_HF": 0.0064532999999999995,
+      "reaction_area_nm2_per_HF": 0.0083217
+    },
+    {
+      "species": "NH1",
+      "desorption_area_nm2_per_HF": 0.0048023,
+      "reaction_area_nm2_per_HF": 0.0087203
+    },
+    {
+      "species": "NH2",
+      "desorption_area_nm2_per_HF": 0.034993,
+      "reaction_area_nm2_per_HF": null
+    }
+  ],
+  "coefficient_interpretation": "Table S4 columns labelled probabilities have area/fluence units. Hazard requires multiplication by matched HF flux. Table alone does not specify full operating conditions; not active in solver.",
+  "availability": "Public supplement contains tables/plots but no model checkpoint, raw training set or IS/TS/FS coordinates. Those were not acquired."
+}

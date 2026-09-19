@@ -1,0 +1,12 @@
+{
+  "source": "https://avssymposium.org/ALD2024/Sessions/SupplementalDocumentDownload/80689?sessionId=79078",
+  "doi": "10.1016/j.apsusc.2024.159414",
+  "source_page": 1,
+  "table": "Simulation of Fluorination, all 16 rows",
+  "source_sha256": "6689c0c1fd99dde2b7ac8d1cbac7e30604bde5e620f06a7faa58d63f7a1842d6",
+  "transcription": "Visually checked magnified source table. Surface asterisks and hidden slab bonds are source motif notation, not standalone balanced gas reactions.",
+  "substrate": "Amorphous hydrogenated Si-rich nitride, about 25 at.% H; not zero-H Si3N4 or the generic chlorine cards",
+  "energy_reference": "Source Ephy, DeltaE and Ea kept separately. Do not add Ephy to Ea or derive reverse barriers until full-paper reference conventions are established.",
+  "rate_status": "No prefactor or entropy supplied. Conditional Arrhenius sensitivity only; not fitted production rates.",
+  "copyright": "Numerical factual extract with attribution; source poster and article not redistributed"
+}

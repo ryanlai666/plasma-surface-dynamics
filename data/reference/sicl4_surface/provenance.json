@@ -1,0 +1,15 @@
+{
+  "doi": "10.3390/sym15010213",
+  "authors": [
+    "Jianxun Zhang",
+    "Quan Zhu",
+    "Jun Li"
+  ],
+  "license": "CC BY 4.0",
+  "source_url": "https://mdpi-res.com/d_attachment/symmetry/symmetry-15-00213/article_deploy/symmetry-15-00213-s001.zip",
+  "source_archive_sha256": "449d7f361b534b5ad419c861241e26e3908a67e2dfd9dc978afc5eed01e0b51e",
+  "support_pdf_sha256": "f8b5033a39f4dfd51156cc0c64d789e48cb112bdbc6249a05ec526fce6bf4a65",
+  "transformation": "Coordinate tables parsed from supporting PDF; atom order and Cartesian positions retained; no cell invented; not a new DFT calculation",
+  "method": "CP2K PBE-D3(BJ)/TZVP-MOLOPT-GTH, 550 Ry, Gamma point; source CI-NEB with six images",
+  "limits": "Published stationary points only; no full NEB image set, raw forces, Hessians or cell vectors supplied in coordinate tables. Recombination reverses source dissociative adsorption and is not proof of substrate Si removal."
+}

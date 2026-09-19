@@ -1,0 +1,72 @@
+{
+  "source": "https://arxiv.org/abs/2305.09037v2",
+  "version": "v2",
+  "authors": "Dwivedi, Barsukov, Jubin, Vella and Kaganovich",
+  "method": "Broken-symmetry unrestricted B3LYP; Si32F32 cluster; Lanl2dz for Si per author manuscript",
+  "event": "First F2 dissociative chemisorption / Si-Si activation on F-terminated silicon",
+  "kinetics": "k=A0*(T/298.15)^n1*exp(-Ea/kBT), hazard=k*n_F2. k units m3/s. gamma is the separately fitted per-impact reaction probability.",
+  "interpretation": "A first-event rate, not a complete ALE cycle. F-radical escape versus two-F retention branching is unresolved; no EPC assigned.",
+  "laws": [
+    {
+      "facet": "r100",
+      "A0_m3_s": 8.82e-21,
+      "n1": 2.2,
+      "gamma0": 0.0011,
+      "n2": 1.6,
+      "barrier_eV": 0.13,
+      "reference_temperature_K": 298.15,
+      "temperature_range_K": [
+        298.15,
+        1000
+      ],
+      "source_table": 1,
+      "source_page": 19
+    },
+    {
+      "facet": "u100",
+      "A0_m3_s": 1.23e-20,
+      "n1": 2.2,
+      "gamma0": 0.0016,
+      "n2": 1.7,
+      "barrier_eV": 0.31,
+      "reference_temperature_K": 298.15,
+      "temperature_range_K": [
+        298.15,
+        1000
+      ],
+      "source_table": 1,
+      "source_page": 19
+    },
+    {
+      "facet": "110",
+      "A0_m3_s": 7.52e-20,
+      "n1": 2.5,
+      "gamma0": 0.0096,
+      "n2": 1.96,
+      "barrier_eV": 0.35,
+      "reference_temperature_K": 298.15,
+      "temperature_range_K": [
+        298.15,
+        1000
+      ],
+      "source_table": 1,
+      "source_page": 19
+    },
+    {
+      "facet": "111",
+      "A0_m3_s": 3.9e-20,
+      "n1": 2.5,
+      "gamma0": 0.005,
+      "n2": 1.96,
+      "barrier_eV": 0.57,
+      "reference_temperature_K": 298.15,
+      "temperature_range_K": [
+        298.15,
+        1000
+      ],
+      "source_table": 1,
+      "source_page": 19
+    }
+  ],
+  "source_pdf_sha256": "07f764a975e604e369c2e81743e4a182e49b02e01d8939846121fe14687f8c5f"
+}

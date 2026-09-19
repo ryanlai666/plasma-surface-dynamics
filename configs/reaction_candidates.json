@@ -349,6 +349,285 @@
       "charge": 0,
       "multiplicity": null,
       "role": "bookkeeping_unit_not_isolated_molecule"
+    },
+    "SiCl": {
+      "composition": {
+        "Si": 1,
+        "Cl": 1
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 2,
+      "role": "source-supported family or candidate as specified per reaction; gas spin is reference choice only"
+    },
+    "SiCl3": {
+      "composition": {
+        "Si": 1,
+        "Cl": 3
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 2,
+      "role": "source-supported family or candidate as specified per reaction; gas spin is reference choice only"
+    },
+    "SiF2": {
+      "composition": {
+        "Si": 1,
+        "F": 2
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 1,
+      "role": "source-supported family or candidate as specified per reaction; gas spin is reference choice only"
+    },
+    "Si2F6": {
+      "composition": {
+        "Si": 2,
+        "F": 6
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 1,
+      "role": "source-supported family or candidate as specified per reaction; gas spin is reference choice only"
+    },
+    "CH2F": {
+      "composition": {
+        "C": 1,
+        "H": 2,
+        "F": 1
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 2,
+      "role": "source-supported family or candidate as specified per reaction; gas spin is reference choice only"
+    },
+    "CHF2": {
+      "composition": {
+        "C": 1,
+        "H": 1,
+        "F": 2
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 2,
+      "role": "source-supported family or candidate as specified per reaction; gas spin is reference choice only"
+    },
+    "CF": {
+      "composition": {
+        "C": 1,
+        "F": 1
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 2,
+      "role": "source-supported family or candidate as specified per reaction; gas spin is reference choice only"
+    },
+    "CN": {
+      "composition": {
+        "C": 1,
+        "N": 1
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 2,
+      "role": "source-supported family or candidate as specified per reaction; gas spin is reference choice only"
+    },
+    "HCN": {
+      "composition": {
+        "H": 1,
+        "C": 1,
+        "N": 1
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 1,
+      "role": "source-supported family or candidate as specified per reaction; gas spin is reference choice only"
+    },
+    "FCN": {
+      "composition": {
+        "F": 1,
+        "C": 1,
+        "N": 1
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 1,
+      "role": "source-supported family or candidate as specified per reaction; gas spin is reference choice only"
+    },
+    "CO": {
+      "composition": {
+        "C": 1,
+        "O": 1
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 1,
+      "role": "source-supported family or candidate as specified per reaction; gas spin is reference choice only"
+    },
+    "CO2": {
+      "composition": {
+        "C": 1,
+        "O": 2
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 1,
+      "role": "source-supported family or candidate as specified per reaction; gas spin is reference choice only"
+    },
+    "O": {
+      "composition": {
+        "O": 1
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 3,
+      "role": "source-supported family or candidate as specified per reaction; gas spin is reference choice only"
+    },
+    "O2": {
+      "composition": {
+        "O": 2
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 3,
+      "role": "source-supported family or candidate as specified per reaction; gas spin is reference choice only"
+    },
+    "NO": {
+      "composition": {
+        "N": 1,
+        "O": 1
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 2,
+      "role": "source-supported family or candidate as specified per reaction; gas spin is reference choice only"
+    },
+    "N2O": {
+      "composition": {
+        "N": 2,
+        "O": 1
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 1,
+      "role": "source-supported family or candidate as specified per reaction; gas spin is reference choice only"
+    },
+    "N": {
+      "composition": {
+        "N": 1
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 4,
+      "role": "source-supported family or candidate as specified per reaction; gas spin is reference choice only"
+    },
+    "NH": {
+      "composition": {
+        "N": 1,
+        "H": 1
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 3,
+      "role": "source-supported family or candidate as specified per reaction; gas spin is reference choice only"
+    },
+    "NF3": {
+      "composition": {
+        "N": 1,
+        "F": 3
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 1,
+      "role": "source-supported family or candidate as specified per reaction; gas spin is reference choice only"
+    },
+    "NF2": {
+      "composition": {
+        "N": 1,
+        "F": 2
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 2,
+      "role": "source-supported family or candidate as specified per reaction; gas spin is reference choice only"
+    },
+    "NF": {
+      "composition": {
+        "N": 1,
+        "F": 1
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 3,
+      "role": "source-supported family or candidate as specified per reaction; gas spin is reference choice only"
+    },
+    "N_surface": {
+      "composition": {
+        "N": 1
+      },
+      "phase": "surface_bookkeeping",
+      "charge": 0,
+      "multiplicity": null,
+      "role": "source-supported family or candidate as specified per reaction; gas spin is reference choice only"
+    },
+    "C_surface": {
+      "composition": {
+        "C": 1
+      },
+      "phase": "surface_bookkeeping",
+      "charge": 0,
+      "multiplicity": null,
+      "role": "source-supported family or candidate as specified per reaction; gas spin is reference choice only"
+    },
+    "SiCl3_surface": {
+      "composition": {
+        "Si": 1,
+        "Cl": 3
+      },
+      "phase": "surface_bookkeeping",
+      "charge": 0,
+      "multiplicity": null,
+      "role": "source-supported family or candidate as specified per reaction; gas spin is reference choice only"
+    },
+    "Cl_surface": {
+      "composition": {
+        "Cl": 1
+      },
+      "phase": "surface_bookkeeping",
+      "charge": 0,
+      "multiplicity": null,
+      "role": "source-supported family or candidate as specified per reaction; gas spin is reference choice only"
+    },
+    "SiCl4_physisorbed": {
+      "composition": {
+        "Si": 1,
+        "Cl": 4
+      },
+      "phase": "surface_bookkeeping",
+      "charge": 0,
+      "multiplicity": null,
+      "role": "source-supported family or candidate as specified per reaction; gas spin is reference choice only"
+    },
+    "NH5F2_salt": {
+      "composition": {
+        "N": 1,
+        "H": 5,
+        "F": 2
+      },
+      "phase": "solid_bookkeeping",
+      "charge": 0,
+      "multiplicity": null,
+      "role": "source-supported family or candidate as specified per reaction; gas spin is reference choice only"
+    },
+    "SiF": {
+      "composition": {
+        "Si": 1,
+        "F": 1
+      },
+      "phase": "gas",
+      "charge": 0,
+      "multiplicity": 2,
+      "role": "Reported radical in molecular-beam product detection; production mechanism must be distinguished from ionizer fragmentation"
     }
   },
   "reactions": [
@@ -689,6 +968,400 @@
       "evidence": "balanced_candidate_for_moisture_artifact; not assessed kinetic pathway",
       "source": null,
       "candidate_signal": "Moisture/background dependence and oxygen-containing residue",
+      "rate_available": false,
+      "active_in_kmc": false
+    },
+    {
+      "id": "sicl4_surface_recombination",
+      "reactants": {
+        "SiCl3_surface": 1,
+        "Cl_surface": 1
+      },
+      "products": {
+        "SiCl4_physisorbed": 1
+      },
+      "category": "elementary_surface",
+      "evidence": "reverse_of_published_DFT_adsorption; specific reconstructed surface",
+      "source": "https://doi.org/10.3390/sym15010213",
+      "candidate_signal": "SiCl4 residence/desorption and surface Cl",
+      "rate_available": false,
+      "active_in_kmc": false,
+      "barrier_table": "data/literature/sicl4_surface_paths.json",
+      "limits": "Adsorbate recombination, not net removal of a substrate Si atom; prefactors absent"
+    },
+    {
+      "id": "sicl4_readsorption",
+      "reactants": {
+        "SiCl4_physisorbed": 1
+      },
+      "products": {
+        "SiCl3_surface": 1,
+        "Cl_surface": 1
+      },
+      "category": "elementary_surface",
+      "evidence": "published_DFT_dissociative_adsorption",
+      "source": "https://doi.org/10.3390/sym15010213",
+      "candidate_signal": "Persistent SiCl3/Cl coverage",
+      "rate_available": false,
+      "active_in_kmc": false,
+      "barrier_table": "data/literature/sicl4_surface_paths.json"
+    },
+    {
+      "id": "sicl4_escape",
+      "reactants": {
+        "SiCl4_physisorbed": 1
+      },
+      "products": {
+        "SiCl4": 1
+      },
+      "category": "desorption",
+      "evidence": "candidate_escape_after_recombination; not same TS as bond recombination",
+      "source": "https://doi.org/10.3390/sym15010213",
+      "candidate_signal": "Delayed gas release",
+      "rate_available": false,
+      "active_in_kmc": false
+    },
+    {
+      "id": "si_f_net",
+      "reactants": {
+        "Si_surface": 1,
+        "F": 4
+      },
+      "products": {
+        "SiF4": 1
+      },
+      "category": "net_etch",
+      "evidence": "reported_product_family; net atom balance not elementary reaction",
+      "source": "https://arxiv.org/abs/2305.09037",
+      "candidate_signal": "SiF4 with Si loss",
+      "rate_available": false,
+      "active_in_kmc": false
+    },
+    {
+      "id": "si_f2_net",
+      "reactants": {
+        "Si_surface": 1,
+        "F2": 2
+      },
+      "products": {
+        "SiF4": 1
+      },
+      "category": "net_etch",
+      "evidence": "net balance; source first step only has quantified TST kinetics",
+      "source": "https://arxiv.org/abs/2305.09037",
+      "candidate_signal": "SiF4 and orientation-dependent etching",
+      "rate_available": false,
+      "active_in_kmc": false
+    },
+    {
+      "id": "si2f6_candidate",
+      "reactants": {
+        "SiF3": 2
+      },
+      "products": {
+        "Si2F6": 1
+      },
+      "category": "association",
+      "evidence": "Si2F6 product reported in source MD; this specific stabilized association is a candidate, not a measured elementary rate",
+      "source": "https://doi.org/10.1063/1.1753657",
+      "candidate_signal": "Si2F6 mass pattern; separate gas-phase stabilization from surface recombination",
+      "rate_available": false,
+      "active_in_kmc": false
+    },
+    {
+      "id": "fragment_SiCl4",
+      "reactants": {
+        "SiCl4": 1
+      },
+      "products": {
+        "SiCl3": 1,
+        "Cl": 1
+      },
+      "category": "activation_required",
+      "evidence": "Candidate fragmentation bookkeeping of source product family; fragmentation branching not established by source",
+      "source": "https://doi.org/10.1016/j.apsusc.2024.159836",
+      "candidate_signal": "Use parent/fragment calibration; ionizer can generate same fragments",
+      "rate_available": false,
+      "active_in_kmc": false,
+      "activation": "Electron or collision energy required; no threshold assigned"
+    },
+    {
+      "id": "fragment_SiCl3",
+      "reactants": {
+        "SiCl3": 1
+      },
+      "products": {
+        "SiCl2": 1,
+        "Cl": 1
+      },
+      "category": "activation_required",
+      "evidence": "Candidate fragmentation bookkeeping of source product family; fragmentation branching not established by source",
+      "source": "https://doi.org/10.1016/j.apsusc.2024.159836",
+      "candidate_signal": "Use parent/fragment calibration; ionizer can generate same fragments",
+      "rate_available": false,
+      "active_in_kmc": false,
+      "activation": "Electron or collision energy required; no threshold assigned"
+    },
+    {
+      "id": "fragment_SiCl2",
+      "reactants": {
+        "SiCl2": 1
+      },
+      "products": {
+        "SiCl": 1,
+        "Cl": 1
+      },
+      "category": "activation_required",
+      "evidence": "Candidate fragmentation bookkeeping of source product family; fragmentation branching not established by source",
+      "source": "https://doi.org/10.1016/j.apsusc.2024.159836",
+      "candidate_signal": "Use parent/fragment calibration; ionizer can generate same fragments",
+      "rate_available": false,
+      "active_in_kmc": false,
+      "activation": "Electron or collision energy required; no threshold assigned"
+    },
+    {
+      "id": "fragment_SiF3",
+      "reactants": {
+        "SiF3": 1
+      },
+      "products": {
+        "SiF2": 1,
+        "F": 1
+      },
+      "category": "activation_required",
+      "evidence": "candidate fragmentation bookkeeping, not established reactor branching",
+      "source": "https://doi.org/10.1063/5.0155929",
+      "candidate_signal": "Use parent/fragment calibration; ionizer can generate same fragments",
+      "rate_available": false,
+      "active_in_kmc": false,
+      "activation": "Electron or collision energy required; no threshold assigned"
+    },
+    {
+      "id": "fragment_NH2",
+      "reactants": {
+        "NH2": 1
+      },
+      "products": {
+        "NH": 1,
+        "H": 1
+      },
+      "category": "activation_required",
+      "evidence": "candidate fragmentation bookkeeping, not established reactor branching",
+      "source": "https://doi.org/10.1063/5.0155929",
+      "candidate_signal": "Use parent/fragment calibration; ionizer can generate same fragments",
+      "rate_available": false,
+      "active_in_kmc": false,
+      "activation": "Electron or collision energy required; no threshold assigned"
+    },
+    {
+      "id": "fragment_NF3",
+      "reactants": {
+        "NF3": 1
+      },
+      "products": {
+        "NF2": 1,
+        "F": 1
+      },
+      "category": "activation_required",
+      "evidence": "candidate fragmentation bookkeeping, not established reactor branching",
+      "source": "https://cpseg.eecs.umich.edu/pub/articles/JVSTA_36_021305_2018.pdf",
+      "candidate_signal": "Use parent/fragment calibration; ionizer can generate same fragments",
+      "rate_available": false,
+      "active_in_kmc": false,
+      "activation": "Electron or collision energy required; no threshold assigned"
+    },
+    {
+      "id": "fragment_NF2",
+      "reactants": {
+        "NF2": 1
+      },
+      "products": {
+        "NF": 1,
+        "F": 1
+      },
+      "category": "activation_required",
+      "evidence": "candidate fragmentation bookkeeping, not established reactor branching",
+      "source": "https://cpseg.eecs.umich.edu/pub/articles/JVSTA_36_021305_2018.pdf",
+      "candidate_signal": "Use parent/fragment calibration; ionizer can generate same fragments",
+      "rate_available": false,
+      "active_in_kmc": false,
+      "activation": "Electron or collision energy required; no threshold assigned"
+    },
+    {
+      "id": "nitrogen_recombination",
+      "reactants": {
+        "N": 2
+      },
+      "products": {
+        "N2": 1
+      },
+      "category": "association",
+      "evidence": "candidate wall-assisted or collision-stabilized recombination",
+      "source": "https://cpseg.eecs.umich.edu/pub/articles/JVSTA_36_021305_2018.pdf",
+      "candidate_signal": "N2 background makes unlabelled signal ambiguous",
+      "rate_available": false,
+      "active_in_kmc": false
+    },
+    {
+      "id": "nitride_f_net",
+      "reactants": {
+        "Si3N4_surface": 1,
+        "F": 12
+      },
+      "products": {
+        "SiF4": 3,
+        "N2": 2
+      },
+      "category": "net_etch",
+      "evidence": "candidate net balance, not assumed universal N product distribution",
+      "source": "https://cpseg.eecs.umich.edu/pub/articles/JVSTA_36_021305_2018.pdf",
+      "candidate_signal": "Correlate Si loss and nitrogen inventory",
+      "rate_available": false,
+      "active_in_kmc": false
+    },
+    {
+      "id": "hcn_release",
+      "reactants": {
+        "N_surface": 1,
+        "C_surface": 1,
+        "H": 1
+      },
+      "products": {
+        "HCN": 1
+      },
+      "category": "net_surface_product",
+      "evidence": "HCN mechanism proposed by beam study; lumped stoichiometry here",
+      "source": "https://ir.library.osaka-u.ac.jp/repo/ouka/all/78472/JVacSciTechnolA_29_05_050601.pdf",
+      "candidate_signal": "HCN-compatible calibrated product pattern and carbon loss",
+      "rate_available": false,
+      "active_in_kmc": false
+    },
+    {
+      "id": "fcn_release",
+      "reactants": {
+        "N_surface": 1,
+        "CF": 1
+      },
+      "products": {
+        "FCN": 1
+      },
+      "category": "net_surface_product",
+      "evidence": "FCN product channel proposed by plasma-beam study; elementary steps unresolved",
+      "source": "https://www.chee.uh.edu/sites/chbe/files/faculty/economou/kaler_plasma_beams_jvst_2016.pdf",
+      "candidate_signal": "Separate FCN from HCN and background fragmentation",
+      "rate_available": false,
+      "active_in_kmc": false
+    },
+    {
+      "id": "cn_release",
+      "reactants": {
+        "N_surface": 1,
+        "C_surface": 1
+      },
+      "products": {
+        "CN": 1
+      },
+      "category": "net_surface_product",
+      "evidence": "CNx volatile family in HFC/ALE MD; CN identity is a candidate",
+      "source": "https://www.sony.com/en/SonyInfo/technology/publications/molecular-dynamics-simulations-of-plasma-enhanced-atomic-layer-etching-of-silicon-nitride-using-hydrofluorocarbon-and-oxygen-plasmas/",
+      "candidate_signal": "CN emission is excitation-dependent, not alone a product flux",
+      "rate_available": false,
+      "active_in_kmc": false
+    },
+    {
+      "id": "carbon_to_co",
+      "reactants": {
+        "C_surface": 1,
+        "O": 1
+      },
+      "products": {
+        "CO": 1
+      },
+      "category": "net_surface_product",
+      "evidence": "COx carbon removal family in HFC/O2 ALE MD; lumped atom balance",
+      "source": "https://www.sony.com/en/SonyInfo/technology/publications/molecular-dynamics-simulations-of-plasma-enhanced-atomic-layer-etching-of-silicon-nitride-using-hydrofluorocarbon-and-oxygen-plasmas/",
+      "candidate_signal": "CO pattern and declining surface carbon",
+      "rate_available": false,
+      "active_in_kmc": false
+    },
+    {
+      "id": "carbon_to_co2",
+      "reactants": {
+        "C_surface": 1,
+        "O": 2
+      },
+      "products": {
+        "CO2": 1
+      },
+      "category": "net_surface_product",
+      "evidence": "COx carbon removal family in HFC/O2 ALE MD; lumped atom balance",
+      "source": "https://www.sony.com/en/SonyInfo/technology/publications/molecular-dynamics-simulations-of-plasma-enhanced-atomic-layer-etching-of-silicon-nitride-using-hydrofluorocarbon-and-oxygen-plasmas/",
+      "candidate_signal": "CO2 and surface C/O; test substrate oxidation too",
+      "rate_available": false,
+      "active_in_kmc": false
+    },
+    {
+      "id": "no_assisted_n_removal",
+      "reactants": {
+        "N_surface": 1,
+        "NO": 1
+      },
+      "products": {
+        "N2O": 1
+      },
+      "category": "net_surface_product",
+      "evidence": "N removal channel in published remote-plasma surface mechanism; lattice bookkeeping simplified",
+      "source": "https://cpseg.eecs.umich.edu/pub/articles/JVSTA_36_021305_2018.pdf",
+      "candidate_signal": "N2O timing with NO exposure; NF3/O2-specific chemistry",
+      "rate_available": false,
+      "active_in_kmc": false
+    },
+    {
+      "id": "afs_partial_release",
+      "reactants": {
+        "AFS_salt": 1
+      },
+      "products": {
+        "NH5F2_salt": 1,
+        "NH3": 1,
+        "SiF4": 1
+      },
+      "category": "salt_pathway",
+      "evidence": "published D3a thermochemical branch; Edes is not a TS barrier",
+      "source": "https://doi.org/10.1016/j.apsusc.2024.159414",
+      "candidate_signal": "Delayed NH3/SiF4; retained N/H/F",
+      "rate_available": false,
+      "active_in_kmc": false
+    },
+    {
+      "id": "nh5f2_release",
+      "reactants": {
+        "NH5F2_salt": 1
+      },
+      "products": {
+        "NH3": 1,
+        "HF": 2
+      },
+      "category": "salt_pathway",
+      "evidence": "published D3b thermochemical branch; Edes is not a TS barrier",
+      "source": "https://doi.org/10.1016/j.apsusc.2024.159414",
+      "candidate_signal": "Secondary NH3/HF release",
+      "rate_available": false,
+      "active_in_kmc": false
+    },
+    {
+      "id": "fragment_SiF2",
+      "reactants": {
+        "SiF2": 1
+      },
+      "products": {
+        "SiF": 1,
+        "F": 1
+      },
+      "category": "activation_required",
+      "evidence": "SiF and SiF2 detected in source; this particular fragmentation pathway is a candidate, not a measured elementary branching rate",
+      "source": "https://doi.org/10.1016/0009-2614(87)87112-9",
+      "candidate_signal": "Parent/fragment-resolved radical detection; distinguish surface emission and measurement-induced fragments",
       "rate_available": false,
       "active_in_kmc": false
     }

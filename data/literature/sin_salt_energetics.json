@@ -1,0 +1,45 @@
+{
+  "source": "https://doi.org/10.1016/j.apsusc.2024.159414",
+  "source_table": "ALD2024 poster p1 salt formation and salt desorption",
+  "formation": [
+    {
+      "id": "S1",
+      "reaction": "SiF4 + NH4F -> NH4+ + SiF5-",
+      "reaction_energy_eV": -0.06,
+      "activation_energy_eV": 0.4
+    },
+    {
+      "id": "S2",
+      "reaction": "NH4+ + SiF5- + NH4F -> 2NH4+ + SiF6(2-)",
+      "reaction_energy_eV": -0.31,
+      "activation_energy_eV": 0.07
+    }
+  ],
+  "desorption": [
+    {
+      "id": "D1",
+      "reaction": "AFS(surface) -> AFS(g)",
+      "desorption_energy_eV": 1.98,
+      "source_crossover_C": 526
+    },
+    {
+      "id": "D2",
+      "reaction": "AFS(surface) -> 2NH3(g) + 2HF(g) + SiF4(g)",
+      "desorption_energy_eV": 4.79,
+      "source_crossover_C": 152
+    },
+    {
+      "id": "D3a",
+      "reaction": "AFS(surface) -> NH5F2(surface) + NH3(g) + SiF4(g)",
+      "desorption_energy_eV": 1.97,
+      "source_crossover_C": 102
+    },
+    {
+      "id": "D3b",
+      "reaction": "NH5F2(surface) -> NH3(g) + 2HF(g)",
+      "desorption_energy_eV": 2.81,
+      "source_crossover_C": 200
+    }
+  ],
+  "interpretation": "Edes values and source free-energy crossover temperatures are NOT activation barriers or prescribed operating temperatures. Conditions and chemical potentials matter."
+}

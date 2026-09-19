@@ -1,0 +1,7 @@
+5
+Properties=species:S:1:pos:R:3 source_doi=10.3390/sym15010213 source_label=STC coordinates_only=T cell_not_supplied=T pbc="F F F"
+Si       4.85901391       6.21368024      13.48683989
+Cl       6.29648325       7.69087238      13.45002240
+Cl       4.35394424       5.89178550      15.43836784
+Cl       3.11790878       6.60319050      12.45316725
+Cl       5.68476670       4.52620034      12.68834824

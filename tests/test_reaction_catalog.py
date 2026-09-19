@@ -10,7 +10,7 @@ module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
 
 def test_catalog_conserves_atoms_and_charge():
     catalog=json.loads((ROOT/'configs/reaction_candidates.json').read_text())
-    assert module.validate(catalog)==21
+    assert module.validate(catalog)==45
     assert all(not r['active_in_kmc'] and not r['rate_available'] for r in catalog['reactions'])
 
 
