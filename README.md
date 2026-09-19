@@ -150,7 +150,7 @@ Surface reaction data now support a separate literature-based kinetics workflow:
 
 ### Surface paths: calculated images and energies
 
-Each new GIF shows **force-optimized, energy-evaluated NEB images** (9 for each F path; 17 for Cl). There are no geometrically interpolated animation frames. Separate folders hold each surface/reactant combination, its coordinates, pointwise energies, checks and source information.
+Each migration GIF below shows **force-optimized, energy-evaluated NEB images** (9 for each F path; 17 for Cl). There are no geometrically interpolated animation frames. Separate folders hold each surface/reactant combination, its coordinates, pointwise energies, checks and source information.
 
 | Surface / reactant and event | Peak above reactant (eV) | Evidence |
 |---|---:|---|
@@ -183,6 +183,96 @@ The SiCl4 slideshow contains only the published IS, TS and FS. It illustrates Si
 </details>
 
 [Full curves, TS table, reaction/rate equations and hypotheses](docs/dry_etch_results/SURFACE_PATHS.md) | [Surface/reactant folder index](data/surface_paths/README.md) | [All six published stationary-point triplets](docs/dry_etch_results/TRANSITION_STATES.md).
+
+<!-- BEGIN MOLECULAR CAMPAIGN -->
+### Molecules, surface orientations and adsorption sites
+
+**Nine molecules x four surfaces; 288 site/orientation curves and 2,592 evaluated geometries**, plus 324 baseline approach geometries. HF, HCl, F2, Cl2, H2, H2O, CH3F, SiF4 and SiCl4 each have separate surface/species folders.
+
+| Surface orientation | Sites sampled | Molecular orientations |
+|---|---|---|
+| Si(100), Si(111) | atop Si, bridge, hollow | upright, parallel, flipped when distinct |
+| beta-Si3N4(001) | Si, N, Si-N bridge projections | upright, parallel, flipped when distinct |
+| alpha-quartz(001) | Si, O, Si-O bridge projections | upright, parallel, flipped when distinct |
+
+![Site and orientation energy comparison](docs/dry_etch_results/molecular_screening.png)
+
+These **rigid approach curves are not transition-state paths**. Each 3D GIF shows only calculated geometries with their energies. The table compares sampled interaction minima, not barriers or etch selectivity. Surfaces are ideal unpassivated cuts; coverage, reconstruction and amorphous composition effects remain unresolved.
+
+<details>
+<summary>3D molecular approach examples and all 36 surface/species folders</summary>
+
+![HCl / Si100: evaluated approach](data/surface_paths/Si100/HCl/mace_site_orientation/hollow/upright/path.gif)
+
+![Cl2 / Si111: evaluated approach](data/surface_paths/Si111/Cl2/mace_site_orientation/atop_Si/parallel/path.gif)
+
+![CH3F / beta_Si3N4_001: evaluated approach](data/surface_paths/beta_Si3N4_001/CH3F/mace_site_orientation/atop_N/flipped/path.gif)
+
+![HF / alpha_quartz_001: evaluated approach](data/surface_paths/alpha_quartz_001/HF/mace_site_orientation/atop_O/flipped/path.gif)
+
+[All curves, folders, energies and sources](docs/dry_etch_results/MOLECULAR_SURFACES.md#calculated-screening-results).
+
+</details>
+
+Molecular dissociation and local Si-N/Si-O cleavage are evaluated separately. Failed endpoint/NEB searches are retained with their convergence and Hessian checks. The OMol25 capped motifs and direct PBE/def2-SVP checks are **local molecular models**, not periodic-surface DFT validation.
+
+[Reaction search table, energy peaks, equations and hypotheses](docs/dry_etch_results/MOLECULAR_SURFACES.md#molecular-reaction-searches) | [Direct DFT results](docs/dry_etch_results/MOLECULAR_SURFACES.md#direct-dft-checks-on-saved-ml-geometries).
+
+#### Molecular reaction-path results
+
+| System / event | ML peak above local IS (eV) | Interpretation |
+|---|---:|---|
+| [beta_Si3N4_001 / CH3F](data/surface_paths/beta_Si3N4_001/CH3F/molecular_refined/README.md) | 0.2009 | neb unconverged; TS not verified |
+| [beta_Si3N4_001 / H2O](data/surface_paths/beta_Si3N4_001/H2O/molecular_refined/README.md) | 2.1257 | neb converged; TS not verified |
+| [beta_Si3N4_001 / H2O](data/surface_paths/beta_Si3N4_001/H2O/mace_local_saddle/README.md) | 2.2683 | Constrained saddle connected to checked local minima; water-derived OH + H; N-to-N H transfer |
+| [SiN_capped_motif / HF](data/surface_paths/SiN_capped_motif/HF/omol25_refined/README.md) | 0.3669 | neb unconverged; TS not verified |
+| [SiO_capped_motif / HF](data/surface_paths/SiO_capped_motif/HF/omol25_refined/README.md) | 9.4797 | neb unconverged; TS not verified |
+
+These values are model potential energies with fixed substrate/cap atoms. Capped Si-N/Si-O motifs are not full surfaces. A converged highest image alone does not establish a transition state.
+
+| Direct PBE/def2-SVP check | DFT FS - IS (eV) | DFT highest saved image - IS (eV) |
+|---|---:|---:|
+| [SiN_capped_motif: 11 saved ML path geometries](data/surface_paths/SiN_capped_motif/HF/dft_path/energies.csv) | -0.7466 | 0.0516 |
+| [SiO_capped_motif: 11 saved ML path geometries](data/surface_paths/SiO_capped_motif/HF/dft_path/energies.csv) | -0.3264 | SCF unresolved; peak rejected |
+
+DFT values are single-point energies along the saved ML paths, not DFT-optimized transition states. See the full report for path convergence and endpoint checks.
+
+![Evaluated surface H-transfer saddle beside Si-OH](data/surface_paths/beta_Si3N4_001/H2O/mace_local_saddle/path.gif)
+
+<!-- END MOLECULAR CAMPAIGN -->
+
+
+<!-- BEGIN SPECIES NETWORK -->
+### Reaction networks and species-resolved kMC
+
+The [HiPRGen pilot](docs/HIPRGEN.md) retained **40 forward and 40 reverse molecular substitution candidates** across Si-N/Si-O motifs with F/Cl. These pass composition and fixed-cap filters; they are not verified surface reactions. The [intermediate gap inventory](data/reaction_network/intermediate_gaps.csv) identifies missing precursor, proton-transfer, backbond, product-retention and ion-driven states.
+
+The HF/SiN:H kMC rerun now tracks **45 named states and 55 enabled events**, representing all 16 published pathway entries. It includes HF complexes, successive fluorination, NH/NH2 and Si-H environments, Si-Si cleavage, and named NH3/H2/SiF4/SiH2F2/SiHF3 products. Missing release barriers leave branches disabled.
+
+![Enabled species-resolved reaction network](docs/reaction_network/species_kmc_network.png)
+
+![Rerun species kinetics and products](docs/species_kmc_results/species_kinetics.png)
+
+**Scientific status:** this is conditional sensitivity, not calibrated ALE. The source Ea values, assumed prefactors, arrival/desorption hazards and proposed connections between source motifs are recorded per event. Unconverged atomistic peaks are excluded. No EPC or film-composition prediction is claimed.
+
+Python and C++ implementations were checked against the independent master equation, with exact Si/N/H/F accounting. The temperature campaign contains **512 C++ trajectories with 1,000 initial motifs each**; independent Python runs check backend agreement.
+
+<details>
+<summary>HiPRGen candidate network, intermediate populations, and the new 2D/3D kMC animation</summary>
+
+![HiPRGen bounded candidate networks](docs/reaction_network/hiprgen_candidates.png)
+
+![Named intermediate populations](docs/species_kmc_results/intermediate_populations.png)
+
+![Actual species kMC snapshots, 2D and perspective](docs/species_kmc_results/species_kmc.gif)
+
+The animation is an actual 400-motif kMC trajectory on a schematic site grid; it is not an atomistic crystal or physical height measurement. No frames are interpolated.
+
+</details>
+
+[Species kMC report, equations, assumptions and verification](docs/species_kmc_results/REPORT.md) | [Every state/event](configs/species_kmc_network.json) | [HiPRGen scope and completeness audit](docs/HIPRGEN.md) | [Event rates and sources](docs/species_kmc_results/event_rates.csv).
+<!-- END SPECIES NETWORK -->
+
 
 ### Literature-parameterized dry-etch kinetics
 

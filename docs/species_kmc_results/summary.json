@@ -1,0 +1,176 @@
+{
+  "status": "conditional_sensitivity_not_validated_etch_prediction",
+  "states": 45,
+  "enabled_events": 55,
+  "distinct_source_pathways": 16,
+  "sites": 1000,
+  "replicates": 128,
+  "exposure_s": 2.0,
+  "purge_s": 1.0,
+  "assumed_HF_arrival_s": 5.0,
+  "assumed_complex_desorption_s": 100.0,
+  "assumed_prefactor_s": 1000000000000.0,
+  "initial_mixture": {
+    "bridge_NH_F0": 0.3,
+    "terminal_NH2_F0": 0.15,
+    "Si_H_rich_F0": 0.1,
+    "bridge_N_F0": 0.15,
+    "pre_SiH2F": 0.1,
+    "pre_SiHF2": 0.1,
+    "Si_Si_F1": 0.1
+  },
+  "temperatures": [
+    {
+      "temperature_K": 325.0,
+      "Si_released_fraction": 0.0040859375,
+      "products_per_initial_motif": {
+        "HF": -0.680890625,
+        "H2": 0.0,
+        "NH3": 0.2781484375,
+        "SiF4": 0.0014609375,
+        "SiH2F2": 0.002625,
+        "SiHF3": 0.0
+      },
+      "mean_events": 19020.609375
+    },
+    {
+      "temperature_K": 350.0,
+      "Si_released_fraction": 0.0567109375,
+      "products_per_initial_motif": {
+        "HF": -1.04765625,
+        "H2": 0.0,
+        "NH3": 0.3011796875,
+        "SiF4": 0.0378828125,
+        "SiH2F2": 0.0187265625,
+        "SiHF3": 0.0001015625
+      },
+      "mean_events": 18409.109375
+    },
+    {
+      "temperature_K": 400.0,
+      "Si_released_fraction": 0.3870625,
+      "products_per_initial_motif": {
+        "HF": -2.0791875,
+        "H2": 0.0,
+        "NH3": 0.36553125,
+        "SiF4": 0.2827265625,
+        "SiH2F2": 0.097734375,
+        "SiHF3": 0.0066015625
+      },
+      "mean_events": 13403.90625
+    },
+    {
+      "temperature_K": 450.0,
+      "Si_released_fraction": 0.47240625,
+      "products_per_initial_motif": {
+        "HF": -2.3630234375,
+        "H2": 0.0,
+        "NH3": 0.4472578125,
+        "SiF4": 0.296140625,
+        "SiH2F2": 0.1,
+        "SiHF3": 0.076265625
+      },
+      "mean_events": 11608.84375
+    }
+  ],
+  "verification": [
+    {
+      "temperature_K": 325.0,
+      "max_standard_errors": 2.777672185942187,
+      "conservation_exact": true,
+      "master_equation_count_error": 2.2588950354505357
+    },
+    {
+      "temperature_K": 350.0,
+      "max_standard_errors": 3.6159519078134785,
+      "conservation_exact": true,
+      "master_equation_count_error": 1.6986967192211466
+    },
+    {
+      "temperature_K": 400.0,
+      "max_standard_errors": 3.837422230256543,
+      "conservation_exact": true,
+      "master_equation_count_error": 1.43985934796288
+    },
+    {
+      "temperature_K": 450.0,
+      "max_standard_errors": 4.926677198794169,
+      "conservation_exact": true,
+      "master_equation_count_error": 2.139418313508969
+    }
+  ],
+  "python_cpp_max_standard_errors": 1.9269423812708038,
+  "benchmark": {
+    "python": {
+      "repetitions": 5,
+      "median_seconds": 0.2592812999500893,
+      "events_per_second": 51220.27793601875,
+      "trials": [
+        {
+          "seconds": 0.282938499993179,
+          "events": 13212
+        },
+        {
+          "seconds": 0.2592812999500893,
+          "events": 13520
+        },
+        {
+          "seconds": 0.2258931999676861,
+          "events": 13568
+        },
+        {
+          "seconds": 0.2940404000109993,
+          "events": 13442
+        },
+        {
+          "seconds": 0.24568799999542534,
+          "events": 13246
+        }
+      ]
+    },
+    "cpp": {
+      "repetitions": 5,
+      "median_seconds": 0.0018823000136762857,
+      "events_per_second": 6900177.3038381515,
+      "trials": [
+        {
+          "seconds": 0.0022564000100828707,
+          "events": 13732
+        },
+        {
+          "seconds": 0.0021071999799460173,
+          "events": 13290
+        },
+        {
+          "seconds": 0.0018823000136762857,
+          "events": 13584
+        },
+        {
+          "seconds": 0.0017513000057078898,
+          "events": 13342
+        },
+        {
+          "seconds": 0.001761099963914603,
+          "events": 13386
+        }
+      ]
+    }
+  },
+  "seed_policy": "C++ ensembles 10000..10127; Python check 30000..30031; independent C++ check 50000..50127; lattice 741",
+  "source_sha256": "3ad70780d0426b1a5d02169c1d4eb548ccdf1043c2233f5e90173501fe524fe0",
+  "code_sha256": {
+    "plasma_surface/species_kmc.py": "c4a086698150b81f4f8c76b0bb953feaa3f095864d72d94ced55931c4f345b62",
+    "plasma_surface/species_native.py": "4f3f13ee5053e65c57acba0765b03b6c0b4fabf669673885887f64d949951b66",
+    "cpp/species.cpp": "fd7555db5fe729df8775a0796f17d2ea348418f48eb45863dab64ebdde6a130a",
+    "scripts/run_species_kmc.py": "06aa5a32450841a976d9abfa0c74728663d17bc29fb136d67ac336e099ed0fb1"
+  },
+  "assumptions": [
+    "Connecting stage-specific source motifs into chains is a reduced topology hypothesis; source amorphous environments are not identical",
+    "HF arrival and complex-desorption hazards and thermal prefactors are sensitivity assumptions",
+    "Ea references have not been resolved against full free-energy profiles; rates are conditional sensitivity only",
+    "Untracked neighboring substrate anchors are fixed and unchanged; each state represents one reactive Si-centered motif, not one atom",
+    "Initial motif mixture is assumed; no conversion to N/Si composition, thickness or EPC",
+    "No new-layer refill, periodic ALE cycle, lateral interactions, diffusion, ions or product readsorption",
+    "Terminal NH2 chain stalls at F3 because its final release barrier is missing; no P4 substitution across incompatible motifs"
+  ]
+}

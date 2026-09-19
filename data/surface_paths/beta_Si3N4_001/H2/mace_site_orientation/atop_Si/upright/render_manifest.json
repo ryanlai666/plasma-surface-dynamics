@@ -1,0 +1,18 @@
+{
+  "frame_count": 9,
+  "frame_image_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "interpolated_frames": 0,
+  "coordinates_sha256": "3e60ccc1fd311d2c526f60af5dad35dc4210b89b863cf92a471b3b73d8ecbbda",
+  "energies_sha256": "4357b6f7f352c8d2adbc1dcc1d0ca986ddac49e43a8b5a050644342ab0fd3d2a",
+  "gif_sha256": "b6009071f293cc42c2a600cc7fec6e86da6fd4f855c855a3bb133f523262e821"
+}

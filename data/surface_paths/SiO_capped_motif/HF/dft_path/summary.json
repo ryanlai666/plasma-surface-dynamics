@@ -1,0 +1,123 @@
+{
+  "method": "Density-fitted PBE/def2-SVP",
+  "grid_level": 3,
+  "SCF_tolerance_Hartree": 1e-09,
+  "charge": 0,
+  "multiplicity": 1,
+  "geometry_method": "Fixed saved ML geometries; no DFT optimization",
+  "input": "/mnt/c/Ryan/python_code/Dry_ALE_Sim/data/surface_paths/SiO_capped_motif/HF/omol25_refined/images.extxyz",
+  "input_sha256": "7b0d30f6f3ff3e111200a44edb2552411223c60acc5e84c7fe3fade961cf58ad",
+  "runner": "scripts/dft_molecular_singlepoints.py",
+  "script_sha256": "eb70b816fb5b940d230026bb247e9ee9fdabee52e6b3413afe390bf753256ec9",
+  "status": "complete",
+  "frames": [
+    {
+      "image": 0,
+      "energy_eV": -12708.07838253627,
+      "relative_energy_eV": 0.0,
+      "max_raw_force_eV_A": 0.8464650593126002,
+      "SCF_converged": true,
+      "accepted_for_comparison": true
+    },
+    {
+      "image": 1,
+      "energy_eV": -12708.21871673798,
+      "relative_energy_eV": -0.14033420170926547,
+      "max_raw_force_eV_A": 0.8899199198423632,
+      "SCF_converged": true,
+      "accepted_for_comparison": true
+    },
+    {
+      "image": 2,
+      "energy_eV": -12708.1259706799,
+      "relative_energy_eV": -0.0475881436286727,
+      "max_raw_force_eV_A": 0.9385047243411885,
+      "SCF_converged": true,
+      "accepted_for_comparison": true
+    },
+    {
+      "image": 3,
+      "energy_eV": -12708.215088944915,
+      "relative_energy_eV": -0.1367064086443861,
+      "max_raw_force_eV_A": 0.9067856418840226,
+      "SCF_converged": true,
+      "accepted_for_comparison": true
+    },
+    {
+      "image": 4,
+      "energy_eV": -12707.738789722129,
+      "relative_energy_eV": 0.3395928141417244,
+      "max_raw_force_eV_A": 1.143329614910172,
+      "SCF_converged": true,
+      "accepted_for_comparison": true
+    },
+    {
+      "image": 5,
+      "energy_eV": -6490.128754258716,
+      "relative_energy_eV": 6217.949628277554,
+      "max_raw_force_eV_A": 98.55227083919718,
+      "SCF_converged": true,
+      "solver": "Newton after failed DIIS",
+      "accepted_for_comparison": false
+    },
+    {
+      "image": 6,
+      "energy_eV": -12703.529204487251,
+      "relative_energy_eV": 4.549178049019247,
+      "max_raw_force_eV_A": 3.8345551536062814,
+      "SCF_converged": true,
+      "solver": "DIIS",
+      "accepted_for_comparison": true
+    },
+    {
+      "image": 7,
+      "energy_eV": -12708.301747963178,
+      "relative_energy_eV": -0.22336542690754868,
+      "max_raw_force_eV_A": 1.1396193841716284,
+      "SCF_converged": true,
+      "solver": "DIIS",
+      "accepted_for_comparison": true
+    },
+    {
+      "image": 8,
+      "energy_eV": -12708.383748779434,
+      "relative_energy_eV": -0.3053662431630073,
+      "max_raw_force_eV_A": 1.127406444635749,
+      "SCF_converged": true,
+      "solver": "DIIS",
+      "accepted_for_comparison": true
+    },
+    {
+      "image": 9,
+      "energy_eV": -12708.410059524544,
+      "relative_energy_eV": -0.3316769882731023,
+      "max_raw_force_eV_A": 1.1326905919899963,
+      "SCF_converged": true,
+      "solver": "DIIS",
+      "accepted_for_comparison": true
+    },
+    {
+      "image": 10,
+      "energy_eV": -12708.40480965877,
+      "relative_energy_eV": -0.3264271224998083,
+      "max_raw_force_eV_A": 1.114200463457887,
+      "SCF_converged": true,
+      "solver": "DIIS",
+      "accepted_for_comparison": true
+    }
+  ],
+  "continuations": [
+    {
+      "runner": "scripts/resume_dft_singlepoints.py",
+      "script_sha256": "d3b1eca500cec29141a53728f38167d75e123c5a36cdd11613f4b131a668197e",
+      "start_image": 5,
+      "reason": "Direct SCF failed at this image; use Newton fallback without changing geometry or functional/basis"
+    }
+  ],
+  "electronic_state_note": "Converged restricted-singlet SCF; no proof of lowest electronic or spin state",
+  "accepted_frame_count": 10,
+  "electronic_quality": "Incomplete: image 5 rejected",
+  "rejected_image_note": "An anomalous high-energy Newton solution could not be reproduced from atom, minao or Huckel SCF starts; excluded pending electronic-state validation.",
+  "SCF_audit_runner": "scripts/check_dft_scf_root.py",
+  "SCF_audit_script_sha256": "89f62a7f1a423752041ae3b42ed10be397b8f7621251f0a45ea3d3eed06a0777"
+}

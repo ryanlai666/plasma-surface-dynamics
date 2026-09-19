@@ -1,0 +1,92 @@
+{
+  "method": "Density-fitted PBE/def2-SVP",
+  "grid_level": 3,
+  "SCF_tolerance_Hartree": 1e-09,
+  "charge": 0,
+  "multiplicity": 1,
+  "geometry_method": "Fixed saved ML geometries; no DFT optimization",
+  "input": "/mnt/c/Ryan/python_code/Dry_ALE_Sim/data/surface_paths/SiN_capped_motif/HF/omol25_refined/images.extxyz",
+  "input_sha256": "e18bb41c6e05b3b4d5fb0f8a5de1f754f4d926bc4b6df6e567221cc9e405489e",
+  "runner": "scripts/dft_molecular_singlepoints.py",
+  "script_sha256": "eb70b816fb5b940d230026bb247e9ee9fdabee52e6b3413afe390bf753256ec9",
+  "status": "complete",
+  "frames": [
+    {
+      "image": 0,
+      "energy_eV": -12167.721879318799,
+      "relative_energy_eV": 0.0,
+      "max_raw_force_eV_A": 0.7314753005663445,
+      "SCF_converged": true
+    },
+    {
+      "image": 1,
+      "energy_eV": -12167.992246007738,
+      "relative_energy_eV": -0.270366688939248,
+      "max_raw_force_eV_A": 0.6653124476150241,
+      "SCF_converged": true
+    },
+    {
+      "image": 2,
+      "energy_eV": -12168.048682721112,
+      "relative_energy_eV": -0.32680340231308946,
+      "max_raw_force_eV_A": 0.6450721185470942,
+      "SCF_converged": true
+    },
+    {
+      "image": 3,
+      "energy_eV": -12168.066021315464,
+      "relative_energy_eV": -0.3441419966657122,
+      "max_raw_force_eV_A": 0.6647966310263022,
+      "SCF_converged": true
+    },
+    {
+      "image": 4,
+      "energy_eV": -12167.670231532278,
+      "relative_energy_eV": 0.051647786520334193,
+      "max_raw_force_eV_A": 2.777090867657796,
+      "SCF_converged": true
+    },
+    {
+      "image": 5,
+      "energy_eV": -12168.180477387326,
+      "relative_energy_eV": -0.4585980685278628,
+      "max_raw_force_eV_A": 1.2023573776678245,
+      "SCF_converged": true
+    },
+    {
+      "image": 6,
+      "energy_eV": -12168.483318638288,
+      "relative_energy_eV": -0.7614393194889999,
+      "max_raw_force_eV_A": 1.184026812715732,
+      "SCF_converged": true
+    },
+    {
+      "image": 7,
+      "energy_eV": -12168.464152854614,
+      "relative_energy_eV": -0.7422735358159116,
+      "max_raw_force_eV_A": 1.154010720133996,
+      "SCF_converged": true
+    },
+    {
+      "image": 8,
+      "energy_eV": -12168.45238900769,
+      "relative_energy_eV": -0.730509688892198,
+      "max_raw_force_eV_A": 1.1441689285887786,
+      "SCF_converged": true
+    },
+    {
+      "image": 9,
+      "energy_eV": -12168.46073733902,
+      "relative_energy_eV": -0.7388580202223238,
+      "max_raw_force_eV_A": 1.1487331797640872,
+      "SCF_converged": true
+    },
+    {
+      "image": 10,
+      "energy_eV": -12168.46852707592,
+      "relative_energy_eV": -0.7466477571215364,
+      "max_raw_force_eV_A": 1.1733750017189688,
+      "SCF_converged": true
+    }
+  ]
+}

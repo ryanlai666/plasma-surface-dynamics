@@ -1,0 +1,36 @@
+{
+  "surface": "Si111",
+  "species": "Cl2",
+  "images": 9,
+  "substrate_atoms": 36,
+  "formula": "Cl2Si36",
+  "surface_site_index": 34,
+  "source": {
+    "construction": "ASE ideal diamond cut, a=5.43 A; 3x2 repeat, six atomic layers"
+  },
+  "energy_reference": "E(slab+molecule) - E(slab) - E(periodic molecular layer), same cell and fixed geometries",
+  "slab_energy_eV": -167.11940021452568,
+  "molecular_layer_energy_eV": -3.537319939462664,
+  "sampled_minimum_interaction_eV": -1.0919218653765466,
+  "sampled_minimum_height_A": 1.9,
+  "farthest_point_residual_eV": 1.7763568394002505e-15,
+  "model": "MACE-MP-0b2 small",
+  "model_sha256": "d5773bf9440e96d6eb8c598f84bd0e6369fcfa432f626a87f890e07da3c651c9",
+  "runner": "scripts/molecular_surface_campaign.py",
+  "script_sha256": "c069d9c8b16be012371fe7615cd1471f567c8a91766fcc9dc38722833fc1b93b",
+  "versions": {
+    "ase": "3.29.0",
+    "mace-torch": "0.3.16",
+    "numpy": "2.5.3",
+    "torch": "2.14.0"
+  },
+  "seconds": 1.514410300005693,
+  "TS_status": "Not searched: scan maxima are NOT transition states",
+  "assumptions": [
+    "Ideal unpassivated rigid surface; no reconstruction, defects or thermal motion",
+    "One fixed molecule orientation and lateral site; finite periodic coverage",
+    "Gas molecule internally optimized first, then translated rigidly",
+    "No intermediate animation frame is synthesized: each displayed geometry has a model energy",
+    "Bulk-trained potential is unvalidated for these reactions; no ALE rates fitted"
+  ]
+}

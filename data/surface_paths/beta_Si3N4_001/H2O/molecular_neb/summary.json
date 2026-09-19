@@ -1,0 +1,91 @@
+{
+  "surface": "beta_Si3N4_001",
+  "species": "H2O",
+  "status": "interrupted_for_FIRE_restart",
+  "mobile_indices": [
+    18,
+    26,
+    28,
+    29,
+    30
+  ],
+  "substrate_atoms": 28,
+  "active_surface_pair": [
+    18,
+    26
+  ],
+  "source": {
+    "bulk_cif": "docs\\mace_results\\2102550.cif",
+    "bulk_sha256": "fca30839fbe00b3c632305ad9705c41cc20fe596e525bc013d41c227299726c1",
+    "source_url": "https://www.crystallography.net/cod/2102550.html",
+    "construction": "Unrelaxed (001) cleavage, two unit-cell layers; quartz doubled along a",
+    "bulk_temperature_note": "Public beta-Si3N4 structure"
+  },
+  "proposed_reaction": "H2O + reactive surface pair -> dissociated adsorbates",
+  "breaking_bond_indices": [
+    28,
+    30
+  ],
+  "gas_bond_length_A": 0.9706582588366933,
+  "method": "MACE-MP-0b2; CI-NEB with two surface atoms and all molecular atoms mobile",
+  "model_sha256": "d5773bf9440e96d6eb8c598f84bd0e6369fcfa432f626a87f890e07da3c651c9",
+  "runner": "scripts/run_molecular_reaction_neb.py",
+  "script_sha256": "3232f752062cfefe294f0e78008c4f14aa4b8a433ab32eeda655821dff646aca",
+  "limitations": [
+    "Ideal unpassivated cleavage, one coverage and site; no slab convergence study",
+    "Only two substrate atoms move; bulk-trained ML model is unvalidated for surface chemistry",
+    "Electronic potential energies only; no excitation, ZPE or entropy",
+    "A highest image is not called a verified TS without curvature and connectivity checks"
+  ],
+  "IS": {
+    "converged": true,
+    "energy_eV": -227.766539874322,
+    "max_mobile_force_eV_A": 0.017563114879061138,
+    "breaking_bond_A": 0.9892588179435903,
+    "surface_pair_distance_A": 1.7282327589456503,
+    "hessian_eigenvalues_eV_A2": [
+      0.42521381048620277,
+      0.857732597093456,
+      1.726581324000814,
+      3.3199299893040743,
+      4.852691433240198,
+      5.536936197864361,
+      6.606914476147589,
+      14.844256428872441,
+      22.240276208977154,
+      24.824540363646307,
+      26.808085039067354,
+      30.413065803665603,
+      36.17768543416278,
+      40.69040785910204,
+      77.85223149344574
+    ],
+    "no_negative_curvature": true
+  },
+  "FS": {
+    "converged": true,
+    "energy_eV": -226.74064863009838,
+    "max_mobile_force_eV_A": 0.011749427136889042,
+    "breaking_bond_A": 3.0501041515880556,
+    "surface_pair_distance_A": 1.854666651273056,
+    "hessian_eigenvalues_eV_A2": [
+      1.1042966149353968,
+      1.1508143010031298,
+      2.48261852697057,
+      2.7816038601499407,
+      2.9748212360674673,
+      4.340211466424669,
+      5.867632201297391,
+      14.383811740059585,
+      23.726084134486115,
+      24.17787128400931,
+      26.64050955056008,
+      30.839370271310926,
+      37.44534178304358,
+      68.73603034078826,
+      74.11876532056247
+    ],
+    "no_negative_curvature": true
+  },
+  "restart_note": "BFGS path stopped before convergence; original endpoints/logs/checkpoint preserved. See sibling molecular_refined for FIRE continuation."
+}

@@ -1,0 +1,27 @@
+{
+  "surface": "Si111",
+  "species": "HCl",
+  "site": "bridge_Si_Si",
+  "site_position_A": [
+    8.639077095921477,
+    4.987773490828165,
+    20.62128289
+  ],
+  "site_atom_indices": [
+    35,
+    31
+  ],
+  "orientation": "flipped",
+  "orientation_convention": "Rotate the optimized gas geometry around y; center molecular centroid laterally over site; lowest atom defines height",
+  "substrate_atoms": 36,
+  "images": 9,
+  "slab_energy_eV": -167.119400213462,
+  "molecular_layer_energy_eV": -6.125929041317082,
+  "minimum_interaction_energy_eV": -0.7774188595992051,
+  "peak_is_TS": false,
+  "method": "Rigid evaluated scan, not a reaction path",
+  "model_sha256": "d5773bf9440e96d6eb8c598f84bd0e6369fcfa432f626a87f890e07da3c651c9",
+  "runner": "scripts/screen_molecular_sites_energy.py",
+  "energy_only": true,
+  "script_sha256": "d68e63885ec4a192e6b34545a25ee1eb6fa1404a4f6ec6b621324beabf121d4b"
+}

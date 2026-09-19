@@ -1,53 +1,53 @@
-# HiPRGen assessment for Si / SiNx plasma-surface reactions
+# HiPRGen pilot and intermediate coverage
 
-## Recommendation
+A **limited HiPRGen function-level pilot has now been run**. It executes the upstream composition-bucketing and decision-tree functions on a supplied library of capped Si-N/Si-O molecular motifs. It is not the full MPI/species-filtering/thermochemical pipeline and does not verify barriers, stable surface structures or mechanism completeness.
 
-Use HiPRGen as an optional upstream **candidate-reaction generator**, followed by chemistry-specific filtering and rate validation. It is not a drop-in plasma-surface kinetics backend. The project has not installed or run HiPRGen, and no HiPRGen-generated rates have been used in the reported simulations.
+![HiPRGen candidate network](reaction_network/hiprgen_candidates.png)
 
-The current upstream repository is [BlauGroup/HiPRGen](https://github.com/BlauGroup/HiPRGen). Its workflow enumerates composition-balanced molecular reactions, applies customizable filters, and uses MPI for network generation. RNMC is a separate network-simulation component. These capabilities make it a plausible research extension for a curated, small species set, rather than a source of ready-made Si/SiNx reaction data.
+## What was actually executed
 
-## What needs adaptation
+The pinned upstream revision is [`a0dddfedc21be0121745e5f33f27ad8aafe796ea`](https://github.com/BlauGroup/HiPRGen/tree/a0dddfedc21be0121745e5f33f27ad8aafe796ea). Unmodified `bucket()` and `run_decision_tree()` definitions are loaded from the [licensed source snapshot](../third_party/hiprgen_snapshot/README.md). This avoids installing unrelated MPI/OpenBabel/reporting dependencies for a small local pilot. A compatible terminal enum and project-specific filters are supplied; this execution boundary is recorded in the output.
 
-The [method paper](https://pubs.rsc.org/en/content/articlepdf/2023/dd/d2dd00117a) starts from species with precomputed properties; it does not generate the required species dataset from scratch. Its demonstrated chemistry concerns electrochemical networks. For our application, prepare consistent Si/N/H/F/Cl molecular and surface-fragment calculations first. The downloaded HCl geometries alone do not provide those energies or a complete species library.
+Each of four families contains **15 Si-centered motif identities plus HX and its coproduct**: NH2/F, NH2/Cl, OH/F, and OH/Cl. These are 68 family-specific records, with duplicates across families; not 68 unique chemical species. The supplied molecules have form `SiH_a X_b L_c`, with `a+b+c=4`, `L=NH2 or OH`, and `X=F or Cl`. H caps remain fixed during a reaction. The prospective step replaces one Si-L bond with Si-X and transfers the HX proton to the departing ligand:
 
-Inspection of [reaction_questions.py](https://github.com/BlauGroup/HiPRGen/blob/main/HiPRGen/reaction_questions.py) shows a default transition-state-like rate expression and a filter that can construct a barrier from reaction free energy plus a constant. Such assigned barriers are not measured or DFT transition-state barriers. The code also contains electrochemical electron-free-energy and solvent-related machinery. These are not substitutes for a nonthermal electron-energy distribution, ion impact, or surface charging model.
+`SiH_a X_b L_c + HX -> SiH_a X_(b+1) L_(c-1) + HL`.
 
-Our proposed adaptations are:
+Here `HL` is NH3 or H2O. This is a capped molecular proxy, not a periodic surface formula. In particular, NH2/OH ligands do not represent every bridging N/O connectivity in a real film.
 
-1. Represent gas molecules, radicals, surface-bound fragments, vacancies, and site types explicitly. Preserve substrate anchors and distinguish Si sites from N sites. A periodic slab cannot simply be treated as a free gas molecule.
-2. Enforce elemental and site balance. Track electrons/ions or reservoirs explicitly whenever charge changes; document external energy delivery.
-3. Replace battery-specific species/reaction filters. In particular, do not reject all uphill reactions merely because thermal free energy is positive: plasma excitation or impact may drive them. Conversely, a favorable free energy does not prove kinetic accessibility.
-4. Obtain thermal barriers from compatible calculations or measurements. Parameterize ion-driven probabilities versus energy, angle, and local coverage from suitable MD/beam data. Derive electron-impact rates from collision data and the electron distribution.
-5. Retain candidate provenance, unknown barriers, uncertainty, and applicability ranges. Reject conversion into executable kinetics when rate units, surface context, or required barriers are missing.
+| Family | Supplied records | Composition buckets | Directed pairs examined | Retained directions |
+|---|---:|---:|---:|---:|
+| NH2 / F | 17 | 85 | 296 | 20 |
+| NH2 / Cl | 17 | 85 | 296 | 20 |
+| OH / F | 17 | 85 | 296 | 20 |
+| OH / Cl | 17 | 85 | 296 | 20 |
 
-These are proposed design requirements, not functionality currently implemented in HiPRGen or this project.
+The result is **40 forward substitutions and 40 reverse candidates**. Filters retain one Si center, unchanged caps and one ligand substitution, and reject trivial/shared-species reactions. Atomic composition is checked by native HiPRGen bucketing. No free energies, synthetic barriers or rates are assigned. Molecular geometry generation, graph-isomorphism filtering, spin-state validation and TS searches are not performed by this pilot.
 
-## Proposed connection boundary
+[Full species, reactions, filter counts and source hashes](../data/reaction_network/hiprgen/network.json) | [SQLite buckets](../data/reaction_network/hiprgen/) | [Runner](../scripts/hiprgen_intermediate_audit.py).
 
-The inspected [reaction database schema](https://github.com/BlauGroup/HiPRGen/blob/main/HiPRGen/reaction_filter.py) exposes reactant/product IDs, rate, reaction free energy, barrier, and redox status. An adapter can read that SQLite database without loading molecule pickle files, then join an independently exported species table with composition, charge, phase, and surface-site metadata. Preserve upstream rates as unvalidated annotations until their physical meaning and units are established.
+## Do we have enough intermediates?
 
-Suggested intermediate record:
+**Not for a complete predictive dry-etch/ALE mechanism.** We have a bounded candidate library and a focused conditional kinetics model. The [intermediate gap table](../data/reaction_network/intermediate_gaps.csv) names the missing structural and kinetic evidence. A large node count is not evidence of completeness.
 
-```json
-{
-  "source_reaction_id": 0,
-  "upstream_commit": "record-the-reviewed-commit",
-  "reactants": [{"species_id": "surface_SiCl", "count": 1}],
-  "products": [],
-  "surface_context": "must-be-specified",
-  "rate_law": null,
-  "rate_units": null,
-  "barrier_ev": null,
-  "status": "candidate_not_simulatable"
-}
+The highest-priority additions are explicit HF precursor complexes and protonation states; successive fluorination with remaining backbonds retained; separate final-release states for bridging NH, bare N and terminal NH2; hydrogenated Si product release; coadsorbed HF/H2O; and retained NH3/fluoride salts. Chlorine, fluorocarbon, defective/amorphous surfaces and ion-assisted events require separate branches and matching data.
+
+An intermediate needs a chemically specified geometry/charge/spin and a stable minimum. A connected reaction needs a converged path, saddle curvature and endpoint connectivity. A usable thermal rate additionally needs a consistent energy reference and a justified prefactor/free-energy treatment. Surface site/anchor balance and gas reservoirs must remain explicit. Species with the same formula but different site, orientation, termination or bonding cannot be merged merely because their compositions match.
+
+A network should be expanded until product branching and observable predictions are insensitive to plausible omitted pathways within the intended experimental domain, and then tested against matched measurements. Unknown barriers must not be replaced with arbitrary constants and labeled as verified kinetics. HiPRGen begins from the species library supplied to it; it cannot discover missing species outside that library or prove that all important intermediates were included. See the [HiPRGen method](https://doi.org/10.1039/D2DD00117A).
+
+## Connection to the new kMC model
+
+A separate [species-resolved HF/SiN:H model](species_kmc_results/REPORT.md) now has **45 named states and 55 enabled events**, representing all 16 published source pathways. It includes explicit HF complexes, successive fluorination states, surface nitrogen/hydrogen bookkeeping, and named gas products. Two future removal states remain unreachable because matching barriers are missing. Connecting source motifs into chains, arrival/desorption rates, prefactors and initial motif populations are assumptions; this is a conditional sensitivity calculation, not calibrated ALE.
+
+The HiPRGen molecular candidate library is **not automatically imported as rates**. The new Python/C++ engine supports count-based single-motif events with external gas reservoirs. General bimolecular surface reactions, lateral diffusion and ion-impact propensities would require additional event handling and data. Candidate networks and enabled kinetics are plotted separately to make this boundary reviewable.
+
+Reproduce:
+
+```sh
+python scripts/hiprgen_intermediate_audit.py --output outputs/hiprgen_reproduction
+python scripts/build_species_cpp.py
+python scripts/run_species_kmc.py
+python scripts/plot_reaction_networks.py
 ```
 
-This incomplete record illustrates the metadata contract only; it is not a balanced reaction or input accepted by the current solver. A future adapter must require balanced complete reactions before rate construction.
-
-The current C++ solver has two site states and five fixed event classes. A general HiPRGen network needs a species-resolved propensity engine and Si/N inventory bookkeeping, or a documented reduction into those five event classes. Simply importing a reaction list would not create a correct coupled simulation.
-
-## Local-computer pilot
-
-Start with roughly 20-50 curated species/fragments for **one** chosen chemistry, not all Si/N/H/F/Cl combinations at once. Pin the upstream commit, review its license/dependencies, and use an isolated environment; test the upstream examples before changing filters. Prefer a small MPI job and inspect the resulting candidate count before expanding. Validate several reaction paths against independent barriers or published mechanisms before enabling any rates in the ALE solver. This pilot can establish whether the added network complexity improves the scientific question enough to justify further work.
-
-Assessment based on the linked upstream README, database schema, reaction filters, and method paper inspected during this session. No third-party source code was copied into this repository.
+The HiPRGen audit writes fresh SQLite buckets; use a new output directory for regeneration. Upstream third-party copyrights are retained; project commits remain authored by Ryan.

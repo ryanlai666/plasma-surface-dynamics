@@ -1,0 +1,88 @@
+{
+  "motif": "SiO",
+  "reactant": "HF",
+  "status": "neb_unconverged",
+  "surface": "Capped local bonding proxy; NOT a periodic nitride/oxide slab",
+  "reaction": "H3SiOH + HF -> H3SiF + H2O",
+  "mobile_indices": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "fixed_indices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "model": "DPA-3.3-1M OMol25",
+  "charge": 0,
+  "multiplicity": 1,
+  "checkpoint_sha256": "36fe440c111108d60cda54aa7d3fccac743794de25abef4d49564b9fb896a55b",
+  "runner": "scripts/cluster_reaction_paths_refined.py",
+  "script_sha256": "ca5568c8da9f76f9172c91b4d8c33b246f973efa3b249e8b81d0dd410930007a",
+  "assumptions": [
+    "SiH3 cap fixed; surface-like local Si-N or Si-O cleavage proxy",
+    "No bulk screening, periodicity, coverage or composition representation",
+    "Not an independently calibrated SiN/SiO2 etch barrier"
+  ],
+  "IS": {
+    "converged": true,
+    "energy_eV": -12724.279072850943,
+    "Si_X_distance_A": 1.6453255572025571,
+    "hessian_eigenvalues_eV_A2": [
+      -0.014233054508879754,
+      0.012308539980260137,
+      0.11789131626102582,
+      0.20041489967500223,
+      0.7987286494183418,
+      1.0552898912150332,
+      1.3771770121656284,
+      1.5944825711369706,
+      5.581056660531122,
+      25.928571633517368,
+      106.92114589109107,
+      114.87846980591753
+    ]
+  },
+  "FS": {
+    "converged": true,
+    "energy_eV": -12724.647834330797,
+    "Si_X_distance_A": 4.57017561126249,
+    "hessian_eigenvalues_eV_A2": [
+      -0.004660798738860851,
+      -0.0017994534271826023,
+      0.005836519176605899,
+      0.09791271658810975,
+      0.25927963193325426,
+      0.5569087128202642,
+      1.967995371740714,
+      2.0105840262161427,
+      16.060370280523095,
+      31.108273269233575,
+      89.42959479696087,
+      118.74224186408348
+    ]
+  },
+  "images": 11,
+  "peak_image": 5,
+  "peak_above_IS_eV": 9.47968140244484,
+  "FS_minus_IS_eV": -0.36876147985458374,
+  "max_neb_force_eV_A": 5.500133254610862,
+  "peak_hessian_eigenvalues_eV_A2": [
+    -1.7111968583554598,
+    -1.4898887035850394,
+    -0.24820100709514495,
+    -0.016206887263048433,
+    -0.009269175994434267,
+    -5.723121296828919e-19,
+    6.8208289144509195e-18,
+    1.1951893522355617e-16,
+    0.05526982423995339,
+    0.11030948132904106,
+    42.83725153350451,
+    92.85523405480683
+  ],
+  "index_one_in_mobile_subspace": false
+}

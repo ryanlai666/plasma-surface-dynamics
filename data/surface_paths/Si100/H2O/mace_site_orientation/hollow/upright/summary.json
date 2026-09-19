@@ -1,0 +1,27 @@
+{
+  "surface": "Si100",
+  "species": "H2O",
+  "site": "hollow",
+  "site_position_A": [
+    7.679179639999999,
+    1.91979491,
+    18.7875
+  ],
+  "site_atom_indices": [
+    34,
+    35,
+    31
+  ],
+  "orientation": "upright",
+  "orientation_convention": "Rotate the optimized gas geometry around y; center molecular centroid laterally over site; lowest atom defines height",
+  "substrate_atoms": 36,
+  "images": 9,
+  "slab_energy_eV": -180.2036608746262,
+  "molecular_layer_energy_eV": -14.170980795319469,
+  "minimum_interaction_energy_eV": -0.46257829674864226,
+  "peak_is_TS": false,
+  "method": "Rigid evaluated scan, not a reaction path",
+  "model_sha256": "d5773bf9440e96d6eb8c598f84bd0e6369fcfa432f626a87f890e07da3c651c9",
+  "runner": "scripts/screen_molecular_sites.py",
+  "script_sha256": "7a59972011403136babf393562dfd79464abea25fec67fdea299574f9f95b6fc"
+}

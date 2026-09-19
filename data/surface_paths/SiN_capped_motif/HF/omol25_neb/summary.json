@@ -1,0 +1,98 @@
+{
+  "motif": "SiN",
+  "reactant": "HF",
+  "status": "neb_unconverged",
+  "surface": "Capped local bonding proxy; NOT a periodic nitride/oxide slab",
+  "reaction": "H3SiNH2 + HF -> H3SiF + NH3",
+  "mobile_indices": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "fixed_indices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "model": "DPA-3.3-1M OMol25",
+  "charge": 0,
+  "multiplicity": 1,
+  "checkpoint_sha256": "36fe440c111108d60cda54aa7d3fccac743794de25abef4d49564b9fb896a55b",
+  "runner": "scripts/cluster_reaction_paths.py",
+  "script_sha256": "9412afa77a3840c411b75a87a04de26998dba8c4040f8c1bf1ecbf2886079850",
+  "assumptions": [
+    "SiH3 cap fixed; surface-like local Si-N or Si-O cleavage proxy",
+    "No bulk screening, periodicity, coverage or composition representation",
+    "Not an independently calibrated SiN/SiO2 etch barrier"
+  ],
+  "IS": {
+    "converged": true,
+    "energy_eV": -12182.785415798426,
+    "Si_X_distance_A": 1.7105913114327531,
+    "hessian_eigenvalues_eV_A2": [
+      -0.06761989052337379,
+      0.012154375655317975,
+      0.02277540164734775,
+      0.11363954510702336,
+      0.1499666232412631,
+      0.5064587857358485,
+      0.5757785667019043,
+      0.8562220534379563,
+      1.317495811570312,
+      5.218985101957606,
+      6.183606767674648,
+      21.860439747630128,
+      91.02580894764732,
+      113.09356381270997,
+      116.17813038595153
+    ]
+  },
+  "FS": {
+    "converged": true,
+    "energy_eV": -12183.537814117968,
+    "Si_X_distance_A": 5.008214288240257,
+    "hessian_eigenvalues_eV_A2": [
+      -0.006675618478130052,
+      -0.0009450098046967108,
+      -0.0006334489744343673,
+      0.054418961713095966,
+      0.10845248170691027,
+      0.16673419939084197,
+      2.0752552592332294,
+      2.078956147899179,
+      9.638892187652061,
+      13.062181114009404,
+      13.336310831373787,
+      31.87893427939119,
+      58.182710059099115,
+      103.45210081397657,
+      103.73322138563384
+    ]
+  },
+  "images": 11,
+  "peak_image": 5,
+  "peak_above_IS_eV": 6.725010573863983,
+  "FS_minus_IS_eV": -0.752398319542408,
+  "max_neb_force_eV_A": 3.8361977776247573,
+  "peak_hessian_eigenvalues_eV_A2": [
+    -2.9586789007174312,
+    -0.4668074888451262,
+    -0.3338876921634644,
+    0.943486546517126,
+    1.259439017337884,
+    1.4448006952456502,
+    1.537618349424113,
+    2.3918410023543646,
+    3.9567284530999323,
+    6.181054836027597,
+    8.388920407112021,
+    14.133139765298896,
+    22.64014896039894,
+    69.7912915328701,
+    101.2996422917227
+  ],
+  "index_one_in_mobile_subspace": false
+}

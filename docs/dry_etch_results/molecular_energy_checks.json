@@ -1,0 +1,202 @@
+{
+  "status": "passed",
+  "geometries": 24,
+  "max_energy_only_error_eV": 0.0,
+  "max_reproduction_error_eV": 4.557173838293238e-08,
+  "runner": "scripts/check_molecular_energies.py",
+  "script_sha256": "726902d89a9d71cd54f454d88e1829f925b6dd82a3f9019c568185204733cd77",
+  "rows": [
+    {
+      "surface": "Si100",
+      "species": "HF",
+      "image": 3,
+      "energy_only_eV": -188.06936441970245,
+      "regular_eV": -188.06936441970245,
+      "stored_eV": -188.06936442014444
+    },
+    {
+      "surface": "Si100",
+      "species": "HF",
+      "image": 8,
+      "energy_only_eV": -182.14020744402526,
+      "regular_eV": -182.14020744402526,
+      "stored_eV": -182.14020744284073
+    },
+    {
+      "surface": "Si100",
+      "species": "CH3F",
+      "image": 3,
+      "energy_only_eV": -204.33333251683072,
+      "regular_eV": -204.33333251683072,
+      "stored_eV": -204.3333325163925
+    },
+    {
+      "surface": "Si100",
+      "species": "CH3F",
+      "image": 8,
+      "energy_only_eV": -198.54225813100564,
+      "regular_eV": -198.54225813100564,
+      "stored_eV": -198.54225810149694
+    },
+    {
+      "surface": "Si100",
+      "species": "SiCl4",
+      "image": 3,
+      "energy_only_eV": -199.31532432668516,
+      "regular_eV": -199.31532432668516,
+      "stored_eV": -199.3153243268289
+    },
+    {
+      "surface": "Si100",
+      "species": "SiCl4",
+      "image": 8,
+      "energy_only_eV": -179.3048961115063,
+      "regular_eV": -179.3048961115063,
+      "stored_eV": -179.30489610568787
+    },
+    {
+      "surface": "Si111",
+      "species": "HF",
+      "image": 3,
+      "energy_only_eV": -175.14675571459287,
+      "regular_eV": -175.14675571459287,
+      "stored_eV": -175.1467557164219
+    },
+    {
+      "surface": "Si111",
+      "species": "HF",
+      "image": 8,
+      "energy_only_eV": -172.0652314868664,
+      "regular_eV": -172.0652314868664,
+      "stored_eV": -172.06523148737432
+    },
+    {
+      "surface": "Si111",
+      "species": "CH3F",
+      "image": 3,
+      "energy_only_eV": -191.39233345566927,
+      "regular_eV": -191.39233345566927,
+      "stored_eV": -191.3923334577284
+    },
+    {
+      "surface": "Si111",
+      "species": "CH3F",
+      "image": 8,
+      "energy_only_eV": -187.64394273635233,
+      "regular_eV": -187.64394273635233,
+      "stored_eV": -187.64394273113408
+    },
+    {
+      "surface": "Si111",
+      "species": "SiCl4",
+      "image": 3,
+      "energy_only_eV": -186.30519630587432,
+      "regular_eV": -186.30519630587432,
+      "stored_eV": -186.30519630774828
+    },
+    {
+      "surface": "Si111",
+      "species": "SiCl4",
+      "image": 8,
+      "energy_only_eV": -168.87789978955743,
+      "regular_eV": -168.87789978955743,
+      "stored_eV": -168.877899799328
+    },
+    {
+      "surface": "beta_Si3N4_001",
+      "species": "HF",
+      "image": 3,
+      "energy_only_eV": -218.05095402445167,
+      "regular_eV": -218.05095402445167,
+      "stored_eV": -218.05095406673263
+    },
+    {
+      "surface": "beta_Si3N4_001",
+      "species": "HF",
+      "image": 8,
+      "energy_only_eV": -215.1947176721524,
+      "regular_eV": -215.1947176721524,
+      "stored_eV": -215.19471771772413
+    },
+    {
+      "surface": "beta_Si3N4_001",
+      "species": "CH3F",
+      "image": 3,
+      "energy_only_eV": -234.38656328507412,
+      "regular_eV": -234.38656328507412,
+      "stored_eV": -234.38656332724332
+    },
+    {
+      "surface": "beta_Si3N4_001",
+      "species": "CH3F",
+      "image": 8,
+      "energy_only_eV": -232.27345208802546,
+      "regular_eV": -232.27345208802546,
+      "stored_eV": -232.27345212734343
+    },
+    {
+      "surface": "beta_Si3N4_001",
+      "species": "SiCl4",
+      "image": 3,
+      "energy_only_eV": -229.4134276414743,
+      "regular_eV": -229.4134276414743,
+      "stored_eV": -229.41342768295692
+    },
+    {
+      "surface": "beta_Si3N4_001",
+      "species": "SiCl4",
+      "image": 8,
+      "energy_only_eV": -227.4857265219042,
+      "regular_eV": -227.4857265219042,
+      "stored_eV": -227.48572656698008
+    },
+    {
+      "surface": "alpha_quartz_001",
+      "species": "HF",
+      "image": 3,
+      "energy_only_eV": -272.91921208948753,
+      "regular_eV": -272.91921208948753,
+      "stored_eV": -272.91921208202854
+    },
+    {
+      "surface": "alpha_quartz_001",
+      "species": "HF",
+      "image": 8,
+      "energy_only_eV": -271.21316014538337,
+      "regular_eV": -271.21316014538337,
+      "stored_eV": -271.21316013295336
+    },
+    {
+      "surface": "alpha_quartz_001",
+      "species": "CH3F",
+      "image": 3,
+      "energy_only_eV": -289.3314545550201,
+      "regular_eV": -289.3314545550201,
+      "stored_eV": -289.33145454846505
+    },
+    {
+      "surface": "alpha_quartz_001",
+      "species": "CH3F",
+      "image": 8,
+      "energy_only_eV": -287.9697500968168,
+      "regular_eV": -287.9697500968168,
+      "stored_eV": -287.9697500885083
+    },
+    {
+      "surface": "alpha_quartz_001",
+      "species": "SiCl4",
+      "image": 3,
+      "energy_only_eV": -283.1011032700842,
+      "regular_eV": -283.1011032700842,
+      "stored_eV": -283.10110325774326
+    },
+    {
+      "surface": "alpha_quartz_001",
+      "species": "SiCl4",
+      "image": 8,
+      "energy_only_eV": -281.82285867779575,
+      "regular_eV": -281.82285867779575,
+      "stored_eV": -281.8228586740998
+    }
+  ]
+}

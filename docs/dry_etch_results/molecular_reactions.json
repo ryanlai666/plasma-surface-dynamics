@@ -1,0 +1,1366 @@
+[
+  {
+    "folder": "data/surface_paths/alpha_quartz_001/HF/molecular_neb",
+    "surface": "alpha_quartz_001",
+    "species": "HF",
+    "status": "no_distinct_dissociation_endpoints",
+    "mobile_indices": [
+      28,
+      14,
+      36,
+      37
+    ],
+    "substrate_atoms": 36,
+    "active_surface_pair": [
+      28,
+      14
+    ],
+    "source": {
+      "bulk_cif": "data\\reference\\surface_bulk\\9005018.cif",
+      "bulk_sha256": "5de61470915c9221bcbd5a8bdbc89c58a8cd30950d361cf2e2aeb86042843d0c",
+      "source_url": "https://www.crystallography.net/cod/9005018.html",
+      "construction": "Unrelaxed (001) cleavage, two unit-cell layers; quartz doubled along a",
+      "bulk_temperature_note": "Quartz source structure measured at 398 K; this is not a finite-temperature simulation"
+    },
+    "proposed_reaction": "HF + reactive surface pair -> dissociated adsorbates",
+    "breaking_bond_indices": [
+      36,
+      37
+    ],
+    "gas_bond_length_A": 0.96123254,
+    "method": "MACE-MP-0b2; CI-NEB with two surface atoms and all molecular atoms mobile",
+    "model_sha256": "d5773bf9440e96d6eb8c598f84bd0e6369fcfa432f626a87f890e07da3c651c9",
+    "runner": "scripts/run_molecular_reaction_neb.py",
+    "script_sha256": "3232f752062cfefe294f0e78008c4f14aa4b8a433ab32eeda655821dff646aca",
+    "limitations": [
+      "Ideal unpassivated cleavage, one coverage and site; no slab convergence study",
+      "Only two substrate atoms move; bulk-trained ML model is unvalidated for surface chemistry",
+      "Electronic potential energies only; no excitation, ZPE or entropy",
+      "A highest image is not called a verified TS without curvature and connectivity checks"
+    ],
+    "IS": {
+      "converged": true,
+      "energy_eV": -274.46370619259676,
+      "max_mobile_force_eV_A": 0.009794686463620897,
+      "breaking_bond_A": 3.600179243948646,
+      "surface_pair_distance_A": 1.6094423343200457,
+      "hessian_eigenvalues_eV_A2": [
+        0.8300473078270066,
+        1.2845385644502882,
+        1.385881564116627,
+        1.682751638872202,
+        1.999204115761471,
+        3.0949801308690925,
+        8.871891308891254,
+        23.258470592127168,
+        30.110896616738682,
+        40.90933494036898,
+        47.59038121403848,
+        88.80498888257642
+      ],
+      "no_negative_curvature": true
+    },
+    "FS": {
+      "converged": true,
+      "energy_eV": -274.46363360895265,
+      "max_mobile_force_eV_A": 0.0165790330977461,
+      "breaking_bond_A": 3.5959038421685796,
+      "surface_pair_distance_A": 1.6096579615793096,
+      "hessian_eigenvalues_eV_A2": [
+        0.8317107785598422,
+        1.3028755408370865,
+        1.3928424024115906,
+        1.716902158987124,
+        2.009735931718606,
+        3.115136775568326,
+        8.930056451779668,
+        23.246797590775888,
+        30.158688751526416,
+        40.99862854656055,
+        47.821679860620215,
+        88.89618072902968
+      ],
+      "no_negative_curvature": true
+    },
+    "endpoint_mobile_RMS_displacement_A": 0.0027639412619119845,
+    "seconds": 233.41030749998754
+  },
+  {
+    "folder": "data/surface_paths/beta_Si3N4_001/CH3F/molecular_neb",
+    "surface": "beta_Si3N4_001",
+    "species": "CH3F",
+    "status": "interrupted_for_FIRE_restart",
+    "mobile_indices": [
+      18,
+      26,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "substrate_atoms": 28,
+    "active_surface_pair": [
+      18,
+      26
+    ],
+    "source": {
+      "bulk_cif": "docs\\mace_results\\2102550.cif",
+      "bulk_sha256": "fca30839fbe00b3c632305ad9705c41cc20fe596e525bc013d41c227299726c1",
+      "source_url": "https://www.crystallography.net/cod/2102550.html",
+      "construction": "Unrelaxed (001) cleavage, two unit-cell layers; quartz doubled along a",
+      "bulk_temperature_note": "Public beta-Si3N4 structure"
+    },
+    "proposed_reaction": "CH3F + reactive surface pair -> dissociated adsorbates",
+    "breaking_bond_indices": [
+      28,
+      29
+    ],
+    "gas_bond_length_A": 1.41965213,
+    "method": "MACE-MP-0b2; CI-NEB with two surface atoms and all molecular atoms mobile",
+    "model_sha256": "d5773bf9440e96d6eb8c598f84bd0e6369fcfa432f626a87f890e07da3c651c9",
+    "runner": "scripts/run_molecular_reaction_neb.py",
+    "script_sha256": "3232f752062cfefe294f0e78008c4f14aa4b8a433ab32eeda655821dff646aca",
+    "limitations": [
+      "Ideal unpassivated cleavage, one coverage and site; no slab convergence study",
+      "Only two substrate atoms move; bulk-trained ML model is unvalidated for surface chemistry",
+      "Electronic potential energies only; no excitation, ZPE or entropy",
+      "A highest image is not called a verified TS without curvature and connectivity checks"
+    ],
+    "IS": {
+      "converged": true,
+      "energy_eV": -234.9070767357814,
+      "max_mobile_force_eV_A": 0.010847251153621059,
+      "breaking_bond_A": 1.4161448160405996,
+      "surface_pair_distance_A": 1.7491323652119606,
+      "hessian_eigenvalues_eV_A2": [
+        0.09337674467421542,
+        0.14417316028667623,
+        0.2330612243476109,
+        0.40233550556599923,
+        0.47348754553879396,
+        0.5227868794829191,
+        6.483981025492964,
+        7.12032998487626,
+        7.443266066929726,
+        10.800997039511262,
+        11.474727839195713,
+        13.073381220097323,
+        13.313837588621404,
+        18.926222400234106,
+        25.409596263478786,
+        28.337592351585407,
+        31.927746644816896,
+        35.23274156796728,
+        54.345856979683134,
+        78.29260611804717,
+        83.9023486364561
+      ],
+      "no_negative_curvature": true
+    },
+    "FS": {
+      "converged": true,
+      "energy_eV": -238.16792962820597,
+      "max_mobile_force_eV_A": 0.013505839011698023,
+      "breaking_bond_A": 3.0028343946610674,
+      "surface_pair_distance_A": 1.7576480198151054,
+      "hessian_eigenvalues_eV_A2": [
+        0.13573243014393555,
+        0.24574895388567458,
+        0.5362203658861115,
+        2.205282469315531,
+        2.8860840917677146,
+        4.414792056464801,
+        6.013335116353084,
+        6.332495296285207,
+        6.675903949955162,
+        9.946032102917801,
+        10.256432935500467,
+        13.99339146616133,
+        19.32067495740531,
+        19.841384838814083,
+        26.57202662147305,
+        27.588196328938608,
+        31.1731098528438,
+        35.825496146771926,
+        50.83541881472235,
+        70.54140032344041,
+        76.934450635683
+      ],
+      "no_negative_curvature": true
+    },
+    "restart_note": "BFGS path stopped before convergence; original endpoints/logs/checkpoint preserved. See sibling molecular_refined for FIRE continuation."
+  },
+  {
+    "folder": "data/surface_paths/beta_Si3N4_001/H2O/molecular_neb",
+    "surface": "beta_Si3N4_001",
+    "species": "H2O",
+    "status": "interrupted_for_FIRE_restart",
+    "mobile_indices": [
+      18,
+      26,
+      28,
+      29,
+      30
+    ],
+    "substrate_atoms": 28,
+    "active_surface_pair": [
+      18,
+      26
+    ],
+    "source": {
+      "bulk_cif": "docs\\mace_results\\2102550.cif",
+      "bulk_sha256": "fca30839fbe00b3c632305ad9705c41cc20fe596e525bc013d41c227299726c1",
+      "source_url": "https://www.crystallography.net/cod/2102550.html",
+      "construction": "Unrelaxed (001) cleavage, two unit-cell layers; quartz doubled along a",
+      "bulk_temperature_note": "Public beta-Si3N4 structure"
+    },
+    "proposed_reaction": "H2O + reactive surface pair -> dissociated adsorbates",
+    "breaking_bond_indices": [
+      28,
+      30
+    ],
+    "gas_bond_length_A": 0.9706582588366933,
+    "method": "MACE-MP-0b2; CI-NEB with two surface atoms and all molecular atoms mobile",
+    "model_sha256": "d5773bf9440e96d6eb8c598f84bd0e6369fcfa432f626a87f890e07da3c651c9",
+    "runner": "scripts/run_molecular_reaction_neb.py",
+    "script_sha256": "3232f752062cfefe294f0e78008c4f14aa4b8a433ab32eeda655821dff646aca",
+    "limitations": [
+      "Ideal unpassivated cleavage, one coverage and site; no slab convergence study",
+      "Only two substrate atoms move; bulk-trained ML model is unvalidated for surface chemistry",
+      "Electronic potential energies only; no excitation, ZPE or entropy",
+      "A highest image is not called a verified TS without curvature and connectivity checks"
+    ],
+    "IS": {
+      "converged": true,
+      "energy_eV": -227.766539874322,
+      "max_mobile_force_eV_A": 0.017563114879061138,
+      "breaking_bond_A": 0.9892588179435903,
+      "surface_pair_distance_A": 1.7282327589456503,
+      "hessian_eigenvalues_eV_A2": [
+        0.42521381048620277,
+        0.857732597093456,
+        1.726581324000814,
+        3.3199299893040743,
+        4.852691433240198,
+        5.536936197864361,
+        6.606914476147589,
+        14.844256428872441,
+        22.240276208977154,
+        24.824540363646307,
+        26.808085039067354,
+        30.413065803665603,
+        36.17768543416278,
+        40.69040785910204,
+        77.85223149344574
+      ],
+      "no_negative_curvature": true
+    },
+    "FS": {
+      "converged": true,
+      "energy_eV": -226.74064863009838,
+      "max_mobile_force_eV_A": 0.011749427136889042,
+      "breaking_bond_A": 3.0501041515880556,
+      "surface_pair_distance_A": 1.854666651273056,
+      "hessian_eigenvalues_eV_A2": [
+        1.1042966149353968,
+        1.1508143010031298,
+        2.48261852697057,
+        2.7816038601499407,
+        2.9748212360674673,
+        4.340211466424669,
+        5.867632201297391,
+        14.383811740059585,
+        23.726084134486115,
+        24.17787128400931,
+        26.64050955056008,
+        30.839370271310926,
+        37.44534178304358,
+        68.73603034078826,
+        74.11876532056247
+      ],
+      "no_negative_curvature": true
+    },
+    "restart_note": "BFGS path stopped before convergence; original endpoints/logs/checkpoint preserved. See sibling molecular_refined for FIRE continuation."
+  },
+  {
+    "folder": "data/surface_paths/beta_Si3N4_001/HF/molecular_neb",
+    "surface": "beta_Si3N4_001",
+    "species": "HF",
+    "status": "no_distinct_dissociation_endpoints",
+    "mobile_indices": [
+      18,
+      26,
+      28,
+      29
+    ],
+    "substrate_atoms": 28,
+    "active_surface_pair": [
+      18,
+      26
+    ],
+    "source": {
+      "bulk_cif": "docs\\mace_results\\2102550.cif",
+      "bulk_sha256": "fca30839fbe00b3c632305ad9705c41cc20fe596e525bc013d41c227299726c1",
+      "source_url": "https://www.crystallography.net/cod/2102550.html",
+      "construction": "Unrelaxed (001) cleavage, two unit-cell layers; quartz doubled along a",
+      "bulk_temperature_note": "Public beta-Si3N4 structure"
+    },
+    "proposed_reaction": "HF + reactive surface pair -> dissociated adsorbates",
+    "breaking_bond_indices": [
+      28,
+      29
+    ],
+    "gas_bond_length_A": 0.96123254,
+    "method": "MACE-MP-0b2; CI-NEB with two surface atoms and all molecular atoms mobile",
+    "model_sha256": "d5773bf9440e96d6eb8c598f84bd0e6369fcfa432f626a87f890e07da3c651c9",
+    "runner": "scripts/run_molecular_reaction_neb.py",
+    "script_sha256": "3232f752062cfefe294f0e78008c4f14aa4b8a433ab32eeda655821dff646aca",
+    "limitations": [
+      "Ideal unpassivated cleavage, one coverage and site; no slab convergence study",
+      "Only two substrate atoms move; bulk-trained ML model is unvalidated for surface chemistry",
+      "Electronic potential energies only; no excitation, ZPE or entropy",
+      "A highest image is not called a verified TS without curvature and connectivity checks"
+    ],
+    "IS": {
+      "converged": true,
+      "energy_eV": -221.66642073353205,
+      "max_mobile_force_eV_A": 0.007523766565445128,
+      "breaking_bond_A": 2.0860252375017994,
+      "surface_pair_distance_A": 1.723506786757646,
+      "hessian_eigenvalues_eV_A2": [
+        0.41384170941676157,
+        2.0228782566344043,
+        3.0150547263175573,
+        3.1306060442394883,
+        6.485624049544352,
+        14.845755056852232,
+        22.94131234291743,
+        24.414481112978642,
+        26.50370082421255,
+        30.403830169410803,
+        40.74093547214743,
+        41.550728762807964
+      ],
+      "no_negative_curvature": true
+    },
+    "FS": {
+      "converged": true,
+      "energy_eV": -216.81803249882284,
+      "max_mobile_force_eV_A": 0.011086993249927408,
+      "breaking_bond_A": 2.102452378964568,
+      "surface_pair_distance_A": 1.8076893609149272,
+      "hessian_eigenvalues_eV_A2": [
+        0.12174048751626877,
+        1.7872546399727443,
+        2.124718574850807,
+        2.4123919750938256,
+        4.15628394608419,
+        13.522760875860442,
+        25.189580885328866,
+        26.03198347994939,
+        26.596412994549784,
+        30.088519004418206,
+        32.22639061802985,
+        66.21592095640449
+      ],
+      "no_negative_curvature": true
+    },
+    "endpoint_mobile_RMS_displacement_A": 0.9040859510259731,
+    "seconds": 101.94263870001305
+  },
+  {
+    "folder": "data/surface_paths/Si100/F2/molecular_neb",
+    "surface": "Si100",
+    "species": "F2",
+    "status": "endpoint_validation_failed",
+    "mobile_indices": [
+      34,
+      28,
+      36,
+      37
+    ],
+    "substrate_atoms": 36,
+    "active_surface_pair": [
+      34,
+      28
+    ],
+    "source": {
+      "construction": "ASE ideal diamond cut, a=5.43 A; 3x2 repeat, six atomic layers"
+    },
+    "proposed_reaction": "F2 + reactive surface pair -> dissociated adsorbates",
+    "breaking_bond_indices": [
+      36,
+      37
+    ],
+    "gas_bond_length_A": 1.48057573,
+    "method": "MACE-MP-0b2; CI-NEB with two surface atoms and all molecular atoms mobile",
+    "model_sha256": "d5773bf9440e96d6eb8c598f84bd0e6369fcfa432f626a87f890e07da3c651c9",
+    "runner": "scripts/run_molecular_reaction_neb.py",
+    "script_sha256": "3232f752062cfefe294f0e78008c4f14aa4b8a433ab32eeda655821dff646aca",
+    "limitations": [
+      "Ideal unpassivated cleavage, one coverage and site; no slab convergence study",
+      "Only two substrate atoms move; bulk-trained ML model is unvalidated for surface chemistry",
+      "Electronic potential energies only; no excitation, ZPE or entropy",
+      "A highest image is not called a verified TS without curvature and connectivity checks"
+    ],
+    "IS": {
+      "converged": true,
+      "energy_eV": -190.53500649921529,
+      "max_mobile_force_eV_A": 0.010976778615162866,
+      "breaking_bond_A": 2.506859383699106,
+      "surface_pair_distance_A": 2.690592110740766,
+      "hessian_eigenvalues_eV_A2": [
+        -4.103488630253981,
+        -0.9151338889886482,
+        -0.38442240149638485,
+        0.743198402865563,
+        0.958584022051885,
+        1.532231764068902,
+        5.665714855967326,
+        8.175372951794552,
+        11.941310292300757,
+        14.284023677100933,
+        44.76991710339929,
+        50.19384561267599
+      ],
+      "no_negative_curvature": false
+    },
+    "FS": {
+      "converged": true,
+      "energy_eV": -192.18263088441586,
+      "max_mobile_force_eV_A": 0.014443891149840451,
+      "breaking_bond_A": 4.555647376430024,
+      "surface_pair_distance_A": 2.4422493029437153,
+      "hessian_eigenvalues_eV_A2": [
+        0.546767465092627,
+        0.8260870374960394,
+        1.0960433314297662,
+        2.029878312123648,
+        2.6877569463711004,
+        4.022535306465877,
+        6.991062791044737,
+        7.779441288762957,
+        11.320304507864996,
+        12.759169549444069,
+        16.239745036261418,
+        58.389750125727424
+      ],
+      "no_negative_curvature": true
+    },
+    "endpoint_mobile_RMS_displacement_A": 1.089102473230787,
+    "seconds": 190.33823390002362
+  },
+  {
+    "folder": "data/surface_paths/Si100/HCl/molecular_neb",
+    "surface": "Si100",
+    "species": "HCl",
+    "status": "endpoint_validation_failed",
+    "mobile_indices": [
+      34,
+      28,
+      36,
+      37
+    ],
+    "substrate_atoms": 36,
+    "active_surface_pair": [
+      34,
+      28
+    ],
+    "source": {
+      "construction": "ASE ideal diamond cut, a=5.43 A; 3x2 repeat, six atomic layers"
+    },
+    "proposed_reaction": "HCl + reactive surface pair -> dissociated adsorbates",
+    "breaking_bond_indices": [
+      36,
+      37
+    ],
+    "gas_bond_length_A": 1.30178926,
+    "method": "MACE-MP-0b2; CI-NEB with two surface atoms and all molecular atoms mobile",
+    "model_sha256": "d5773bf9440e96d6eb8c598f84bd0e6369fcfa432f626a87f890e07da3c651c9",
+    "runner": "scripts/run_molecular_reaction_neb.py",
+    "script_sha256": "3232f752062cfefe294f0e78008c4f14aa4b8a433ab32eeda655821dff646aca",
+    "limitations": [
+      "Ideal unpassivated cleavage, one coverage and site; no slab convergence study",
+      "Only two substrate atoms move; bulk-trained ML model is unvalidated for surface chemistry",
+      "Electronic potential energies only; no excitation, ZPE or entropy",
+      "A highest image is not called a verified TS without curvature and connectivity checks"
+    ],
+    "IS": {
+      "converged": true,
+      "energy_eV": -186.66785322794033,
+      "max_mobile_force_eV_A": 0.003509451548737254,
+      "breaking_bond_A": 1.3196004900824683,
+      "surface_pair_distance_A": 2.339304259717226,
+      "hessian_eigenvalues_eV_A2": [
+        -0.6097320672646819,
+        -0.05208153125459816,
+        0.08716202012211416,
+        0.7508146118895234,
+        1.617808494008616,
+        1.6868792787674116,
+        5.19781369877665,
+        11.06228417849679,
+        11.735487264032141,
+        14.697888777789293,
+        22.38296563799184,
+        48.63699874589021
+      ],
+      "no_negative_curvature": false
+    },
+    "FS": {
+      "converged": true,
+      "energy_eV": -186.38690370773188,
+      "max_mobile_force_eV_A": 0.008009718506447727,
+      "breaking_bond_A": 3.3214271038598495,
+      "surface_pair_distance_A": 2.310029684099905,
+      "hessian_eigenvalues_eV_A2": [
+        -3.536782667097588,
+        -1.1313518427528977,
+        0.2906888531909769,
+        0.4549098441273767,
+        1.5718395313929014,
+        4.127829381879931,
+        6.1371001186321275,
+        10.43148967929098,
+        13.590397995384121,
+        20.37475705413126,
+        27.205079078211835,
+        33.09998705832095
+      ],
+      "no_negative_curvature": false
+    },
+    "endpoint_mobile_RMS_displacement_A": 1.0300903053186887,
+    "seconds": 86.11481749999803
+  },
+  {
+    "folder": "data/surface_paths/Si111/Cl2/molecular_neb",
+    "surface": "Si111",
+    "species": "Cl2",
+    "status": "no_distinct_dissociation_endpoints",
+    "mobile_indices": [
+      34,
+      30,
+      36,
+      37
+    ],
+    "substrate_atoms": 36,
+    "active_surface_pair": [
+      34,
+      30
+    ],
+    "source": {
+      "construction": "ASE ideal diamond cut, a=5.43 A; 3x2 repeat, six atomic layers"
+    },
+    "proposed_reaction": "Cl2 + reactive surface pair -> dissociated adsorbates",
+    "breaking_bond_indices": [
+      36,
+      37
+    ],
+    "gas_bond_length_A": 1.99859232,
+    "method": "MACE-MP-0b2; CI-NEB with two surface atoms and all molecular atoms mobile",
+    "model_sha256": "d5773bf9440e96d6eb8c598f84bd0e6369fcfa432f626a87f890e07da3c651c9",
+    "runner": "scripts/run_molecular_reaction_neb.py",
+    "script_sha256": "3232f752062cfefe294f0e78008c4f14aa4b8a433ab32eeda655821dff646aca",
+    "limitations": [
+      "Ideal unpassivated cleavage, one coverage and site; no slab convergence study",
+      "Only two substrate atoms move; bulk-trained ML model is unvalidated for surface chemistry",
+      "Electronic potential energies only; no excitation, ZPE or entropy",
+      "A highest image is not called a verified TS without curvature and connectivity checks"
+    ],
+    "IS": {
+      "converged": true,
+      "energy_eV": -181.97975215755096,
+      "max_mobile_force_eV_A": 0.014425104502698396,
+      "breaking_bond_A": 4.77508293648546,
+      "surface_pair_distance_A": 4.214715867966418,
+      "hessian_eigenvalues_eV_A2": [
+        0.33933831072142173,
+        0.5673626980584083,
+        0.6431733302926497,
+        1.4642520936419487,
+        2.310606676367363,
+        2.9261863030028126,
+        3.547743404272067,
+        6.211744792608185,
+        8.737980968941665,
+        12.672488719919931,
+        13.716082950610597,
+        28.226639502754345
+      ],
+      "no_negative_curvature": true
+    },
+    "FS": {
+      "converged": true,
+      "energy_eV": -181.0825225782845,
+      "max_mobile_force_eV_A": 0.01611408799605064,
+      "breaking_bond_A": 4.600672023261589,
+      "surface_pair_distance_A": 3.888568146394808,
+      "hessian_eigenvalues_eV_A2": [
+        0.4433190007382735,
+        0.6833941017394756,
+        1.6220854466148806,
+        2.107034635959747,
+        2.2518314533854644,
+        3.4013643355192196,
+        3.830883820674876,
+        4.140107327474404,
+        5.631838518780019,
+        5.9495791654985,
+        7.4259706635955585,
+        26.315506193281937
+      ],
+      "no_negative_curvature": true
+    },
+    "endpoint_mobile_RMS_displacement_A": 1.7584622531480816,
+    "seconds": 313.99099030002253
+  },
+  {
+    "folder": "data/surface_paths/beta_Si3N4_001/CH3F/molecular_refined",
+    "surface": "beta_Si3N4_001",
+    "species": "CH3F",
+    "status": "neb_unconverged",
+    "mobile_indices": [
+      18,
+      26,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "substrate_atoms": 28,
+    "active_surface_pair": [
+      18,
+      26
+    ],
+    "source": {
+      "bulk_cif": "docs\\mace_results\\2102550.cif",
+      "bulk_sha256": "fca30839fbe00b3c632305ad9705c41cc20fe596e525bc013d41c227299726c1",
+      "source_url": "https://www.crystallography.net/cod/2102550.html",
+      "construction": "Unrelaxed (001) cleavage, two unit-cell layers; quartz doubled along a",
+      "bulk_temperature_note": "Public beta-Si3N4 structure"
+    },
+    "proposed_reaction": "CH3F + reactive surface pair -> dissociated adsorbates",
+    "breaking_bond_indices": [
+      28,
+      29
+    ],
+    "gas_bond_length_A": 1.41965213,
+    "method": "MACE-MP-0b2; CI-NEB with two surface atoms and all molecular atoms mobile",
+    "model_sha256": "d5773bf9440e96d6eb8c598f84bd0e6369fcfa432f626a87f890e07da3c651c9",
+    "runner": "scripts/refine_molecular_surface_paths.py",
+    "script_sha256": "17ee4f8e2b5db0f73457625fd2425318e86ee9fd538b973a481f8e1a180606d2",
+    "limitations": [
+      "Ideal unpassivated cleavage, one coverage and site; no slab convergence study",
+      "Only two substrate atoms move; bulk-trained ML model is unvalidated for surface chemistry",
+      "Electronic potential energies only; no excitation, ZPE or entropy",
+      "A highest image is not called a verified TS without curvature and connectivity checks"
+    ],
+    "IS": {
+      "converged": true,
+      "energy_eV": -234.9070767357814,
+      "max_mobile_force_eV_A": 0.010847251153621059,
+      "breaking_bond_A": 1.4161448160405996,
+      "surface_pair_distance_A": 1.7491323652119606,
+      "hessian_eigenvalues_eV_A2": [
+        0.09337674467421542,
+        0.14417316028667623,
+        0.2330612243476109,
+        0.40233550556599923,
+        0.47348754553879396,
+        0.5227868794829191,
+        6.483981025492964,
+        7.12032998487626,
+        7.443266066929726,
+        10.800997039511262,
+        11.474727839195713,
+        13.073381220097323,
+        13.313837588621404,
+        18.926222400234106,
+        25.409596263478786,
+        28.337592351585407,
+        31.927746644816896,
+        35.23274156796728,
+        54.345856979683134,
+        78.29260611804717,
+        83.9023486364561
+      ],
+      "no_negative_curvature": true
+    },
+    "FS": {
+      "converged": true,
+      "energy_eV": -238.16792962820597,
+      "max_mobile_force_eV_A": 0.013505839011698023,
+      "breaking_bond_A": 3.0028343946610674,
+      "surface_pair_distance_A": 1.7576480198151054,
+      "hessian_eigenvalues_eV_A2": [
+        0.13573243014393555,
+        0.24574895388567458,
+        0.5362203658861115,
+        2.205282469315531,
+        2.8860840917677146,
+        4.414792056464801,
+        6.013335116353084,
+        6.332495296285207,
+        6.675903949955162,
+        9.946032102917801,
+        10.256432935500467,
+        13.99339146616133,
+        19.32067495740531,
+        19.841384838814083,
+        26.57202662147305,
+        27.588196328938608,
+        31.1731098528438,
+        35.825496146771926,
+        50.83541881472235,
+        70.54140032344041,
+        76.934450635683
+      ],
+      "no_negative_curvature": true
+    },
+    "restart_note": "BFGS path stopped before convergence; original endpoints/logs/checkpoint preserved. See sibling molecular_refined for FIRE continuation.",
+    "previous_runner": "scripts/run_molecular_reaction_neb.py",
+    "previous_script_sha256": "3232f752062cfefe294f0e78008c4f14aa4b8a433ab32eeda655821dff646aca",
+    "restart_source_sha256": "37152b64fa483a917e1decc969b1c94bd69454a9922617fa8ba19f221b5473d2",
+    "optimizer": "FIRE; independent ASE calculators, shared immutable MACE weights; threaded NEB",
+    "images": 11,
+    "peak_image": 9,
+    "peak_above_IS_eV": 0.20092376556493718,
+    "FS_minus_IS_eV": -3.2608528923976507,
+    "max_neb_force_eV_A": 1.1896918847958728,
+    "peak_hessian_eigenvalues_eV_A2": [
+      -2.3390381437346504,
+      -1.1939066567572414,
+      -0.4574866393035209,
+      -0.019465181711578745,
+      0.6638877315883946,
+      0.8613578213100369,
+      1.713323511102617,
+      3.3746010435211145,
+      3.4524295808105245,
+      6.137350051538985,
+      6.221627563523822,
+      8.04415049273273,
+      13.429009133564122,
+      17.731665063383243,
+      20.454705361302793,
+      26.083006054263553,
+      29.868906367087163,
+      33.40089867112788,
+      51.94675804000759,
+      91.40207741904943,
+      96.36373716808473
+    ],
+    "index_one_in_mobile_subspace": false
+  },
+  {
+    "folder": "data/surface_paths/beta_Si3N4_001/H2O/molecular_refined",
+    "surface": "beta_Si3N4_001",
+    "species": "H2O",
+    "status": "neb_converged",
+    "mobile_indices": [
+      18,
+      26,
+      28,
+      29,
+      30
+    ],
+    "substrate_atoms": 28,
+    "active_surface_pair": [
+      18,
+      26
+    ],
+    "source": {
+      "bulk_cif": "docs\\mace_results\\2102550.cif",
+      "bulk_sha256": "fca30839fbe00b3c632305ad9705c41cc20fe596e525bc013d41c227299726c1",
+      "source_url": "https://www.crystallography.net/cod/2102550.html",
+      "construction": "Unrelaxed (001) cleavage, two unit-cell layers; quartz doubled along a",
+      "bulk_temperature_note": "Public beta-Si3N4 structure"
+    },
+    "proposed_reaction": "H2O + reactive surface pair -> dissociated adsorbates",
+    "breaking_bond_indices": [
+      28,
+      30
+    ],
+    "gas_bond_length_A": 0.9706582588366933,
+    "method": "MACE-MP-0b2; CI-NEB with two surface atoms and all molecular atoms mobile",
+    "model_sha256": "d5773bf9440e96d6eb8c598f84bd0e6369fcfa432f626a87f890e07da3c651c9",
+    "runner": "scripts/refine_molecular_surface_paths.py",
+    "script_sha256": "17ee4f8e2b5db0f73457625fd2425318e86ee9fd538b973a481f8e1a180606d2",
+    "limitations": [
+      "Ideal unpassivated cleavage, one coverage and site; no slab convergence study",
+      "Only two substrate atoms move; bulk-trained ML model is unvalidated for surface chemistry",
+      "Electronic potential energies only; no excitation, ZPE or entropy",
+      "A highest image is not called a verified TS without curvature and connectivity checks"
+    ],
+    "IS": {
+      "converged": true,
+      "energy_eV": -227.766539874322,
+      "max_mobile_force_eV_A": 0.017563114879061138,
+      "breaking_bond_A": 0.9892588179435903,
+      "surface_pair_distance_A": 1.7282327589456503,
+      "hessian_eigenvalues_eV_A2": [
+        0.42521381048620277,
+        0.857732597093456,
+        1.726581324000814,
+        3.3199299893040743,
+        4.852691433240198,
+        5.536936197864361,
+        6.606914476147589,
+        14.844256428872441,
+        22.240276208977154,
+        24.824540363646307,
+        26.808085039067354,
+        30.413065803665603,
+        36.17768543416278,
+        40.69040785910204,
+        77.85223149344574
+      ],
+      "no_negative_curvature": true
+    },
+    "FS": {
+      "converged": true,
+      "energy_eV": -226.74064863009838,
+      "max_mobile_force_eV_A": 0.011749427136889042,
+      "breaking_bond_A": 3.0501041515880556,
+      "surface_pair_distance_A": 1.854666651273056,
+      "hessian_eigenvalues_eV_A2": [
+        1.1042966149353968,
+        1.1508143010031298,
+        2.48261852697057,
+        2.7816038601499407,
+        2.9748212360674673,
+        4.340211466424669,
+        5.867632201297391,
+        14.383811740059585,
+        23.726084134486115,
+        24.17787128400931,
+        26.64050955056008,
+        30.839370271310926,
+        37.44534178304358,
+        68.73603034078826,
+        74.11876532056247
+      ],
+      "no_negative_curvature": true
+    },
+    "restart_note": "BFGS path stopped before convergence; original endpoints/logs/checkpoint preserved. See sibling molecular_refined for FIRE continuation.",
+    "previous_runner": "scripts/run_molecular_reaction_neb.py",
+    "previous_script_sha256": "3232f752062cfefe294f0e78008c4f14aa4b8a433ab32eeda655821dff646aca",
+    "restart_source_sha256": "9c5be4535a2f360cb0fe2324d3f21b5dbd575314ecf6b362b70a2aecfbcb26a7",
+    "optimizer": "FIRE; independent ASE calculators, shared immutable MACE weights; threaded NEB",
+    "images": 11,
+    "peak_image": 7,
+    "peak_above_IS_eV": 2.125679951441782,
+    "FS_minus_IS_eV": 1.0258912441507277,
+    "max_neb_force_eV_A": 0.03325511548855397,
+    "peak_hessian_eigenvalues_eV_A2": [
+      -14.540631226295165,
+      1.080382961403753,
+      1.283341174060448,
+      2.4400255293999376,
+      3.079224715475729,
+      5.269152328978311,
+      5.923891083262976,
+      9.042810388526929,
+      13.409268829089381,
+      23.589549340444076,
+      23.952183037576017,
+      26.35298323481712,
+      32.845807652676164,
+      34.91323898095642,
+      71.4108406457358
+    ],
+    "index_one_in_mobile_subspace": true,
+    "downhill_connections": [
+      {
+        "sign": -1,
+        "converged": true,
+        "endpoint_RMS_errors_A": [
+          0.6726242740081393,
+          0.004073199793419929
+        ]
+      },
+      {
+        "sign": 1,
+        "converged": true,
+        "endpoint_RMS_errors_A": [
+          0.3696907510676579,
+          0.5346913870980264
+        ]
+      }
+    ],
+    "endpoint_connectivity_confirmed": false
+  },
+  {
+    "folder": "data/surface_paths/beta_Si3N4_001/H2O/mace_local_saddle",
+    "surface": "beta_Si3N4_001",
+    "species": "H2O",
+    "status": "constrained_saddle_connected",
+    "method": "MACE-MP-0b2; evaluated downhill minimization branches from a CI-NEB saddle; not an IRC",
+    "source": "data\\surface_paths\\beta_Si3N4_001\\H2O\\molecular_refined",
+    "source_sha256": "a86a4f145a9592953843c137d137716df5ec8c83c060f94e6a8fa9833f0616d5",
+    "runner": "scripts/trace_surface_saddle.py",
+    "script_sha256": "2df0b9685762575e19d3af453a5df11ab943b80dbe6130a5d542989c23bd80c7",
+    "images": 25,
+    "peak_image": 13,
+    "peak_above_IS_eV": 2.26825512210371,
+    "FS_minus_IS_eV": 1.1684490248119346,
+    "IS": {
+      "converged": true,
+      "energy_eV": -227.9091150437823,
+      "hessian_eigenvalues_eV_A2": [
+        0.8806543689054344,
+        1.1671188744700545,
+        1.4437386456214023,
+        3.668439125323319,
+        3.991346558072168,
+        5.925224628087893,
+        6.518918153380773,
+        14.261418377059824,
+        22.091137706774074,
+        23.563886782044538,
+        27.730161341140988,
+        30.06691513593201,
+        35.60986172099855,
+        37.93094245860336,
+        67.36964760469417
+      ],
+      "no_negative_curvature": true
+    },
+    "FS": {
+      "converged": true,
+      "energy_eV": -226.74066601897036,
+      "hessian_eigenvalues_eV_A2": [
+        1.1120813468056983,
+        1.1524761587233714,
+        2.4784713919743457,
+        2.7777145617201326,
+        2.9691673135087777,
+        4.339193689095456,
+        5.873085814139539,
+        14.38112753051165,
+        23.751221205372453,
+        24.15250650981053,
+        26.63964083854794,
+        30.792243629915543,
+        37.4912284580322,
+        68.84370972481884,
+        74.09617445791473
+      ],
+      "no_negative_curvature": true
+    },
+    "mobile_indices": [
+      18,
+      26,
+      28,
+      29,
+      30
+    ],
+    "peak_hessian_eigenvalues_eV_A2": [
+      -14.540631074133364,
+      1.0803829638484164,
+      1.2833412067199352,
+      2.4400255276469056,
+      3.0792249598395407,
+      5.26915232322857,
+      5.923891126280989,
+      9.042810539007132,
+      13.409268875261134,
+      23.589549518874136,
+      23.95218319223382,
+      26.352983278897657,
+      32.84580763688781,
+      34.91323892980724,
+      71.41083828055338
+    ],
+    "index_one_in_mobile_subspace": true,
+    "endpoint_connectivity_confirmed": true,
+    "original_precursor_connectivity_confirmed": false,
+    "assumptions": [
+      "IS and FS are distinct H adsorption sites beside Si-OH; both are already dissociated water-derived configurations.",
+      "Only two substrate atoms and water are mobile",
+      "Reversed minimization frames are a connectivity visualization, not a dynamical trajectory or a minimum-energy-path optimization",
+      "Bulk-trained MACE is unvalidated for this surface chemistry"
+    ],
+    "event_identity": "H transfer N25-H + N26 -> N25 + N26-H; adsorbed Si15-OH spectator",
+    "original_chemical_assignment_rejected": "Alternative intact-water IS: false; it is already OH + surface H.",
+    "identity_audit": "identity_audit.json"
+  },
+  {
+    "folder": "data/surface_paths/SiN_capped_motif/HF/omol25_neb",
+    "motif": "SiN",
+    "reactant": "HF",
+    "status": "neb_unconverged",
+    "surface": "Capped local bonding proxy; NOT a periodic nitride/oxide slab",
+    "reaction": "H3SiNH2 + HF -> H3SiF + NH3",
+    "mobile_indices": [
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "fixed_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "model": "DPA-3.3-1M OMol25",
+    "charge": 0,
+    "multiplicity": 1,
+    "checkpoint_sha256": "36fe440c111108d60cda54aa7d3fccac743794de25abef4d49564b9fb896a55b",
+    "runner": "scripts/cluster_reaction_paths.py",
+    "script_sha256": "9412afa77a3840c411b75a87a04de26998dba8c4040f8c1bf1ecbf2886079850",
+    "assumptions": [
+      "SiH3 cap fixed; surface-like local Si-N or Si-O cleavage proxy",
+      "No bulk screening, periodicity, coverage or composition representation",
+      "Not an independently calibrated SiN/SiO2 etch barrier"
+    ],
+    "IS": {
+      "converged": true,
+      "energy_eV": -12182.785415798426,
+      "Si_X_distance_A": 1.7105913114327531,
+      "hessian_eigenvalues_eV_A2": [
+        -0.06761989052337379,
+        0.012154375655317975,
+        0.02277540164734775,
+        0.11363954510702336,
+        0.1499666232412631,
+        0.5064587857358485,
+        0.5757785667019043,
+        0.8562220534379563,
+        1.317495811570312,
+        5.218985101957606,
+        6.183606767674648,
+        21.860439747630128,
+        91.02580894764732,
+        113.09356381270997,
+        116.17813038595153
+      ]
+    },
+    "FS": {
+      "converged": true,
+      "energy_eV": -12183.537814117968,
+      "Si_X_distance_A": 5.008214288240257,
+      "hessian_eigenvalues_eV_A2": [
+        -0.006675618478130052,
+        -0.0009450098046967108,
+        -0.0006334489744343673,
+        0.054418961713095966,
+        0.10845248170691027,
+        0.16673419939084197,
+        2.0752552592332294,
+        2.078956147899179,
+        9.638892187652061,
+        13.062181114009404,
+        13.336310831373787,
+        31.87893427939119,
+        58.182710059099115,
+        103.45210081397657,
+        103.73322138563384
+      ]
+    },
+    "images": 11,
+    "peak_image": 5,
+    "peak_above_IS_eV": 6.725010573863983,
+    "FS_minus_IS_eV": -0.752398319542408,
+    "max_neb_force_eV_A": 3.8361977776247573,
+    "peak_hessian_eigenvalues_eV_A2": [
+      -2.9586789007174312,
+      -0.4668074888451262,
+      -0.3338876921634644,
+      0.943486546517126,
+      1.259439017337884,
+      1.4448006952456502,
+      1.537618349424113,
+      2.3918410023543646,
+      3.9567284530999323,
+      6.181054836027597,
+      8.388920407112021,
+      14.133139765298896,
+      22.64014896039894,
+      69.7912915328701,
+      101.2996422917227
+    ],
+    "index_one_in_mobile_subspace": false
+  },
+  {
+    "folder": "data/surface_paths/SiO_capped_motif/HF/omol25_neb",
+    "motif": "SiO",
+    "reactant": "HF",
+    "status": "neb_unconverged",
+    "surface": "Capped local bonding proxy; NOT a periodic nitride/oxide slab",
+    "reaction": "H3SiOH + HF -> H3SiF + H2O",
+    "mobile_indices": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "fixed_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "model": "DPA-3.3-1M OMol25",
+    "charge": 0,
+    "multiplicity": 1,
+    "checkpoint_sha256": "36fe440c111108d60cda54aa7d3fccac743794de25abef4d49564b9fb896a55b",
+    "runner": "scripts/cluster_reaction_paths.py",
+    "script_sha256": "9412afa77a3840c411b75a87a04de26998dba8c4040f8c1bf1ecbf2886079850",
+    "assumptions": [
+      "SiH3 cap fixed; surface-like local Si-N or Si-O cleavage proxy",
+      "No bulk screening, periodicity, coverage or composition representation",
+      "Not an independently calibrated SiN/SiO2 etch barrier"
+    ],
+    "IS": {
+      "converged": true,
+      "energy_eV": -12724.27907243371,
+      "Si_X_distance_A": 1.645325556538878,
+      "hessian_eigenvalues_eV_A2": [
+        -0.014234125304889026,
+        0.01231548833922232,
+        0.11789450020885411,
+        0.20040943788557192,
+        0.798731634248453,
+        1.055285005175854,
+        1.3771782006139202,
+        1.5944818485319252,
+        5.581024403030777,
+        25.92858556609157,
+        106.92110190933293,
+        114.87848681636956
+      ]
+    },
+    "FS": {
+      "converged": true,
+      "energy_eV": -12724.647834479809,
+      "Si_X_distance_A": 4.570175609372385,
+      "hessian_eigenvalues_eV_A2": [
+        -0.004662937278674725,
+        -0.001806974413055676,
+        0.00583129158556296,
+        0.09791313567879842,
+        0.25928463349960057,
+        0.5569068428093114,
+        1.9679914605715396,
+        2.0105824970492208,
+        16.060356114512622,
+        31.108246110491667,
+        89.42961303198,
+        118.74232113720993
+      ]
+    },
+    "images": 11,
+    "peak_image": 4,
+    "peak_above_IS_eV": 6.694042593240738,
+    "FS_minus_IS_eV": -0.3687620460987091,
+    "max_neb_force_eV_A": 1.7864398339180454,
+    "peak_hessian_eigenvalues_eV_A2": [
+      -6.963285406770817e-07,
+      -7.46020364955216e-09,
+      -2.0812616316551948e-10,
+      -1.683804324771916e-10,
+      -6.109878482433542e-17,
+      0.00012452883024249308,
+      0.4491296964094295,
+      0.46141891876410385,
+      0.7788449803549946,
+      0.7928275481798847,
+      93.20377456501018,
+      116.60261822933589
+    ],
+    "index_one_in_mobile_subspace": false
+  },
+  {
+    "folder": "data/surface_paths/SiN_capped_motif/HF/omol25_refined",
+    "motif": "SiN",
+    "reactant": "HF",
+    "status": "neb_unconverged",
+    "surface": "Capped local bonding proxy; NOT a periodic nitride/oxide slab",
+    "reaction": "H3SiNH2 + HF -> H3SiF + NH3",
+    "mobile_indices": [
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "fixed_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "model": "DPA-3.3-1M OMol25",
+    "charge": 0,
+    "multiplicity": 1,
+    "checkpoint_sha256": "36fe440c111108d60cda54aa7d3fccac743794de25abef4d49564b9fb896a55b",
+    "runner": "scripts/cluster_reaction_paths_refined.py",
+    "script_sha256": "ca5568c8da9f76f9172c91b4d8c33b246f973efa3b249e8b81d0dd410930007a",
+    "assumptions": [
+      "SiH3 cap fixed; surface-like local Si-N or Si-O cleavage proxy",
+      "No bulk screening, periodicity, coverage or composition representation",
+      "Not an independently calibrated SiN/SiO2 etch barrier"
+    ],
+    "IS": {
+      "converged": true,
+      "energy_eV": -12182.801233947277,
+      "Si_X_distance_A": 1.7129222274068057,
+      "hessian_eigenvalues_eV_A2": [
+        0.012973034414555933,
+        0.04447480203262633,
+        0.12042821743097258,
+        0.22721551522824948,
+        0.28988069167091485,
+        0.41150086816283393,
+        0.6736656412115214,
+        1.0118042763677595,
+        2.4267542629501504,
+        5.25633330985185,
+        6.517640114112916,
+        21.876185797632896,
+        89.28991623075547,
+        111.33404990769587,
+        113.3246086555744
+      ]
+    },
+    "FS": {
+      "converged": true,
+      "energy_eV": -12183.537813961506,
+      "Si_X_distance_A": 5.008214286502126,
+      "hessian_eigenvalues_eV_A2": [
+        -0.006669034813127128,
+        -0.0009438523764064564,
+        -0.0006341036025013466,
+        0.05441685138526223,
+        0.10844659712687789,
+        0.16674099293094868,
+        2.07525995435403,
+        2.0789527675905997,
+        9.638869878154003,
+        13.062168822569975,
+        13.336312375469783,
+        31.8789427749241,
+        58.18283225826116,
+        103.45210826220445,
+        103.73330432813756
+      ]
+    },
+    "images": 11,
+    "peak_image": 4,
+    "peak_above_IS_eV": 0.36688724160194397,
+    "FS_minus_IS_eV": -0.7365800142288208,
+    "max_neb_force_eV_A": 0.7590455883757713,
+    "peak_hessian_eigenvalues_eV_A2": [
+      -0.19838470621399332,
+      0.061315832119586786,
+      0.14010593701694338,
+      1.0545253962370216,
+      1.4680915193113746,
+      2.6584538823787383,
+      3.475691509892141,
+      5.687251280268897,
+      10.712765892365612,
+      13.060891894862566,
+      13.747800345841728,
+      17.104563118688905,
+      52.366939050324945,
+      106.63728988576167,
+      111.64253499981929
+    ],
+    "index_one_in_mobile_subspace": true
+  },
+  {
+    "folder": "data/surface_paths/SiO_capped_motif/HF/omol25_refined",
+    "motif": "SiO",
+    "reactant": "HF",
+    "status": "neb_unconverged",
+    "surface": "Capped local bonding proxy; NOT a periodic nitride/oxide slab",
+    "reaction": "H3SiOH + HF -> H3SiF + H2O",
+    "mobile_indices": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "fixed_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "model": "DPA-3.3-1M OMol25",
+    "charge": 0,
+    "multiplicity": 1,
+    "checkpoint_sha256": "36fe440c111108d60cda54aa7d3fccac743794de25abef4d49564b9fb896a55b",
+    "runner": "scripts/cluster_reaction_paths_refined.py",
+    "script_sha256": "ca5568c8da9f76f9172c91b4d8c33b246f973efa3b249e8b81d0dd410930007a",
+    "assumptions": [
+      "SiH3 cap fixed; surface-like local Si-N or Si-O cleavage proxy",
+      "No bulk screening, periodicity, coverage or composition representation",
+      "Not an independently calibrated SiN/SiO2 etch barrier"
+    ],
+    "IS": {
+      "converged": true,
+      "energy_eV": -12724.279072850943,
+      "Si_X_distance_A": 1.6453255572025571,
+      "hessian_eigenvalues_eV_A2": [
+        -0.014233054508879754,
+        0.012308539980260137,
+        0.11789131626102582,
+        0.20041489967500223,
+        0.7987286494183418,
+        1.0552898912150332,
+        1.3771770121656284,
+        1.5944825711369706,
+        5.581056660531122,
+        25.928571633517368,
+        106.92114589109107,
+        114.87846980591753
+      ]
+    },
+    "FS": {
+      "converged": true,
+      "energy_eV": -12724.647834330797,
+      "Si_X_distance_A": 4.57017561126249,
+      "hessian_eigenvalues_eV_A2": [
+        -0.004660798738860851,
+        -0.0017994534271826023,
+        0.005836519176605899,
+        0.09791271658810975,
+        0.25927963193325426,
+        0.5569087128202642,
+        1.967995371740714,
+        2.0105840262161427,
+        16.060370280523095,
+        31.108273269233575,
+        89.42959479696087,
+        118.74224186408348
+      ]
+    },
+    "images": 11,
+    "peak_image": 5,
+    "peak_above_IS_eV": 9.47968140244484,
+    "FS_minus_IS_eV": -0.36876147985458374,
+    "max_neb_force_eV_A": 5.500133254610862,
+    "peak_hessian_eigenvalues_eV_A2": [
+      -1.7111968583554598,
+      -1.4898887035850394,
+      -0.24820100709514495,
+      -0.016206887263048433,
+      -0.009269175994434267,
+      -5.723121296828919e-19,
+      6.8208289144509195e-18,
+      1.1951893522355617e-16,
+      0.05526982423995339,
+      0.11030948132904106,
+      42.83725153350451,
+      92.85523405480683
+    ],
+    "index_one_in_mobile_subspace": false
+  }
+]

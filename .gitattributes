@@ -1,2 +1,5 @@
 # Preserve exact artifact/source bytes for recorded SHA-256 provenance.
 * -text whitespace=cr-at-eol
+
+# Preserve the licensed upstream source snapshot verbatim.
+third_party/hiprgen_snapshot/* whitespace=-blank-at-eol,cr-at-eol

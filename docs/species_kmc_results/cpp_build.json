@@ -1,0 +1,20 @@
+{
+  "command": [
+    "C:\\msys64\\ucrt64\\bin\\g++.EXE",
+    "-std=c++17",
+    "-O3",
+    "-Wall",
+    "-Wextra",
+    "-shared",
+    "-static",
+    "-static-libgcc",
+    "-static-libstdc++",
+    "C:\\Ryan\\python_code\\Dry_ALE_Sim\\cpp\\species.cpp",
+    "-o",
+    "C:\\Ryan\\python_code\\Dry_ALE_Sim\\build\\species.dll"
+  ],
+  "compiler": "g++.EXE (Rev8, Built by MSYS2 project) 15.2.0",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "source_sha256": "fd7555db5fe729df8775a0796f17d2ea348418f48eb45863dab64ebdde6a130a",
+  "binary_sha256": "cf17ebb87075a1918a691ac1b7ec29700dbb05df1f7f7e791797840d743587c9"
+}

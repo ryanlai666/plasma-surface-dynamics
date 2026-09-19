@@ -1,0 +1,8 @@
+{
+  "frame_count": 41,
+  "interpolated_frames": 0,
+  "representation": "Actual kMC site states on a schematic grid; no atomistic geometry or length scale",
+  "seed": 741,
+  "trajectory_sha256": "48fdf287e2c1c82c5c075e91a5704c3928388225f9419ad2afc1927fa8078979",
+  "gif_sha256": "cdfd2a427733ad984d500791a922990118ffaa48e3aa81912004ec2769ab025d"
+}

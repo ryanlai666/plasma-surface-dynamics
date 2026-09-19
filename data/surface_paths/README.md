@@ -20,3 +20,9 @@
 `mace_neb` means a locally calculated ML path; `published` means source coordinates; `literature` contains cited parameters without a recovered Cartesian path. New methods belong in separate subdirectories so their energy zeros and provenance cannot be mixed.
 
 [Comparison, equations and limitations](../../docs/dry_etch_results/SURFACE_PATHS.md).
+
+## Molecular surfaces, orientations and sites
+
+Nine molecules on Si(100), Si(111), beta-Si3N4(001) and quartz(001) are organized as `<surface>/<species>/mace_site_orientation/<site>/<orientation>/`. Each curve contains evaluated coordinates, energies and provenance. Per-species README pages show a selected 3D approach animation and the full site/orientation comparison. These scans are not transition states.
+
+[Molecular campaign, all 36 folders, reaction searches, DFT checks and sources](../../docs/dry_etch_results/MOLECULAR_SURFACES.md).

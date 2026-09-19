@@ -1,0 +1,26 @@
+{
+  "surface": "alpha_quartz_001",
+  "species": "H2",
+  "site": "atop_Si",
+  "site_position_A": [
+    3.76227409,
+    2.00679893,
+    21.01516667
+  ],
+  "site_atom_indices": [
+    28
+  ],
+  "orientation": "parallel",
+  "orientation_convention": "Rotate the optimized gas geometry around y; center molecular centroid laterally over site; lowest atom defines height",
+  "substrate_atoms": 36,
+  "images": 9,
+  "slab_energy_eV": -265.304106631801,
+  "molecular_layer_energy_eV": -6.638673901854466,
+  "minimum_interaction_energy_eV": -0.1925312995368902,
+  "peak_is_TS": false,
+  "method": "Rigid evaluated scan, not a reaction path",
+  "model_sha256": "d5773bf9440e96d6eb8c598f84bd0e6369fcfa432f626a87f890e07da3c651c9",
+  "runner": "scripts/screen_molecular_sites_energy.py",
+  "energy_only": true,
+  "script_sha256": "d68e63885ec4a192e6b34545a25ee1eb6fa1404a4f6ec6b621324beabf121d4b"
+}

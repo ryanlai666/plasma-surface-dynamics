@@ -1,0 +1,88 @@
+{
+  "motif": "SiO",
+  "reactant": "HF",
+  "status": "neb_unconverged",
+  "surface": "Capped local bonding proxy; NOT a periodic nitride/oxide slab",
+  "reaction": "H3SiOH + HF -> H3SiF + H2O",
+  "mobile_indices": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "fixed_indices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "model": "DPA-3.3-1M OMol25",
+  "charge": 0,
+  "multiplicity": 1,
+  "checkpoint_sha256": "36fe440c111108d60cda54aa7d3fccac743794de25abef4d49564b9fb896a55b",
+  "runner": "scripts/cluster_reaction_paths.py",
+  "script_sha256": "9412afa77a3840c411b75a87a04de26998dba8c4040f8c1bf1ecbf2886079850",
+  "assumptions": [
+    "SiH3 cap fixed; surface-like local Si-N or Si-O cleavage proxy",
+    "No bulk screening, periodicity, coverage or composition representation",
+    "Not an independently calibrated SiN/SiO2 etch barrier"
+  ],
+  "IS": {
+    "converged": true,
+    "energy_eV": -12724.27907243371,
+    "Si_X_distance_A": 1.645325556538878,
+    "hessian_eigenvalues_eV_A2": [
+      -0.014234125304889026,
+      0.01231548833922232,
+      0.11789450020885411,
+      0.20040943788557192,
+      0.798731634248453,
+      1.055285005175854,
+      1.3771782006139202,
+      1.5944818485319252,
+      5.581024403030777,
+      25.92858556609157,
+      106.92110190933293,
+      114.87848681636956
+    ]
+  },
+  "FS": {
+    "converged": true,
+    "energy_eV": -12724.647834479809,
+    "Si_X_distance_A": 4.570175609372385,
+    "hessian_eigenvalues_eV_A2": [
+      -0.004662937278674725,
+      -0.001806974413055676,
+      0.00583129158556296,
+      0.09791313567879842,
+      0.25928463349960057,
+      0.5569068428093114,
+      1.9679914605715396,
+      2.0105824970492208,
+      16.060356114512622,
+      31.108246110491667,
+      89.42961303198,
+      118.74232113720993
+    ]
+  },
+  "images": 11,
+  "peak_image": 4,
+  "peak_above_IS_eV": 6.694042593240738,
+  "FS_minus_IS_eV": -0.3687620460987091,
+  "max_neb_force_eV_A": 1.7864398339180454,
+  "peak_hessian_eigenvalues_eV_A2": [
+    -6.963285406770817e-07,
+    -7.46020364955216e-09,
+    -2.0812616316551948e-10,
+    -1.683804324771916e-10,
+    -6.109878482433542e-17,
+    0.00012452883024249308,
+    0.4491296964094295,
+    0.46141891876410385,
+    0.7788449803549946,
+    0.7928275481798847,
+    93.20377456501018,
+    116.60261822933589
+  ],
+  "index_one_in_mobile_subspace": false
+}

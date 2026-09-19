@@ -1,0 +1,3219 @@
+{
+  "upstream_repository": "https://github.com/BlauGroup/HiPRGen",
+  "upstream_commit": "a0dddfedc21be0121745e5f33f27ad8aafe796ea",
+  "execution_scope": "Unmodified bucket() and run_decision_tree() functions; custom fixed-cap local-motif filters. Full MPI, molecule filtering, graph isomorphism and thermochemical pipeline NOT executed.",
+  "source_sha256": {
+    "bucketing.py": "36ba17a2b794cdc5f2976b6372a2f27e1b8689b15a69c511e1e689085d816efd",
+    "constants.py": "b23d41ef3c449a3a1fa0a14b99480d328d71dc296149bef5a0749acedab1ace9",
+    "reaction_questions.py": "a4dff7d5f7461acd4f00bc68e0aa5f5b4ee4f14f1c4c268eb975ed4850bda20e"
+  },
+  "runner": "scripts/hiprgen_intermediate_audit.py",
+  "script_sha256": "914fdcb8052fe14d3b828b6879c7ab238b5c4d96c69e772fd0048042f24b715e",
+  "families": [
+    {
+      "family": "NH2_F",
+      "species": 17,
+      "composition_buckets": 85,
+      "directed_pairs": 296,
+      "retained": 20,
+      "filter_counts": {
+        "not_single_si": 276,
+        "always": 20
+      }
+    },
+    {
+      "family": "NH2_Cl",
+      "species": 17,
+      "composition_buckets": 85,
+      "directed_pairs": 296,
+      "retained": 20,
+      "filter_counts": {
+        "not_single_si": 276,
+        "always": 20
+      }
+    },
+    {
+      "family": "OH_F",
+      "species": 17,
+      "composition_buckets": 85,
+      "directed_pairs": 296,
+      "retained": 20,
+      "filter_counts": {
+        "not_single_si": 276,
+        "always": 20
+      }
+    },
+    {
+      "family": "OH_Cl",
+      "species": 17,
+      "composition_buckets": 85,
+      "directed_pairs": 296,
+      "retained": 20,
+      "filter_counts": {
+        "not_single_si": 276,
+        "always": 20
+      }
+    }
+  ],
+  "species": [
+    {
+      "family": "NH2_F",
+      "id": "SiF4",
+      "composition": {
+        "Si": 1,
+        "F": 4
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 0,
+      "bound_ligands": 0,
+      "halogens": 4,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 0
+    },
+    {
+      "family": "NH2_F",
+      "id": "SiF3(NH2)1",
+      "composition": {
+        "Si": 1,
+        "H": 2,
+        "N": 1,
+        "F": 3
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 0,
+      "bound_ligands": 1,
+      "halogens": 3,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 0
+    },
+    {
+      "family": "NH2_F",
+      "id": "SiF2(NH2)2",
+      "composition": {
+        "Si": 1,
+        "H": 4,
+        "N": 2,
+        "F": 2
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 0,
+      "bound_ligands": 2,
+      "halogens": 2,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 0
+    },
+    {
+      "family": "NH2_F",
+      "id": "SiF1(NH2)3",
+      "composition": {
+        "Si": 1,
+        "H": 6,
+        "N": 3,
+        "F": 1
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 0,
+      "bound_ligands": 3,
+      "halogens": 1,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 0
+    },
+    {
+      "family": "NH2_F",
+      "id": "Si(NH2)4",
+      "composition": {
+        "Si": 1,
+        "H": 8,
+        "N": 4
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 0,
+      "bound_ligands": 4,
+      "halogens": 0,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 0
+    },
+    {
+      "family": "NH2_F",
+      "id": "SiH1F3",
+      "composition": {
+        "Si": 1,
+        "H": 1,
+        "F": 3
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 1,
+      "bound_ligands": 0,
+      "halogens": 3,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 1
+    },
+    {
+      "family": "NH2_F",
+      "id": "SiH1F2(NH2)1",
+      "composition": {
+        "Si": 1,
+        "H": 3,
+        "N": 1,
+        "F": 2
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 1,
+      "bound_ligands": 1,
+      "halogens": 2,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 1
+    },
+    {
+      "family": "NH2_F",
+      "id": "SiH1F1(NH2)2",
+      "composition": {
+        "Si": 1,
+        "H": 5,
+        "N": 2,
+        "F": 1
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 1,
+      "bound_ligands": 2,
+      "halogens": 1,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 1
+    },
+    {
+      "family": "NH2_F",
+      "id": "SiH1(NH2)3",
+      "composition": {
+        "Si": 1,
+        "H": 7,
+        "N": 3
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 1,
+      "bound_ligands": 3,
+      "halogens": 0,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 1
+    },
+    {
+      "family": "NH2_F",
+      "id": "SiH2F2",
+      "composition": {
+        "Si": 1,
+        "H": 2,
+        "F": 2
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 2,
+      "bound_ligands": 0,
+      "halogens": 2,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 2
+    },
+    {
+      "family": "NH2_F",
+      "id": "SiH2F1(NH2)1",
+      "composition": {
+        "Si": 1,
+        "H": 4,
+        "N": 1,
+        "F": 1
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 2,
+      "bound_ligands": 1,
+      "halogens": 1,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 2
+    },
+    {
+      "family": "NH2_F",
+      "id": "SiH2(NH2)2",
+      "composition": {
+        "Si": 1,
+        "H": 6,
+        "N": 2
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 2,
+      "bound_ligands": 2,
+      "halogens": 0,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 2
+    },
+    {
+      "family": "NH2_F",
+      "id": "SiH3F1",
+      "composition": {
+        "Si": 1,
+        "H": 3,
+        "F": 1
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 3,
+      "bound_ligands": 0,
+      "halogens": 1,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 3
+    },
+    {
+      "family": "NH2_F",
+      "id": "SiH3(NH2)1",
+      "composition": {
+        "Si": 1,
+        "H": 5,
+        "N": 1
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 3,
+      "bound_ligands": 1,
+      "halogens": 0,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 3
+    },
+    {
+      "family": "NH2_F",
+      "id": "SiH4",
+      "composition": {
+        "Si": 1,
+        "H": 4
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 4,
+      "bound_ligands": 0,
+      "halogens": 0,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 4
+    },
+    {
+      "family": "NH2_F",
+      "id": "HF",
+      "composition": {
+        "H": 1,
+        "F": 1
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "gas",
+      "cap_H": null,
+      "bound_ligands": null,
+      "halogens": null,
+      "evidence": "known molecular identity; no species free energy assigned"
+    },
+    {
+      "family": "NH2_F",
+      "id": "NH3",
+      "composition": {
+        "N": 1,
+        "H": 3
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "gas",
+      "cap_H": null,
+      "bound_ligands": null,
+      "halogens": null,
+      "evidence": "known molecular identity; no species free energy assigned"
+    },
+    {
+      "family": "NH2_Cl",
+      "id": "SiCl4",
+      "composition": {
+        "Si": 1,
+        "Cl": 4
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 0,
+      "bound_ligands": 0,
+      "halogens": 4,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 0
+    },
+    {
+      "family": "NH2_Cl",
+      "id": "SiCl3(NH2)1",
+      "composition": {
+        "Si": 1,
+        "H": 2,
+        "N": 1,
+        "Cl": 3
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 0,
+      "bound_ligands": 1,
+      "halogens": 3,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 0
+    },
+    {
+      "family": "NH2_Cl",
+      "id": "SiCl2(NH2)2",
+      "composition": {
+        "Si": 1,
+        "H": 4,
+        "N": 2,
+        "Cl": 2
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 0,
+      "bound_ligands": 2,
+      "halogens": 2,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 0
+    },
+    {
+      "family": "NH2_Cl",
+      "id": "SiCl1(NH2)3",
+      "composition": {
+        "Si": 1,
+        "H": 6,
+        "N": 3,
+        "Cl": 1
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 0,
+      "bound_ligands": 3,
+      "halogens": 1,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 0
+    },
+    {
+      "family": "NH2_Cl",
+      "id": "Si(NH2)4",
+      "composition": {
+        "Si": 1,
+        "H": 8,
+        "N": 4
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 0,
+      "bound_ligands": 4,
+      "halogens": 0,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 0
+    },
+    {
+      "family": "NH2_Cl",
+      "id": "SiH1Cl3",
+      "composition": {
+        "Si": 1,
+        "H": 1,
+        "Cl": 3
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 1,
+      "bound_ligands": 0,
+      "halogens": 3,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 1
+    },
+    {
+      "family": "NH2_Cl",
+      "id": "SiH1Cl2(NH2)1",
+      "composition": {
+        "Si": 1,
+        "H": 3,
+        "N": 1,
+        "Cl": 2
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 1,
+      "bound_ligands": 1,
+      "halogens": 2,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 1
+    },
+    {
+      "family": "NH2_Cl",
+      "id": "SiH1Cl1(NH2)2",
+      "composition": {
+        "Si": 1,
+        "H": 5,
+        "N": 2,
+        "Cl": 1
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 1,
+      "bound_ligands": 2,
+      "halogens": 1,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 1
+    },
+    {
+      "family": "NH2_Cl",
+      "id": "SiH1(NH2)3",
+      "composition": {
+        "Si": 1,
+        "H": 7,
+        "N": 3
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 1,
+      "bound_ligands": 3,
+      "halogens": 0,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 1
+    },
+    {
+      "family": "NH2_Cl",
+      "id": "SiH2Cl2",
+      "composition": {
+        "Si": 1,
+        "H": 2,
+        "Cl": 2
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 2,
+      "bound_ligands": 0,
+      "halogens": 2,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 2
+    },
+    {
+      "family": "NH2_Cl",
+      "id": "SiH2Cl1(NH2)1",
+      "composition": {
+        "Si": 1,
+        "H": 4,
+        "N": 1,
+        "Cl": 1
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 2,
+      "bound_ligands": 1,
+      "halogens": 1,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 2
+    },
+    {
+      "family": "NH2_Cl",
+      "id": "SiH2(NH2)2",
+      "composition": {
+        "Si": 1,
+        "H": 6,
+        "N": 2
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 2,
+      "bound_ligands": 2,
+      "halogens": 0,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 2
+    },
+    {
+      "family": "NH2_Cl",
+      "id": "SiH3Cl1",
+      "composition": {
+        "Si": 1,
+        "H": 3,
+        "Cl": 1
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 3,
+      "bound_ligands": 0,
+      "halogens": 1,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 3
+    },
+    {
+      "family": "NH2_Cl",
+      "id": "SiH3(NH2)1",
+      "composition": {
+        "Si": 1,
+        "H": 5,
+        "N": 1
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 3,
+      "bound_ligands": 1,
+      "halogens": 0,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 3
+    },
+    {
+      "family": "NH2_Cl",
+      "id": "SiH4",
+      "composition": {
+        "Si": 1,
+        "H": 4
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 4,
+      "bound_ligands": 0,
+      "halogens": 0,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 4
+    },
+    {
+      "family": "NH2_Cl",
+      "id": "HCl",
+      "composition": {
+        "H": 1,
+        "Cl": 1
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "gas",
+      "cap_H": null,
+      "bound_ligands": null,
+      "halogens": null,
+      "evidence": "known molecular identity; no species free energy assigned"
+    },
+    {
+      "family": "NH2_Cl",
+      "id": "NH3",
+      "composition": {
+        "N": 1,
+        "H": 3
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "gas",
+      "cap_H": null,
+      "bound_ligands": null,
+      "halogens": null,
+      "evidence": "known molecular identity; no species free energy assigned"
+    },
+    {
+      "family": "OH_F",
+      "id": "SiF4",
+      "composition": {
+        "Si": 1,
+        "F": 4
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 0,
+      "bound_ligands": 0,
+      "halogens": 4,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 0
+    },
+    {
+      "family": "OH_F",
+      "id": "SiF3(OH)1",
+      "composition": {
+        "Si": 1,
+        "H": 1,
+        "O": 1,
+        "F": 3
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 0,
+      "bound_ligands": 1,
+      "halogens": 3,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 0
+    },
+    {
+      "family": "OH_F",
+      "id": "SiF2(OH)2",
+      "composition": {
+        "Si": 1,
+        "H": 2,
+        "O": 2,
+        "F": 2
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 0,
+      "bound_ligands": 2,
+      "halogens": 2,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 0
+    },
+    {
+      "family": "OH_F",
+      "id": "SiF1(OH)3",
+      "composition": {
+        "Si": 1,
+        "H": 3,
+        "O": 3,
+        "F": 1
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 0,
+      "bound_ligands": 3,
+      "halogens": 1,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 0
+    },
+    {
+      "family": "OH_F",
+      "id": "Si(OH)4",
+      "composition": {
+        "Si": 1,
+        "H": 4,
+        "O": 4
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 0,
+      "bound_ligands": 4,
+      "halogens": 0,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 0
+    },
+    {
+      "family": "OH_F",
+      "id": "SiH1F3",
+      "composition": {
+        "Si": 1,
+        "H": 1,
+        "F": 3
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 1,
+      "bound_ligands": 0,
+      "halogens": 3,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 1
+    },
+    {
+      "family": "OH_F",
+      "id": "SiH1F2(OH)1",
+      "composition": {
+        "Si": 1,
+        "H": 2,
+        "O": 1,
+        "F": 2
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 1,
+      "bound_ligands": 1,
+      "halogens": 2,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 1
+    },
+    {
+      "family": "OH_F",
+      "id": "SiH1F1(OH)2",
+      "composition": {
+        "Si": 1,
+        "H": 3,
+        "O": 2,
+        "F": 1
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 1,
+      "bound_ligands": 2,
+      "halogens": 1,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 1
+    },
+    {
+      "family": "OH_F",
+      "id": "SiH1(OH)3",
+      "composition": {
+        "Si": 1,
+        "H": 4,
+        "O": 3
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 1,
+      "bound_ligands": 3,
+      "halogens": 0,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 1
+    },
+    {
+      "family": "OH_F",
+      "id": "SiH2F2",
+      "composition": {
+        "Si": 1,
+        "H": 2,
+        "F": 2
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 2,
+      "bound_ligands": 0,
+      "halogens": 2,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 2
+    },
+    {
+      "family": "OH_F",
+      "id": "SiH2F1(OH)1",
+      "composition": {
+        "Si": 1,
+        "H": 3,
+        "O": 1,
+        "F": 1
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 2,
+      "bound_ligands": 1,
+      "halogens": 1,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 2
+    },
+    {
+      "family": "OH_F",
+      "id": "SiH2(OH)2",
+      "composition": {
+        "Si": 1,
+        "H": 4,
+        "O": 2
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 2,
+      "bound_ligands": 2,
+      "halogens": 0,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 2
+    },
+    {
+      "family": "OH_F",
+      "id": "SiH3F1",
+      "composition": {
+        "Si": 1,
+        "H": 3,
+        "F": 1
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 3,
+      "bound_ligands": 0,
+      "halogens": 1,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 3
+    },
+    {
+      "family": "OH_F",
+      "id": "SiH3(OH)1",
+      "composition": {
+        "Si": 1,
+        "H": 4,
+        "O": 1
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 3,
+      "bound_ligands": 1,
+      "halogens": 0,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 3
+    },
+    {
+      "family": "OH_F",
+      "id": "SiH4",
+      "composition": {
+        "Si": 1,
+        "H": 4
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 4,
+      "bound_ligands": 0,
+      "halogens": 0,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 4
+    },
+    {
+      "family": "OH_F",
+      "id": "HF",
+      "composition": {
+        "H": 1,
+        "F": 1
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "gas",
+      "cap_H": null,
+      "bound_ligands": null,
+      "halogens": null,
+      "evidence": "known molecular identity; no species free energy assigned"
+    },
+    {
+      "family": "OH_F",
+      "id": "H2O",
+      "composition": {
+        "O": 1,
+        "H": 2
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "gas",
+      "cap_H": null,
+      "bound_ligands": null,
+      "halogens": null,
+      "evidence": "known molecular identity; no species free energy assigned"
+    },
+    {
+      "family": "OH_Cl",
+      "id": "SiCl4",
+      "composition": {
+        "Si": 1,
+        "Cl": 4
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 0,
+      "bound_ligands": 0,
+      "halogens": 4,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 0
+    },
+    {
+      "family": "OH_Cl",
+      "id": "SiCl3(OH)1",
+      "composition": {
+        "Si": 1,
+        "H": 1,
+        "O": 1,
+        "Cl": 3
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 0,
+      "bound_ligands": 1,
+      "halogens": 3,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 0
+    },
+    {
+      "family": "OH_Cl",
+      "id": "SiCl2(OH)2",
+      "composition": {
+        "Si": 1,
+        "H": 2,
+        "O": 2,
+        "Cl": 2
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 0,
+      "bound_ligands": 2,
+      "halogens": 2,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 0
+    },
+    {
+      "family": "OH_Cl",
+      "id": "SiCl1(OH)3",
+      "composition": {
+        "Si": 1,
+        "H": 3,
+        "O": 3,
+        "Cl": 1
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 0,
+      "bound_ligands": 3,
+      "halogens": 1,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 0
+    },
+    {
+      "family": "OH_Cl",
+      "id": "Si(OH)4",
+      "composition": {
+        "Si": 1,
+        "H": 4,
+        "O": 4
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 0,
+      "bound_ligands": 4,
+      "halogens": 0,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 0
+    },
+    {
+      "family": "OH_Cl",
+      "id": "SiH1Cl3",
+      "composition": {
+        "Si": 1,
+        "H": 1,
+        "Cl": 3
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 1,
+      "bound_ligands": 0,
+      "halogens": 3,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 1
+    },
+    {
+      "family": "OH_Cl",
+      "id": "SiH1Cl2(OH)1",
+      "composition": {
+        "Si": 1,
+        "H": 2,
+        "O": 1,
+        "Cl": 2
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 1,
+      "bound_ligands": 1,
+      "halogens": 2,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 1
+    },
+    {
+      "family": "OH_Cl",
+      "id": "SiH1Cl1(OH)2",
+      "composition": {
+        "Si": 1,
+        "H": 3,
+        "O": 2,
+        "Cl": 1
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 1,
+      "bound_ligands": 2,
+      "halogens": 1,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 1
+    },
+    {
+      "family": "OH_Cl",
+      "id": "SiH1(OH)3",
+      "composition": {
+        "Si": 1,
+        "H": 4,
+        "O": 3
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 1,
+      "bound_ligands": 3,
+      "halogens": 0,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 1
+    },
+    {
+      "family": "OH_Cl",
+      "id": "SiH2Cl2",
+      "composition": {
+        "Si": 1,
+        "H": 2,
+        "Cl": 2
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 2,
+      "bound_ligands": 0,
+      "halogens": 2,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 2
+    },
+    {
+      "family": "OH_Cl",
+      "id": "SiH2Cl1(OH)1",
+      "composition": {
+        "Si": 1,
+        "H": 3,
+        "O": 1,
+        "Cl": 1
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 2,
+      "bound_ligands": 1,
+      "halogens": 1,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 2
+    },
+    {
+      "family": "OH_Cl",
+      "id": "SiH2(OH)2",
+      "composition": {
+        "Si": 1,
+        "H": 4,
+        "O": 2
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 2,
+      "bound_ligands": 2,
+      "halogens": 0,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 2
+    },
+    {
+      "family": "OH_Cl",
+      "id": "SiH3Cl1",
+      "composition": {
+        "Si": 1,
+        "H": 3,
+        "Cl": 1
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 3,
+      "bound_ligands": 0,
+      "halogens": 1,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 3
+    },
+    {
+      "family": "OH_Cl",
+      "id": "SiH3(OH)1",
+      "composition": {
+        "Si": 1,
+        "H": 4,
+        "O": 1
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 3,
+      "bound_ligands": 1,
+      "halogens": 0,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 3
+    },
+    {
+      "family": "OH_Cl",
+      "id": "SiH4",
+      "composition": {
+        "Si": 1,
+        "H": 4
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "capped_molecular_proxy",
+      "cap_H": 4,
+      "bound_ligands": 0,
+      "halogens": 0,
+      "evidence": "candidate graph; energy and surface stability unverified",
+      "fixed_cap_hydrogens": 4
+    },
+    {
+      "family": "OH_Cl",
+      "id": "HCl",
+      "composition": {
+        "H": 1,
+        "Cl": 1
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "gas",
+      "cap_H": null,
+      "bound_ligands": null,
+      "halogens": null,
+      "evidence": "known molecular identity; no species free energy assigned"
+    },
+    {
+      "family": "OH_Cl",
+      "id": "H2O",
+      "composition": {
+        "O": 1,
+        "H": 2
+      },
+      "charge": 0,
+      "multiplicity": 1,
+      "phase": "gas",
+      "cap_H": null,
+      "bound_ligands": null,
+      "halogens": null,
+      "evidence": "known molecular identity; no species free energy assigned"
+    }
+  ],
+  "reactions": [
+    {
+      "id": "NH2_F_1",
+      "family": "NH2_F",
+      "reactants": [
+        "SiF4",
+        "NH3"
+      ],
+      "products": [
+        "SiF3(NH2)1",
+        "HF"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 0,
+      "initial_bound_ligands": 0,
+      "final_bound_ligands": 1,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_F_2",
+      "family": "NH2_F",
+      "reactants": [
+        "SiF3(NH2)1",
+        "HF"
+      ],
+      "products": [
+        "SiF4",
+        "NH3"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 0,
+      "initial_bound_ligands": 1,
+      "final_bound_ligands": 0,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_F_3",
+      "family": "NH2_F",
+      "reactants": [
+        "SiF3(NH2)1",
+        "NH3"
+      ],
+      "products": [
+        "SiF2(NH2)2",
+        "HF"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 0,
+      "initial_bound_ligands": 1,
+      "final_bound_ligands": 2,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_F_4",
+      "family": "NH2_F",
+      "reactants": [
+        "SiF2(NH2)2",
+        "HF"
+      ],
+      "products": [
+        "SiF3(NH2)1",
+        "NH3"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 0,
+      "initial_bound_ligands": 2,
+      "final_bound_ligands": 1,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_F_5",
+      "family": "NH2_F",
+      "reactants": [
+        "SiF2(NH2)2",
+        "NH3"
+      ],
+      "products": [
+        "SiF1(NH2)3",
+        "HF"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 0,
+      "initial_bound_ligands": 2,
+      "final_bound_ligands": 3,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_F_6",
+      "family": "NH2_F",
+      "reactants": [
+        "SiF1(NH2)3",
+        "HF"
+      ],
+      "products": [
+        "SiF2(NH2)2",
+        "NH3"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 0,
+      "initial_bound_ligands": 3,
+      "final_bound_ligands": 2,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_F_7",
+      "family": "NH2_F",
+      "reactants": [
+        "SiF1(NH2)3",
+        "NH3"
+      ],
+      "products": [
+        "Si(NH2)4",
+        "HF"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 0,
+      "initial_bound_ligands": 3,
+      "final_bound_ligands": 4,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_F_8",
+      "family": "NH2_F",
+      "reactants": [
+        "Si(NH2)4",
+        "HF"
+      ],
+      "products": [
+        "SiF1(NH2)3",
+        "NH3"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 0,
+      "initial_bound_ligands": 4,
+      "final_bound_ligands": 3,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_F_9",
+      "family": "NH2_F",
+      "reactants": [
+        "SiH1F3",
+        "NH3"
+      ],
+      "products": [
+        "SiH1F2(NH2)1",
+        "HF"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 1,
+      "initial_bound_ligands": 0,
+      "final_bound_ligands": 1,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_F_10",
+      "family": "NH2_F",
+      "reactants": [
+        "SiH1F2(NH2)1",
+        "HF"
+      ],
+      "products": [
+        "SiH1F3",
+        "NH3"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 1,
+      "initial_bound_ligands": 1,
+      "final_bound_ligands": 0,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_F_11",
+      "family": "NH2_F",
+      "reactants": [
+        "SiH1F2(NH2)1",
+        "NH3"
+      ],
+      "products": [
+        "SiH1F1(NH2)2",
+        "HF"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 1,
+      "initial_bound_ligands": 1,
+      "final_bound_ligands": 2,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_F_12",
+      "family": "NH2_F",
+      "reactants": [
+        "SiH1F1(NH2)2",
+        "HF"
+      ],
+      "products": [
+        "SiH1F2(NH2)1",
+        "NH3"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 1,
+      "initial_bound_ligands": 2,
+      "final_bound_ligands": 1,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_F_13",
+      "family": "NH2_F",
+      "reactants": [
+        "SiH1F1(NH2)2",
+        "NH3"
+      ],
+      "products": [
+        "SiH1(NH2)3",
+        "HF"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 1,
+      "initial_bound_ligands": 2,
+      "final_bound_ligands": 3,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_F_14",
+      "family": "NH2_F",
+      "reactants": [
+        "SiH1(NH2)3",
+        "HF"
+      ],
+      "products": [
+        "SiH1F1(NH2)2",
+        "NH3"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 1,
+      "initial_bound_ligands": 3,
+      "final_bound_ligands": 2,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_F_15",
+      "family": "NH2_F",
+      "reactants": [
+        "SiH2F2",
+        "NH3"
+      ],
+      "products": [
+        "SiH2F1(NH2)1",
+        "HF"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 2,
+      "initial_bound_ligands": 0,
+      "final_bound_ligands": 1,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_F_16",
+      "family": "NH2_F",
+      "reactants": [
+        "SiH2F1(NH2)1",
+        "HF"
+      ],
+      "products": [
+        "SiH2F2",
+        "NH3"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 2,
+      "initial_bound_ligands": 1,
+      "final_bound_ligands": 0,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_F_17",
+      "family": "NH2_F",
+      "reactants": [
+        "SiH2F1(NH2)1",
+        "NH3"
+      ],
+      "products": [
+        "SiH2(NH2)2",
+        "HF"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 2,
+      "initial_bound_ligands": 1,
+      "final_bound_ligands": 2,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_F_18",
+      "family": "NH2_F",
+      "reactants": [
+        "SiH2(NH2)2",
+        "HF"
+      ],
+      "products": [
+        "SiH2F1(NH2)1",
+        "NH3"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 2,
+      "initial_bound_ligands": 2,
+      "final_bound_ligands": 1,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_F_19",
+      "family": "NH2_F",
+      "reactants": [
+        "SiH3F1",
+        "NH3"
+      ],
+      "products": [
+        "SiH3(NH2)1",
+        "HF"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 3,
+      "initial_bound_ligands": 0,
+      "final_bound_ligands": 1,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_F_20",
+      "family": "NH2_F",
+      "reactants": [
+        "SiH3(NH2)1",
+        "HF"
+      ],
+      "products": [
+        "SiH3F1",
+        "NH3"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 3,
+      "initial_bound_ligands": 1,
+      "final_bound_ligands": 0,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_Cl_1",
+      "family": "NH2_Cl",
+      "reactants": [
+        "SiCl4",
+        "NH3"
+      ],
+      "products": [
+        "SiCl3(NH2)1",
+        "HCl"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 0,
+      "initial_bound_ligands": 0,
+      "final_bound_ligands": 1,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_Cl_2",
+      "family": "NH2_Cl",
+      "reactants": [
+        "SiCl3(NH2)1",
+        "HCl"
+      ],
+      "products": [
+        "SiCl4",
+        "NH3"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 0,
+      "initial_bound_ligands": 1,
+      "final_bound_ligands": 0,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_Cl_3",
+      "family": "NH2_Cl",
+      "reactants": [
+        "SiCl3(NH2)1",
+        "NH3"
+      ],
+      "products": [
+        "SiCl2(NH2)2",
+        "HCl"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 0,
+      "initial_bound_ligands": 1,
+      "final_bound_ligands": 2,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_Cl_4",
+      "family": "NH2_Cl",
+      "reactants": [
+        "SiCl2(NH2)2",
+        "HCl"
+      ],
+      "products": [
+        "SiCl3(NH2)1",
+        "NH3"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 0,
+      "initial_bound_ligands": 2,
+      "final_bound_ligands": 1,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_Cl_5",
+      "family": "NH2_Cl",
+      "reactants": [
+        "SiCl2(NH2)2",
+        "NH3"
+      ],
+      "products": [
+        "SiCl1(NH2)3",
+        "HCl"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 0,
+      "initial_bound_ligands": 2,
+      "final_bound_ligands": 3,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_Cl_6",
+      "family": "NH2_Cl",
+      "reactants": [
+        "SiCl1(NH2)3",
+        "HCl"
+      ],
+      "products": [
+        "SiCl2(NH2)2",
+        "NH3"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 0,
+      "initial_bound_ligands": 3,
+      "final_bound_ligands": 2,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_Cl_7",
+      "family": "NH2_Cl",
+      "reactants": [
+        "SiCl1(NH2)3",
+        "NH3"
+      ],
+      "products": [
+        "Si(NH2)4",
+        "HCl"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 0,
+      "initial_bound_ligands": 3,
+      "final_bound_ligands": 4,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_Cl_8",
+      "family": "NH2_Cl",
+      "reactants": [
+        "Si(NH2)4",
+        "HCl"
+      ],
+      "products": [
+        "SiCl1(NH2)3",
+        "NH3"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 0,
+      "initial_bound_ligands": 4,
+      "final_bound_ligands": 3,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_Cl_9",
+      "family": "NH2_Cl",
+      "reactants": [
+        "SiH1Cl3",
+        "NH3"
+      ],
+      "products": [
+        "SiH1Cl2(NH2)1",
+        "HCl"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 1,
+      "initial_bound_ligands": 0,
+      "final_bound_ligands": 1,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_Cl_10",
+      "family": "NH2_Cl",
+      "reactants": [
+        "SiH1Cl2(NH2)1",
+        "HCl"
+      ],
+      "products": [
+        "SiH1Cl3",
+        "NH3"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 1,
+      "initial_bound_ligands": 1,
+      "final_bound_ligands": 0,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_Cl_11",
+      "family": "NH2_Cl",
+      "reactants": [
+        "SiH1Cl2(NH2)1",
+        "NH3"
+      ],
+      "products": [
+        "SiH1Cl1(NH2)2",
+        "HCl"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 1,
+      "initial_bound_ligands": 1,
+      "final_bound_ligands": 2,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_Cl_12",
+      "family": "NH2_Cl",
+      "reactants": [
+        "SiH1Cl1(NH2)2",
+        "HCl"
+      ],
+      "products": [
+        "SiH1Cl2(NH2)1",
+        "NH3"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 1,
+      "initial_bound_ligands": 2,
+      "final_bound_ligands": 1,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_Cl_13",
+      "family": "NH2_Cl",
+      "reactants": [
+        "SiH1Cl1(NH2)2",
+        "NH3"
+      ],
+      "products": [
+        "SiH1(NH2)3",
+        "HCl"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 1,
+      "initial_bound_ligands": 2,
+      "final_bound_ligands": 3,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_Cl_14",
+      "family": "NH2_Cl",
+      "reactants": [
+        "SiH1(NH2)3",
+        "HCl"
+      ],
+      "products": [
+        "SiH1Cl1(NH2)2",
+        "NH3"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 1,
+      "initial_bound_ligands": 3,
+      "final_bound_ligands": 2,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_Cl_15",
+      "family": "NH2_Cl",
+      "reactants": [
+        "SiH2Cl2",
+        "NH3"
+      ],
+      "products": [
+        "SiH2Cl1(NH2)1",
+        "HCl"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 2,
+      "initial_bound_ligands": 0,
+      "final_bound_ligands": 1,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_Cl_16",
+      "family": "NH2_Cl",
+      "reactants": [
+        "SiH2Cl1(NH2)1",
+        "HCl"
+      ],
+      "products": [
+        "SiH2Cl2",
+        "NH3"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 2,
+      "initial_bound_ligands": 1,
+      "final_bound_ligands": 0,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_Cl_17",
+      "family": "NH2_Cl",
+      "reactants": [
+        "SiH2Cl1(NH2)1",
+        "NH3"
+      ],
+      "products": [
+        "SiH2(NH2)2",
+        "HCl"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 2,
+      "initial_bound_ligands": 1,
+      "final_bound_ligands": 2,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_Cl_18",
+      "family": "NH2_Cl",
+      "reactants": [
+        "SiH2(NH2)2",
+        "HCl"
+      ],
+      "products": [
+        "SiH2Cl1(NH2)1",
+        "NH3"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 2,
+      "initial_bound_ligands": 2,
+      "final_bound_ligands": 1,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_Cl_19",
+      "family": "NH2_Cl",
+      "reactants": [
+        "SiH3Cl1",
+        "NH3"
+      ],
+      "products": [
+        "SiH3(NH2)1",
+        "HCl"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 3,
+      "initial_bound_ligands": 0,
+      "final_bound_ligands": 1,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "NH2_Cl_20",
+      "family": "NH2_Cl",
+      "reactants": [
+        "SiH3(NH2)1",
+        "HCl"
+      ],
+      "products": [
+        "SiH3Cl1",
+        "NH3"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 3,
+      "initial_bound_ligands": 1,
+      "final_bound_ligands": 0,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_F_1",
+      "family": "OH_F",
+      "reactants": [
+        "SiF4",
+        "H2O"
+      ],
+      "products": [
+        "SiF3(OH)1",
+        "HF"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 0,
+      "initial_bound_ligands": 0,
+      "final_bound_ligands": 1,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_F_2",
+      "family": "OH_F",
+      "reactants": [
+        "SiF3(OH)1",
+        "HF"
+      ],
+      "products": [
+        "SiF4",
+        "H2O"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 0,
+      "initial_bound_ligands": 1,
+      "final_bound_ligands": 0,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_F_3",
+      "family": "OH_F",
+      "reactants": [
+        "SiF3(OH)1",
+        "H2O"
+      ],
+      "products": [
+        "SiF2(OH)2",
+        "HF"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 0,
+      "initial_bound_ligands": 1,
+      "final_bound_ligands": 2,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_F_4",
+      "family": "OH_F",
+      "reactants": [
+        "SiF2(OH)2",
+        "HF"
+      ],
+      "products": [
+        "SiF3(OH)1",
+        "H2O"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 0,
+      "initial_bound_ligands": 2,
+      "final_bound_ligands": 1,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_F_5",
+      "family": "OH_F",
+      "reactants": [
+        "SiF2(OH)2",
+        "H2O"
+      ],
+      "products": [
+        "SiF1(OH)3",
+        "HF"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 0,
+      "initial_bound_ligands": 2,
+      "final_bound_ligands": 3,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_F_6",
+      "family": "OH_F",
+      "reactants": [
+        "SiF1(OH)3",
+        "HF"
+      ],
+      "products": [
+        "SiF2(OH)2",
+        "H2O"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 0,
+      "initial_bound_ligands": 3,
+      "final_bound_ligands": 2,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_F_7",
+      "family": "OH_F",
+      "reactants": [
+        "SiF1(OH)3",
+        "H2O"
+      ],
+      "products": [
+        "Si(OH)4",
+        "HF"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 0,
+      "initial_bound_ligands": 3,
+      "final_bound_ligands": 4,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_F_8",
+      "family": "OH_F",
+      "reactants": [
+        "Si(OH)4",
+        "HF"
+      ],
+      "products": [
+        "SiF1(OH)3",
+        "H2O"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 0,
+      "initial_bound_ligands": 4,
+      "final_bound_ligands": 3,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_F_9",
+      "family": "OH_F",
+      "reactants": [
+        "SiH1F3",
+        "H2O"
+      ],
+      "products": [
+        "SiH1F2(OH)1",
+        "HF"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 1,
+      "initial_bound_ligands": 0,
+      "final_bound_ligands": 1,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_F_10",
+      "family": "OH_F",
+      "reactants": [
+        "SiH1F2(OH)1",
+        "HF"
+      ],
+      "products": [
+        "SiH1F3",
+        "H2O"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 1,
+      "initial_bound_ligands": 1,
+      "final_bound_ligands": 0,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_F_11",
+      "family": "OH_F",
+      "reactants": [
+        "SiH1F2(OH)1",
+        "H2O"
+      ],
+      "products": [
+        "SiH1F1(OH)2",
+        "HF"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 1,
+      "initial_bound_ligands": 1,
+      "final_bound_ligands": 2,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_F_12",
+      "family": "OH_F",
+      "reactants": [
+        "SiH1F1(OH)2",
+        "HF"
+      ],
+      "products": [
+        "SiH1F2(OH)1",
+        "H2O"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 1,
+      "initial_bound_ligands": 2,
+      "final_bound_ligands": 1,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_F_13",
+      "family": "OH_F",
+      "reactants": [
+        "SiH1F1(OH)2",
+        "H2O"
+      ],
+      "products": [
+        "SiH1(OH)3",
+        "HF"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 1,
+      "initial_bound_ligands": 2,
+      "final_bound_ligands": 3,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_F_14",
+      "family": "OH_F",
+      "reactants": [
+        "SiH1(OH)3",
+        "HF"
+      ],
+      "products": [
+        "SiH1F1(OH)2",
+        "H2O"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 1,
+      "initial_bound_ligands": 3,
+      "final_bound_ligands": 2,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_F_15",
+      "family": "OH_F",
+      "reactants": [
+        "SiH2F2",
+        "H2O"
+      ],
+      "products": [
+        "SiH2F1(OH)1",
+        "HF"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 2,
+      "initial_bound_ligands": 0,
+      "final_bound_ligands": 1,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_F_16",
+      "family": "OH_F",
+      "reactants": [
+        "SiH2F1(OH)1",
+        "HF"
+      ],
+      "products": [
+        "SiH2F2",
+        "H2O"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 2,
+      "initial_bound_ligands": 1,
+      "final_bound_ligands": 0,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_F_17",
+      "family": "OH_F",
+      "reactants": [
+        "SiH2F1(OH)1",
+        "H2O"
+      ],
+      "products": [
+        "SiH2(OH)2",
+        "HF"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 2,
+      "initial_bound_ligands": 1,
+      "final_bound_ligands": 2,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_F_18",
+      "family": "OH_F",
+      "reactants": [
+        "SiH2(OH)2",
+        "HF"
+      ],
+      "products": [
+        "SiH2F1(OH)1",
+        "H2O"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 2,
+      "initial_bound_ligands": 2,
+      "final_bound_ligands": 1,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_F_19",
+      "family": "OH_F",
+      "reactants": [
+        "SiH3F1",
+        "H2O"
+      ],
+      "products": [
+        "SiH3(OH)1",
+        "HF"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 3,
+      "initial_bound_ligands": 0,
+      "final_bound_ligands": 1,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_F_20",
+      "family": "OH_F",
+      "reactants": [
+        "SiH3(OH)1",
+        "HF"
+      ],
+      "products": [
+        "SiH3F1",
+        "H2O"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 3,
+      "initial_bound_ligands": 1,
+      "final_bound_ligands": 0,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_Cl_1",
+      "family": "OH_Cl",
+      "reactants": [
+        "SiCl4",
+        "H2O"
+      ],
+      "products": [
+        "SiCl3(OH)1",
+        "HCl"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 0,
+      "initial_bound_ligands": 0,
+      "final_bound_ligands": 1,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_Cl_2",
+      "family": "OH_Cl",
+      "reactants": [
+        "SiCl3(OH)1",
+        "HCl"
+      ],
+      "products": [
+        "SiCl4",
+        "H2O"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 0,
+      "initial_bound_ligands": 1,
+      "final_bound_ligands": 0,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_Cl_3",
+      "family": "OH_Cl",
+      "reactants": [
+        "SiCl3(OH)1",
+        "H2O"
+      ],
+      "products": [
+        "SiCl2(OH)2",
+        "HCl"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 0,
+      "initial_bound_ligands": 1,
+      "final_bound_ligands": 2,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_Cl_4",
+      "family": "OH_Cl",
+      "reactants": [
+        "SiCl2(OH)2",
+        "HCl"
+      ],
+      "products": [
+        "SiCl3(OH)1",
+        "H2O"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 0,
+      "initial_bound_ligands": 2,
+      "final_bound_ligands": 1,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_Cl_5",
+      "family": "OH_Cl",
+      "reactants": [
+        "SiCl2(OH)2",
+        "H2O"
+      ],
+      "products": [
+        "SiCl1(OH)3",
+        "HCl"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 0,
+      "initial_bound_ligands": 2,
+      "final_bound_ligands": 3,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_Cl_6",
+      "family": "OH_Cl",
+      "reactants": [
+        "SiCl1(OH)3",
+        "HCl"
+      ],
+      "products": [
+        "SiCl2(OH)2",
+        "H2O"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 0,
+      "initial_bound_ligands": 3,
+      "final_bound_ligands": 2,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_Cl_7",
+      "family": "OH_Cl",
+      "reactants": [
+        "SiCl1(OH)3",
+        "H2O"
+      ],
+      "products": [
+        "Si(OH)4",
+        "HCl"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 0,
+      "initial_bound_ligands": 3,
+      "final_bound_ligands": 4,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_Cl_8",
+      "family": "OH_Cl",
+      "reactants": [
+        "Si(OH)4",
+        "HCl"
+      ],
+      "products": [
+        "SiCl1(OH)3",
+        "H2O"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 0,
+      "initial_bound_ligands": 4,
+      "final_bound_ligands": 3,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_Cl_9",
+      "family": "OH_Cl",
+      "reactants": [
+        "SiH1Cl3",
+        "H2O"
+      ],
+      "products": [
+        "SiH1Cl2(OH)1",
+        "HCl"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 1,
+      "initial_bound_ligands": 0,
+      "final_bound_ligands": 1,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_Cl_10",
+      "family": "OH_Cl",
+      "reactants": [
+        "SiH1Cl2(OH)1",
+        "HCl"
+      ],
+      "products": [
+        "SiH1Cl3",
+        "H2O"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 1,
+      "initial_bound_ligands": 1,
+      "final_bound_ligands": 0,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_Cl_11",
+      "family": "OH_Cl",
+      "reactants": [
+        "SiH1Cl2(OH)1",
+        "H2O"
+      ],
+      "products": [
+        "SiH1Cl1(OH)2",
+        "HCl"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 1,
+      "initial_bound_ligands": 1,
+      "final_bound_ligands": 2,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_Cl_12",
+      "family": "OH_Cl",
+      "reactants": [
+        "SiH1Cl1(OH)2",
+        "HCl"
+      ],
+      "products": [
+        "SiH1Cl2(OH)1",
+        "H2O"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 1,
+      "initial_bound_ligands": 2,
+      "final_bound_ligands": 1,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_Cl_13",
+      "family": "OH_Cl",
+      "reactants": [
+        "SiH1Cl1(OH)2",
+        "H2O"
+      ],
+      "products": [
+        "SiH1(OH)3",
+        "HCl"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 1,
+      "initial_bound_ligands": 2,
+      "final_bound_ligands": 3,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_Cl_14",
+      "family": "OH_Cl",
+      "reactants": [
+        "SiH1(OH)3",
+        "HCl"
+      ],
+      "products": [
+        "SiH1Cl1(OH)2",
+        "H2O"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 1,
+      "initial_bound_ligands": 3,
+      "final_bound_ligands": 2,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_Cl_15",
+      "family": "OH_Cl",
+      "reactants": [
+        "SiH2Cl2",
+        "H2O"
+      ],
+      "products": [
+        "SiH2Cl1(OH)1",
+        "HCl"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 2,
+      "initial_bound_ligands": 0,
+      "final_bound_ligands": 1,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_Cl_16",
+      "family": "OH_Cl",
+      "reactants": [
+        "SiH2Cl1(OH)1",
+        "HCl"
+      ],
+      "products": [
+        "SiH2Cl2",
+        "H2O"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 2,
+      "initial_bound_ligands": 1,
+      "final_bound_ligands": 0,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_Cl_17",
+      "family": "OH_Cl",
+      "reactants": [
+        "SiH2Cl1(OH)1",
+        "H2O"
+      ],
+      "products": [
+        "SiH2(OH)2",
+        "HCl"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 2,
+      "initial_bound_ligands": 1,
+      "final_bound_ligands": 2,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_Cl_18",
+      "family": "OH_Cl",
+      "reactants": [
+        "SiH2(OH)2",
+        "HCl"
+      ],
+      "products": [
+        "SiH2Cl1(OH)1",
+        "H2O"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 2,
+      "initial_bound_ligands": 2,
+      "final_bound_ligands": 1,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_Cl_19",
+      "family": "OH_Cl",
+      "reactants": [
+        "SiH3Cl1",
+        "H2O"
+      ],
+      "products": [
+        "SiH3(OH)1",
+        "HCl"
+      ],
+      "direction": "reverse_substitution",
+      "cap_H": 3,
+      "initial_bound_ligands": 0,
+      "final_bound_ligands": 1,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    },
+    {
+      "id": "OH_Cl_20",
+      "family": "OH_Cl",
+      "reactants": [
+        "SiH3(OH)1",
+        "HCl"
+      ],
+      "products": [
+        "SiH3Cl1",
+        "H2O"
+      ],
+      "direction": "forward_substitution",
+      "cap_H": 3,
+      "initial_bound_ligands": 1,
+      "final_bound_ligands": 0,
+      "barrier_eV": null,
+      "rate_s": null,
+      "status": "composition_and_fixed_cap_filter_passed_not_TS_verified",
+      "needed": [
+        "3D structure and atom mapping",
+        "surface embedding and termination",
+        "minimum and TS searches",
+        "free energies/prefactors and gas chemical potential"
+      ]
+    }
+  ],
+  "completeness": "Finite supplied species library only; cannot prove mechanism completeness or kinetic accessibility"
+}

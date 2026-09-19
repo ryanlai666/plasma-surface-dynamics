@@ -1,0 +1,1398 @@
+{
+  "status": "conditional_literature_sensitivity_not_calibrated_ALE",
+  "states": [
+    {
+      "id": "bridge_NH_F0",
+      "composition": {
+        "Si": 1,
+        "N": 4,
+        "H": 4
+      },
+      "family": "bridge_NH",
+      "fluorination_stage": 0,
+      "HF_complex": false,
+      "Si_removed": false
+    },
+    {
+      "id": "bridge_NH_F1",
+      "composition": {
+        "Si": 1,
+        "N": 4,
+        "H": 5,
+        "F": 1
+      },
+      "family": "bridge_NH",
+      "fluorination_stage": 1,
+      "HF_complex": false,
+      "Si_removed": false
+    },
+    {
+      "id": "bridge_NH_F2",
+      "composition": {
+        "Si": 1,
+        "N": 4,
+        "H": 6,
+        "F": 2
+      },
+      "family": "bridge_NH",
+      "fluorination_stage": 2,
+      "HF_complex": false,
+      "Si_removed": false
+    },
+    {
+      "id": "bridge_NH_F3",
+      "composition": {
+        "Si": 1,
+        "N": 4,
+        "H": 7,
+        "F": 3
+      },
+      "family": "bridge_NH",
+      "fluorination_stage": 3,
+      "HF_complex": false,
+      "Si_removed": false
+    },
+    {
+      "id": "bridge_NH_residual",
+      "composition": {
+        "N": 4,
+        "H": 8
+      },
+      "family": "bridge_NH",
+      "fluorination_stage": 4,
+      "HF_complex": false,
+      "Si_removed": true
+    },
+    {
+      "id": "bridge_NH_F0_HF",
+      "composition": {
+        "Si": 1,
+        "N": 4,
+        "H": 5,
+        "F": 1
+      },
+      "family": "bridge_NH",
+      "fluorination_stage": 0,
+      "HF_complex": true,
+      "Si_removed": false
+    },
+    {
+      "id": "bridge_NH_F1_HF",
+      "composition": {
+        "Si": 1,
+        "N": 4,
+        "H": 6,
+        "F": 2
+      },
+      "family": "bridge_NH",
+      "fluorination_stage": 1,
+      "HF_complex": true,
+      "Si_removed": false
+    },
+    {
+      "id": "bridge_NH_F2_HF",
+      "composition": {
+        "Si": 1,
+        "N": 4,
+        "H": 7,
+        "F": 3
+      },
+      "family": "bridge_NH",
+      "fluorination_stage": 2,
+      "HF_complex": true,
+      "Si_removed": false
+    },
+    {
+      "id": "bridge_NH_F3_HF",
+      "composition": {
+        "Si": 1,
+        "N": 4,
+        "H": 8,
+        "F": 4
+      },
+      "family": "bridge_NH",
+      "fluorination_stage": 3,
+      "HF_complex": true,
+      "Si_removed": false
+    },
+    {
+      "id": "terminal_NH2_F0",
+      "composition": {
+        "Si": 1,
+        "N": 4,
+        "H": 8
+      },
+      "family": "terminal_NH2",
+      "fluorination_stage": 0,
+      "HF_complex": false,
+      "Si_removed": false
+    },
+    {
+      "id": "terminal_NH2_F1",
+      "composition": {
+        "Si": 1,
+        "N": 3,
+        "H": 6,
+        "F": 1
+      },
+      "family": "terminal_NH2",
+      "fluorination_stage": 1,
+      "HF_complex": false,
+      "Si_removed": false
+    },
+    {
+      "id": "terminal_NH2_F2",
+      "composition": {
+        "Si": 1,
+        "N": 2,
+        "H": 4,
+        "F": 2
+      },
+      "family": "terminal_NH2",
+      "fluorination_stage": 2,
+      "HF_complex": false,
+      "Si_removed": false
+    },
+    {
+      "id": "terminal_NH2_F3",
+      "composition": {
+        "Si": 1,
+        "N": 1,
+        "H": 2,
+        "F": 3
+      },
+      "family": "terminal_NH2",
+      "fluorination_stage": 3,
+      "HF_complex": false,
+      "Si_removed": false
+    },
+    {
+      "id": "terminal_NH2_residual",
+      "composition": {},
+      "family": "terminal_NH2",
+      "fluorination_stage": 4,
+      "HF_complex": false,
+      "Si_removed": true
+    },
+    {
+      "id": "terminal_NH2_F0_HF",
+      "composition": {
+        "Si": 1,
+        "N": 4,
+        "H": 9,
+        "F": 1
+      },
+      "family": "terminal_NH2",
+      "fluorination_stage": 0,
+      "HF_complex": true,
+      "Si_removed": false
+    },
+    {
+      "id": "terminal_NH2_F1_HF",
+      "composition": {
+        "Si": 1,
+        "N": 3,
+        "H": 7,
+        "F": 2
+      },
+      "family": "terminal_NH2",
+      "fluorination_stage": 1,
+      "HF_complex": true,
+      "Si_removed": false
+    },
+    {
+      "id": "terminal_NH2_F2_HF",
+      "composition": {
+        "Si": 1,
+        "N": 2,
+        "H": 5,
+        "F": 3
+      },
+      "family": "terminal_NH2",
+      "fluorination_stage": 2,
+      "HF_complex": true,
+      "Si_removed": false
+    },
+    {
+      "id": "terminal_NH2_F3_HF",
+      "composition": {
+        "Si": 1,
+        "N": 1,
+        "H": 3,
+        "F": 4
+      },
+      "family": "terminal_NH2",
+      "fluorination_stage": 3,
+      "HF_complex": true,
+      "Si_removed": false
+    },
+    {
+      "id": "Si_H_rich_F0",
+      "composition": {
+        "Si": 1,
+        "N": 1,
+        "H": 4
+      },
+      "family": "Si_H_rich",
+      "fluorination_stage": 0,
+      "HF_complex": false,
+      "Si_removed": false
+    },
+    {
+      "id": "Si_H_rich_F1",
+      "composition": {
+        "Si": 1,
+        "N": 1,
+        "H": 3,
+        "F": 1
+      },
+      "family": "Si_H_rich",
+      "fluorination_stage": 1,
+      "HF_complex": false,
+      "Si_removed": false
+    },
+    {
+      "id": "Si_H_rich_F2",
+      "composition": {
+        "Si": 1,
+        "N": 1,
+        "H": 2,
+        "F": 2
+      },
+      "family": "Si_H_rich",
+      "fluorination_stage": 2,
+      "HF_complex": false,
+      "Si_removed": false
+    },
+    {
+      "id": "Si_H_rich_F3",
+      "composition": {
+        "Si": 1,
+        "N": 1,
+        "H": 1,
+        "F": 3
+      },
+      "family": "Si_H_rich",
+      "fluorination_stage": 3,
+      "HF_complex": false,
+      "Si_removed": false
+    },
+    {
+      "id": "Si_H_rich_residual",
+      "composition": {
+        "N": 1,
+        "H": 2
+      },
+      "family": "Si_H_rich",
+      "fluorination_stage": 4,
+      "HF_complex": false,
+      "Si_removed": true
+    },
+    {
+      "id": "Si_H_rich_F0_HF",
+      "composition": {
+        "Si": 1,
+        "N": 1,
+        "H": 5,
+        "F": 1
+      },
+      "family": "Si_H_rich",
+      "fluorination_stage": 0,
+      "HF_complex": true,
+      "Si_removed": false
+    },
+    {
+      "id": "Si_H_rich_F1_HF",
+      "composition": {
+        "Si": 1,
+        "N": 1,
+        "H": 4,
+        "F": 2
+      },
+      "family": "Si_H_rich",
+      "fluorination_stage": 1,
+      "HF_complex": true,
+      "Si_removed": false
+    },
+    {
+      "id": "Si_H_rich_F2_HF",
+      "composition": {
+        "Si": 1,
+        "N": 1,
+        "H": 3,
+        "F": 3
+      },
+      "family": "Si_H_rich",
+      "fluorination_stage": 2,
+      "HF_complex": true,
+      "Si_removed": false
+    },
+    {
+      "id": "Si_H_rich_F3_HF",
+      "composition": {
+        "Si": 1,
+        "N": 1,
+        "H": 2,
+        "F": 4
+      },
+      "family": "Si_H_rich",
+      "fluorination_stage": 3,
+      "HF_complex": true,
+      "Si_removed": false
+    },
+    {
+      "id": "bridge_N_F0",
+      "composition": {
+        "Si": 1,
+        "N": 4
+      },
+      "family": "bridge_N",
+      "fluorination_stage": 0,
+      "HF_complex": false,
+      "Si_removed": false
+    },
+    {
+      "id": "bridge_N_F1",
+      "composition": {
+        "Si": 1,
+        "N": 4,
+        "H": 1,
+        "F": 1
+      },
+      "family": "bridge_N",
+      "fluorination_stage": 1,
+      "HF_complex": false,
+      "Si_removed": false
+    },
+    {
+      "id": "bridge_N_F2",
+      "composition": {
+        "Si": 1,
+        "N": 4,
+        "H": 2,
+        "F": 2
+      },
+      "family": "bridge_N",
+      "fluorination_stage": 2,
+      "HF_complex": false,
+      "Si_removed": false
+    },
+    {
+      "id": "bridge_N_F3",
+      "composition": {
+        "Si": 1,
+        "N": 4,
+        "H": 3,
+        "F": 3
+      },
+      "family": "bridge_N",
+      "fluorination_stage": 3,
+      "HF_complex": false,
+      "Si_removed": false
+    },
+    {
+      "id": "bridge_N_residual",
+      "composition": {
+        "N": 4,
+        "H": 4
+      },
+      "family": "bridge_N",
+      "fluorination_stage": 4,
+      "HF_complex": false,
+      "Si_removed": true
+    },
+    {
+      "id": "bridge_N_F0_HF",
+      "composition": {
+        "Si": 1,
+        "N": 4,
+        "H": 1,
+        "F": 1
+      },
+      "family": "bridge_N",
+      "fluorination_stage": 0,
+      "HF_complex": true,
+      "Si_removed": false
+    },
+    {
+      "id": "bridge_N_F1_HF",
+      "composition": {
+        "Si": 1,
+        "N": 4,
+        "H": 2,
+        "F": 2
+      },
+      "family": "bridge_N",
+      "fluorination_stage": 1,
+      "HF_complex": true,
+      "Si_removed": false
+    },
+    {
+      "id": "bridge_N_F2_HF",
+      "composition": {
+        "Si": 1,
+        "N": 4,
+        "H": 3,
+        "F": 3
+      },
+      "family": "bridge_N",
+      "fluorination_stage": 2,
+      "HF_complex": true,
+      "Si_removed": false
+    },
+    {
+      "id": "bridge_N_F3_HF",
+      "composition": {
+        "Si": 1,
+        "N": 4,
+        "H": 4,
+        "F": 4
+      },
+      "family": "bridge_N",
+      "fluorination_stage": 3,
+      "HF_complex": true,
+      "Si_removed": false
+    },
+    {
+      "id": "pre_SiH2F",
+      "composition": {
+        "Si": 1,
+        "N": 1,
+        "H": 2,
+        "F": 1
+      },
+      "family": "pre_SiH2F",
+      "fluorination_stage": 1,
+      "HF_complex": false,
+      "Si_removed": false
+    },
+    {
+      "id": "pre_SiH2F_HF",
+      "composition": {
+        "Si": 1,
+        "N": 1,
+        "H": 3,
+        "F": 2
+      },
+      "family": "pre_SiH2F",
+      "fluorination_stage": 1,
+      "HF_complex": true,
+      "Si_removed": false
+    },
+    {
+      "id": "pre_SiH2F_residual",
+      "composition": {
+        "N": 1,
+        "H": 1
+      },
+      "family": "pre_SiH2F",
+      "fluorination_stage": 2,
+      "HF_complex": false,
+      "Si_removed": true
+    },
+    {
+      "id": "pre_SiHF2",
+      "composition": {
+        "Si": 1,
+        "N": 1,
+        "H": 1,
+        "F": 2
+      },
+      "family": "pre_SiHF2",
+      "fluorination_stage": 2,
+      "HF_complex": false,
+      "Si_removed": false
+    },
+    {
+      "id": "pre_SiHF2_HF",
+      "composition": {
+        "Si": 1,
+        "N": 1,
+        "H": 2,
+        "F": 3
+      },
+      "family": "pre_SiHF2",
+      "fluorination_stage": 2,
+      "HF_complex": true,
+      "Si_removed": false
+    },
+    {
+      "id": "pre_SiHF2_residual",
+      "composition": {
+        "N": 1,
+        "H": 1
+      },
+      "family": "pre_SiHF2",
+      "fluorination_stage": 3,
+      "HF_complex": false,
+      "Si_removed": true
+    },
+    {
+      "id": "Si_Si_F1",
+      "composition": {
+        "Si": 2,
+        "F": 1
+      },
+      "family": "Si_Si_backbond",
+      "fluorination_stage": 1,
+      "HF_complex": false,
+      "Si_removed": false
+    },
+    {
+      "id": "Si_Si_F1_HF",
+      "composition": {
+        "Si": 2,
+        "F": 2,
+        "H": 1
+      },
+      "family": "Si_Si_backbond",
+      "fluorination_stage": 1,
+      "HF_complex": true,
+      "Si_removed": false
+    },
+    {
+      "id": "Si_Si_cleaved_F2_H",
+      "composition": {
+        "Si": 2,
+        "H": 1,
+        "F": 2
+      },
+      "family": "Si_Si_backbond",
+      "fluorination_stage": 2,
+      "HF_complex": false,
+      "Si_removed": false
+    }
+  ],
+  "events": [
+    {
+      "id": "ads_bridge_NH_F0",
+      "source": 0,
+      "target": 5,
+      "kind": "adsorption",
+      "gas_delta": {
+        "HF": -1
+      },
+      "pathway": null,
+      "barrier_eV": null,
+      "source_reaction": null,
+      "rate_status": "assumed_adsorption_or_desorption_hazard",
+      "enabled": true
+    },
+    {
+      "id": "des_bridge_NH_F0",
+      "source": 5,
+      "target": 0,
+      "kind": "desorption",
+      "gas_delta": {
+        "HF": 1
+      },
+      "pathway": null,
+      "barrier_eV": null,
+      "source_reaction": null,
+      "rate_status": "assumed_adsorption_or_desorption_hazard",
+      "enabled": true
+    },
+    {
+      "id": "P1c_bridge_NH",
+      "source": 5,
+      "target": 1,
+      "kind": "reaction",
+      "gas_delta": {},
+      "pathway": "P1c",
+      "barrier_eV": 0.02,
+      "source_reaction": "Si-NH*-Si + HF -> SiF* + SiNH2*",
+      "rate_status": "conditional_Ea_and_assumed_prefactor",
+      "enabled": true
+    },
+    {
+      "id": "ads_bridge_NH_F1",
+      "source": 1,
+      "target": 6,
+      "kind": "adsorption",
+      "gas_delta": {
+        "HF": -1
+      },
+      "pathway": null,
+      "barrier_eV": null,
+      "source_reaction": null,
+      "rate_status": "assumed_adsorption_or_desorption_hazard",
+      "enabled": true
+    },
+    {
+      "id": "des_bridge_NH_F1",
+      "source": 6,
+      "target": 1,
+      "kind": "desorption",
+      "gas_delta": {
+        "HF": 1
+      },
+      "pathway": null,
+      "barrier_eV": null,
+      "source_reaction": null,
+      "rate_status": "assumed_adsorption_or_desorption_hazard",
+      "enabled": true
+    },
+    {
+      "id": "P2c_bridge_NH",
+      "source": 6,
+      "target": 2,
+      "kind": "reaction",
+      "gas_delta": {},
+      "pathway": "P2c",
+      "barrier_eV": 0.79,
+      "source_reaction": "SiF*-NH*-Si + HF -> SiF2* + SiNH2*",
+      "rate_status": "conditional_Ea_and_assumed_prefactor",
+      "enabled": true
+    },
+    {
+      "id": "ads_bridge_NH_F2",
+      "source": 2,
+      "target": 7,
+      "kind": "adsorption",
+      "gas_delta": {
+        "HF": -1
+      },
+      "pathway": null,
+      "barrier_eV": null,
+      "source_reaction": null,
+      "rate_status": "assumed_adsorption_or_desorption_hazard",
+      "enabled": true
+    },
+    {
+      "id": "des_bridge_NH_F2",
+      "source": 7,
+      "target": 2,
+      "kind": "desorption",
+      "gas_delta": {
+        "HF": 1
+      },
+      "pathway": null,
+      "barrier_eV": null,
+      "source_reaction": null,
+      "rate_status": "assumed_adsorption_or_desorption_hazard",
+      "enabled": true
+    },
+    {
+      "id": "P3c_bridge_NH",
+      "source": 7,
+      "target": 3,
+      "kind": "reaction",
+      "gas_delta": {},
+      "pathway": "P3c",
+      "barrier_eV": 0.74,
+      "source_reaction": "SiF2*-NH*-Si + HF -> SiF3* + SiNH2*",
+      "rate_status": "conditional_Ea_and_assumed_prefactor",
+      "enabled": true
+    },
+    {
+      "id": "ads_bridge_NH_F3",
+      "source": 3,
+      "target": 8,
+      "kind": "adsorption",
+      "gas_delta": {
+        "HF": -1
+      },
+      "pathway": null,
+      "barrier_eV": null,
+      "source_reaction": null,
+      "rate_status": "assumed_adsorption_or_desorption_hazard",
+      "enabled": true
+    },
+    {
+      "id": "des_bridge_NH_F3",
+      "source": 8,
+      "target": 3,
+      "kind": "desorption",
+      "gas_delta": {
+        "HF": 1
+      },
+      "pathway": null,
+      "barrier_eV": null,
+      "source_reaction": null,
+      "rate_status": "assumed_adsorption_or_desorption_hazard",
+      "enabled": true
+    },
+    {
+      "id": "P4_bridge_NH",
+      "source": 8,
+      "target": 4,
+      "kind": "reaction",
+      "gas_delta": {
+        "SiF4": 1
+      },
+      "pathway": "P4",
+      "barrier_eV": 0.53,
+      "source_reaction": "Si-NH*-SiF3* + HF -> SiF4 + SiNH2*",
+      "rate_status": "conditional_Ea_and_assumed_prefactor",
+      "enabled": true
+    },
+    {
+      "id": "ads_terminal_NH2_F0",
+      "source": 9,
+      "target": 14,
+      "kind": "adsorption",
+      "gas_delta": {
+        "HF": -1
+      },
+      "pathway": null,
+      "barrier_eV": null,
+      "source_reaction": null,
+      "rate_status": "assumed_adsorption_or_desorption_hazard",
+      "enabled": true
+    },
+    {
+      "id": "des_terminal_NH2_F0",
+      "source": 14,
+      "target": 9,
+      "kind": "desorption",
+      "gas_delta": {
+        "HF": 1
+      },
+      "pathway": null,
+      "barrier_eV": null,
+      "source_reaction": null,
+      "rate_status": "assumed_adsorption_or_desorption_hazard",
+      "enabled": true
+    },
+    {
+      "id": "P1a_terminal_NH2",
+      "source": 14,
+      "target": 10,
+      "kind": "reaction",
+      "gas_delta": {
+        "NH3": 1
+      },
+      "pathway": "P1a",
+      "barrier_eV": 0.45,
+      "source_reaction": "SiNH2* + HF -> SiF* + NH3",
+      "rate_status": "conditional_Ea_and_assumed_prefactor",
+      "enabled": true
+    },
+    {
+      "id": "ads_terminal_NH2_F1",
+      "source": 10,
+      "target": 15,
+      "kind": "adsorption",
+      "gas_delta": {
+        "HF": -1
+      },
+      "pathway": null,
+      "barrier_eV": null,
+      "source_reaction": null,
+      "rate_status": "assumed_adsorption_or_desorption_hazard",
+      "enabled": true
+    },
+    {
+      "id": "des_terminal_NH2_F1",
+      "source": 15,
+      "target": 10,
+      "kind": "desorption",
+      "gas_delta": {
+        "HF": 1
+      },
+      "pathway": null,
+      "barrier_eV": null,
+      "source_reaction": null,
+      "rate_status": "assumed_adsorption_or_desorption_hazard",
+      "enabled": true
+    },
+    {
+      "id": "P2a_terminal_NH2",
+      "source": 15,
+      "target": 11,
+      "kind": "reaction",
+      "gas_delta": {
+        "NH3": 1
+      },
+      "pathway": "P2a",
+      "barrier_eV": 0.68,
+      "source_reaction": "Si(NH2)F* + HF -> SiF2* + NH3",
+      "rate_status": "conditional_Ea_and_assumed_prefactor",
+      "enabled": true
+    },
+    {
+      "id": "ads_terminal_NH2_F2",
+      "source": 11,
+      "target": 16,
+      "kind": "adsorption",
+      "gas_delta": {
+        "HF": -1
+      },
+      "pathway": null,
+      "barrier_eV": null,
+      "source_reaction": null,
+      "rate_status": "assumed_adsorption_or_desorption_hazard",
+      "enabled": true
+    },
+    {
+      "id": "des_terminal_NH2_F2",
+      "source": 16,
+      "target": 11,
+      "kind": "desorption",
+      "gas_delta": {
+        "HF": 1
+      },
+      "pathway": null,
+      "barrier_eV": null,
+      "source_reaction": null,
+      "rate_status": "assumed_adsorption_or_desorption_hazard",
+      "enabled": true
+    },
+    {
+      "id": "P3a_terminal_NH2",
+      "source": 16,
+      "target": 12,
+      "kind": "reaction",
+      "gas_delta": {
+        "NH3": 1
+      },
+      "pathway": "P3a",
+      "barrier_eV": 0.88,
+      "source_reaction": "Si(NH2)F2* + HF -> SiF3* + NH3",
+      "rate_status": "conditional_Ea_and_assumed_prefactor",
+      "enabled": true
+    },
+    {
+      "id": "ads_terminal_NH2_F3",
+      "source": 12,
+      "target": 17,
+      "kind": "adsorption",
+      "gas_delta": {
+        "HF": -1
+      },
+      "pathway": null,
+      "barrier_eV": null,
+      "source_reaction": null,
+      "rate_status": "assumed_adsorption_or_desorption_hazard",
+      "enabled": true
+    },
+    {
+      "id": "des_terminal_NH2_F3",
+      "source": 17,
+      "target": 12,
+      "kind": "desorption",
+      "gas_delta": {
+        "HF": 1
+      },
+      "pathway": null,
+      "barrier_eV": null,
+      "source_reaction": null,
+      "rate_status": "assumed_adsorption_or_desorption_hazard",
+      "enabled": true
+    },
+    {
+      "id": "ads_Si_H_rich_F0",
+      "source": 18,
+      "target": 23,
+      "kind": "adsorption",
+      "gas_delta": {
+        "HF": -1
+      },
+      "pathway": null,
+      "barrier_eV": null,
+      "source_reaction": null,
+      "rate_status": "assumed_adsorption_or_desorption_hazard",
+      "enabled": true
+    },
+    {
+      "id": "des_Si_H_rich_F0",
+      "source": 23,
+      "target": 18,
+      "kind": "desorption",
+      "gas_delta": {
+        "HF": 1
+      },
+      "pathway": null,
+      "barrier_eV": null,
+      "source_reaction": null,
+      "rate_status": "assumed_adsorption_or_desorption_hazard",
+      "enabled": true
+    },
+    {
+      "id": "P1b_Si_H_rich",
+      "source": 23,
+      "target": 19,
+      "kind": "reaction",
+      "gas_delta": {
+        "H2": 1
+      },
+      "pathway": "P1b",
+      "barrier_eV": 2.1,
+      "source_reaction": "SiH* + HF -> SiF* + H2",
+      "rate_status": "conditional_Ea_and_assumed_prefactor",
+      "enabled": true
+    },
+    {
+      "id": "ads_Si_H_rich_F1",
+      "source": 19,
+      "target": 24,
+      "kind": "adsorption",
+      "gas_delta": {
+        "HF": -1
+      },
+      "pathway": null,
+      "barrier_eV": null,
+      "source_reaction": null,
+      "rate_status": "assumed_adsorption_or_desorption_hazard",
+      "enabled": true
+    },
+    {
+      "id": "des_Si_H_rich_F1",
+      "source": 24,
+      "target": 19,
+      "kind": "desorption",
+      "gas_delta": {
+        "HF": 1
+      },
+      "pathway": null,
+      "barrier_eV": null,
+      "source_reaction": null,
+      "rate_status": "assumed_adsorption_or_desorption_hazard",
+      "enabled": true
+    },
+    {
+      "id": "P2b_Si_H_rich",
+      "source": 24,
+      "target": 20,
+      "kind": "reaction",
+      "gas_delta": {
+        "H2": 1
+      },
+      "pathway": "P2b",
+      "barrier_eV": 1.8,
+      "source_reaction": "SiHF* + HF -> SiF2* + H2",
+      "rate_status": "conditional_Ea_and_assumed_prefactor",
+      "enabled": true
+    },
+    {
+      "id": "ads_Si_H_rich_F2",
+      "source": 20,
+      "target": 25,
+      "kind": "adsorption",
+      "gas_delta": {
+        "HF": -1
+      },
+      "pathway": null,
+      "barrier_eV": null,
+      "source_reaction": null,
+      "rate_status": "assumed_adsorption_or_desorption_hazard",
+      "enabled": true
+    },
+    {
+      "id": "des_Si_H_rich_F2",
+      "source": 25,
+      "target": 20,
+      "kind": "desorption",
+      "gas_delta": {
+        "HF": 1
+      },
+      "pathway": null,
+      "barrier_eV": null,
+      "source_reaction": null,
+      "rate_status": "assumed_adsorption_or_desorption_hazard",
+      "enabled": true
+    },
+    {
+      "id": "P3b_Si_H_rich",
+      "source": 25,
+      "target": 21,
+      "kind": "reaction",
+      "gas_delta": {
+        "H2": 1
+      },
+      "pathway": "P3b",
+      "barrier_eV": 1.54,
+      "source_reaction": "SiHF2* + HF -> SiF3* + H2",
+      "rate_status": "conditional_Ea_and_assumed_prefactor",
+      "enabled": true
+    },
+    {
+      "id": "ads_Si_H_rich_F3",
+      "source": 21,
+      "target": 26,
+      "kind": "adsorption",
+      "gas_delta": {
+        "HF": -1
+      },
+      "pathway": null,
+      "barrier_eV": null,
+      "source_reaction": null,
+      "rate_status": "assumed_adsorption_or_desorption_hazard",
+      "enabled": true
+    },
+    {
+      "id": "des_Si_H_rich_F3",
+      "source": 26,
+      "target": 21,
+      "kind": "desorption",
+      "gas_delta": {
+        "HF": 1
+      },
+      "pathway": null,
+      "barrier_eV": null,
+      "source_reaction": null,
+      "rate_status": "assumed_adsorption_or_desorption_hazard",
+      "enabled": true
+    },
+    {
+      "id": "P4_Si_H_rich",
+      "source": 26,
+      "target": 22,
+      "kind": "reaction",
+      "gas_delta": {
+        "SiF4": 1
+      },
+      "pathway": "P4",
+      "barrier_eV": 0.53,
+      "source_reaction": "Si-NH*-SiF3* + HF -> SiF4 + SiNH2*",
+      "rate_status": "conditional_Ea_and_assumed_prefactor",
+      "enabled": true
+    },
+    {
+      "id": "ads_bridge_N_F0",
+      "source": 27,
+      "target": 32,
+      "kind": "adsorption",
+      "gas_delta": {
+        "HF": -1
+      },
+      "pathway": null,
+      "barrier_eV": null,
+      "source_reaction": null,
+      "rate_status": "assumed_adsorption_or_desorption_hazard",
+      "enabled": true
+    },
+    {
+      "id": "des_bridge_N_F0",
+      "source": 32,
+      "target": 27,
+      "kind": "desorption",
+      "gas_delta": {
+        "HF": 1
+      },
+      "pathway": null,
+      "barrier_eV": null,
+      "source_reaction": null,
+      "rate_status": "assumed_adsorption_or_desorption_hazard",
+      "enabled": true
+    },
+    {
+      "id": "P1d_bridge_N",
+      "source": 32,
+      "target": 28,
+      "kind": "reaction",
+      "gas_delta": {},
+      "pathway": "P1d",
+      "barrier_eV": 0.72,
+      "source_reaction": "Si-N-Si + HF -> SiF* + SiNH*",
+      "rate_status": "conditional_Ea_and_assumed_prefactor",
+      "enabled": true
+    },
+    {
+      "id": "ads_bridge_N_F1",
+      "source": 28,
+      "target": 33,
+      "kind": "adsorption",
+      "gas_delta": {
+        "HF": -1
+      },
+      "pathway": null,
+      "barrier_eV": null,
+      "source_reaction": null,
+      "rate_status": "assumed_adsorption_or_desorption_hazard",
+      "enabled": true
+    },
+    {
+      "id": "des_bridge_N_F1",
+      "source": 33,
+      "target": 28,
+      "kind": "desorption",
+      "gas_delta": {
+        "HF": 1
+      },
+      "pathway": null,
+      "barrier_eV": null,
+      "source_reaction": null,
+      "rate_status": "assumed_adsorption_or_desorption_hazard",
+      "enabled": true
+    },
+    {
+      "id": "P2d_bridge_N",
+      "source": 33,
+      "target": 29,
+      "kind": "reaction",
+      "gas_delta": {},
+      "pathway": "P2d",
+      "barrier_eV": 0.75,
+      "source_reaction": "SiF*-N-Si + HF -> SiF2* + SiNH*",
+      "rate_status": "conditional_Ea_and_assumed_prefactor",
+      "enabled": true
+    },
+    {
+      "id": "ads_bridge_N_F2",
+      "source": 29,
+      "target": 34,
+      "kind": "adsorption",
+      "gas_delta": {
+        "HF": -1
+      },
+      "pathway": null,
+      "barrier_eV": null,
+      "source_reaction": null,
+      "rate_status": "assumed_adsorption_or_desorption_hazard",
+      "enabled": true
+    },
+    {
+      "id": "des_bridge_N_F2",
+      "source": 34,
+      "target": 29,
+      "kind": "desorption",
+      "gas_delta": {
+        "HF": 1
+      },
+      "pathway": null,
+      "barrier_eV": null,
+      "source_reaction": null,
+      "rate_status": "assumed_adsorption_or_desorption_hazard",
+      "enabled": true
+    },
+    {
+      "id": "P3d_bridge_N",
+      "source": 34,
+      "target": 30,
+      "kind": "reaction",
+      "gas_delta": {},
+      "pathway": "P3d",
+      "barrier_eV": 0.9,
+      "source_reaction": "SiF2-N-Si + HF -> SiF3* + SiNH*",
+      "rate_status": "conditional_Ea_and_assumed_prefactor",
+      "enabled": true
+    },
+    {
+      "id": "ads_bridge_N_F3",
+      "source": 30,
+      "target": 35,
+      "kind": "adsorption",
+      "gas_delta": {
+        "HF": -1
+      },
+      "pathway": null,
+      "barrier_eV": null,
+      "source_reaction": null,
+      "rate_status": "assumed_adsorption_or_desorption_hazard",
+      "enabled": true
+    },
+    {
+      "id": "des_bridge_N_F3",
+      "source": 35,
+      "target": 30,
+      "kind": "desorption",
+      "gas_delta": {
+        "HF": 1
+      },
+      "pathway": null,
+      "barrier_eV": null,
+      "source_reaction": null,
+      "rate_status": "assumed_adsorption_or_desorption_hazard",
+      "enabled": true
+    },
+    {
+      "id": "ads_pre_SiH2F",
+      "source": 36,
+      "target": 37,
+      "kind": "adsorption",
+      "gas_delta": {
+        "HF": -1
+      },
+      "pathway": null,
+      "barrier_eV": null,
+      "source_reaction": null,
+      "rate_status": "assumed_adsorption_or_desorption_hazard",
+      "enabled": true
+    },
+    {
+      "id": "des_pre_SiH2F",
+      "source": 37,
+      "target": 36,
+      "kind": "desorption",
+      "gas_delta": {
+        "HF": 1
+      },
+      "pathway": null,
+      "barrier_eV": null,
+      "source_reaction": null,
+      "rate_status": "assumed_adsorption_or_desorption_hazard",
+      "enabled": true
+    },
+    {
+      "id": "P2e",
+      "source": 37,
+      "target": 38,
+      "kind": "reaction",
+      "gas_delta": {
+        "SiH2F2": 1
+      },
+      "pathway": "P2e",
+      "barrier_eV": 0.81,
+      "source_reaction": "Si-N-SiH2F* + HF -> SiH2F2 + SiNH*",
+      "rate_status": "conditional_Ea_and_assumed_prefactor",
+      "enabled": true
+    },
+    {
+      "id": "ads_pre_SiHF2",
+      "source": 39,
+      "target": 40,
+      "kind": "adsorption",
+      "gas_delta": {
+        "HF": -1
+      },
+      "pathway": null,
+      "barrier_eV": null,
+      "source_reaction": null,
+      "rate_status": "assumed_adsorption_or_desorption_hazard",
+      "enabled": true
+    },
+    {
+      "id": "des_pre_SiHF2",
+      "source": 40,
+      "target": 39,
+      "kind": "desorption",
+      "gas_delta": {
+        "HF": 1
+      },
+      "pathway": null,
+      "barrier_eV": null,
+      "source_reaction": null,
+      "rate_status": "assumed_adsorption_or_desorption_hazard",
+      "enabled": true
+    },
+    {
+      "id": "P3e",
+      "source": 40,
+      "target": 41,
+      "kind": "reaction",
+      "gas_delta": {
+        "SiHF3": 1
+      },
+      "pathway": "P3e",
+      "barrier_eV": 0.96,
+      "source_reaction": "Si-N-SiHF2* + HF -> SiHF3 + SiNH*",
+      "rate_status": "conditional_Ea_and_assumed_prefactor",
+      "enabled": true
+    },
+    {
+      "id": "ads_Si_Si_F1",
+      "source": 42,
+      "target": 43,
+      "kind": "adsorption",
+      "gas_delta": {
+        "HF": -1
+      },
+      "pathway": null,
+      "barrier_eV": null,
+      "source_reaction": null,
+      "rate_status": "assumed_adsorption_or_desorption_hazard",
+      "enabled": true
+    },
+    {
+      "id": "des_Si_Si_F1",
+      "source": 43,
+      "target": 42,
+      "kind": "desorption",
+      "gas_delta": {
+        "HF": 1
+      },
+      "pathway": null,
+      "barrier_eV": null,
+      "source_reaction": null,
+      "rate_status": "assumed_adsorption_or_desorption_hazard",
+      "enabled": true
+    },
+    {
+      "id": "P2f",
+      "source": 43,
+      "target": 44,
+      "kind": "reaction",
+      "gas_delta": {},
+      "pathway": "P2f",
+      "barrier_eV": 0.79,
+      "source_reaction": "SiF*-Si + HF -> SiF2* + SiH*",
+      "rate_status": "conditional_Ea_and_assumed_prefactor",
+      "enabled": true
+    }
+  ],
+  "gas_species": {
+    "HF": {
+      "H": 1,
+      "F": 1
+    },
+    "H2": {
+      "H": 2
+    },
+    "NH3": {
+      "N": 1,
+      "H": 3
+    },
+    "SiF4": {
+      "Si": 1,
+      "F": 4
+    },
+    "SiH2F2": {
+      "Si": 1,
+      "H": 2,
+      "F": 2
+    },
+    "SiHF3": {
+      "Si": 1,
+      "H": 1,
+      "F": 3
+    }
+  },
+  "initial_motif_fractions": {
+    "bridge_NH_F0": 0.3,
+    "terminal_NH2_F0": 0.15,
+    "Si_H_rich_F0": 0.1,
+    "bridge_N_F0": 0.15,
+    "pre_SiH2F": 0.1,
+    "pre_SiHF2": 0.1,
+    "Si_Si_F1": 0.1
+  },
+  "unparameterized_candidates": [
+    {
+      "id": "bare_N_bridge_F3_release",
+      "status": "disabled_missing_matching_final_step"
+    },
+    {
+      "id": "Si_Si_cleavage_followup",
+      "status": "disabled_missing_connected_followup_states"
+    },
+    {
+      "id": "terminal_F3_cleavage_and_release",
+      "source": "terminal_NH2_F3_HF",
+      "status": "disabled_missing_matching_barrier_and_product_state",
+      "reason": "P4 is a bridging NH event, not an NH2 terminal-ligand event"
+    },
+    {
+      "id": "water_blocking_and_assisted_HF",
+      "status": "disabled_missing_matched_rates"
+    },
+    {
+      "id": "AFS_NH4F_retention_decomposition",
+      "status": "disabled_missing_consistent_states_and_rates"
+    },
+    {
+      "id": "ion_sputtering_and_ion_assisted_removal",
+      "status": "disabled_missing_energy_angle_resolved_yields"
+    }
+  ],
+  "source": "https://doi.org/10.1016/j.apsusc.2024.159414",
+  "assumptions": [
+    "Connecting stage-specific source motifs into chains is a reduced topology hypothesis; source amorphous environments are not identical",
+    "HF arrival and complex-desorption hazards and thermal prefactors are sensitivity assumptions",
+    "Ea references have not been resolved against full free-energy profiles; rates are conditional sensitivity only",
+    "Untracked neighboring substrate anchors are fixed and unchanged; each state represents one reactive Si-centered motif, not one atom",
+    "Initial motif mixture is assumed; no conversion to N/Si composition, thickness or EPC",
+    "No new-layer refill, periodic ALE cycle, lateral interactions, diffusion, ions or product readsorption",
+    "Terminal NH2 chain stalls at F3 because its final release barrier is missing; no P4 substitution across incompatible motifs"
+  ]
+}

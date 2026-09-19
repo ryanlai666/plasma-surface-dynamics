@@ -1,0 +1,159 @@
+{
+  "status": "rejected_as_reaction_path",
+  "reason": "NEB did not converge; no verified transition state",
+  "severe_overlap": false,
+  "rows": [
+    {
+      "image": 0,
+      "minimum_pair_distance_A": 0.9288229335473303,
+      "pair_indices": [
+        6,
+        7
+      ],
+      "pair_species": [
+        "F",
+        "H"
+      ],
+      "severe_overlap": false
+    },
+    {
+      "image": 1,
+      "minimum_pair_distance_A": 0.9378671026703,
+      "pair_indices": [
+        6,
+        7
+      ],
+      "pair_species": [
+        "F",
+        "H"
+      ],
+      "severe_overlap": false
+    },
+    {
+      "image": 2,
+      "minimum_pair_distance_A": 0.9305941578049777,
+      "pair_indices": [
+        6,
+        7
+      ],
+      "pair_species": [
+        "F",
+        "H"
+      ],
+      "severe_overlap": false
+    },
+    {
+      "image": 3,
+      "minimum_pair_distance_A": 0.9366792891253884,
+      "pair_indices": [
+        6,
+        7
+      ],
+      "pair_species": [
+        "F",
+        "H"
+      ],
+      "severe_overlap": false
+    },
+    {
+      "image": 4,
+      "minimum_pair_distance_A": 0.9435397380127581,
+      "pair_indices": [
+        6,
+        7
+      ],
+      "pair_species": [
+        "F",
+        "H"
+      ],
+      "severe_overlap": false
+    },
+    {
+      "image": 5,
+      "minimum_pair_distance_A": 0.9705707488059495,
+      "pair_indices": [
+        4,
+        7
+      ],
+      "pair_species": [
+        "O",
+        "H"
+      ],
+      "severe_overlap": false
+    },
+    {
+      "image": 6,
+      "minimum_pair_distance_A": 0.9885632043823006,
+      "pair_indices": [
+        4,
+        7
+      ],
+      "pair_species": [
+        "O",
+        "H"
+      ],
+      "severe_overlap": false
+    },
+    {
+      "image": 7,
+      "minimum_pair_distance_A": 0.9601217016206789,
+      "pair_indices": [
+        4,
+        5
+      ],
+      "pair_species": [
+        "O",
+        "H"
+      ],
+      "severe_overlap": false
+    },
+    {
+      "image": 8,
+      "minimum_pair_distance_A": 0.9617546129066734,
+      "pair_indices": [
+        4,
+        7
+      ],
+      "pair_species": [
+        "O",
+        "H"
+      ],
+      "severe_overlap": false
+    },
+    {
+      "image": 9,
+      "minimum_pair_distance_A": 0.9612888046484275,
+      "pair_indices": [
+        4,
+        5
+      ],
+      "pair_species": [
+        "O",
+        "H"
+      ],
+      "severe_overlap": false
+    },
+    {
+      "image": 10,
+      "minimum_pair_distance_A": 0.9610400926147407,
+      "pair_indices": [
+        4,
+        5
+      ],
+      "pair_species": [
+        "O",
+        "H"
+      ],
+      "severe_overlap": false
+    }
+  ],
+  "ml_status": "neb_unconverged",
+  "path_sha256": "7b0d30f6f3ff3e111200a44edb2552411223c60acc5e84c7fe3fade961cf58ad",
+  "runner": "scripts/audit_molecular_paths.py",
+  "script_sha256": "63ae946b4abdaa698e2250832167f352acd01d8cc36d595c86631f4c834705e5",
+  "DFT_interpretation": "Fixed-geometry diagnostic energies only; exclude this path peak from kinetic parameterization",
+  "rejected_DFT_images": [
+    5
+  ],
+  "electronic_note": "Anomalous Newton SCF solution; three independent alternative starts failed. Do not interpret its energy as a reaction-path point."
+}

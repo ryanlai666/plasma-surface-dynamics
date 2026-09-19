@@ -1,0 +1,81 @@
+{
+  "surface": "Si111",
+  "species": "Cl2",
+  "status": "no_distinct_dissociation_endpoints",
+  "mobile_indices": [
+    34,
+    30,
+    36,
+    37
+  ],
+  "substrate_atoms": 36,
+  "active_surface_pair": [
+    34,
+    30
+  ],
+  "source": {
+    "construction": "ASE ideal diamond cut, a=5.43 A; 3x2 repeat, six atomic layers"
+  },
+  "proposed_reaction": "Cl2 + reactive surface pair -> dissociated adsorbates",
+  "breaking_bond_indices": [
+    36,
+    37
+  ],
+  "gas_bond_length_A": 1.99859232,
+  "method": "MACE-MP-0b2; CI-NEB with two surface atoms and all molecular atoms mobile",
+  "model_sha256": "d5773bf9440e96d6eb8c598f84bd0e6369fcfa432f626a87f890e07da3c651c9",
+  "runner": "scripts/run_molecular_reaction_neb.py",
+  "script_sha256": "3232f752062cfefe294f0e78008c4f14aa4b8a433ab32eeda655821dff646aca",
+  "limitations": [
+    "Ideal unpassivated cleavage, one coverage and site; no slab convergence study",
+    "Only two substrate atoms move; bulk-trained ML model is unvalidated for surface chemistry",
+    "Electronic potential energies only; no excitation, ZPE or entropy",
+    "A highest image is not called a verified TS without curvature and connectivity checks"
+  ],
+  "IS": {
+    "converged": true,
+    "energy_eV": -181.97975215755096,
+    "max_mobile_force_eV_A": 0.014425104502698396,
+    "breaking_bond_A": 4.77508293648546,
+    "surface_pair_distance_A": 4.214715867966418,
+    "hessian_eigenvalues_eV_A2": [
+      0.33933831072142173,
+      0.5673626980584083,
+      0.6431733302926497,
+      1.4642520936419487,
+      2.310606676367363,
+      2.9261863030028126,
+      3.547743404272067,
+      6.211744792608185,
+      8.737980968941665,
+      12.672488719919931,
+      13.716082950610597,
+      28.226639502754345
+    ],
+    "no_negative_curvature": true
+  },
+  "FS": {
+    "converged": true,
+    "energy_eV": -181.0825225782845,
+    "max_mobile_force_eV_A": 0.01611408799605064,
+    "breaking_bond_A": 4.600672023261589,
+    "surface_pair_distance_A": 3.888568146394808,
+    "hessian_eigenvalues_eV_A2": [
+      0.4433190007382735,
+      0.6833941017394756,
+      1.6220854466148806,
+      2.107034635959747,
+      2.2518314533854644,
+      3.4013643355192196,
+      3.830883820674876,
+      4.140107327474404,
+      5.631838518780019,
+      5.9495791654985,
+      7.4259706635955585,
+      26.315506193281937
+    ],
+    "no_negative_curvature": true
+  },
+  "endpoint_mobile_RMS_displacement_A": 1.7584622531480816,
+  "seconds": 313.99099030002253
+}

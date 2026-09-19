@@ -1,0 +1,36 @@
+{
+  "event": "H transfer N25-H + N26 -> N25 + N26-H; adsorbed Si15-OH spectator",
+  "origin": "Water-derived OH + H surface configuration; NOT intact H2O dissociation",
+  "rows": [
+    {
+      "state": "IS",
+      "image": 0,
+      "OH_bond_A": 1.000968336760206,
+      "separated_O_H_A": 2.1521005484835936,
+      "H_N25_A": 1.0235842655612837,
+      "H_N26_A": 2.862642019246016,
+      "O_Si15_A": 1.6621341032634747
+    },
+    {
+      "state": "TS",
+      "image": 13,
+      "OH_bond_A": 0.9953493030050824,
+      "separated_O_H_A": 2.547636190318037,
+      "H_N25_A": 1.5243484076822649,
+      "H_N26_A": 1.4498657341753294,
+      "O_Si15_A": 1.6560238880211782
+    },
+    {
+      "state": "FS",
+      "image": 24,
+      "OH_bond_A": 0.9920279813356796,
+      "separated_O_H_A": 3.052121723423184,
+      "H_N25_A": 2.470073822572321,
+      "H_N26_A": 1.0486573395157683,
+      "O_Si15_A": 1.654517594416625
+    }
+  ],
+  "runner": "scripts/audit_surface_saddle_identity.py",
+  "script_sha256": "4852540c77a1a2edb319bd938a73145b8fadc737d86214e45e085b67820ed56e",
+  "path_sha256": "0b8002aac1ce8b99e36087d40f9d89d321ab96966978ea3ae6fca2ecc77411c7"
+}

@@ -1,0 +1,85 @@
+{
+  "surface": "alpha_quartz_001",
+  "species": "HF",
+  "status": "no_distinct_dissociation_endpoints",
+  "mobile_indices": [
+    28,
+    14,
+    36,
+    37
+  ],
+  "substrate_atoms": 36,
+  "active_surface_pair": [
+    28,
+    14
+  ],
+  "source": {
+    "bulk_cif": "data\\reference\\surface_bulk\\9005018.cif",
+    "bulk_sha256": "5de61470915c9221bcbd5a8bdbc89c58a8cd30950d361cf2e2aeb86042843d0c",
+    "source_url": "https://www.crystallography.net/cod/9005018.html",
+    "construction": "Unrelaxed (001) cleavage, two unit-cell layers; quartz doubled along a",
+    "bulk_temperature_note": "Quartz source structure measured at 398 K; this is not a finite-temperature simulation"
+  },
+  "proposed_reaction": "HF + reactive surface pair -> dissociated adsorbates",
+  "breaking_bond_indices": [
+    36,
+    37
+  ],
+  "gas_bond_length_A": 0.96123254,
+  "method": "MACE-MP-0b2; CI-NEB with two surface atoms and all molecular atoms mobile",
+  "model_sha256": "d5773bf9440e96d6eb8c598f84bd0e6369fcfa432f626a87f890e07da3c651c9",
+  "runner": "scripts/run_molecular_reaction_neb.py",
+  "script_sha256": "3232f752062cfefe294f0e78008c4f14aa4b8a433ab32eeda655821dff646aca",
+  "limitations": [
+    "Ideal unpassivated cleavage, one coverage and site; no slab convergence study",
+    "Only two substrate atoms move; bulk-trained ML model is unvalidated for surface chemistry",
+    "Electronic potential energies only; no excitation, ZPE or entropy",
+    "A highest image is not called a verified TS without curvature and connectivity checks"
+  ],
+  "IS": {
+    "converged": true,
+    "energy_eV": -274.46370619259676,
+    "max_mobile_force_eV_A": 0.009794686463620897,
+    "breaking_bond_A": 3.600179243948646,
+    "surface_pair_distance_A": 1.6094423343200457,
+    "hessian_eigenvalues_eV_A2": [
+      0.8300473078270066,
+      1.2845385644502882,
+      1.385881564116627,
+      1.682751638872202,
+      1.999204115761471,
+      3.0949801308690925,
+      8.871891308891254,
+      23.258470592127168,
+      30.110896616738682,
+      40.90933494036898,
+      47.59038121403848,
+      88.80498888257642
+    ],
+    "no_negative_curvature": true
+  },
+  "FS": {
+    "converged": true,
+    "energy_eV": -274.46363360895265,
+    "max_mobile_force_eV_A": 0.0165790330977461,
+    "breaking_bond_A": 3.5959038421685796,
+    "surface_pair_distance_A": 1.6096579615793096,
+    "hessian_eigenvalues_eV_A2": [
+      0.8317107785598422,
+      1.3028755408370865,
+      1.3928424024115906,
+      1.716902158987124,
+      2.009735931718606,
+      3.115136775568326,
+      8.930056451779668,
+      23.246797590775888,
+      30.158688751526416,
+      40.99862854656055,
+      47.821679860620215,
+      88.89618072902968
+    ],
+    "no_negative_curvature": true
+  },
+  "endpoint_mobile_RMS_displacement_A": 0.0027639412619119845,
+  "seconds": 233.41030749998754
+}

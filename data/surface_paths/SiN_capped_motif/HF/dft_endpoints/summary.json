@@ -1,0 +1,29 @@
+{
+  "method": "Density-fitted PBE/def2-SVP",
+  "grid_level": 3,
+  "SCF_tolerance_Hartree": 1e-09,
+  "charge": 0,
+  "multiplicity": 1,
+  "geometry_method": "Fixed saved ML geometries; no DFT optimization",
+  "input": "data/surface_paths/SiN_capped_motif/HF/omol25_refined/endpoints.extxyz",
+  "input_sha256": "12f988cadf9e732384914e259136098c99d51754185228c41493bf148c27ba96",
+  "runner": "scripts/dft_molecular_singlepoints.py",
+  "script_sha256": "eb70b816fb5b940d230026bb247e9ee9fdabee52e6b3413afe390bf753256ec9",
+  "status": "complete",
+  "frames": [
+    {
+      "image": 0,
+      "energy_eV": -12167.721879318811,
+      "relative_energy_eV": 0.0,
+      "max_raw_force_eV_A": 0.7314753005666556,
+      "SCF_converged": true
+    },
+    {
+      "image": 1,
+      "energy_eV": -12168.468527075944,
+      "relative_energy_eV": -0.7466477571324504,
+      "max_raw_force_eV_A": 1.173375001718325,
+      "SCF_converged": true
+    }
+  ]
+}

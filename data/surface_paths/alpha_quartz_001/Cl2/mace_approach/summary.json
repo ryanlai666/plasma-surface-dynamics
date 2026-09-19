@@ -1,0 +1,40 @@
+{
+  "surface": "alpha_quartz_001",
+  "species": "Cl2",
+  "images": 9,
+  "substrate_atoms": 36,
+  "formula": "Cl2O24Si12",
+  "surface_site_index": 28,
+  "source": {
+    "bulk_cif": "data\\reference\\surface_bulk\\9005018.cif",
+    "bulk_sha256": "5de61470915c9221bcbd5a8bdbc89c58a8cd30950d361cf2e2aeb86042843d0c",
+    "source_url": "https://www.crystallography.net/cod/9005018.html",
+    "construction": "Unrelaxed (001) cleavage, two unit-cell layers; quartz doubled along a",
+    "bulk_temperature_note": "Quartz source structure measured at 398 K; this is not a finite-temperature simulation"
+  },
+  "energy_reference": "E(slab+molecule) - E(slab) - E(periodic molecular layer), same cell and fixed geometries",
+  "slab_energy_eV": -265.304106624323,
+  "molecular_layer_energy_eV": -3.5374702389862573,
+  "sampled_minimum_interaction_eV": -0.19055429040247596,
+  "sampled_minimum_height_A": 1.6,
+  "farthest_point_residual_eV": -1.7763568394002505e-15,
+  "model": "MACE-MP-0b2 small",
+  "model_sha256": "d5773bf9440e96d6eb8c598f84bd0e6369fcfa432f626a87f890e07da3c651c9",
+  "runner": "scripts/molecular_surface_campaign.py",
+  "script_sha256": "c069d9c8b16be012371fe7615cd1471f567c8a91766fcc9dc38722833fc1b93b",
+  "versions": {
+    "ase": "3.29.0",
+    "mace-torch": "0.3.16",
+    "numpy": "2.5.3",
+    "torch": "2.14.0"
+  },
+  "seconds": 1.7986333000008017,
+  "TS_status": "Not searched: scan maxima are NOT transition states",
+  "assumptions": [
+    "Ideal unpassivated rigid surface; no reconstruction, defects or thermal motion",
+    "One fixed molecule orientation and lateral site; finite periodic coverage",
+    "Gas molecule internally optimized first, then translated rigidly",
+    "No intermediate animation frame is synthesized: each displayed geometry has a model energy",
+    "Bulk-trained potential is unvalidated for these reactions; no ALE rates fitted"
+  ]
+}

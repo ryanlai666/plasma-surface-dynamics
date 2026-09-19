@@ -1,0 +1,155 @@
+{
+  "status": "rejected_as_reaction_path",
+  "reason": "NEB did not converge; no verified transition state",
+  "severe_overlap": false,
+  "rows": [
+    {
+      "image": 0,
+      "minimum_pair_distance_A": 0.9290000290676966,
+      "pair_indices": [
+        7,
+        8
+      ],
+      "pair_species": [
+        "F",
+        "H"
+      ],
+      "severe_overlap": false
+    },
+    {
+      "image": 1,
+      "minimum_pair_distance_A": 0.9480866060159301,
+      "pair_indices": [
+        7,
+        8
+      ],
+      "pair_species": [
+        "F",
+        "H"
+      ],
+      "severe_overlap": false
+    },
+    {
+      "image": 2,
+      "minimum_pair_distance_A": 0.9502116793562009,
+      "pair_indices": [
+        7,
+        8
+      ],
+      "pair_species": [
+        "F",
+        "H"
+      ],
+      "severe_overlap": false
+    },
+    {
+      "image": 3,
+      "minimum_pair_distance_A": 0.9515383235971382,
+      "pair_indices": [
+        7,
+        8
+      ],
+      "pair_species": [
+        "F",
+        "H"
+      ],
+      "severe_overlap": false
+    },
+    {
+      "image": 4,
+      "minimum_pair_distance_A": 1.0078364819300445,
+      "pair_indices": [
+        4,
+        6
+      ],
+      "pair_species": [
+        "N",
+        "H"
+      ],
+      "severe_overlap": false
+    },
+    {
+      "image": 5,
+      "minimum_pair_distance_A": 1.0092786852508324,
+      "pair_indices": [
+        4,
+        6
+      ],
+      "pair_species": [
+        "N",
+        "H"
+      ],
+      "severe_overlap": false
+    },
+    {
+      "image": 6,
+      "minimum_pair_distance_A": 1.0105643801453517,
+      "pair_indices": [
+        4,
+        8
+      ],
+      "pair_species": [
+        "N",
+        "H"
+      ],
+      "severe_overlap": false
+    },
+    {
+      "image": 7,
+      "minimum_pair_distance_A": 1.011674367188922,
+      "pair_indices": [
+        4,
+        8
+      ],
+      "pair_species": [
+        "N",
+        "H"
+      ],
+      "severe_overlap": false
+    },
+    {
+      "image": 8,
+      "minimum_pair_distance_A": 1.0124715456850097,
+      "pair_indices": [
+        4,
+        8
+      ],
+      "pair_species": [
+        "N",
+        "H"
+      ],
+      "severe_overlap": false
+    },
+    {
+      "image": 9,
+      "minimum_pair_distance_A": 1.0123087472744965,
+      "pair_indices": [
+        4,
+        8
+      ],
+      "pair_species": [
+        "N",
+        "H"
+      ],
+      "severe_overlap": false
+    },
+    {
+      "image": 10,
+      "minimum_pair_distance_A": 1.0124526437334787,
+      "pair_indices": [
+        4,
+        5
+      ],
+      "pair_species": [
+        "N",
+        "H"
+      ],
+      "severe_overlap": false
+    }
+  ],
+  "ml_status": "neb_unconverged",
+  "path_sha256": "e18bb41c6e05b3b4d5fb0f8a5de1f754f4d926bc4b6df6e567221cc9e405489e",
+  "runner": "scripts/audit_molecular_paths.py",
+  "script_sha256": "63ae946b4abdaa698e2250832167f352acd01d8cc36d595c86631f4c834705e5",
+  "DFT_interpretation": "Fixed-geometry diagnostic energies only; exclude this path peak from kinetic parameterization"
+}

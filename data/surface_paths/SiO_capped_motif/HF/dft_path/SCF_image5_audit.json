@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "atom",
+    "converged": false,
+    "internally_stable": false,
+    "energy_eV": -11741.807147427557,
+    "electron_count": 36.000000000000014
+  },
+  {
+    "guess": "minao",
+    "converged": false,
+    "internally_stable": false,
+    "energy_eV": -11715.004548812283,
+    "electron_count": 35.99999999999999
+  },
+  {
+    "guess": "huckel",
+    "converged": false,
+    "internally_stable": false,
+    "energy_eV": -11710.658339360136,
+    "electron_count": 36.00000000000001
+  }
+]
