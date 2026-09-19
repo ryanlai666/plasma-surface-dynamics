@@ -1,0 +1,26 @@
+{
+  "re_evaluation_max_energy_error_eV": 1.975706709345104e-09,
+  "validator_sha256": "ec15e2b6af5b9fac414cddc0f314f78d826251aa86c23073e63019e34cfd61d9",
+  "curvature_eigenvalues_eV_A2": {
+    "IS": [
+      1.2216257870042089,
+      1.8657252723303155,
+      6.262894897422724
+    ],
+    "peak": [
+      -0.6292235331519325,
+      0.9695110105366033,
+      19.37031094163509
+    ],
+    "FS": [
+      1.2216257793971457,
+      1.8657252709708076,
+      6.262894877119628
+    ]
+  },
+  "finite_difference_A": 0.005,
+  "endpoint_minima_in_mobile_subspace": true,
+  "peak_index_one_in_mobile_subspace": true,
+  "interpretation": "Three-dimensional adsorbate-only Hessian with every Si fixed; does not validate full-surface vibrational stability or DFT accuracy.",
+  "eligible_constrained_saddle": true
+}

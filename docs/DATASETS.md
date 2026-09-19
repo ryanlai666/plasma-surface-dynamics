@@ -31,4 +31,4 @@ For digitized literature curves, retain figure/table identifiers, digitizer sett
 
 The [atomistic acquisition guide](ATOMISTIC_DATA.md) now links a 70-frame public DFT energy/force subset, indexed Si-H-Cl geometries including 15 source-named transition states, and two cited Cl diffusion barriers. See the [dry-etch reaction report](dry_etch_results/REPORT.md) for published-rate reproduction and surface pathways and [candidate fragments and experiment sets](REACTION_CANDIDATES.md) for follow-up research.
 
-The [dry-etch acquisition and parameter audit](DRY_ETCH_PARAMETERS.md) adds four F2/Si rate laws, all 16 SiN:H/HF fluorination pathways, salt energetics and 17 [SiCl4 surface structures](../data/reference/sicl4_surface/README.md) forming six matched IS/TS/FS paths.
+The [dry-etch acquisition and parameter audit](DRY_ETCH_PARAMETERS.md) adds four F2/Si rate laws, all 16 SiN:H/HF fluorination pathways, salt energetics and 17 [SiCl4 surface structures](../data/surface_paths/Si100_c4x2/SiCl4/published/README.md) forming six matched IS/TS/FS paths.

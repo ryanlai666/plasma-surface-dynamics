@@ -1,0 +1,41 @@
+{
+  "paths": [
+    {
+      "surface": "Si100",
+      "species": "Cl",
+      "images": 17,
+      "max_neb_force_eV_A": 0.014332612226461688,
+      "peak_MP_0b2_eV": 0.4095695195994722,
+      "sampled_peak_MPA_0_eV": 0.6818794761124991,
+      "constrained_saddle_checked": true,
+      "max_saved_geometry_energy_error_eV": 3.248317170800874e-09
+    },
+    {
+      "surface": "Si100",
+      "species": "F",
+      "images": 9,
+      "max_neb_force_eV_A": 0.018548581617600365,
+      "peak_MP_0b2_eV": 1.2984549287895675,
+      "sampled_peak_MPA_0_eV": 1.737708348554321,
+      "constrained_saddle_checked": true,
+      "max_saved_geometry_energy_error_eV": 2.588791403468349e-09
+    },
+    {
+      "surface": "Si111",
+      "species": "F",
+      "images": 9,
+      "max_neb_force_eV_A": 0.022962717494392857,
+      "peak_MP_0b2_eV": 0.3086759530235952,
+      "sampled_peak_MPA_0_eV": 0.018486225260744504,
+      "constrained_saddle_checked": true,
+      "max_saved_geometry_energy_error_eV": 1.975706709345104e-09
+    }
+  ],
+  "total_calculated_images": 35,
+  "interpolated_animation_frames": 0,
+  "regression_tests_passed": 37,
+  "test_command": "python -m pytest -q --basetemp=outputs/pytest-surface-paths",
+  "physical_accuracy_validated": false,
+  "scope": "Numerical and adsorbate-only constrained-saddle checks; no periodic DFT, full-surface Hessian or experimental validation.",
+  "README_user_intro_and_post_atomistic_content_preserved": true
+}

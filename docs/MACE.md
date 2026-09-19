@@ -35,3 +35,7 @@ Both checkpoints ran successfully on CPU: 12 structures each, 24 energy/force ev
 At zero strain, the RMS force-component disagreement is 0.0474 eV/angstrom for beta-Si3N4, 0.2640 for the Si6N6 vacancy probe, and 0.3101 for Si6N5. The largest disagreement in these probes is 0.4910 eV/angstrom for compressed Si6N5. This suggests prioritizing defect environments for reference calculations; it does not establish which model is correct. Nearly zero forces in uniformly strained perfect diamond Si follow from symmetry and do not demonstrate force accuracy for distorted silicon environments.
 
 The ASE CIF reader emitted a generic hexagonal-setting warning. The loaded cell contains 6 Si and 8 N atoms and preserves the source cell dimensions; the exact expanded structures are saved for inspection. No relaxation or atomistic etching trajectory was performed.
+
+## Surface reaction paths
+
+A separate [surface-path workflow](dry_etch_results/SURFACE_PATHS.md) now computes rigid-surface F/Cl migration with MACE CI-NEB, checks adsorbate-only saddle curvature, and evaluates a second model on the same images. These calculations include relaxation and reaction-path energies; they do not change the interpretation of the earlier bulk-strain comparison.

@@ -1,6 +1,6 @@
 """Render IS -> TS -> FS from published surface stationary-point coordinates.
 
-Intermediate frames are geometric interpolation, not newly computed NEB images.
+Only the three published stationary points are shown; no invented intermediate frames.
 """
 from pathlib import Path
 import hashlib
@@ -10,8 +10,8 @@ from PIL import Image, ImageDraw, ImageFont
 from ase.io import read
 from matplotlib import font_manager
 ROOT=Path(__file__).resolve().parents[1]
-DATA=ROOT/'data/reference/sicl4_surface'
-OUT=ROOT/'docs/dry_etch_results/animations'
+DATA=ROOT/'data/surface_paths/Si100_c4x2/SiCl4/published'
+OUT=ROOT/'data/surface_paths/Si100_c4x2/SiCl4/published'
 FONT=font_manager.findfont('DejaVu Sans')
 def font(n):return ImageFont.truetype(FONT,n)
 
@@ -56,10 +56,10 @@ def render(xyz,symbols,progress,labels,energies,title):
     if progress in (0,1,2):
         j=int(progress);d.ellipse((xp[j]-8,yp[j]-8,xp[j]+8,yp[j]+8),fill='#d55848')
         state=['IS','TS','FS'][j]+' / '+labels[j]+' (source geometry)'
-    else:state='IS to TS' if progress<1 else 'TS to FS';state+=' (interpolated geometry)'
+    else:raise ValueError('Only original stationary points may be rendered')
     d.text((30,514),state,fill='#203c53',font=font(20))
     d.text((30,547),'Si: blue | reacting Si: gold | Cl: green | H: white',fill='#415c72',font=font(15))
-    d.text((30,573),'Geometric interpolation, not a time trajectory or a newly calculated minimum-energy path.',fill='#824b36',font=font(15))
+    d.text((30,573),'Three published stationary points only; no connecting trajectory has been computed.',fill='#824b36',font=font(15))
     return im
 
 def main():
@@ -79,14 +79,14 @@ def main():
         energies=np.array(path['relative_energies_kcal_mol'][::-1])/spec['conversion_kcal_mol_per_eV']
         title='SiCl4 recombination / '+path['id'] if path['id']!='IR_flip' else 'Si surface dimer flip / IR'
         frames=[];durations=[];minimum_separation=99.
-        for q in np.linspace(0,2,41):
-            k=min(int(q),1);a=q-k;pos=(1-a)*xyz[k]+a*xyz[k+1]
+        for q in (0,1,2):
+            pos=xyz[q]
             delta=pos[:,None,:]-pos[None,:,:];dist=np.linalg.norm(delta,axis=-1);np.fill_diagonal(dist,np.inf);minimum_separation=min(minimum_separation,float(dist.min()))
             frames.append(render(pos,symbols,float(q),labels,energies,title));durations.append(1000 if q in (0,1,2) else 80)
-        assert minimum_separation>.6,'Interpolated atom overlap'
+        assert minimum_separation>.6,'Source atom overlap'
         name=path['id'].lower();frames[0].save(OUT/(name+'.gif'),save_all=True,append_images=frames[1:],duration=durations,loop=0,optimize=False)
-        if path['id']=='OD':frames[20].save(OUT/'od_ts_preview.png')
-        manifest.append(dict(path=path['id'],direction='reverse of source adsorption/flip',states=labels,natoms=len(symbols),frames=len(frames),barrier_eV=float(energies[1]-energies[0]),rigid_translation_A=translations,common_display_translation_A=view_shift.tolist(),min_pair_separation_A=minimum_separation,coordinate_mapping='Source atom order unchanged; identical symbols and counts verified',interpolation='Piecewise Cartesian interpolation through exact source TS; no forces/energies evaluated between anchors',file_sha256=hashlib.sha256((OUT/(name+'.gif')).read_bytes()).hexdigest()))
+        if path['id']=='OD':frames[1].save(OUT/'od_ts_preview.png')
+        manifest.append(dict(path=path['id'],direction='reverse of source adsorption/flip',states=labels,natoms=len(symbols),frames=len(frames),barrier_eV=float(energies[1]-energies[0]),rigid_translation_A=translations,common_display_translation_A=view_shift.tolist(),min_pair_separation_A=minimum_separation,coordinate_mapping='Source atom order unchanged; identical symbols and counts verified',interpolation='None: three original stationary points only',file_sha256=hashlib.sha256((OUT/(name+'.gif')).read_bytes()).hexdigest()))
     (OUT/'manifest.json').write_text(json.dumps(dict(source='https://doi.org/10.3390/sym15010213',authors='Zhang, Zhu and Li',license='CC BY 4.0; adapted visualization',paths=manifest),indent=2)+'\n')
     print('Rendered',len(manifest),'source-based IS-TS-FS surface GIFs')
 if __name__=='__main__':main()

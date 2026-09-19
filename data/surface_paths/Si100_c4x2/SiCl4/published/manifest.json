@@ -1,0 +1,235 @@
+{
+  "source": "https://doi.org/10.3390/sym15010213",
+  "authors": "Zhang, Zhu and Li",
+  "license": "CC BY 4.0; adapted visualization",
+  "paths": [
+    {
+      "path": "IR_direct",
+      "direction": "reverse of source adsorption/flip",
+      "states": [
+        "P1",
+        "TS1",
+        "VDW1"
+      ],
+      "natoms": 117,
+      "frames": 3,
+      "barrier_eV": 2.714592925536742,
+      "rigid_translation_A": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -5.800000000277805e-07
+        ],
+        [
+          0.0,
+          0.0,
+          -1.4300000001910007e-06
+        ]
+      ],
+      "common_display_translation_A": [
+        -1.138950000000003,
+        -0.5725750000000005,
+        -5.668399999999999
+      ],
+      "min_pair_separation_A": 1.3239999999999998,
+      "coordinate_mapping": "Source atom order unchanged; identical symbols and counts verified",
+      "interpolation": "None: three original stationary points only",
+      "file_sha256": "32d86e31499ac14723e8a05409d610d090d5b254559d20f1cf30bbdd51e313ba"
+    },
+    {
+      "path": "IR_flip",
+      "direction": "reverse of source adsorption/flip",
+      "states": [
+        "IM1",
+        "TS2",
+        "VDW1"
+      ],
+      "natoms": 117,
+      "frames": 3,
+      "barrier_eV": 0.021682052120900575,
+      "rigid_translation_A": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -6.29999999723907e-07
+        ],
+        [
+          0.0,
+          0.0,
+          -1.4300000001910007e-06
+        ]
+      ],
+      "common_display_translation_A": [
+        -1.138950000000003,
+        -0.5725750000000005,
+        -5.668399999999999
+      ],
+      "min_pair_separation_A": 1.3239999999999998,
+      "coordinate_mapping": "Source atom order unchanged; identical symbols and counts verified",
+      "interpolation": "None: three original stationary points only",
+      "file_sha256": "9c7b1cb7526d837711c79e0ee1b1666ac8a112bba0d2070e9e136087a61bd243"
+    },
+    {
+      "path": "IR_after_flip",
+      "direction": "reverse of source adsorption/flip",
+      "states": [
+        "P1",
+        "TS3",
+        "IM1"
+      ],
+      "natoms": 117,
+      "frames": 3,
+      "barrier_eV": 2.18988726421095,
+      "rigid_translation_A": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "common_display_translation_A": [
+        -1.138950000000003,
+        -0.5725750000000005,
+        -5.668399999999999
+      ],
+      "min_pair_separation_A": 1.3239999999999998,
+      "coordinate_mapping": "Source atom order unchanged; identical symbols and counts verified",
+      "interpolation": "None: three original stationary points only",
+      "file_sha256": "4846d8d98d1299ee7653c002b92d8fa88473eecdad094865b1962136376d980f"
+    },
+    {
+      "path": "ID_2",
+      "direction": "reverse of source adsorption/flip",
+      "states": [
+        "P2",
+        "TS4",
+        "VDW2"
+      ],
+      "natoms": 117,
+      "frames": 3,
+      "barrier_eV": 1.7866010947622006,
+      "rigid_translation_A": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -2.6140000000118846e-05
+        ],
+        [
+          0.0,
+          0.0,
+          -4.0839999999597865e-05
+        ]
+      ],
+      "common_display_translation_A": [
+        -1.138950000000003,
+        -0.5725750000000005,
+        -5.372999999999998
+      ],
+      "min_pair_separation_A": 1.3239999999999998,
+      "coordinate_mapping": "Source atom order unchanged; identical symbols and counts verified",
+      "interpolation": "None: three original stationary points only",
+      "file_sha256": "d32df5fbe8befc70b21077889a9cd2bd5673ecc74b51b4da0687a605cb3527ff"
+    },
+    {
+      "path": "ID_3",
+      "direction": "reverse of source adsorption/flip",
+      "states": [
+        "P3",
+        "TS5",
+        "VDW3"
+      ],
+      "natoms": 117,
+      "frames": 3,
+      "barrier_eV": 2.2332513684527506,
+      "rigid_translation_A": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.7599999999617921e-06
+        ],
+        [
+          0.0,
+          0.0,
+          1.4899999998263525e-06
+        ]
+      ],
+      "common_display_translation_A": [
+        -1.138950000000003,
+        -0.5725750000000005,
+        -5.877100000000006
+      ],
+      "min_pair_separation_A": 1.3239999999999998,
+      "coordinate_mapping": "Source atom order unchanged; identical symbols and counts verified",
+      "interpolation": "None: three original stationary points only",
+      "file_sha256": "bf2793cf989a28d3b0a9f75066866bc4fcec3e4102df34082d89c39901937e27"
+    },
+    {
+      "path": "OD",
+      "direction": "reverse of source adsorption/flip",
+      "states": [
+        "P4",
+        "TS6",
+        "VDW4"
+      ],
+      "natoms": 117,
+      "frames": 3,
+      "barrier_eV": 2.4023713749957745,
+      "rigid_translation_A": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "common_display_translation_A": [
+        -2.0659999999999954,
+        -0.19312499999999932,
+        -3.3306690738754696e-16
+      ],
+      "min_pair_separation_A": 1.3249999999999993,
+      "coordinate_mapping": "Source atom order unchanged; identical symbols and counts verified",
+      "interpolation": "None: three original stationary points only",
+      "file_sha256": "26c6033f34a957ae6772f2476480d2da14865a8714c3a5567d5c6782e26a913c"
+    }
+  ]
+}

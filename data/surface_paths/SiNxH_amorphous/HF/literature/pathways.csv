@@ -1,0 +1,17 @@
+pathway,fluorination_stage,surface_motif_reaction,physisorption_energy_eV,reaction_energy_eV,activation_energy_eV,volatile_product
+P1a,1,SiNH2* + HF -> SiF* + NH3,-1.09,-0.24,0.45,NH3
+P1b,1,SiH* + HF -> SiF* + H2,-0.83,-0.63,2.1,H2
+P1c,1,Si-NH*-Si + HF -> SiF* + SiNH2*,-0.91,-1.4,0.02,
+P1d,1,Si-N-Si + HF -> SiF* + SiNH*,-0.9,-0.97,0.72,
+P2a,2,Si(NH2)F* + HF -> SiF2* + NH3,-0.54,-0.76,0.68,NH3
+P2b,2,SiHF* + HF -> SiF2* + H2,-0.42,-0.65,1.8,H2
+P2c,2,SiF*-NH*-Si + HF -> SiF2* + SiNH2*,-0.35,-0.24,0.79,
+P2d,2,SiF*-N-Si + HF -> SiF2* + SiNH*,-0.51,-0.96,0.75,
+P2e,2,Si-N-SiH2F* + HF -> SiH2F2 + SiNH*,-0.51,-1.29,0.81,SiH2F2
+P2f,2,SiF*-Si + HF -> SiF2* + SiH*,-0.25,-1.31,0.79,
+P3a,3,Si(NH2)F2* + HF -> SiF3* + NH3,-0.64,-0.42,0.88,NH3
+P3b,3,SiHF2* + HF -> SiF3* + H2,-0.29,-1.08,1.54,H2
+P3c,3,SiF2*-NH*-Si + HF -> SiF3* + SiNH2*,-0.37,-0.67,0.74,
+P3d,3,SiF2-N-Si + HF -> SiF3* + SiNH*,-0.3,-0.56,0.9,
+P3e,3,Si-N-SiHF2* + HF -> SiHF3 + SiNH*,-0.39,-1.13,0.96,SiHF3
+P4,4,Si-NH*-SiF3* + HF -> SiF4 + SiNH2*,-0.32,-0.77,0.53,SiF4

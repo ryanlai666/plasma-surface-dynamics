@@ -1,0 +1,68 @@
+{
+  "command": [
+    "scripts/run_surface_neb.py",
+    "--surface",
+    "Si100",
+    "--species",
+    "F",
+    "--steps",
+    "120",
+    "--initial-images",
+    "data/surface_paths/Si100/F/mace_neb/initial_restart.extxyz"
+  ],
+  "initial_images_sha256": "0b10756984c2dbc9087c20490fe906b93d08aafb9b27207189ea1f2c91e9d6ee",
+  "optimizer": "BFGS",
+  "surface": "Si100",
+  "species": "F",
+  "reaction": "F* (site A) -> F* (site B)",
+  "method": "MACE-MP-0b2 small; rigid substrate CI-NEB",
+  "status": "converged",
+  "images": 9,
+  "peak_image": 4,
+  "peak_above_IS_eV": 1.2984549287895675,
+  "FS_minus_IS_eV": -2.1515234038815834e-11,
+  "max_neb_force_eV_A": 0.018548581617600365,
+  "endpoint_checks": [
+    {
+      "label": "IS",
+      "converged": true,
+      "max_force": 0.003925572622980938,
+      "curvature_eigenvalues_eV_A2": [
+        0.9411180229278472,
+        2.884327882273756,
+        7.599037517503268
+      ]
+    },
+    {
+      "label": "FS",
+      "converged": true,
+      "max_force": 0.00392557261924158,
+      "curvature_eigenvalues_eV_A2": [
+        0.9411180229270081,
+        2.8843278822713714,
+        7.599037517505289
+      ]
+    }
+  ],
+  "seconds": 80.76290810003411,
+  "model_sha256": "d5773bf9440e96d6eb8c598f84bd0e6369fcfa432f626a87f890e07da3c651c9",
+  "script_sha256": "ca9ef57cfa800eac275bc09417cca2d18c9a9c06a21498fbad6d414e5b39065d",
+  "versions": {
+    "ase": "3.29.0",
+    "mace-torch": "0.3.16",
+    "torch": "2.14.0",
+    "numpy": "2.5.3"
+  },
+  "assumptions": [
+    "Ideal unreconstructed diamond surface, a=5.43 angstrom",
+    "36 Si substrate atoms held fixed; one halogen atom mobile",
+    "3 x 2 surface repeat, six atomic layers; 10 angstrom vacuum each side",
+    "Periodic x/y only; no hydrogen passivation",
+    "Single coverage, cell and image count; no convergence study",
+    "Bulk-trained ML potential; no independent DFT accuracy validation",
+    "NEB peak is a candidate saddle, not a frequency-verified full-surface TS"
+  ],
+  "rendering": "Nine evaluated final NEB images only; no interpolated animation frames",
+  "initial_images_original_file_sha256": "19f5b4a1747a30ac4459916f03f3dc6c81808d7e229320e0440143f25ce8fc19",
+  "restart_metadata_note": "Removed unused cached energies/forces from the restart input; atom positions, constraints and cell are unchanged. Only the final evaluated images carry accepted energies."
+}

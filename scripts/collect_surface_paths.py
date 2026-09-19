@@ -26,7 +26,7 @@ def main():
         with urllib.request.urlopen(URL,timeout=90) as r:raw=r.read()
         args.archive.write_bytes(raw)
     raw=args.archive.read_bytes()
-    target=ROOT/'data/reference/sicl4_surface'
+    target=ROOT/'data/surface_paths/Si100_c4x2/SiCl4/published'
     expected=json.loads((target/'provenance.json').read_text())
     if hashlib.sha256(raw).hexdigest()!=expected['source_archive_sha256']:
         raise ValueError('Source archive checksum changed; review version before extraction')

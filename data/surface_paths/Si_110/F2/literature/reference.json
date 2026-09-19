@@ -1,0 +1,20 @@
+{
+  "source": "https://arxiv.org/abs/2305.09037v2",
+  "method": "Broken-symmetry unrestricted B3LYP; Si32F32 cluster; Lanl2dz for Si per author manuscript",
+  "event": "First F2 dissociative chemisorption / Si-Si activation on F-terminated silicon",
+  "kinetics": "k=A0*(T/298.15)^n1*exp(-Ea/kBT), hazard=k*n_F2. k units m3/s. gamma is the separately fitted per-impact reaction probability.",
+  "path_energy_status": "Activation parameter only; no raw connected path images recovered",
+  "facet": "110",
+  "A0_m3_s": 7.52e-20,
+  "n1": 2.5,
+  "gamma0": 0.0096,
+  "n2": 1.96,
+  "barrier_eV": 0.35,
+  "reference_temperature_K": 298.15,
+  "temperature_range_K": [
+    298.15,
+    1000
+  ],
+  "source_table": 1,
+  "source_page": 19
+}

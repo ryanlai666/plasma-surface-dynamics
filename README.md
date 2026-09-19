@@ -88,7 +88,7 @@ The C++ build requires a C++17 GCC/Clang compiler. [Detailed setup, benchmarking
 
 | Check or comparison | Recorded result | Interpretation |
 |---|---:|---|
-| Regression suite | 29 tests passed | Analytical limits, kinetics, calibration recovery, backend checks, and animation-state fidelity |
+| Regression suite | 37 tests passed | Model checks plus path energies, geometry constraints, provenance and animation frames |
 | Python/C++ recipe comparison | 4,096 recipes | Same deterministic model evaluated by both implementations |
 | Maximum backend EPC difference | 2.22e-16 nm/cycle | Numerical agreement |
 | Stochastic ensembles | 6 of 6 within five standard errors | Agreement with the exact mean-field expectation |
@@ -148,11 +148,41 @@ Surface reaction data now support a separate literature-based kinetics workflow:
 
 [Sources, full parameter audit and equations](docs/DRY_ETCH_PARAMETERS.md) | [Dry-etch rate results](docs/dry_etch_results/REPORT.md) | [Fragments and experiment sets](docs/REACTION_CANDIDATES.md).
 
-### Surface IS -> TS -> FS animation
+### Surface paths: calculated images and energies
 
-![SiCl4 surface recombination through published TS6](docs/dry_etch_results/animations/od.gif)
+Each new GIF shows **force-optimized, energy-evaluated NEB images** (9 for each F path; 17 for Cl). There are no geometrically interpolated animation frames. Separate folders hold each surface/reactant combination, its coordinates, pointwise energies, checks and source information.
 
-**SiCl3* + Cl* -> SiCl4(physisorbed)** on reconstructed Si(100): the displayed reverse barrier is **2.4024 eV**. IS, TS and FS are published DFT structures; intermediate frames are geometric interpolation. This is a competing recombination/readsorption channel, **not proof of substrate Si removal**. [All six animations, barrier table and attribution](docs/dry_etch_results/TRANSITION_STATES.md).
+| Surface / reactant and event | Peak above reactant (eV) | Evidence |
+|---|---:|---|
+| Si100 / Cl migration | 0.4096 | MACE CI-NEB; 17 evaluated images; constrained saddle checked |
+| Si100 / F migration | 1.2985 | MACE CI-NEB; 9 evaluated images; constrained saddle checked |
+| Si111 / F migration | 0.3087 | MACE CI-NEB; 9 evaluated images; constrained saddle checked |
+| Fluorinated Si3N4 / HF + H2O removal | 0.6775 | Published cluster DFT, R6 |
+| Fluorinated SiO2 / HF + H2O removal | 0.6376 | Published cluster DFT, R6 |
+| Fluorinated Si3N4 / HF + HF(v=1) | 0.1513 effective | DFT barrier with source vibrational-energy adjustment |
+| Fluorinated SiO2 / HF + HF(v=1) | 0.6946 | Source model assumes excitation quenching |
+| Reconstructed Si(100) / SiCl4 recombination, OD | 2.4024 | Published DFT stationary points only |
+
+The calculated migration paths use MACE-MP-0b2 on **ideal rigid silicon slabs**. Curvature checks apply only to the mobile halogen; these are not validated DFT barriers or complete ALE cycles. A second MACE model evaluates every image for model sensitivity. The HF-assisted values come from [Jung et al. (2020)](https://doi.org/10.1116/1.5125569); missing FS energies and raw paths remain unfilled.
+
+![Three calculated surface energy profiles](docs/dry_etch_results/calculated_path_comparison.png)
+
+![Calculated F migration on Si100](data/surface_paths/Si100/F/mace_neb/path.gif)
+
+<details>
+<summary>Cl on Si(100), F on Si(111), and published SiCl4 stationary points</summary>
+
+![Calculated Cl migration on Si100](data/surface_paths/Si100/Cl/mace_neb/path.gif)
+
+![Calculated F migration on Si111](data/surface_paths/Si111/F/mace_neb/path.gif)
+
+![Three published SiCl4 stationary points](data/surface_paths/Si100_c4x2/SiCl4/published/od.gif)
+
+The SiCl4 slideshow contains only the published IS, TS and FS. It illustrates SiCl3* + Cl* -> SiCl4(physisorbed), a recombination channel; no connecting trajectory or substrate-Si removal is claimed.
+
+</details>
+
+[Full curves, TS table, reaction/rate equations and hypotheses](docs/dry_etch_results/SURFACE_PATHS.md) | [Surface/reactant folder index](data/surface_paths/README.md) | [All six published stationary-point triplets](docs/dry_etch_results/TRANSITION_STATES.md).
 
 ### Literature-parameterized dry-etch kinetics
 

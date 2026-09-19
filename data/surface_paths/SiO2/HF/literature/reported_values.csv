@@ -1,0 +1,8 @@
+path,source_reaction_notation,DFT_deltaH_reported,DFT_Ea_reported,ReaxFF_deltaH_reported,ReaxFF_Ea_reported
+cluster_a,Si4O10H4 + HF -> FSi4O9H3 + H2O,-11.4017,21.432,-19.7784,42.6237
+cluster_b,FSi4O9H3 + HF -> F2Si4O9H4,-9.74,16.06,-22.1557,28.81
+cluster_c,F2Si4O9H4 + HF -> F3Si4O9H5,-10.9738,65.7,-13.3633,43.4226
+cluster_d,F3Si4O9H5 + HF -> Si3O9H6 + SiF4,-0.6392,9.4033,-1.3045,14.1675
+slab_a,Si* + O* + HF -> SiF* + OH*,-1.0608,15.6123,-5.0948,28.1317
+slab_b,SiF* + OH* + HF -> SiF2* + 2OH*,-112.409,17.6325,-82.005,25.9066
+slab_c,SiF* + Si* + OH* + HF -> 2SiF* + H2O,-6.5147,19.4988,-18.6002,37.9134

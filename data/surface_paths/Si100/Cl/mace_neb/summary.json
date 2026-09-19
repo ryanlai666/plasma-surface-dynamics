@@ -1,0 +1,60 @@
+{
+  "command": [
+    "scripts/refine_surface_neb.py",
+    "data/surface_paths/Si100/Cl/mace_neb"
+  ],
+  "initial_images_sha256": "6a8087f01b93d29fa91bd15929fdbed522cd20731f7f4cff8e7c0f1883f93cb3",
+  "optimizer": "BFGS",
+  "surface": "Si100",
+  "species": "Cl",
+  "reaction": "Cl* (site A) -> Cl* (site B)",
+  "method": "MACE-MP-0b2 small; rigid substrate CI-NEB",
+  "status": "converged",
+  "images": 17,
+  "peak_image": 7,
+  "peak_above_IS_eV": 0.4095695195994722,
+  "FS_minus_IS_eV": 8.93294327397598e-10,
+  "max_neb_force_eV_A": 0.014332612226461688,
+  "endpoint_checks": [
+    {
+      "label": "IS",
+      "converged": true,
+      "max_force": 0.00042313627560057584,
+      "curvature_eigenvalues_eV_A2": [
+        1.0718022361611446,
+        3.8640864644925887,
+        7.677515525952002
+      ]
+    },
+    {
+      "label": "FS",
+      "converged": true,
+      "max_force": 0.00042313628584712495,
+      "curvature_eigenvalues_eV_A2": [
+        1.0718022363611923,
+        3.86408646520715,
+        7.677515528003811
+      ]
+    }
+  ],
+  "seconds": 109.96513020002749,
+  "model_sha256": "d5773bf9440e96d6eb8c598f84bd0e6369fcfa432f626a87f890e07da3c651c9",
+  "script_sha256": "08ec7a76078457f0169d4defc4e123897fbab89fc43bb7ee7f4adcfe641e02dc",
+  "versions": {
+    "ase": "3.29.0",
+    "mace-torch": "0.3.16",
+    "torch": "2.14.0",
+    "numpy": "2.5.3"
+  },
+  "assumptions": [
+    "Ideal unreconstructed diamond surface, a=5.43 angstrom",
+    "36 Si substrate atoms held fixed; one halogen atom mobile",
+    "3 x 2 surface repeat, six atomic layers; 10 angstrom vacuum each side",
+    "Periodic x/y only; no hydrogen passivation",
+    "Single coverage, cell and image count; no convergence study",
+    "Bulk-trained ML potential; no independent DFT accuracy validation",
+    "NEB peak is a candidate saddle, not a frequency-verified full-surface TS"
+  ],
+  "rendering": "Final evaluated images only",
+  "refinement": "17-image NEB from archived 9-image path; inserted starting guesses were force-optimized, not published as interpolated frames"
+}

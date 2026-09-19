@@ -1,0 +1,10 @@
+{
+  "reason": "Symmetric atop guess relaxed in height had negative lateral curvature; rejected as a minimum before final paths",
+  "hessian_eigenvalues_eV_A2": [
+    -0.5560221659530075,
+    0.04139000972516834,
+    13.334020096002265
+  ],
+  "replacement": "Symmetry-broken adsorbate relaxation with positive-curvature endpoint check",
+  "model": "MACE-MP-0b2 small"
+}
