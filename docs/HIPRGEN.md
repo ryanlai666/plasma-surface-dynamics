@@ -1,5 +1,7 @@
 # HiPRGen pilot and intermediate coverage
 
+Current assessment: [multi-source scientific critique and calculated priorities](SCIENTIFIC_REVIEW.md). The current species model has no spatial interactions or subsurface refill; candidate enumeration does not establish completeness.
+
 A **limited HiPRGen function-level pilot has now been run**. It executes the upstream composition-bucketing and decision-tree functions on a supplied library of capped Si-N/Si-O molecular motifs. It is not the full MPI/species-filtering/thermochemical pipeline and does not verify barriers, stable surface structures or mechanism completeness.
 
 ![HiPRGen candidate network](reaction_network/hiprgen_candidates.png)

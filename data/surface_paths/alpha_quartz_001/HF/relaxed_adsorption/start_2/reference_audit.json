@@ -1,0 +1,17 @@
+{
+  "surface": "alpha_quartz_001",
+  "start": 2,
+  "combined_converged": true,
+  "bare_reference_converged": true,
+  "frozen_fragment_interaction_eV": -0.9726852358712277,
+  "substrate_reference_shift_eV": -0.012036898063797707,
+  "molecular_layer_reference_shift_eV": 0.08805407489902795,
+  "apparent_adsorption_difference_eV": -0.8966680590359974,
+  "closure_error_eV": 0.0,
+  "lower_clean_slab_geometry_found": false,
+  "screening_threshold_eV": -0.1,
+  "interpretation": "Negative substrate shift below -0.1 eV flags a lower-energy clean-slab geometry than the relaxed reference; that threshold is diagnostic, not a convergence standard.",
+  "trajectory_sha256": "6578b0afae029e5f4ae5a59251511903c2fed29ccc11c5481f6b443b5510c168",
+  "runner": "scripts/audit_adsorption_references.py",
+  "runner_sha256": "fb9b78912c0fb18f6745606aebd00cf56dba5413b918049e09d32eb4119e1ebf"
+}

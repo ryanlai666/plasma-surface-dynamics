@@ -1,0 +1,17 @@
+{
+  "surface": "beta_Si3N4_001",
+  "start": 2,
+  "combined_converged": true,
+  "bare_reference_converged": true,
+  "frozen_fragment_interaction_eV": -0.31607913702500934,
+  "substrate_reference_shift_eV": 0.007248642516486825,
+  "molecular_layer_reference_shift_eV": 0.005861481081276487,
+  "apparent_adsorption_difference_eV": -0.302969013427246,
+  "closure_error_eV": 0.0,
+  "lower_clean_slab_geometry_found": false,
+  "screening_threshold_eV": -0.1,
+  "interpretation": "Negative substrate shift below -0.1 eV flags a lower-energy clean-slab geometry than the relaxed reference; that threshold is diagnostic, not a convergence standard.",
+  "trajectory_sha256": "ff614c72bd122229b4b2c1a0bdcc6ceed7816ef886f6d5bf0ca3f1d7cafa01fa",
+  "runner": "scripts/audit_adsorption_references.py",
+  "runner_sha256": "fb9b78912c0fb18f6745606aebd00cf56dba5413b918049e09d32eb4119e1ebf"
+}

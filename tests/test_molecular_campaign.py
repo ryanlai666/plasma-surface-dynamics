@@ -125,3 +125,37 @@ def test_local_saddle_uses_the_minima_actually_connected():
     assert audit['rows'][0]['H_N25_A']<1.2 and audit['rows'][-1]['H_N26_A']<1.2
     assert audit['path_sha256']==hashlib.sha256((p/'images.extxyz').read_bytes()).hexdigest()
     assert d['script_sha256']==hashlib.sha256((ROOT/d['runner']).read_bytes()).hexdigest()
+
+
+@pytest.mark.parametrize('surface',SURFACES)
+def test_relaxed_adsorption_moves_substrate_and_preserves_fixed_atoms(surface):
+    root=ROOT/'data/surface_paths'/surface/'HF/relaxed_adsorption'
+    d=json.loads((root/'summary.json').read_text())
+    assert d['script_sha256']==hashlib.sha256((ROOT/d['runner']).read_bytes()).hexdigest()
+    assert len(d['starts'])==2 and d['starts'][0]['site']!=d['starts'][1]['site']
+    assert d['starts'][0]['orientation']!=d['starts'][1]['orientation']
+    for r in d['starts']:
+        p=ROOT/Path(r['folder'].replace(chr(92),'/'));fs=frames(p/'trajectory.extxyz');fixed=r['fixed_indices']
+        assert len(fs)==r['frames'] and len(fs)==r['steps']+1
+        assert r['source_sha256']==hashlib.sha256((ROOT/Path(r['source'].replace(chr(92),'/'))).read_bytes()).hexdigest()
+        for f in fs:assert np.array_equal(f[2][fixed],fs[0][2][fixed])
+        assert r['substrate_max_displacement_A']>0.001
+        assert r['converged']==(r['max_mobile_force_eV_A']<=d['force_tolerance_eV_A'])
+        assert float(fs[-1][0]['energy'])==pytest.approx(r['energy_eV'],abs=1e-7)
+        if r['converged'] and d['bare_slab']['converged']:
+            assert r['adsorption_energy_eV']==pytest.approx(r['energy_eV']-d['bare_slab']['energy_eV']-d['gas_energy_eV'])
+        else:assert r['adsorption_energy_eV'] is None
+        m=json.loads((p/'render_manifest.json').read_text());assert m['interpolated_frames']==0
+        assert m['frame_indices'][0]==0 and m['frame_indices'][-1]==len(fs)-1
+        assert m['trajectory_sha256']==hashlib.sha256((p/'trajectory.extxyz').read_bytes()).hexdigest()
+
+
+def test_adsorption_decomposition_detects_unstable_reference_comparison():
+    rows=json.loads((ROOT/'docs/dry_etch_results/adsorption_reference_audit.json').read_text());assert len(rows)==8
+    for r in rows:
+        assert abs(r['closure_error_eV'])<1e-10
+        assert r['runner_sha256']==hashlib.sha256((ROOT/r['runner']).read_bytes()).hexdigest()
+        folder=ROOT/'data/surface_paths'/r['surface']/'HF/relaxed_adsorption'/f"start_{r['start']}"
+        es=float(frames(folder/'frozen_slab.extxyz')[0][0]['energy']);em=float(frames(folder/'frozen_molecular_layer.extxyz')[0][0]['energy']);ec=float(frames(folder/'trajectory.extxyz')[-1][0]['energy'])
+        assert ec-es-em==pytest.approx(r['frozen_fragment_interaction_eV'],abs=1e-7)
+    assert all(r['lower_clean_slab_geometry_found'] for r in rows if r['surface']=='Si111')

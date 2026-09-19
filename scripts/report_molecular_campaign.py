@@ -37,34 +37,6 @@ def main():
         lines.append(f"| {p.parents[2].name} | {p.parent.name} | {accepted}/{n} accepted | {energies[-1]-energies[0]:.4f} | {peak_text} | [energies](../../{rel}/energies.csv), [SCF metadata](../../{rel}/summary.json) |")
         dft.append(dict(folder=rel,**d))
     doc=ROOT/'docs/dry_etch_results/MOLECULAR_SURFACES.md';s=doc.read_text().split('<!-- RESULTS -->')[0];doc.write_text(s+'<!-- RESULTS -->\n\n'+'\n'.join(lines)+'\n',encoding='utf8')
-    section=['<!-- BEGIN MOLECULAR CAMPAIGN -->','### Molecules, surface orientations and adsorption sites','',f"**Nine molecules x four surfaces; {sum(r['combinations'] for r in results)} site/orientation curves and {sum(r['evaluations'] for r in results):,} evaluated geometries**, plus 324 baseline approach geometries. HF, HCl, F2, Cl2, H2, H2O, CH3F, SiF4 and SiCl4 each have separate surface/species folders.",'','| Surface orientation | Sites sampled | Molecular orientations |','|---|---|---|','| Si(100), Si(111) | atop Si, bridge, hollow | upright, parallel, flipped when distinct |','| beta-Si3N4(001) | Si, N, Si-N bridge projections | upright, parallel, flipped when distinct |','| alpha-quartz(001) | Si, O, Si-O bridge projections | upright, parallel, flipped when distinct |','','![Site and orientation energy comparison](docs/dry_etch_results/molecular_screening.png)','','These **rigid approach curves are not transition-state paths**. Each 3D GIF shows only calculated geometries with their energies. The table compares sampled interaction minima, not barriers or etch selectivity. Surfaces are ideal unpassivated cuts; coverage, reconstruction and amorphous composition effects remain unresolved.','','<details>','<summary>3D molecular approach examples and all 36 surface/species folders</summary>','']
-    for surface,species in [('Si100','HCl'),('Si111','Cl2'),('beta_Si3N4_001','CH3F'),('alpha_quartz_001','HF')]:
-        r=next(r for r in results if r['surface']==surface and r['species']==species);section.append(f"![{species} / {surface}: evaluated approach]({r['folder']}/path.gif)\n")
-    section+=['[All curves, folders, energies and sources](docs/dry_etch_results/MOLECULAR_SURFACES.md#calculated-screening-results).','','</details>','','Molecular dissociation and local Si-N/Si-O cleavage are evaluated separately. Failed endpoint/NEB searches are retained with their convergence and Hessian checks. The OMol25 capped motifs and direct PBE/def2-SVP checks are **local molecular models**, not periodic-surface DFT validation.','','[Reaction search table, energy peaks, equations and hypotheses](docs/dry_etch_results/MOLECULAR_SURFACES.md#molecular-reaction-searches) | [Direct DFT results](docs/dry_etch_results/MOLECULAR_SURFACES.md#direct-dft-checks-on-saved-ml-geometries).','<!-- END MOLECULAR CAMPAIGN -->','']
-    evidence=['','#### Molecular reaction-path results','','| System / event | ML peak above local IS (eV) | Interpretation |','|---|---:|---|']
-    for d in reaction:
-        method=d['folder'].split('/')[-1]
-        if method not in ['mace_local_saddle','molecular_refined','omol25_refined']:continue
-        peak=d.get('peak_above_IS_eV');confirmed=d.get('endpoint_connectivity_confirmed',False)
-        label='Constrained saddle connected to checked local minima' if confirmed else d['status'].replace('_',' ')+'; TS not verified'
-        if method=='mace_local_saddle':label+='; water-derived OH + H; N-to-N H transfer'
-        system=d['folder'].split('/')[2]+' / '+d['folder'].split('/')[3]
-        evidence.append(f"| [{system}]({d['folder']}/README.md) | {peak:.4f} | {label} |" if peak is not None else f"| {system} | -- | {label} |")
-    evidence+=['','These values are model potential energies with fixed substrate/cap atoms. Capped Si-N/Si-O motifs are not full surfaces. A converged highest image alone does not establish a transition state.','','| Direct PBE/def2-SVP check | DFT FS - IS (eV) | DFT highest saved image - IS (eV) |','|---|---:|---:|']
-    for d in dft:
-        if not d['folder'].endswith('/dft_path'):continue
-        es=[r['energy_eV'] for r in d['frames']];name=d['folder'].split('/')[2];accepted=sum(r.get('accepted_for_comparison',True) for r in d['frames']);peak_text=f'{max(es)-es[0]:.4f}' if accepted==len(es) else 'SCF unresolved; peak rejected'
-        evidence.append(f"| [{name}: {len(es)} saved ML path geometries]({d['folder']}/energies.csv) | {es[-1]-es[0]:.4f} | {peak_text} |")
-    evidence+=['','DFT values are single-point energies along the saved ML paths, not DFT-optimized transition states. See the full report for path convergence and endpoint checks.','']
-    for d in reaction:
-        if d['folder'].endswith('/mace_local_saddle') and (ROOT/d['folder']/'path.gif').exists():evidence.append(f"![Evaluated surface H-transfer saddle beside Si-OH]({d['folder']}/path.gif)\n")
-    section[-2:-2]=evidence
-    readme=ROOT/'README.md';raw=readme.read_bytes();newline='\r\n' if b'\r\n' in raw else '\n';s=raw.decode('utf8').replace('\r\n','\n')
-    if '<!-- BEGIN MOLECULAR CAMPAIGN -->' in s:
-        before,rest=s.split('<!-- BEGIN MOLECULAR CAMPAIGN -->',1);_,after=rest.split('<!-- END MOLECULAR CAMPAIGN -->',1);s=before+'\n'.join(section)+after
-    else:s=s.replace('### Literature-parameterized dry-etch kinetics','\n'.join(section)+'\n### Literature-parameterized dry-etch kinetics')
-    s=s.replace('Each new GIF shows **force-optimized, energy-evaluated NEB images**','Each migration GIF below shows **force-optimized, energy-evaluated NEB images**')
-    readme.write_bytes(s.replace('\n',newline).encode('utf8'))
     (ROOT/'docs/dry_etch_results/molecular_reactions.json').write_text(json.dumps(reaction,indent=2)+'\n')
     print('Reported',len(results),'surface/species systems;',len(reaction),'reaction attempts;',len(dft),'DFT sets')
 if __name__=='__main__':main()

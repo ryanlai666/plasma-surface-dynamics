@@ -1,0 +1,168 @@
+{
+  "source_sha256": "01508571b8c4fc93613cd7f849b45648f576a66c3eca20223b1e22922c5269dc",
+  "runner": "scripts/compare_literature_channels.py",
+  "runner_sha256": "97bc6aed2ee762393822b069b29a653da2fbfb7f6c44e95afec11d3c1a633bcf",
+  "rows": [
+    {
+      "reaction": "R6",
+      "occupied_state": "HF + H2O",
+      "material": "Si3N4",
+      "A_s": 11800000000.0,
+      "Ea_over_R_K": 7862,
+      "temperature_K": 300,
+      "barrier_eV": 0.6774947410698399,
+      "rate_s": 0.04903106028866404
+    },
+    {
+      "reaction": "R6",
+      "occupied_state": "HF + H2O",
+      "material": "SiO2",
+      "A_s": 14600000000000.0,
+      "Ea_over_R_K": 7399,
+      "temperature_K": 300,
+      "barrier_eV": 0.6375964880661086,
+      "rate_s": 283.92477073968246
+    },
+    {
+      "reaction": "R7",
+      "occupied_state": "HF + HF(v=1)",
+      "material": "Si3N4",
+      "A_s": 402000000000.0,
+      "Ea_over_R_K": 1756,
+      "temperature_K": 300,
+      "barrier_eV": 0.1513203720832662,
+      "rate_s": 1153866821.3139563
+    },
+    {
+      "reaction": "R7",
+      "occupied_state": "HF + HF(v=1)",
+      "material": "SiO2",
+      "A_s": 655000000.0,
+      "Ea_over_R_K": 8061,
+      "temperature_K": 300,
+      "barrier_eV": 0.6946432342615084,
+      "rate_s": 0.0014020018001260634
+    },
+    {
+      "reaction": "R6",
+      "occupied_state": "HF + H2O",
+      "material": "Si3N4",
+      "A_s": 11800000000.0,
+      "Ea_over_R_K": 7862,
+      "temperature_K": 350,
+      "barrier_eV": 0.6774947410698399,
+      "rate_s": 2.0719873632496193
+    },
+    {
+      "reaction": "R6",
+      "occupied_state": "HF + H2O",
+      "material": "SiO2",
+      "A_s": 14600000000000.0,
+      "Ea_over_R_K": 7399,
+      "temperature_K": 350,
+      "barrier_eV": 0.6375964880661086,
+      "rate_s": 9624.263575984887
+    },
+    {
+      "reaction": "R7",
+      "occupied_state": "HF + HF(v=1)",
+      "material": "Si3N4",
+      "A_s": 402000000000.0,
+      "Ea_over_R_K": 1756,
+      "temperature_K": 350,
+      "barrier_eV": 0.1513203720832662,
+      "rate_s": 2662616354.9655156
+    },
+    {
+      "reaction": "R7",
+      "occupied_state": "HF + HF(v=1)",
+      "material": "SiO2",
+      "A_s": 655000000.0,
+      "Ea_over_R_K": 8061,
+      "temperature_K": 350,
+      "barrier_eV": 0.6946432342615084,
+      "rate_s": 0.06513568144616687
+    },
+    {
+      "reaction": "R6",
+      "occupied_state": "HF + H2O",
+      "material": "Si3N4",
+      "A_s": 11800000000.0,
+      "Ea_over_R_K": 7862,
+      "temperature_K": 400,
+      "barrier_eV": 0.6774947410698399,
+      "rate_s": 34.3418720256827
+    },
+    {
+      "reaction": "R6",
+      "occupied_state": "HF + H2O",
+      "material": "SiO2",
+      "A_s": 14600000000000.0,
+      "Ea_over_R_K": 7399,
+      "temperature_K": 400,
+      "barrier_eV": 0.6375964880661086,
+      "rate_s": 135204.35378750876
+    },
+    {
+      "reaction": "R7",
+      "occupied_state": "HF + HF(v=1)",
+      "material": "Si3N4",
+      "A_s": 402000000000.0,
+      "Ea_over_R_K": 1756,
+      "temperature_K": 400,
+      "barrier_eV": 0.1513203720832662,
+      "rate_s": 4985093146.618249
+    },
+    {
+      "reaction": "R7",
+      "occupied_state": "HF + HF(v=1)",
+      "material": "SiO2",
+      "A_s": 655000000.0,
+      "Ea_over_R_K": 8061,
+      "temperature_K": 400,
+      "barrier_eV": 0.6946432342615084,
+      "rate_s": 1.1591022622025673
+    },
+    {
+      "reaction": "R6",
+      "occupied_state": "HF + H2O",
+      "material": "Si3N4",
+      "A_s": 11800000000.0,
+      "Ea_over_R_K": 7862,
+      "temperature_K": 450,
+      "barrier_eV": 0.6774947410698399,
+      "rate_s": 304.98245711788206
+    },
+    {
+      "reaction": "R6",
+      "occupied_state": "HF + H2O",
+      "material": "SiO2",
+      "A_s": 14600000000000.0,
+      "Ea_over_R_K": 7399,
+      "temperature_K": 450,
+      "barrier_eV": 0.6375964880661086,
+      "rate_s": 1055811.7099944323
+    },
+    {
+      "reaction": "R7",
+      "occupied_state": "HF + HF(v=1)",
+      "material": "Si3N4",
+      "A_s": 402000000000.0,
+      "Ea_over_R_K": 1756,
+      "temperature_K": 450,
+      "barrier_eV": 0.1513203720832662,
+      "rate_s": 8119185704.085131
+    },
+    {
+      "reaction": "R7",
+      "occupied_state": "HF + HF(v=1)",
+      "material": "SiO2",
+      "A_s": 655000000.0,
+      "Ea_over_R_K": 8061,
+      "temperature_K": 450,
+      "barrier_eV": 0.6946432342615084,
+      "rate_s": 10.878762131386143
+    }
+  ],
+  "interpretation": "Rates per occupied coadsorbate state; not net etch rate or material selectivity. Flux, coverage, desorption and retained-product kinetics are required."
+}

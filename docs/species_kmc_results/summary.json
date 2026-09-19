@@ -103,54 +103,54 @@
   "benchmark": {
     "python": {
       "repetitions": 5,
-      "median_seconds": 0.2592812999500893,
-      "events_per_second": 51220.27793601875,
+      "median_seconds": 0.5380717000225559,
+      "events_per_second": 25591.476252207147,
       "trials": [
         {
-          "seconds": 0.282938499993179,
+          "seconds": 0.45180390001041815,
           "events": 13212
         },
         {
-          "seconds": 0.2592812999500893,
+          "seconds": 0.5674596999888308,
           "events": 13520
         },
         {
-          "seconds": 0.2258931999676861,
+          "seconds": 0.5380717000225559,
           "events": 13568
         },
         {
-          "seconds": 0.2940404000109993,
+          "seconds": 0.5566888999892399,
           "events": 13442
         },
         {
-          "seconds": 0.24568799999542534,
+          "seconds": 0.5035660999710672,
           "events": 13246
         }
       ]
     },
     "cpp": {
       "repetitions": 5,
-      "median_seconds": 0.0018823000136762857,
-      "events_per_second": 6900177.3038381515,
+      "median_seconds": 0.004585899994708598,
+      "events_per_second": 3330184.517001921,
       "trials": [
         {
-          "seconds": 0.0022564000100828707,
+          "seconds": 0.004585899994708598,
           "events": 13732
         },
         {
-          "seconds": 0.0021071999799460173,
+          "seconds": 0.005457300052512437,
           "events": 13290
         },
         {
-          "seconds": 0.0018823000136762857,
+          "seconds": 0.005092800012789667,
           "events": 13584
         },
         {
-          "seconds": 0.0017513000057078898,
+          "seconds": 0.0025676999939605594,
           "events": 13342
         },
         {
-          "seconds": 0.001761099963914603,
+          "seconds": 0.002515600004699081,
           "events": 13386
         }
       ]
@@ -162,7 +162,7 @@
     "plasma_surface/species_kmc.py": "c4a086698150b81f4f8c76b0bb953feaa3f095864d72d94ced55931c4f345b62",
     "plasma_surface/species_native.py": "4f3f13ee5053e65c57acba0765b03b6c0b4fabf669673885887f64d949951b66",
     "cpp/species.cpp": "fd7555db5fe729df8775a0796f17d2ea348418f48eb45863dab64ebdde6a130a",
-    "scripts/run_species_kmc.py": "06aa5a32450841a976d9abfa0c74728663d17bc29fb136d67ac336e099ed0fb1"
+    "scripts/run_species_kmc.py": "293eb2ae252721aa706fb0d536821ff934413032a8a91118305bd4ebe2db8979"
   },
   "assumptions": [
     "Connecting stage-specific source motifs into chains is a reduced topology hypothesis; source amorphous environments are not identical",

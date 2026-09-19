@@ -19,6 +19,10 @@ Each available center can form an HF precursor complex and lose HF by desorption
 
 HF dimers/H2O assistance, adsorbed NH3, NH4F/AFS retention, fluorocarbon films, radicals/ions, lateral hopping and reconstruction remain [intermediate/rate gaps](../../data/reaction_network/intermediate_gaps.csv). There is no new-layer refill: this is one exposure/purge calculation on an initial motif inventory.
 
+## Sensitivity and scientific assessment
+
+The [transient sensitivity and mixture analysis](../SCIENTIFIC_REVIEW.md#2-determine-what-actually-controls-the-current-kinetics) identifies influential rate assumptions and the topological removal ceiling. [Computed diagnostics](kinetic_priorities.json). These refine research priorities without supplying missing barriers.
+
 ## Rates and assumptions
 
 The activation energies come from the [16-path factual extract](../../data/literature/sin_hf_pathways.csv), attributed to [Khumaini et al.](https://doi.org/10.1016/j.apsusc.2024.159414) and its linked public poster. The source concerns amorphous hydrogenated Si-rich nitride, not the ideal crystalline MACE slab. Ea/Ephy reference conventions and vibrational prefactors remain unresolved. Applying Ea in this conditional law is an explicit assumption:
@@ -51,7 +55,9 @@ NH3 comes from terminal ligands; NH-bridge cleavage instead leaves NH2 on neighb
 
 ![Actual kMC snapshots in 2D and perspective](species_kmc.gif)
 
-Each cell is one modeled reactive center on a **schematic motif grid**, not an atomistic crystal. Lowered points denote a Si-removal state, not a physical height in nm. Every frame is an actual kMC snapshot; there are no interpolated frames. [Saved trajectory](lattice_trajectory.npz), [frame manifest](animation_manifest.json).
+Gold fill denotes an adsorbed HF complex; its top-view border keeps the underlying fluorination color. Gray, green, teal and purple denote F0, F1, F2 and F3; dark blue denotes Si released. These colors are shared with the network.
+
+Each cell is one modeled reactive center on a **schematic motif grid**, not an atomistic crystal. Lowered points denote a Si-removal state, not a physical height in nm. The fixed initial inventory has no subsurface exposure or new-site refill: this is why the view has one reactive layer. The seven motif families do not interconvert, and the displayed grid does not define lateral interactions. Every frame is an actual kMC snapshot; there are no interpolated frames. [Saved trajectory](lattice_trajectory.npz), [frame manifest](animation_manifest.json).
 
 ## Reproduction
 
@@ -85,7 +91,7 @@ Five-trial CPU timings below are a local microbenchmark. Random streams differ; 
 
 | Backend | Median seconds / 1,000-motif run | Events per second |
 |---|---:|---:|
-| python | 0.259281 | 51220 |
-| cpp | 0.001882 | 6900177 |
+| python | 0.538072 | 25591 |
+| cpp | 0.004586 | 3330185 |
 
 [Full verification, seeds and source hashes](summary.json) | [Compiler manifest](cpp_build.json).

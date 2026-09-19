@@ -1,0 +1,39 @@
+{
+  "source": "Jung et al., JVSTA 38, 023008 (2020), Table I, R6 and R7",
+  "doi": "10.1116/1.5125569",
+  "url": "https://cpseg.eecs.umich.edu/pub/articles/JVSTA_38_023008_2020.pdf",
+  "accessed": "2026-09-18",
+  "rate_law": "k=A*exp(-Ea_over_R_K/T)",
+  "regime": "Strongly fluorinated cluster models in an NF3/N2/O2/H2 remote-plasma mechanism",
+  "not_transferable_to": "Unfluorinated ideal slabs or the a-SiN:H motif chain without a separate parameter audit",
+  "rows": [
+    {
+      "reaction": "R6",
+      "occupied_state": "HF + H2O",
+      "material": "Si3N4",
+      "A_s": 11800000000.0,
+      "Ea_over_R_K": 7862
+    },
+    {
+      "reaction": "R6",
+      "occupied_state": "HF + H2O",
+      "material": "SiO2",
+      "A_s": 14600000000000.0,
+      "Ea_over_R_K": 7399
+    },
+    {
+      "reaction": "R7",
+      "occupied_state": "HF + HF(v=1)",
+      "material": "Si3N4",
+      "A_s": 402000000000.0,
+      "Ea_over_R_K": 1756
+    },
+    {
+      "reaction": "R7",
+      "occupied_state": "HF + HF(v=1)",
+      "material": "SiO2",
+      "A_s": 655000000.0,
+      "Ea_over_R_K": 8061
+    }
+  ]
+}

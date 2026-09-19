@@ -19,19 +19,7 @@ def ledger(network,result,sites):
     assert np.all(result['counts']>=0)
     assert np.all(result['counts']@S+result['gas_counts']@G==expected)
 
-def render_lattice(network,result,out):
-    palette=['#aab3bd','#8dcfaf','#3ca49e','#8760b0','#283c51'];states=network['states'];n=result['lattice'].shape[1];side=int(np.sqrt(n));x,y=np.meshgrid(np.arange(side),np.arange(side));frames=[]
-    for k in range(len(result['times'])):
-        grid=result['lattice'][k];stage=np.array([states[i]['fluorination_stage'] for i in grid]);removed=np.array([states[i]['Si_removed'] for i in grid]);occupied=np.array([states[i]['HF_complex'] for i in grid]);colors=[palette[4] if gone else palette[min(j,3)] for j,gone in zip(stage,removed)]
-        fig=plt.figure(figsize=(10,4.8),dpi=100);ax=fig.add_subplot(121);view=fig.add_subplot(122,projection='3d')
-        ax.scatter(x.ravel(),y.ravel(),c=colors,s=70,marker='s');ax.scatter(x.ravel()[occupied],y.ravel()[occupied],s=12,c='#f5cb57');ax.set_aspect('equal');ax.set_axis_off();ax.set_title('Named surface motifs; yellow = HF complex')
-        z=np.where(removed,0.,1.);view.scatter(x.ravel(),y.ravel(),z,c=colors,s=28,depthshade=True);view.view_init(28,-58);view.set_zlim(0,2);view.set_axis_off();view.set_title('Perspective of motif occupancy')
-        fig.suptitle(f'HF/SiN:H conditional kMC | 400 K | t = {result["times"][k]:.2f} s',fontsize=13)
-        fig.text(.5,.04,'Gray: F0 | green: F1 | teal: F2 | purple: F3 | dark: Si released\nSchematic reactive-site grid, not an atomistic crystal or physical film thickness',ha='center',fontsize=9)
-        fig.subplots_adjust(left=.02,right=.98,bottom=.18,top=.82);b=io.BytesIO();fig.savefig(b,format='png');b.seek(0);frames.append(Image.open(b).convert('RGB'));plt.close(fig)
-    frames[0].save(out/'species_kmc.gif',save_all=True,append_images=frames[1:],duration=250,loop=0)
-    np.savez_compressed(out/'lattice_trajectory.npz',times=result['times'],states=result['lattice'],counts=result['counts'],gas_counts=result['gas_counts'])
-    (out/'animation_manifest.json').write_text(json.dumps(dict(frame_count=len(frames),interpolated_frames=0,representation='Actual kMC site states on a schematic grid; no atomistic geometry or length scale',seed=741,trajectory_sha256=hashlib.sha256((out/'lattice_trajectory.npz').read_bytes()).hexdigest(),gif_sha256=hashlib.sha256((out/'species_kmc.gif').read_bytes()).hexdigest()),indent=2)+'\n')
+from render_species_lattice import render_lattice
 
 def main():
     out=ROOT/'docs/species_kmc_results';out.mkdir(exist_ok=True);network=build_network();(ROOT/'configs/species_kmc_network.json').write_text(json.dumps(network,indent=2)+'\n')

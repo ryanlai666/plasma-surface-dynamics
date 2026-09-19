@@ -1,0 +1,19 @@
+{
+  "frame_indices": [
+    0,
+    5,
+    11,
+    17,
+    23,
+    29,
+    34,
+    40,
+    46,
+    52,
+    58,
+    64
+  ],
+  "interpolated_frames": 0,
+  "trajectory_sha256": "ff614c72bd122229b4b2c1a0bdcc6ceed7816ef886f6d5bf0ca3f1d7cafa01fa",
+  "gif_sha256": "81112b7a95405bb1882d5005023a44e94e8f6e24a728d46239463fd365e6a5e8"
+}

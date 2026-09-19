@@ -1,0 +1,17 @@
+{
+  "surface": "Si100",
+  "start": 2,
+  "combined_converged": true,
+  "bare_reference_converged": true,
+  "frozen_fragment_interaction_eV": -0.4400774815047068,
+  "substrate_reference_shift_eV": -0.0009445184735170642,
+  "molecular_layer_reference_shift_eV": 0.0014775991451223547,
+  "apparent_adsorption_difference_eV": -0.43954440083310153,
+  "closure_error_eV": 0.0,
+  "lower_clean_slab_geometry_found": false,
+  "screening_threshold_eV": -0.1,
+  "interpretation": "Negative substrate shift below -0.1 eV flags a lower-energy clean-slab geometry than the relaxed reference; that threshold is diagnostic, not a convergence standard.",
+  "trajectory_sha256": "41d1d08d4f41f78c369e13d64bd4414774cc488deadb7112ce3d89a123256a60",
+  "runner": "scripts/audit_adsorption_references.py",
+  "runner_sha256": "fb9b78912c0fb18f6745606aebd00cf56dba5413b918049e09d32eb4119e1ebf"
+}

@@ -1,0 +1,86 @@
+{
+  "accessed": "2026-09-18",
+  "purpose": "Regime-specific evidence and project decisions; not one pooled parameter set",
+  "sources": [
+    {
+      "id": "Khumaini2024",
+      "regime": "a-SiN:H + HF",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0169433224001284",
+      "finding": "Amorphous hydrogenated material, competing Si-N/Si-Si/Si-H cleavage and salt formation.",
+      "project_inference": "Keep chemistry tied to hydrogenated amorphous motifs; include retention before claiming self-limitation.",
+      "access_scope": "Publisher abstract/introduction and public author poster"
+    },
+    {
+      "id": "Jung2020",
+      "regime": "Fluorinated nitride/oxide under NF3/N2/O2/H2 remote plasma",
+      "url": "https://doi.org/10.1116/1.5125569",
+      "finding": "HF coadsorption, water assistance and HF vibrational excitation change the reaction network.",
+      "project_inference": "Treat coadsorbate occupancy and flux explicitly; keep these rates in a separate regime.",
+      "access_scope": "Full author-hosted paper, Table I"
+    },
+    {
+      "id": "ChengHwang2021",
+      "regime": "CH3F / hydrogen-terminated nitride",
+      "url": "https://doi.org/10.1016/j.apsusc.2020.148557",
+      "finding": "Intact CH3F chemisorption alone does not account for a complete ALE mechanism.",
+      "project_inference": "Compare reactive fragments and ion-created sites; do not infer sticking from a neutral approach minimum.",
+      "access_scope": "Author institution abstract"
+    },
+    {
+      "id": "Dwivedi2023",
+      "regime": "F2 / fluorine-terminated Si crystal faces",
+      "url": "https://arxiv.org/abs/2305.09037",
+      "finding": "Coverage and orientation affect bond-breaking; a reactive potential can miss the ordering.",
+      "project_inference": "Benchmark reaction energies and forces at matched termination, not only the ideal facet.",
+      "access_scope": "Author preprint abstract"
+    },
+    {
+      "id": "Vella2022",
+      "regime": "Si / Cl2 / Ar+ ALE",
+      "url": "https://graves.princeton.edu/publications/molecular-dynamics-study-silicon-atomic-layer-etching-chlorine-gas-and-argon-ions",
+      "finding": "Agreement with ion-beam experiments depends on matching ion fluence.",
+      "project_inference": "Keep ion-driven removal separate; validate exposure and fluence as well as energy.",
+      "access_scope": "Author group abstract"
+    },
+    {
+      "id": "Vella2025",
+      "regime": "Si / Cl2 / Ar+ ALE window",
+      "url": "https://doi.org/10.1021/acs.jpcb.5c01378",
+      "finding": "MD and a reduced model link the narrow ALE window to chemical versus physical sputtering.",
+      "project_inference": "An energy-window claim needs both removal and damage channels, not thermal Arrhenius chemistry alone.",
+      "access_scope": "Publisher abstract"
+    },
+    {
+      "id": "Gil2023",
+      "regime": "NF3/H2 remote plasma plus methanol and heating",
+      "url": "https://www.nature.com/articles/s41598-023-38359-4",
+      "finding": "Changing radicals and retained products permits oxide-selective cyclic removal.",
+      "project_inference": "Selectivity is recipe-dependent; do not extrapolate a universal nitride/oxide ranking.",
+      "access_scope": "Full open-access experimental article"
+    },
+    {
+      "id": "ReuterScheffler2006",
+      "regime": "First-principles surface kMC",
+      "url": "https://doi.org/10.1103/PhysRevB.73.045433",
+      "finding": "DFT/TST elementary rates are connected to spatial correlations and measured observables.",
+      "project_inference": "The current independent-motif grid does not supply those correlations; add interactions only with data.",
+      "access_scope": "Primary methodology paper abstract"
+    },
+    {
+      "id": "Meskine2009",
+      "regime": "Sensitivity of surface reaction networks",
+      "url": "https://arxiv.org/abs/0805.4356",
+      "finding": "Rate-control analysis examines how elementary processes affect kinetic outputs.",
+      "project_inference": "Use transient endpoint sensitivity for this pulsed model; do not relabel it a steady-state degree of rate control.",
+      "access_scope": "Author preprint abstract"
+    },
+    {
+      "id": "MACEGuidance",
+      "regime": "Reactive force-field refinement",
+      "url": "https://mace-docs.readthedocs.io/en/latest/guide/finetuning_guidance.html",
+      "finding": "Foundation choice, consistent references and task-level validation matter for fine tuning.",
+      "project_inference": "Use DFT forces and barrier profiles; split held-out data by reaction/surface rather than neighboring path frames.",
+      "access_scope": "Official method documentation"
+    }
+  ]
+}

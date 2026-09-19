@@ -1,0 +1,4 @@
+2
+Lattice="9.8418 0.0 0.0 -2.460449999999999 4.261624409482844 0.0 0.0 -0.0 34.16586254" Properties=species:S:1:pos:R:3:spacegroup_kinds:I:1:tags:I:1:forces:R:3 spacegroup="P 32 2 1" unit_cell=conventional surface=alpha_quartz_001 species=HF site=bridge_Si_O orientation=parallel height_A=2.25 substrate_atoms=36 calculation_kind="Rigid evaluated approach scan; not NEB" energy=-7.546932530748603 pbc="T T F"
+F        3.43065819       1.72877354      25.00517184        0        0       0.18798251       0.53240121      -2.41003332
+H        3.50780852       1.95076594      24.00626596        0        0      -0.18798251      -0.53240121       2.41003332

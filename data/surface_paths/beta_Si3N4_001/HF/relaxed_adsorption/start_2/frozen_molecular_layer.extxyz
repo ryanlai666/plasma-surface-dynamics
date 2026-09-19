@@ -1,0 +1,4 @@
+2
+Lattice="7.6044 0.0 0.0 -3.802199999999998 6.585603580538386 0.0 0.0 -0.0 28.35945" Properties=species:S:1:pos:R:3:spacegroup_kinds:I:1:tags:I:1:forces:R:3 spacegroup="P 63/m" unit_cell=conventional occupancy="_JSON {\"0\": {\"Si\": 1.0}, \"1\": {\"N\": 1.0}, \"2\": {\"N\": 1.0}}" surface=beta_Si3N4_001 species=HF site=bridge_Si_N orientation=parallel height_A=3.25 substrate_atoms=28 calculation_kind="Rigid evaluated approach scan; not NEB" energy=-7.629002909433585 pbc="T T F"
+F        0.50352600       4.78846693      19.48234007        0        0      -0.63108766       0.06040142      -0.48465229
+H        1.25183460       4.71684629      20.05701376        0        0       0.63108766      -0.06040142       0.48465229

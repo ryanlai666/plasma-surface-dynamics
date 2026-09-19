@@ -1,0 +1,4 @@
+2
+Lattice="11.518769465528859 0.0 0.0 0.0 7.679179643685906 0.0 0.0 0.0 30.7875" Properties=species:S:1:pos:R:3:tags:I:1:forces:R:3 surface=Si100 species=HF site=hollow orientation=upright height_A=1.9 substrate_atoms=36 calculation_kind="Rigid evaluated approach scan; not NEB" energy=-7.632823096705294 pbc="T T F"
+F        7.67917964       1.91979491      20.82376572        0       0.00000000       0.00000000      -0.46318549
+H        7.67917964       1.91979491      21.77606357        0       0.00000000       0.00000000       0.46318549

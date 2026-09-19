@@ -1,5 +1,7 @@
 # Research portfolio plan: Si and SiNₓ plasma-surface modeling
 
+Current assessment: [multi-source scientific critique and calculated priorities](SCIENTIFIC_REVIEW.md). The current species model has no spatial interactions or subsurface refill; candidate enumeration does not establish completeness.
+
 ## Objective and scope
 
 Build a defensible multiscale study of how surface modification and ion-driven removal compete in silicon ALE, then investigate which additional states are required for non-stoichiometric silicon nitride. Work on a local CPU and reuse public data. A strong outcome is a reproducible analysis that explains where a model succeeds, where it fails, and which new measurements or calculations would resolve the failure.

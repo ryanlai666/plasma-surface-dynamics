@@ -1,0 +1,4 @@
+2
+Lattice="11.518769465528859 0.0 0.0 3.839589821842953 6.650364651656328 0.0 0.0 0.0 32.62128289467409" Properties=species:S:1:pos:R:3:tags:I:1:forces:R:3 surface=Si111 species=HF site=hollow orientation=parallel height_A=1.9 substrate_atoms=36 calculation_kind="Rigid evaluated approach scan; not NEB" energy=-7.632116823924514 pbc="T T F"
+F        9.58326717       5.96379414      23.15474600        0      -0.15309327      -0.19650130      -0.47849716
+H        9.85312313       6.31016499      23.99818808        0       0.15309327       0.19650130       0.47849716

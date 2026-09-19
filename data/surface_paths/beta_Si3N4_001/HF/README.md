@@ -11,3 +11,7 @@ These are rigid approach scans, not NEB paths or transition states. Each GIF fra
 - Tested 9 site/orientation combinations and 81 geometries.
 - [All energies](mace_site_orientation/all_energies.csv), [selected coordinates](mace_site_orientation/atop_N/upright/images.extxyz), [selected provenance](mace_site_orientation/atop_N/upright/summary.json).
 - [Shared assumptions, equations and sources](../../../../docs/dry_etch_results/MOLECULAR_SURFACES.md).
+
+## Force-relaxed follow-up
+
+[Two starts with the upper substrate mobile, energies, convergence and reference audit](../../../../docs/dry_etch_results/RELAXED_ADSORPTION.md).

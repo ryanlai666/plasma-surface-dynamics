@@ -1,0 +1,4 @@
+2
+Lattice="11.518769465528859 0.0 0.0 3.839589821842953 6.650364651656328 0.0 0.0 0.0 32.62128289467409" Properties=species:S:1:pos:R:3:tags:I:1:forces:R:3 surface=Si111 species=HF site=bridge_Si_Si orientation=upright height_A=1.9 substrate_atoms=36 calculation_kind="Rigid evaluated approach scan; not NEB" energy=-7.629698197210305 pbc="T T F"
+F        7.94126148       4.56076352      21.76690097        0      -0.08446761      -0.05618161      -0.74043273
+H        8.04830843       4.63196324      22.70526149        0       0.08446761       0.05618161       0.74043273

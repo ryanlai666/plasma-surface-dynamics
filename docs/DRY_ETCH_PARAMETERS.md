@@ -1,5 +1,7 @@
 # Dry-etch transition states and parameter mapping
 
+Current assessment: [multi-source scientific critique and calculated priorities](SCIENTIFIC_REVIEW.md). The current species model has no spatial interactions or subsurface refill; candidate enumeration does not establish completeness.
+
 The active atomistic evidence concerns surface reactions. This update **reuses published DFT transition states and rate laws**; it does not claim new periodic DFT or a calibrated Cl2/Ar ALE window. The unrelated NH3 inversion example has been moved to `archive/molecular_diagnostics/` and is excluded from dry-etch evidence.
 
 ## What can constrain which model

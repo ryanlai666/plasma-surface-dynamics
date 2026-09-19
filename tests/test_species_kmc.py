@@ -69,3 +69,50 @@ def test_species_animation_is_backed_by_actual_saved_states():
     with Image.open(p/'species_kmc.gif') as im:assert im.n_frames==41
     for grid,counts in zip(traj['states'],traj['counts']):assert np.array_equal(np.bincount(grid,minlength=45),counts)
     assert hashlib.sha256((p/'lattice_trajectory.npz').read_bytes()).hexdigest()==d['trajectory_sha256']
+
+
+def test_network_plot_includes_all_events_and_matches_animation_palette():
+    p=ROOT/'docs/reaction_network';d=json.loads((p/'render_manifest.json').read_text());n=build_network()
+    assert d['state_ids']==[s['id'] for s in n['states']]
+    assert d['event_ids']==[e['id'] for e in n['events']]
+    assert d['network_sha256']==hashlib.sha256((ROOT/'configs/species_kmc_network.json').read_bytes()).hexdigest()
+    a=json.loads((ROOT/'docs/species_kmc_results/animation_manifest.json').read_text())
+    assert d['state_colors']==a['state_colors']
+    assert a['renderer_sha256']==hashlib.sha256((ROOT/a['renderer']).read_bytes()).hexdigest()
+
+
+def test_released_animation_replays_exactly_with_recorded_seed():
+    p=ROOT/'docs/species_kmc_results';traj=np.load(p/'lattice_trajectory.npz');n=build_network()
+    r=simulate(n,rate_constants(n),400,traj['times'],seed=741,track_lattice=True)
+    for saved,key in [('states','lattice'),('counts','counts'),('gas_counts','gas_counts')]:
+        assert np.array_equal(traj[saved],r[key])
+    atom_ledger(n,r,400)
+    # This is a single inventory: every site stays in its initial motif family.
+    family=np.array([s['family'] for s in n['states']]);assert np.all(family[traj['states']]==family[traj['states'][0]])
+    removed=np.array([s['Si_removed'] for s in n['states']]);assert np.all(np.diff(removed[traj['states']].astype(int),axis=0)>=0)
+
+
+def test_sensitivity_mixture_identity_and_topological_ceiling():
+    p=ROOT/'docs/species_kmc_results/kinetic_priorities.json';d=json.loads(p.read_text());n=build_network()
+    assert d['mixture_linearity_error']<1e-7
+    assert d['runner_sha256']==hashlib.sha256((ROOT/d['runner']).read_bytes()).hexdigest()
+    total=0.;names=[s['id'] for s in n['states']]
+    for name,weight in n['initial_motif_fractions'].items():
+        reached={names.index(name)}
+        while True:
+            new=reached|{e['target'] for e in n['events'] if e['source'] in reached and e['enabled']}
+            if new==reached:break
+            reached=new
+        if any(n['states'][i]['Si_removed'] for i in reached):total+=weight
+    assert total==pytest.approx(.6)
+    for r in d['sensitivities']:
+        expected=np.log(r['higher_rate_yield']/r['lower_rate_yield'])/(2*np.log(r['relative_step']))
+        assert expected==pytest.approx(r['log_yield_sensitivity'],abs=1e-12)
+
+
+def test_separate_literature_channels_preserve_source_units():
+    p=ROOT/'docs/species_kmc_results/literature_channel_rates.json';d=json.loads(p.read_text())
+    assert d['source_sha256']==hashlib.sha256((ROOT/'data/literature/jung2020_coadsorption_rates.json').read_bytes()).hexdigest()
+    for r in d['rows']:
+        assert r['rate_s']==pytest.approx(r['A_s']*np.exp(-r['Ea_over_R_K']/r['temperature_K']))
+        assert r['barrier_eV']==pytest.approx(r['Ea_over_R_K']*8.617333262145e-5)

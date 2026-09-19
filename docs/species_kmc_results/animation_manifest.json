@@ -3,6 +3,16 @@
   "interpolated_frames": 0,
   "representation": "Actual kMC site states on a schematic grid; no atomistic geometry or length scale",
   "seed": 741,
+  "state_colors": {
+    "F0": "#B5BEC9",
+    "F1": "#80CBA4",
+    "F2": "#2BA6A4",
+    "F3": "#A489CF",
+    "HF_complex": "#F4C95D",
+    "Si_released": "#293E57"
+  },
+  "renderer": "scripts/render_species_lattice.py",
+  "renderer_sha256": "5b35a99a02ef27e1c0510569eb7542e16fd30cf3c36dae9230b36b59a7a4a086",
   "trajectory_sha256": "48fdf287e2c1c82c5c075e91a5704c3928388225f9419ad2afc1927fa8078979",
-  "gif_sha256": "cdfd2a427733ad984d500791a922990118ffaa48e3aa81912004ec2769ab025d"
+  "gif_sha256": "418fbcf0bfefc0f810034a191a2580b416e3d5be68170b108ab772c163567370"
 }

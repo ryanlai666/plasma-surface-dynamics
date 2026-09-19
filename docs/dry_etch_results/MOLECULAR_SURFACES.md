@@ -2,6 +2,10 @@
 
 This campaign separates **evaluated approach scans**, **reaction-path searches**, and **validated transition states**. Their energy maxima are not interchangeable. All released animations display actual evaluated geometries; no intermediate animation frame is created by interpolation. IDPP interpolation is used only to initialize a NEB before force optimization.
 
+## Force-relaxed follow-up
+
+The [eight HF adsorption relaxations and reference-energy audit](RELAXED_ADSORPTION.md) extend the rigid screen. Seven force-converged, but substrate reconstruction makes some apparent Si/HF adsorption energies unsuitable for quantitative binding claims.
+
 ## Coverage and geometry
 
 Nine neutral molecules are evaluated on four surfaces: **HF, HCl, F2, Cl2, H2, H2O, CH3F, SiF4 and SiCl4** on ideal **Si(100), Si(111), beta-Si3N4(001), and alpha-quartz(001)**. SiF4 and SiCl4 are included as possible products/readsorption partners; H2 and H2O test competing hydrogen and oxygen chemistry. Molecular reactants do not stand in for their plasma-generated radicals or ions.
