@@ -1,5 +1,7 @@
 # Research portfolio plan: Si and SiNₓ plasma-surface modeling
 
+Update: a separate [multilayer bond-graph prototype and evidence-gated rate queue](multilayer_results/REPORT.md) has now been implemented. Statements below about independent motifs and no subsurface refill refer to the original 45-state model. The new prototype does not resolve the energetics or experimental-validation gaps.
+
 Current assessment: [multi-source scientific critique and calculated priorities](SCIENTIFIC_REVIEW.md). The current species model has no spatial interactions or subsurface refill; candidate enumeration does not establish completeness.
 
 ## Objective and scope

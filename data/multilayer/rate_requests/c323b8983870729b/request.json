@@ -1,0 +1,261 @@
+{
+  "key": "c323b8983870729ba51f84744a05094c6e8db0d2ff51f5ee340582485f48f280",
+  "descriptor": {
+    "reaction": "HF_adsorption",
+    "temperature_K": 450.0,
+    "root_labels": [
+      "b4a4a56e0fe15d5222f6a566c932672d31489656199ca7bf3735bc7e354b77c9"
+    ],
+    "shell_labels": [
+      "31ba914059efde08de6ad17a975390128c0f9873cec9d2627cad8ac8dcb5e204",
+      "55aa2ea4d0dd2985897f0c7bac4978de835dcf29f53e992878852dd2e1fdc124",
+      "55aa2ea4d0dd2985897f0c7bac4978de835dcf29f53e992878852dd2e1fdc124",
+      "b4a4a56e0fe15d5222f6a566c932672d31489656199ca7bf3735bc7e354b77c9"
+    ],
+    "bond_geometry": [
+      [
+        "31ba914059efde08de6ad17a975390128c0f9873cec9d2627cad8ac8dcb5e204",
+        "55aa2ea4d0dd2985897f0c7bac4978de835dcf29f53e992878852dd2e1fdc124",
+        1.736
+      ],
+      [
+        "31ba914059efde08de6ad17a975390128c0f9873cec9d2627cad8ac8dcb5e204",
+        "55aa2ea4d0dd2985897f0c7bac4978de835dcf29f53e992878852dd2e1fdc124",
+        1.736
+      ],
+      [
+        "31ba914059efde08de6ad17a975390128c0f9873cec9d2627cad8ac8dcb5e204",
+        "b4a4a56e0fe15d5222f6a566c932672d31489656199ca7bf3735bc7e354b77c9",
+        1.736
+      ]
+    ],
+    "description": "Two-shell labelled graph plus substrate bond lengths; not a unique relaxed adsorbate geometry or electronic state"
+  },
+  "atom_ids": [
+    58,
+    63,
+    72,
+    225
+  ],
+  "central_site": 72,
+  "partner": null,
+  "central_termination": {
+    "F": 3
+  },
+  "central_coordination": 1,
+  "partner_termination": null,
+  "event_kind": "HF_adsorption",
+  "reference_pathway": null,
+  "demonstration_barrier_eV": null,
+  "rate_status": "missing_qualified_rate",
+  "observed_events": 84,
+  "candidate_snapshots": 110,
+  "requirements": [
+    "Build and relax matching terminated IS and FS, with HF precursor where appropriate",
+    "Verify charge/spin, boundary caps, reference energy, coverage and neighbor connectivity",
+    "Obtain connected TS, one imaginary mode, prefactor/free-energy and uncertainty",
+    "For adsorption: measured/calculated sticking, gas flux and site-area mapping instead of an arbitrary barrier"
+  ],
+  "example": {
+    "nodes": [
+      {
+        "id": 58,
+        "element": "Si",
+        "position_A": [
+          4.018796125200002,
+          3.9113216785533576,
+          17.6252
+        ],
+        "column": 8,
+        "layer": 4,
+        "active": true,
+        "fixed": false,
+        "termination": []
+      },
+      {
+        "id": 63,
+        "element": "N",
+        "position_A": [
+          4.825904328000003,
+          4.410773854101389,
+          19.07835
+        ],
+        "column": 14,
+        "layer": 4,
+        "active": true,
+        "fixed": false,
+        "termination": []
+      },
+      {
+        "id": 72,
+        "element": "Si",
+        "position_A": [
+          4.018796125200002,
+          3.9113216785533576,
+          20.5315
+        ],
+        "column": 8,
+        "layer": 5,
+        "active": true,
+        "fixed": false,
+        "termination": [
+          "F",
+          "F",
+          "F"
+        ]
+      },
+      {
+        "id": 225,
+        "element": "Si",
+        "position_A": [
+          6.226494126600003,
+          5.436040376330348,
+          19.07835
+        ],
+        "column": 15,
+        "layer": 4,
+        "active": true,
+        "fixed": false,
+        "termination": []
+      }
+    ],
+    "bonds": [
+      [
+        58,
+        63
+      ],
+      [
+        63,
+        72
+      ],
+      [
+        63,
+        225
+      ]
+    ],
+    "precursor_sites": [],
+    "event": {
+      "kind": "HF_adsorption",
+      "site": 72,
+      "partner": null,
+      "rate_s": 5.0,
+      "barrier_eV": null,
+      "reference_pathway": null,
+      "rate_status": "assumed_demonstration_rate",
+      "depth_A": 0.0,
+      "exposed": true,
+      "time_s": 0.3522397301223785,
+      "newly_exposed": []
+    },
+    "cell_A": [
+      [
+        15.2088,
+        0.0,
+        0.0
+      ],
+      [
+        -7.604399999999996,
+        13.171207161076772,
+        0.0
+      ],
+      [
+        0.0,
+        -0.0,
+        27.98465
+      ]
+    ],
+    "pbc": [
+      true,
+      true,
+      false
+    ],
+    "FS_connectivity": {
+      "nodes": [
+        {
+          "id": 58,
+          "element": "Si",
+          "position_A": [
+            4.018796125200002,
+            3.9113216785533576,
+            17.6252
+          ],
+          "column": 8,
+          "layer": 4,
+          "active": true,
+          "fixed": false,
+          "termination": []
+        },
+        {
+          "id": 63,
+          "element": "N",
+          "position_A": [
+            4.825904328000003,
+            4.410773854101389,
+            19.07835
+          ],
+          "column": 14,
+          "layer": 4,
+          "active": true,
+          "fixed": false,
+          "termination": []
+        },
+        {
+          "id": 72,
+          "element": "Si",
+          "position_A": [
+            4.018796125200002,
+            3.9113216785533576,
+            20.5315
+          ],
+          "column": 8,
+          "layer": 5,
+          "active": true,
+          "fixed": false,
+          "termination": [
+            "F",
+            "F",
+            "F"
+          ]
+        },
+        {
+          "id": 225,
+          "element": "Si",
+          "position_A": [
+            6.226494126600003,
+            5.436040376330348,
+            19.07835
+          ],
+          "column": 15,
+          "layer": 4,
+          "active": true,
+          "fixed": false,
+          "termination": []
+        }
+      ],
+      "bonds": [
+        [
+          58,
+          63
+        ],
+        [
+          63,
+          72
+        ],
+        [
+          63,
+          225
+        ]
+      ],
+      "precursor_sites": [
+        72
+      ]
+    },
+    "gas_delta": {
+      "HF": -1
+    },
+    "gas_formulas": {}
+  },
+  "structure_status": "Connectivity request only; ligand/HF positions and relaxed electronic structure are not supplied",
+  "priority_rank": 12,
+  "priority_basis": "Missing final-cleavage barriers first, then observed count + sampled candidate presence; priority heuristic, not degree of rate control"
+}

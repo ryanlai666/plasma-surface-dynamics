@@ -17,5 +17,11 @@ def main():
         lines.append(f'| Beyond rigid scans | **{n}/{len(rows)} HF/substrate relaxations force-converged**, two starts on each of four surfaces; see reference convergence below. |')
         body=f"**{n}/{len(rows)} adsorbate/substrate relaxations meet 0.04 eV/angstrom.** Lower-half atoms remain fixed. Force convergence does not establish a stable minimum or transition state. [Full table, energy traces and actual relaxation GIFs](docs/dry_etch_results/RELAXED_ADSORPTION.md).\n\n![Force-driven adsorption relaxation](docs/dry_etch_results/relaxed_adsorption.png)"
         s=block(s,'RELAXATION STATUS',body)
+    multi=ROOT/'docs/multilayer_results/summary.json'
+    if multi.exists():
+        m=json.loads(multi.read_text());q=json.loads((ROOT/'data/multilayer/rate_requests/index.json').read_text())['requests']
+        lines.append(f"| Multilayer prototype | {m['substrate_atoms']} Si/N atoms, six depth bands; explicit bonds and H/F/Cl termination. Unvalidated demonstration rates; strict mode blocks missing data. |")
+        if '<!-- BEGIN MULTILAYER STATUS -->' in s:
+            s=block(s,'MULTILAYER STATUS',f"The 9 s demonstration recorded **{m['baseline_events']} events**, **{m['removed'].get('Si',0)} Si + {m['removed'].get('N',0)} N removals**, and **{m['newly_exposed_atoms']} newly exposed atoms**. Twelve access-depth/seed controls accompany it. The rate audit identifies **{len(q)} distinct missing-rate environments**, with separate IS/FS connectivity requests for priority cases.")
     s=block(s,'CURRENT STATUS','\n'.join(lines));p.write_text(s,encoding='utf-8')
 if __name__=='__main__':main()

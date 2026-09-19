@@ -1,0 +1,476 @@
+{
+  "key": "15ea0df23c795c4578235d291cb5ed00e951c84345142baab9baf4272e305f2e",
+  "descriptor": {
+    "reaction": "SiN_cleavage",
+    "temperature_K": 450.0,
+    "root_labels": [
+      "11263a1f218b922a9cc93918de79fc928a84de5c3b8eb36cfbeb98b632d43d8e",
+      "5c794d99eb63b2855a0c8637c6858b26ea40b7a3053df529d724424d61bec2af"
+    ],
+    "shell_labels": [
+      "0d5d8b43ebefc7f914b3cc2cea72d0dcd5b6916497cdfb869ddab14590d9c559",
+      "0d5d8b43ebefc7f914b3cc2cea72d0dcd5b6916497cdfb869ddab14590d9c559",
+      "11263a1f218b922a9cc93918de79fc928a84de5c3b8eb36cfbeb98b632d43d8e",
+      "5c794d99eb63b2855a0c8637c6858b26ea40b7a3053df529d724424d61bec2af",
+      "73dcb5153b7aea8fd74eceefdf3f7eec54f9cb44b95c6431352f59e5bb3317eb",
+      "73dcb5153b7aea8fd74eceefdf3f7eec54f9cb44b95c6431352f59e5bb3317eb",
+      "73dcb5153b7aea8fd74eceefdf3f7eec54f9cb44b95c6431352f59e5bb3317eb",
+      "afc19a91dea34c271a6f0d4ea53485d2651a9644f94cb006d6acbb3f768a1053",
+      "c27837492a3b2cffbbe4c2bddede887bf9acccebc615a22cb112211ae1fd2630"
+    ],
+    "bond_geometry": [
+      [
+        "0d5d8b43ebefc7f914b3cc2cea72d0dcd5b6916497cdfb869ddab14590d9c559",
+        "c27837492a3b2cffbbe4c2bddede887bf9acccebc615a22cb112211ae1fd2630",
+        1.73
+      ],
+      [
+        "0d5d8b43ebefc7f914b3cc2cea72d0dcd5b6916497cdfb869ddab14590d9c559",
+        "c27837492a3b2cffbbe4c2bddede887bf9acccebc615a22cb112211ae1fd2630",
+        1.736
+      ],
+      [
+        "11263a1f218b922a9cc93918de79fc928a84de5c3b8eb36cfbeb98b632d43d8e",
+        "5c794d99eb63b2855a0c8637c6858b26ea40b7a3053df529d724424d61bec2af",
+        1.736
+      ],
+      [
+        "11263a1f218b922a9cc93918de79fc928a84de5c3b8eb36cfbeb98b632d43d8e",
+        "afc19a91dea34c271a6f0d4ea53485d2651a9644f94cb006d6acbb3f768a1053",
+        1.736
+      ],
+      [
+        "11263a1f218b922a9cc93918de79fc928a84de5c3b8eb36cfbeb98b632d43d8e",
+        "c27837492a3b2cffbbe4c2bddede887bf9acccebc615a22cb112211ae1fd2630",
+        1.736
+      ],
+      [
+        "73dcb5153b7aea8fd74eceefdf3f7eec54f9cb44b95c6431352f59e5bb3317eb",
+        "afc19a91dea34c271a6f0d4ea53485d2651a9644f94cb006d6acbb3f768a1053",
+        1.73
+      ],
+      [
+        "73dcb5153b7aea8fd74eceefdf3f7eec54f9cb44b95c6431352f59e5bb3317eb",
+        "afc19a91dea34c271a6f0d4ea53485d2651a9644f94cb006d6acbb3f768a1053",
+        1.736
+      ],
+      [
+        "73dcb5153b7aea8fd74eceefdf3f7eec54f9cb44b95c6431352f59e5bb3317eb",
+        "afc19a91dea34c271a6f0d4ea53485d2651a9644f94cb006d6acbb3f768a1053",
+        1.736
+      ]
+    ],
+    "description": "Two-shell labelled graph plus substrate bond lengths; not a unique relaxed adsorbate geometry or electronic state"
+  },
+  "atom_ids": [
+    67,
+    145,
+    147,
+    148,
+    153,
+    156,
+    159,
+    162,
+    166
+  ],
+  "central_site": 159,
+  "partner": 162,
+  "central_termination": {
+    "F": 3
+  },
+  "central_coordination": 1,
+  "partner_termination": {},
+  "event_kind": "SiN_cleavage",
+  "reference_pathway": null,
+  "demonstration_barrier_eV": null,
+  "rate_status": "missing_qualified_rate",
+  "observed_events": 0,
+  "candidate_snapshots": 1,
+  "requirements": [
+    "Build and relax matching terminated IS and FS, with HF precursor where appropriate",
+    "Verify charge/spin, boundary caps, reference energy, coverage and neighbor connectivity",
+    "Obtain connected TS, one imaginary mode, prefactor/free-energy and uncertainty",
+    "For adsorption: measured/calculated sticking, gas flux and site-area mapping instead of an arbitrary barrier"
+  ],
+  "example": {
+    "nodes": [
+      {
+        "id": 67,
+        "element": "N",
+        "position_A": [
+          5.209090043999998,
+          0.20086090920642097,
+          19.07835
+        ],
+        "column": 2,
+        "layer": 4,
+        "active": true,
+        "fixed": false,
+        "termination": []
+      },
+      {
+        "id": 145,
+        "element": "Si",
+        "position_A": [
+          -2.2076980013999963,
+          11.646488463299782,
+          19.07835
+        ],
+        "column": 31,
+        "layer": 4,
+        "active": true,
+        "fixed": false,
+        "termination": []
+      },
+      {
+        "id": 147,
+        "element": "N",
+        "position_A": [
+          1.0237043280000049,
+          10.996377434639776,
+          19.07835
+        ],
+        "column": 32,
+        "layer": 4,
+        "active": true,
+        "fixed": false,
+        "termination": []
+      },
+      {
+        "id": 148,
+        "element": "N",
+        "position_A": [
+          -1.371605627999997,
+          11.197238343846196,
+          17.6252
+        ],
+        "column": 32,
+        "layer": 4,
+        "active": true,
+        "fixed": false,
+        "termination": []
+      },
+      {
+        "id": 153,
+        "element": "N",
+        "position_A": [
+          -3.8021619779999964,
+          10.976027919575913,
+          19.07835
+        ],
+        "column": 31,
+        "layer": 4,
+        "active": true,
+        "fixed": false,
+        "termination": []
+      },
+      {
+        "id": 156,
+        "element": "Si",
+        "position_A": [
+          0.2165961252000046,
+          10.496925259091743,
+          20.5315
+        ],
+        "column": 26,
+        "layer": 5,
+        "active": true,
+        "fixed": false,
+        "termination": [
+          "F"
+        ]
+      },
+      {
+        "id": 159,
+        "element": "Si",
+        "position_A": [
+          -2.2076980013999963,
+          11.646488463299782,
+          21.98465
+        ],
+        "column": 31,
+        "layer": 5,
+        "active": true,
+        "fixed": false,
+        "termination": [
+          "F",
+          "F",
+          "F"
+        ]
+      },
+      {
+        "id": 162,
+        "element": "N",
+        "position_A": [
+          -1.371605627999997,
+          11.197238343846196,
+          20.5315
+        ],
+        "column": 32,
+        "layer": 5,
+        "active": true,
+        "fixed": false,
+        "termination": []
+      },
+      {
+        "id": 166,
+        "element": "N",
+        "position_A": [
+          -3.802199999647371e-05,
+          8.780782822039246,
+          20.5315
+        ],
+        "column": 19,
+        "layer": 5,
+        "active": true,
+        "fixed": false,
+        "termination": []
+      }
+    ],
+    "bonds": [
+      [
+        67,
+        145
+      ],
+      [
+        145,
+        148
+      ],
+      [
+        145,
+        153
+      ],
+      [
+        145,
+        162
+      ],
+      [
+        147,
+        156
+      ],
+      [
+        156,
+        162
+      ],
+      [
+        156,
+        166
+      ],
+      [
+        159,
+        162
+      ]
+    ],
+    "precursor_sites": [
+      159
+    ],
+    "event": {
+      "kind": "SiN_cleavage",
+      "site": 159,
+      "partner": 162,
+      "rate_s": 0.0,
+      "barrier_eV": null,
+      "reference_pathway": null,
+      "rate_status": "disabled_missing_final_cleavage_barrier",
+      "depth_A": 0.0,
+      "exposed": true
+    },
+    "cell_A": [
+      [
+        15.2088,
+        0.0,
+        0.0
+      ],
+      [
+        -7.604399999999996,
+        13.171207161076772,
+        0.0
+      ],
+      [
+        0.0,
+        -0.0,
+        27.98465
+      ]
+    ],
+    "pbc": [
+      true,
+      true,
+      false
+    ],
+    "FS_connectivity": {
+      "nodes": [
+        {
+          "id": 67,
+          "element": "N",
+          "position_A": [
+            5.209090043999998,
+            0.20086090920642097,
+            19.07835
+          ],
+          "column": 2,
+          "layer": 4,
+          "active": true,
+          "fixed": false,
+          "termination": []
+        },
+        {
+          "id": 145,
+          "element": "Si",
+          "position_A": [
+            -2.2076980013999963,
+            11.646488463299782,
+            19.07835
+          ],
+          "column": 31,
+          "layer": 4,
+          "active": true,
+          "fixed": false,
+          "termination": []
+        },
+        {
+          "id": 147,
+          "element": "N",
+          "position_A": [
+            1.0237043280000049,
+            10.996377434639776,
+            19.07835
+          ],
+          "column": 32,
+          "layer": 4,
+          "active": true,
+          "fixed": false,
+          "termination": []
+        },
+        {
+          "id": 148,
+          "element": "N",
+          "position_A": [
+            -1.371605627999997,
+            11.197238343846196,
+            17.6252
+          ],
+          "column": 32,
+          "layer": 4,
+          "active": true,
+          "fixed": false,
+          "termination": []
+        },
+        {
+          "id": 153,
+          "element": "N",
+          "position_A": [
+            -3.8021619779999964,
+            10.976027919575913,
+            19.07835
+          ],
+          "column": 31,
+          "layer": 4,
+          "active": true,
+          "fixed": false,
+          "termination": []
+        },
+        {
+          "id": 156,
+          "element": "Si",
+          "position_A": [
+            0.2165961252000046,
+            10.496925259091743,
+            20.5315
+          ],
+          "column": 26,
+          "layer": 5,
+          "active": true,
+          "fixed": false,
+          "termination": [
+            "F"
+          ]
+        },
+        {
+          "id": 159,
+          "element": "Si",
+          "position_A": [
+            -2.2076980013999963,
+            11.646488463299782,
+            21.98465
+          ],
+          "column": 31,
+          "layer": 5,
+          "active": true,
+          "fixed": false,
+          "termination": [
+            "F",
+            "F",
+            "F",
+            "F"
+          ]
+        },
+        {
+          "id": 162,
+          "element": "N",
+          "position_A": [
+            -1.371605627999997,
+            11.197238343846196,
+            20.5315
+          ],
+          "column": 32,
+          "layer": 5,
+          "active": true,
+          "fixed": false,
+          "termination": [
+            "H"
+          ]
+        },
+        {
+          "id": 166,
+          "element": "N",
+          "position_A": [
+            -3.802199999647371e-05,
+            8.780782822039246,
+            20.5315
+          ],
+          "column": 19,
+          "layer": 5,
+          "active": true,
+          "fixed": false,
+          "termination": []
+        }
+      ],
+      "bonds": [
+        [
+          67,
+          145
+        ],
+        [
+          145,
+          148
+        ],
+        [
+          145,
+          153
+        ],
+        [
+          145,
+          162
+        ],
+        [
+          147,
+          156
+        ],
+        [
+          156,
+          162
+        ],
+        [
+          156,
+          166
+        ]
+      ],
+      "precursor_sites": []
+    },
+    "gas_delta": {},
+    "gas_formulas": {}
+  },
+  "structure_status": "Connectivity request only; ligand/HF positions and relaxed electronic structure are not supplied",
+  "priority_rank": 5,
+  "priority_basis": "Missing final-cleavage barriers first, then observed count + sampled candidate presence; priority heuristic, not degree of rate control"
+}

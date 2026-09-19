@@ -1,0 +1,515 @@
+{
+  "key": "015af80a808a927ea4da3cae0f059571ed9e1f7775b5efb729c43cb2721d1aac",
+  "descriptor": {
+    "reaction": "SiN_cleavage",
+    "temperature_K": 450.0,
+    "root_labels": [
+      "0dc270204cfc484e352a355e223e987f93801bbe22dfd64a639e8f4c25c6d61e",
+      "bacadb962428fd5e84ecbd07f3e24f68af100ac9bb11d44d9a601c031badd524"
+    ],
+    "shell_labels": [
+      "0dc270204cfc484e352a355e223e987f93801bbe22dfd64a639e8f4c25c6d61e",
+      "4fc3cffbf0f834e608c59e4f4ea7f65d3251f3c6d519740292710b6c5549d9e8",
+      "4fc3cffbf0f834e608c59e4f4ea7f65d3251f3c6d519740292710b6c5549d9e8",
+      "844498f1e99e0d98bf160741f2e1560508df07fbdc3a77dc2e82cb843573ca0a",
+      "844498f1e99e0d98bf160741f2e1560508df07fbdc3a77dc2e82cb843573ca0a",
+      "844498f1e99e0d98bf160741f2e1560508df07fbdc3a77dc2e82cb843573ca0a",
+      "844498f1e99e0d98bf160741f2e1560508df07fbdc3a77dc2e82cb843573ca0a",
+      "844498f1e99e0d98bf160741f2e1560508df07fbdc3a77dc2e82cb843573ca0a",
+      "844498f1e99e0d98bf160741f2e1560508df07fbdc3a77dc2e82cb843573ca0a",
+      "bacadb962428fd5e84ecbd07f3e24f68af100ac9bb11d44d9a601c031badd524"
+    ],
+    "bond_geometry": [
+      [
+        "0dc270204cfc484e352a355e223e987f93801bbe22dfd64a639e8f4c25c6d61e",
+        "4fc3cffbf0f834e608c59e4f4ea7f65d3251f3c6d519740292710b6c5549d9e8",
+        1.736
+      ],
+      [
+        "0dc270204cfc484e352a355e223e987f93801bbe22dfd64a639e8f4c25c6d61e",
+        "4fc3cffbf0f834e608c59e4f4ea7f65d3251f3c6d519740292710b6c5549d9e8",
+        1.736
+      ],
+      [
+        "0dc270204cfc484e352a355e223e987f93801bbe22dfd64a639e8f4c25c6d61e",
+        "bacadb962428fd5e84ecbd07f3e24f68af100ac9bb11d44d9a601c031badd524",
+        1.736
+      ],
+      [
+        "4fc3cffbf0f834e608c59e4f4ea7f65d3251f3c6d519740292710b6c5549d9e8",
+        "844498f1e99e0d98bf160741f2e1560508df07fbdc3a77dc2e82cb843573ca0a",
+        1.73
+      ],
+      [
+        "4fc3cffbf0f834e608c59e4f4ea7f65d3251f3c6d519740292710b6c5549d9e8",
+        "844498f1e99e0d98bf160741f2e1560508df07fbdc3a77dc2e82cb843573ca0a",
+        1.73
+      ],
+      [
+        "4fc3cffbf0f834e608c59e4f4ea7f65d3251f3c6d519740292710b6c5549d9e8",
+        "844498f1e99e0d98bf160741f2e1560508df07fbdc3a77dc2e82cb843573ca0a",
+        1.736
+      ],
+      [
+        "4fc3cffbf0f834e608c59e4f4ea7f65d3251f3c6d519740292710b6c5549d9e8",
+        "844498f1e99e0d98bf160741f2e1560508df07fbdc3a77dc2e82cb843573ca0a",
+        1.736
+      ],
+      [
+        "4fc3cffbf0f834e608c59e4f4ea7f65d3251f3c6d519740292710b6c5549d9e8",
+        "844498f1e99e0d98bf160741f2e1560508df07fbdc3a77dc2e82cb843573ca0a",
+        1.736
+      ],
+      [
+        "4fc3cffbf0f834e608c59e4f4ea7f65d3251f3c6d519740292710b6c5549d9e8",
+        "844498f1e99e0d98bf160741f2e1560508df07fbdc3a77dc2e82cb843573ca0a",
+        1.736
+      ]
+    ],
+    "description": "Two-shell labelled graph plus substrate bond lengths; not a unique relaxed adsorbate geometry or electronic state"
+  },
+  "atom_ids": [
+    52,
+    121,
+    129,
+    130,
+    132,
+    135,
+    138,
+    139,
+    144,
+    146
+  ],
+  "central_site": 144,
+  "partner": 135,
+  "central_termination": {
+    "F": 3
+  },
+  "central_coordination": 1,
+  "partner_termination": {},
+  "event_kind": "SiN_cleavage",
+  "reference_pathway": null,
+  "demonstration_barrier_eV": null,
+  "rate_status": "missing_qualified_rate",
+  "observed_events": 0,
+  "candidate_snapshots": 1,
+  "requirements": [
+    "Build and relax matching terminated IS and FS, with HF precursor where appropriate",
+    "Verify charge/spin, boundary caps, reference energy, coverage and neighbor connectivity",
+    "Obtain connected TS, one imaginary mode, prefactor/free-energy and uncertainty",
+    "For adsorption: measured/calculated sticking, gas flux and site-area mapping instead of an arbitrary barrier"
+  ],
+  "example": {
+    "nodes": [
+      {
+        "id": 52,
+        "element": "N",
+        "position_A": [
+          -1.406890043999998,
+          6.384742671331965,
+          14.7189
+        ],
+        "column": 12,
+        "layer": 3,
+        "active": true,
+        "fixed": false,
+        "termination": []
+      },
+      {
+        "id": 121,
+        "element": "N",
+        "position_A": [
+          -2.4305943719999967,
+          8.559572397768962,
+          13.265749999999999
+        ],
+        "column": 18,
+        "layer": 2,
+        "active": true,
+        "fixed": false,
+        "termination": []
+      },
+      {
+        "id": 129,
+        "element": "Si",
+        "position_A": [
+          -4.018796125199997,
+          9.259885482523416,
+          16.17205
+        ],
+        "column": 24,
+        "layer": 3,
+        "active": true,
+        "fixed": false,
+        "termination": []
+      },
+      {
+        "id": 130,
+        "element": "Si",
+        "position_A": [
+          -1.594501998599998,
+          8.110322278315376,
+          14.7189
+        ],
+        "column": 19,
+        "layer": 3,
+        "active": true,
+        "fixed": false,
+        "termination": []
+      },
+      {
+        "id": 132,
+        "element": "N",
+        "position_A": [
+          -4.8259043279999965,
+          8.760433306975383,
+          14.7189
+        ],
+        "column": 18,
+        "layer": 3,
+        "active": true,
+        "fixed": false,
+        "termination": []
+      },
+      {
+        "id": 135,
+        "element": "N",
+        "position_A": [
+          -2.4305943719999967,
+          8.559572397768962,
+          16.17205
+        ],
+        "column": 18,
+        "layer": 3,
+        "active": true,
+        "fixed": false,
+        "termination": []
+      },
+      {
+        "id": 138,
+        "element": "N",
+        "position_A": [
+          -3.802199999647371e-05,
+          8.780782822039246,
+          14.7189
+        ],
+        "column": 19,
+        "layer": 3,
+        "active": true,
+        "fixed": false,
+        "termination": []
+      },
+      {
+        "id": 139,
+        "element": "N",
+        "position_A": [
+          -3.8021619779999964,
+          10.976027919575913,
+          16.17205
+        ],
+        "column": 31,
+        "layer": 3,
+        "active": true,
+        "fixed": false,
+        "termination": []
+      },
+      {
+        "id": 144,
+        "element": "Si",
+        "position_A": [
+          -1.594501998599998,
+          8.110322278315376,
+          17.6252
+        ],
+        "column": 19,
+        "layer": 4,
+        "active": true,
+        "fixed": false,
+        "termination": [
+          "F",
+          "F",
+          "F"
+        ]
+      },
+      {
+        "id": 146,
+        "element": "N",
+        "position_A": [
+          -4.8259043279999965,
+          8.760433306975383,
+          17.6252
+        ],
+        "column": 18,
+        "layer": 4,
+        "active": true,
+        "fixed": false,
+        "termination": []
+      }
+    ],
+    "bonds": [
+      [
+        52,
+        130
+      ],
+      [
+        121,
+        130
+      ],
+      [
+        129,
+        132
+      ],
+      [
+        129,
+        135
+      ],
+      [
+        129,
+        139
+      ],
+      [
+        129,
+        146
+      ],
+      [
+        130,
+        135
+      ],
+      [
+        130,
+        138
+      ],
+      [
+        135,
+        144
+      ]
+    ],
+    "precursor_sites": [
+      144
+    ],
+    "event": {
+      "kind": "SiN_cleavage",
+      "site": 144,
+      "partner": 135,
+      "rate_s": 0.0,
+      "barrier_eV": null,
+      "reference_pathway": null,
+      "rate_status": "disabled_missing_final_cleavage_barrier",
+      "depth_A": 0.0,
+      "exposed": true
+    },
+    "cell_A": [
+      [
+        15.2088,
+        0.0,
+        0.0
+      ],
+      [
+        -7.604399999999996,
+        13.171207161076772,
+        0.0
+      ],
+      [
+        0.0,
+        -0.0,
+        27.98465
+      ]
+    ],
+    "pbc": [
+      true,
+      true,
+      false
+    ],
+    "FS_connectivity": {
+      "nodes": [
+        {
+          "id": 52,
+          "element": "N",
+          "position_A": [
+            -1.406890043999998,
+            6.384742671331965,
+            14.7189
+          ],
+          "column": 12,
+          "layer": 3,
+          "active": true,
+          "fixed": false,
+          "termination": []
+        },
+        {
+          "id": 121,
+          "element": "N",
+          "position_A": [
+            -2.4305943719999967,
+            8.559572397768962,
+            13.265749999999999
+          ],
+          "column": 18,
+          "layer": 2,
+          "active": true,
+          "fixed": false,
+          "termination": []
+        },
+        {
+          "id": 129,
+          "element": "Si",
+          "position_A": [
+            -4.018796125199997,
+            9.259885482523416,
+            16.17205
+          ],
+          "column": 24,
+          "layer": 3,
+          "active": true,
+          "fixed": false,
+          "termination": []
+        },
+        {
+          "id": 130,
+          "element": "Si",
+          "position_A": [
+            -1.594501998599998,
+            8.110322278315376,
+            14.7189
+          ],
+          "column": 19,
+          "layer": 3,
+          "active": true,
+          "fixed": false,
+          "termination": []
+        },
+        {
+          "id": 132,
+          "element": "N",
+          "position_A": [
+            -4.8259043279999965,
+            8.760433306975383,
+            14.7189
+          ],
+          "column": 18,
+          "layer": 3,
+          "active": true,
+          "fixed": false,
+          "termination": []
+        },
+        {
+          "id": 135,
+          "element": "N",
+          "position_A": [
+            -2.4305943719999967,
+            8.559572397768962,
+            16.17205
+          ],
+          "column": 18,
+          "layer": 3,
+          "active": true,
+          "fixed": false,
+          "termination": [
+            "H"
+          ]
+        },
+        {
+          "id": 138,
+          "element": "N",
+          "position_A": [
+            -3.802199999647371e-05,
+            8.780782822039246,
+            14.7189
+          ],
+          "column": 19,
+          "layer": 3,
+          "active": true,
+          "fixed": false,
+          "termination": []
+        },
+        {
+          "id": 139,
+          "element": "N",
+          "position_A": [
+            -3.8021619779999964,
+            10.976027919575913,
+            16.17205
+          ],
+          "column": 31,
+          "layer": 3,
+          "active": true,
+          "fixed": false,
+          "termination": []
+        },
+        {
+          "id": 144,
+          "element": "Si",
+          "position_A": [
+            -1.594501998599998,
+            8.110322278315376,
+            17.6252
+          ],
+          "column": 19,
+          "layer": 4,
+          "active": true,
+          "fixed": false,
+          "termination": [
+            "F",
+            "F",
+            "F",
+            "F"
+          ]
+        },
+        {
+          "id": 146,
+          "element": "N",
+          "position_A": [
+            -4.8259043279999965,
+            8.760433306975383,
+            17.6252
+          ],
+          "column": 18,
+          "layer": 4,
+          "active": true,
+          "fixed": false,
+          "termination": []
+        }
+      ],
+      "bonds": [
+        [
+          52,
+          130
+        ],
+        [
+          121,
+          130
+        ],
+        [
+          129,
+          132
+        ],
+        [
+          129,
+          135
+        ],
+        [
+          129,
+          139
+        ],
+        [
+          129,
+          146
+        ],
+        [
+          130,
+          135
+        ],
+        [
+          130,
+          138
+        ]
+      ],
+      "precursor_sites": []
+    },
+    "gas_delta": {},
+    "gas_formulas": {}
+  },
+  "structure_status": "Connectivity request only; ligand/HF positions and relaxed electronic structure are not supplied",
+  "priority_rank": 9,
+  "priority_basis": "Missing final-cleavage barriers first, then observed count + sampled candidate presence; priority heuristic, not degree of rate control"
+}

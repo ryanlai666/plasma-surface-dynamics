@@ -1,5 +1,7 @@
 # HiPRGen pilot and intermediate coverage
 
+Update: a separate [multilayer bond-graph prototype and evidence-gated rate queue](multilayer_results/REPORT.md) has now been implemented. Statements below about independent motifs and no subsurface refill refer to the original 45-state model. The new prototype does not resolve the energetics or experimental-validation gaps.
+
 Current assessment: [multi-source scientific critique and calculated priorities](SCIENTIFIC_REVIEW.md). The current species model has no spatial interactions or subsurface refill; candidate enumeration does not establish completeness.
 
 A **limited HiPRGen function-level pilot has now been run**. It executes the upstream composition-bucketing and decision-tree functions on a supplied library of capped Si-N/Si-O molecular motifs. It is not the full MPI/species-filtering/thermochemical pipeline and does not verify barriers, stable surface structures or mechanism completeness.

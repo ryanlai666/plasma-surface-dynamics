@@ -1,0 +1,394 @@
+{
+  "key": "caad422981c7be5aed436856e4efdb87248add550282edfe3c56170e47e71e33",
+  "descriptor": {
+    "reaction": "SiN_cleavage",
+    "temperature_K": 450.0,
+    "root_labels": [
+      "67623d4f4207f3505ce931c965f3ebf64214c715ff551b93f8eb20e7d58ae008",
+      "cc1bd26095fc526f3d80db9cd73e6d9541f3092da2c20639207ac883b26f3319"
+    ],
+    "shell_labels": [
+      "6115182b44f9a494958d83ae6be811ffed91a97fe2165bad643acbedc77cfaac",
+      "67623d4f4207f3505ce931c965f3ebf64214c715ff551b93f8eb20e7d58ae008",
+      "80c70b6f3dfdd71ad4d269553d875ee5e9c699cd4f50a3744531c7856813adaf",
+      "80c70b6f3dfdd71ad4d269553d875ee5e9c699cd4f50a3744531c7856813adaf",
+      "80c70b6f3dfdd71ad4d269553d875ee5e9c699cd4f50a3744531c7856813adaf",
+      "9781611e1a3057ea6ef88d5bd16d31692e01e5e133f4a71f3db01ecddd314e1b",
+      "cc1bd26095fc526f3d80db9cd73e6d9541f3092da2c20639207ac883b26f3319"
+    ],
+    "bond_geometry": [
+      [
+        "6115182b44f9a494958d83ae6be811ffed91a97fe2165bad643acbedc77cfaac",
+        "67623d4f4207f3505ce931c965f3ebf64214c715ff551b93f8eb20e7d58ae008",
+        1.736
+      ],
+      [
+        "67623d4f4207f3505ce931c965f3ebf64214c715ff551b93f8eb20e7d58ae008",
+        "9781611e1a3057ea6ef88d5bd16d31692e01e5e133f4a71f3db01ecddd314e1b",
+        1.736
+      ],
+      [
+        "67623d4f4207f3505ce931c965f3ebf64214c715ff551b93f8eb20e7d58ae008",
+        "cc1bd26095fc526f3d80db9cd73e6d9541f3092da2c20639207ac883b26f3319",
+        1.736
+      ],
+      [
+        "80c70b6f3dfdd71ad4d269553d875ee5e9c699cd4f50a3744531c7856813adaf",
+        "9781611e1a3057ea6ef88d5bd16d31692e01e5e133f4a71f3db01ecddd314e1b",
+        1.73
+      ],
+      [
+        "80c70b6f3dfdd71ad4d269553d875ee5e9c699cd4f50a3744531c7856813adaf",
+        "9781611e1a3057ea6ef88d5bd16d31692e01e5e133f4a71f3db01ecddd314e1b",
+        1.736
+      ],
+      [
+        "80c70b6f3dfdd71ad4d269553d875ee5e9c699cd4f50a3744531c7856813adaf",
+        "9781611e1a3057ea6ef88d5bd16d31692e01e5e133f4a71f3db01ecddd314e1b",
+        1.736
+      ]
+    ],
+    "description": "Two-shell labelled graph plus substrate bond lengths; not a unique relaxed adsorbate geometry or electronic state"
+  },
+  "atom_ids": [
+    63,
+    225,
+    234,
+    237,
+    239,
+    248,
+    326
+  ],
+  "central_site": 326,
+  "partner": 248,
+  "central_termination": {
+    "F": 3
+  },
+  "central_coordination": 1,
+  "partner_termination": {},
+  "event_kind": "SiN_cleavage",
+  "reference_pathway": null,
+  "demonstration_barrier_eV": null,
+  "rate_status": "missing_qualified_rate",
+  "observed_events": 0,
+  "candidate_snapshots": 4,
+  "requirements": [
+    "Build and relax matching terminated IS and FS, with HF precursor where appropriate",
+    "Verify charge/spin, boundary caps, reference energy, coverage and neighbor connectivity",
+    "Obtain connected TS, one imaginary mode, prefactor/free-energy and uncertainty",
+    "For adsorption: measured/calculated sticking, gas flux and site-area mapping instead of an arbitrary barrier"
+  ],
+  "example": {
+    "nodes": [
+      {
+        "id": 63,
+        "element": "N",
+        "position_A": [
+          4.825904328000003,
+          4.410773854101389,
+          19.07835
+        ],
+        "column": 14,
+        "layer": 4,
+        "active": true,
+        "fixed": false,
+        "termination": []
+      },
+      {
+        "id": 225,
+        "element": "Si",
+        "position_A": [
+          6.226494126600003,
+          5.436040376330348,
+          19.07835
+        ],
+        "column": 15,
+        "layer": 4,
+        "active": true,
+        "fixed": false,
+        "termination": []
+      },
+      {
+        "id": 234,
+        "element": "N",
+        "position_A": [
+          6.197509956000002,
+          6.384742671331965,
+          17.6252
+        ],
+        "column": 15,
+        "layer": 4,
+        "active": true,
+        "fixed": false,
+        "termination": []
+      },
+      {
+        "id": 237,
+        "element": "N",
+        "position_A": [
+          7.604438022000002,
+          4.3904243390375255,
+          19.07835
+        ],
+        "column": 16,
+        "layer": 4,
+        "active": true,
+        "fixed": false,
+        "termination": []
+      },
+      {
+        "id": 239,
+        "element": "Si",
+        "position_A": [
+          6.226494126600003,
+          5.436040376330348,
+          21.98465
+        ],
+        "column": 15,
+        "layer": 5,
+        "active": true,
+        "fixed": false,
+        "termination": [
+          "F",
+          "F",
+          "F"
+        ]
+      },
+      {
+        "id": 248,
+        "element": "N",
+        "position_A": [
+          6.197509956000002,
+          6.384742671331965,
+          20.5315
+        ],
+        "column": 15,
+        "layer": 5,
+        "active": true,
+        "fixed": false,
+        "termination": []
+      },
+      {
+        "id": 326,
+        "element": "Si",
+        "position_A": [
+          6.009898001400002,
+          8.110322278315376,
+          20.5315
+        ],
+        "column": 22,
+        "layer": 5,
+        "active": true,
+        "fixed": false,
+        "termination": [
+          "F",
+          "F",
+          "F"
+        ]
+      }
+    ],
+    "bonds": [
+      [
+        63,
+        225
+      ],
+      [
+        225,
+        234
+      ],
+      [
+        225,
+        237
+      ],
+      [
+        225,
+        248
+      ],
+      [
+        239,
+        248
+      ],
+      [
+        248,
+        326
+      ]
+    ],
+    "precursor_sites": [
+      326
+    ],
+    "event": {
+      "kind": "SiN_cleavage",
+      "site": 326,
+      "partner": 248,
+      "rate_s": 0.0,
+      "barrier_eV": null,
+      "reference_pathway": null,
+      "rate_status": "disabled_missing_final_cleavage_barrier",
+      "depth_A": 0.0,
+      "exposed": true
+    },
+    "cell_A": [
+      [
+        15.2088,
+        0.0,
+        0.0
+      ],
+      [
+        -7.604399999999996,
+        13.171207161076772,
+        0.0
+      ],
+      [
+        0.0,
+        -0.0,
+        27.98465
+      ]
+    ],
+    "pbc": [
+      true,
+      true,
+      false
+    ],
+    "FS_connectivity": {
+      "nodes": [
+        {
+          "id": 63,
+          "element": "N",
+          "position_A": [
+            4.825904328000003,
+            4.410773854101389,
+            19.07835
+          ],
+          "column": 14,
+          "layer": 4,
+          "active": true,
+          "fixed": false,
+          "termination": []
+        },
+        {
+          "id": 225,
+          "element": "Si",
+          "position_A": [
+            6.226494126600003,
+            5.436040376330348,
+            19.07835
+          ],
+          "column": 15,
+          "layer": 4,
+          "active": true,
+          "fixed": false,
+          "termination": []
+        },
+        {
+          "id": 234,
+          "element": "N",
+          "position_A": [
+            6.197509956000002,
+            6.384742671331965,
+            17.6252
+          ],
+          "column": 15,
+          "layer": 4,
+          "active": true,
+          "fixed": false,
+          "termination": []
+        },
+        {
+          "id": 237,
+          "element": "N",
+          "position_A": [
+            7.604438022000002,
+            4.3904243390375255,
+            19.07835
+          ],
+          "column": 16,
+          "layer": 4,
+          "active": true,
+          "fixed": false,
+          "termination": []
+        },
+        {
+          "id": 239,
+          "element": "Si",
+          "position_A": [
+            6.226494126600003,
+            5.436040376330348,
+            21.98465
+          ],
+          "column": 15,
+          "layer": 5,
+          "active": true,
+          "fixed": false,
+          "termination": [
+            "F",
+            "F",
+            "F"
+          ]
+        },
+        {
+          "id": 248,
+          "element": "N",
+          "position_A": [
+            6.197509956000002,
+            6.384742671331965,
+            20.5315
+          ],
+          "column": 15,
+          "layer": 5,
+          "active": true,
+          "fixed": false,
+          "termination": [
+            "H"
+          ]
+        },
+        {
+          "id": 326,
+          "element": "Si",
+          "position_A": [
+            6.009898001400002,
+            8.110322278315376,
+            20.5315
+          ],
+          "column": 22,
+          "layer": 5,
+          "active": true,
+          "fixed": false,
+          "termination": [
+            "F",
+            "F",
+            "F",
+            "F"
+          ]
+        }
+      ],
+      "bonds": [
+        [
+          63,
+          225
+        ],
+        [
+          225,
+          234
+        ],
+        [
+          225,
+          237
+        ],
+        [
+          225,
+          248
+        ],
+        [
+          239,
+          248
+        ]
+      ],
+      "precursor_sites": []
+    },
+    "gas_delta": {},
+    "gas_formulas": {}
+  },
+  "structure_status": "Connectivity request only; ligand/HF positions and relaxed electronic structure are not supplied",
+  "priority_rank": 2,
+  "priority_basis": "Missing final-cleavage barriers first, then observed count + sampled candidate presence; priority heuristic, not degree of rate control"
+}

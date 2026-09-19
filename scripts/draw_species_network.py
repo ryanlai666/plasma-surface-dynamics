@@ -50,7 +50,7 @@ def main():
     handles=[Patch(fc=c,label='F'+str(i)) for i,c in enumerate(COLORS)]+[Patch(fc=HF,label='Adsorbed HF complex'),Patch(fc=REMOVED,label='Si released'),Patch(fc='white',ec=MISSING,ls='--',label='Missing / disabled')]
     fig.legend(handles=handles,loc='upper center',bbox_to_anchor=(.5,.938),ncol=7,frameon=False,fontsize=10)
     fig.text(.5,.028,'Gray arrow pairs: HF adsorption / desorption. Brown arrows: chemical conversion, source Ea and gas products.\nF0-F3 count incorporated F at the central motif; adsorbed HF is additional. Rates remain conditional; no calibrated EPC.',ha='center',fontsize=10)
-    save(fig,out/'species_kmc_network')
+    save(fig,out/'species_kmc_network_compact')
     # Compact conceptual view is explicitly a repeated motif template, not an extra enabled graph.
     fig,ax=plt.subplots(figsize=(12,3.6));ax.axis('off');ax.set_xlim(-.7,6.7);ax.set_ylim(-1.7,1.4)
     nodes=[((0,0),'Available\nmotif',COLORS[0]),((2,0),'HF adsorption\ncomplex',HF),((4,0),'Converted\nmotif',COLORS[2]),((6,0),'Si released\nif parameterized',REMOVED)]
@@ -62,5 +62,7 @@ def main():
     fig.suptitle('Read one motif pathway from left to right',fontsize=17,weight='bold');fig.text(.5,.035,'Overview template only. The complete graph below specifies which steps are enabled or missing.',ha='center',fontsize=10)
     save(fig,out/'species_kmc_overview')
     (out/'render_manifest.json').write_text(json.dumps(dict(network_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),state_ids=[s['id'] for s in states],event_ids=[e['id'] for e in n['events']],families=families,state_colors=dict(F0=COLORS[0],F1=COLORS[1],F2=COLORS[2],F3=COLORS[3],HF_complex=HF,Si_released=REMOVED),interpretation='Full graph contains all configured states and events; overview is conceptual'),indent=2)+'\n')
+    from draw_surface_states import main as draw_surfaces
+    draw_surfaces()
     print('Rendered complete network and overview')
 if __name__=='__main__':main()

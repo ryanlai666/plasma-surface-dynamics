@@ -121,5 +121,4230 @@
     "HF_complex": "#F4C95D",
     "Si_released": "#293E57"
   },
-  "interpretation": "Full graph contains all configured states and events; overview is conceptual"
+  "interpretation": "Complete configured kMC graph with representative bookkeeping sketches; no calculated adsorption geometry or extra subsurface kinetics implied",
+  "depictions": [
+    {
+      "state_id": "bridge_NH_F0",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "element": "N",
+          "x": 0.25,
+          "y": 0.57
+        },
+        {
+          "element": "H",
+          "x": 0.25,
+          "y": 0.6799999999999999
+        },
+        {
+          "element": "N",
+          "x": 0.75,
+          "y": 0.57
+        },
+        {
+          "element": "H",
+          "x": 0.75,
+          "y": 0.6799999999999999
+        },
+        {
+          "element": "N",
+          "x": 0.25,
+          "y": 0.31
+        },
+        {
+          "element": "H",
+          "x": 0.25,
+          "y": 0.42
+        },
+        {
+          "element": "N",
+          "x": 0.75,
+          "y": 0.31
+        },
+        {
+          "element": "H",
+          "x": 0.75,
+          "y": 0.42
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 1,
+          "b": 2,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 3,
+          "kind": "bond"
+        },
+        {
+          "a": 3,
+          "b": 4,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 5,
+          "kind": "bond"
+        },
+        {
+          "a": 5,
+          "b": 6,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 7,
+          "kind": "bond"
+        },
+        {
+          "a": 7,
+          "b": 8,
+          "kind": "bond"
+        }
+      ],
+      "anchors": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "unknown": false,
+      "composition": {
+        "Si": 1,
+        "N": 4,
+        "H": 4
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "bridge_NH_F1",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "element": "F",
+          "x": 0.25,
+          "y": 0.57
+        },
+        {
+          "element": "N",
+          "x": 0.19,
+          "y": 0.13
+        },
+        {
+          "element": "H",
+          "x": 0.24500000000000002,
+          "y": 0.22526279441628827
+        },
+        {
+          "element": "H",
+          "x": 0.08,
+          "y": 0.13
+        },
+        {
+          "element": "N",
+          "x": 0.75,
+          "y": 0.57
+        },
+        {
+          "element": "H",
+          "x": 0.75,
+          "y": 0.6799999999999999
+        },
+        {
+          "element": "N",
+          "x": 0.25,
+          "y": 0.31
+        },
+        {
+          "element": "H",
+          "x": 0.25,
+          "y": 0.42
+        },
+        {
+          "element": "N",
+          "x": 0.75,
+          "y": 0.31
+        },
+        {
+          "element": "H",
+          "x": 0.75,
+          "y": 0.42
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 2,
+          "b": 3,
+          "kind": "bond"
+        },
+        {
+          "a": 2,
+          "b": 4,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 5,
+          "kind": "bond"
+        },
+        {
+          "a": 5,
+          "b": 6,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 7,
+          "kind": "bond"
+        },
+        {
+          "a": 7,
+          "b": 8,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 9,
+          "kind": "bond"
+        },
+        {
+          "a": 9,
+          "b": 10,
+          "kind": "bond"
+        }
+      ],
+      "anchors": [
+        2,
+        5,
+        7,
+        9
+      ],
+      "unknown": false,
+      "composition": {
+        "Si": 1,
+        "F": 1,
+        "N": 4,
+        "H": 5
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "bridge_NH_F2",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "element": "F",
+          "x": 0.25,
+          "y": 0.57
+        },
+        {
+          "element": "N",
+          "x": 0.19,
+          "y": 0.13
+        },
+        {
+          "element": "H",
+          "x": 0.24500000000000002,
+          "y": 0.22526279441628827
+        },
+        {
+          "element": "H",
+          "x": 0.08,
+          "y": 0.13
+        },
+        {
+          "element": "F",
+          "x": 0.75,
+          "y": 0.57
+        },
+        {
+          "element": "N",
+          "x": 0.395,
+          "y": 0.13
+        },
+        {
+          "element": "H",
+          "x": 0.45,
+          "y": 0.22526279441628827
+        },
+        {
+          "element": "H",
+          "x": 0.28500000000000003,
+          "y": 0.13
+        },
+        {
+          "element": "N",
+          "x": 0.25,
+          "y": 0.31
+        },
+        {
+          "element": "H",
+          "x": 0.25,
+          "y": 0.42
+        },
+        {
+          "element": "N",
+          "x": 0.75,
+          "y": 0.31
+        },
+        {
+          "element": "H",
+          "x": 0.75,
+          "y": 0.42
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 2,
+          "b": 3,
+          "kind": "bond"
+        },
+        {
+          "a": 2,
+          "b": 4,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 5,
+          "kind": "bond"
+        },
+        {
+          "a": 6,
+          "b": 7,
+          "kind": "bond"
+        },
+        {
+          "a": 6,
+          "b": 8,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 9,
+          "kind": "bond"
+        },
+        {
+          "a": 9,
+          "b": 10,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 11,
+          "kind": "bond"
+        },
+        {
+          "a": 11,
+          "b": 12,
+          "kind": "bond"
+        }
+      ],
+      "anchors": [
+        2,
+        6,
+        9,
+        11
+      ],
+      "unknown": false,
+      "composition": {
+        "Si": 1,
+        "F": 2,
+        "N": 4,
+        "H": 6
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "bridge_NH_F3",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "element": "F",
+          "x": 0.25,
+          "y": 0.57
+        },
+        {
+          "element": "N",
+          "x": 0.19,
+          "y": 0.13
+        },
+        {
+          "element": "H",
+          "x": 0.24500000000000002,
+          "y": 0.22526279441628827
+        },
+        {
+          "element": "H",
+          "x": 0.08,
+          "y": 0.13
+        },
+        {
+          "element": "F",
+          "x": 0.75,
+          "y": 0.57
+        },
+        {
+          "element": "N",
+          "x": 0.395,
+          "y": 0.13
+        },
+        {
+          "element": "H",
+          "x": 0.45,
+          "y": 0.22526279441628827
+        },
+        {
+          "element": "H",
+          "x": 0.28500000000000003,
+          "y": 0.13
+        },
+        {
+          "element": "F",
+          "x": 0.25,
+          "y": 0.31
+        },
+        {
+          "element": "N",
+          "x": 0.6,
+          "y": 0.13
+        },
+        {
+          "element": "H",
+          "x": 0.655,
+          "y": 0.22526279441628827
+        },
+        {
+          "element": "H",
+          "x": 0.49,
+          "y": 0.13
+        },
+        {
+          "element": "N",
+          "x": 0.75,
+          "y": 0.31
+        },
+        {
+          "element": "H",
+          "x": 0.75,
+          "y": 0.42
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 2,
+          "b": 3,
+          "kind": "bond"
+        },
+        {
+          "a": 2,
+          "b": 4,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 5,
+          "kind": "bond"
+        },
+        {
+          "a": 6,
+          "b": 7,
+          "kind": "bond"
+        },
+        {
+          "a": 6,
+          "b": 8,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 9,
+          "kind": "bond"
+        },
+        {
+          "a": 10,
+          "b": 11,
+          "kind": "bond"
+        },
+        {
+          "a": 10,
+          "b": 12,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 13,
+          "kind": "bond"
+        },
+        {
+          "a": 13,
+          "b": 14,
+          "kind": "bond"
+        }
+      ],
+      "anchors": [
+        2,
+        6,
+        10,
+        13
+      ],
+      "unknown": false,
+      "composition": {
+        "Si": 1,
+        "F": 3,
+        "N": 4,
+        "H": 7
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "bridge_NH_residual",
+      "nodes": [
+        {
+          "element": "N",
+          "x": 0.19,
+          "y": 0.13
+        },
+        {
+          "element": "H",
+          "x": 0.24500000000000002,
+          "y": 0.22526279441628827
+        },
+        {
+          "element": "H",
+          "x": 0.08,
+          "y": 0.13
+        },
+        {
+          "element": "N",
+          "x": 0.395,
+          "y": 0.13
+        },
+        {
+          "element": "H",
+          "x": 0.45,
+          "y": 0.22526279441628827
+        },
+        {
+          "element": "H",
+          "x": 0.28500000000000003,
+          "y": 0.13
+        },
+        {
+          "element": "N",
+          "x": 0.6,
+          "y": 0.13
+        },
+        {
+          "element": "H",
+          "x": 0.655,
+          "y": 0.22526279441628827
+        },
+        {
+          "element": "H",
+          "x": 0.49,
+          "y": 0.13
+        },
+        {
+          "element": "N",
+          "x": 0.8049999999999999,
+          "y": 0.13
+        },
+        {
+          "element": "H",
+          "x": 0.86,
+          "y": 0.22526279441628827
+        },
+        {
+          "element": "H",
+          "x": 0.695,
+          "y": 0.13
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 2,
+          "kind": "bond"
+        },
+        {
+          "a": 3,
+          "b": 4,
+          "kind": "bond"
+        },
+        {
+          "a": 3,
+          "b": 5,
+          "kind": "bond"
+        },
+        {
+          "a": 6,
+          "b": 7,
+          "kind": "bond"
+        },
+        {
+          "a": 6,
+          "b": 8,
+          "kind": "bond"
+        },
+        {
+          "a": 9,
+          "b": 10,
+          "kind": "bond"
+        },
+        {
+          "a": 9,
+          "b": 11,
+          "kind": "bond"
+        }
+      ],
+      "anchors": [
+        0,
+        3,
+        6,
+        9
+      ],
+      "unknown": false,
+      "composition": {
+        "N": 4,
+        "H": 8
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "bridge_NH_F0_HF",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "element": "N",
+          "x": 0.25,
+          "y": 0.57
+        },
+        {
+          "element": "H",
+          "x": 0.25,
+          "y": 0.6799999999999999
+        },
+        {
+          "element": "N",
+          "x": 0.75,
+          "y": 0.57
+        },
+        {
+          "element": "H",
+          "x": 0.75,
+          "y": 0.6799999999999999
+        },
+        {
+          "element": "N",
+          "x": 0.25,
+          "y": 0.31
+        },
+        {
+          "element": "H",
+          "x": 0.25,
+          "y": 0.42
+        },
+        {
+          "element": "N",
+          "x": 0.75,
+          "y": 0.31
+        },
+        {
+          "element": "H",
+          "x": 0.75,
+          "y": 0.42
+        },
+        {
+          "element": "F",
+          "x": 0.4,
+          "y": 0.84
+        },
+        {
+          "element": "H",
+          "x": 0.6,
+          "y": 0.84
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 1,
+          "b": 2,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 3,
+          "kind": "bond"
+        },
+        {
+          "a": 3,
+          "b": 4,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 5,
+          "kind": "bond"
+        },
+        {
+          "a": 5,
+          "b": 6,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 7,
+          "kind": "bond"
+        },
+        {
+          "a": 7,
+          "b": 8,
+          "kind": "bond"
+        },
+        {
+          "a": 9,
+          "b": 10,
+          "kind": "bond"
+        },
+        {
+          "a": 10,
+          "b": 0,
+          "kind": "encounter"
+        }
+      ],
+      "anchors": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "unknown": false,
+      "composition": {
+        "Si": 1,
+        "N": 4,
+        "H": 5,
+        "F": 1
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "bridge_NH_F1_HF",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "element": "F",
+          "x": 0.25,
+          "y": 0.57
+        },
+        {
+          "element": "N",
+          "x": 0.19,
+          "y": 0.13
+        },
+        {
+          "element": "H",
+          "x": 0.24500000000000002,
+          "y": 0.22526279441628827
+        },
+        {
+          "element": "H",
+          "x": 0.08,
+          "y": 0.13
+        },
+        {
+          "element": "N",
+          "x": 0.75,
+          "y": 0.57
+        },
+        {
+          "element": "H",
+          "x": 0.75,
+          "y": 0.6799999999999999
+        },
+        {
+          "element": "N",
+          "x": 0.25,
+          "y": 0.31
+        },
+        {
+          "element": "H",
+          "x": 0.25,
+          "y": 0.42
+        },
+        {
+          "element": "N",
+          "x": 0.75,
+          "y": 0.31
+        },
+        {
+          "element": "H",
+          "x": 0.75,
+          "y": 0.42
+        },
+        {
+          "element": "F",
+          "x": 0.4,
+          "y": 0.84
+        },
+        {
+          "element": "H",
+          "x": 0.6,
+          "y": 0.84
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 2,
+          "b": 3,
+          "kind": "bond"
+        },
+        {
+          "a": 2,
+          "b": 4,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 5,
+          "kind": "bond"
+        },
+        {
+          "a": 5,
+          "b": 6,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 7,
+          "kind": "bond"
+        },
+        {
+          "a": 7,
+          "b": 8,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 9,
+          "kind": "bond"
+        },
+        {
+          "a": 9,
+          "b": 10,
+          "kind": "bond"
+        },
+        {
+          "a": 11,
+          "b": 12,
+          "kind": "bond"
+        },
+        {
+          "a": 12,
+          "b": 0,
+          "kind": "encounter"
+        }
+      ],
+      "anchors": [
+        2,
+        5,
+        7,
+        9
+      ],
+      "unknown": false,
+      "composition": {
+        "Si": 1,
+        "F": 2,
+        "N": 4,
+        "H": 6
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "bridge_NH_F2_HF",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "element": "F",
+          "x": 0.25,
+          "y": 0.57
+        },
+        {
+          "element": "N",
+          "x": 0.19,
+          "y": 0.13
+        },
+        {
+          "element": "H",
+          "x": 0.24500000000000002,
+          "y": 0.22526279441628827
+        },
+        {
+          "element": "H",
+          "x": 0.08,
+          "y": 0.13
+        },
+        {
+          "element": "F",
+          "x": 0.75,
+          "y": 0.57
+        },
+        {
+          "element": "N",
+          "x": 0.395,
+          "y": 0.13
+        },
+        {
+          "element": "H",
+          "x": 0.45,
+          "y": 0.22526279441628827
+        },
+        {
+          "element": "H",
+          "x": 0.28500000000000003,
+          "y": 0.13
+        },
+        {
+          "element": "N",
+          "x": 0.25,
+          "y": 0.31
+        },
+        {
+          "element": "H",
+          "x": 0.25,
+          "y": 0.42
+        },
+        {
+          "element": "N",
+          "x": 0.75,
+          "y": 0.31
+        },
+        {
+          "element": "H",
+          "x": 0.75,
+          "y": 0.42
+        },
+        {
+          "element": "F",
+          "x": 0.4,
+          "y": 0.84
+        },
+        {
+          "element": "H",
+          "x": 0.6,
+          "y": 0.84
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 2,
+          "b": 3,
+          "kind": "bond"
+        },
+        {
+          "a": 2,
+          "b": 4,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 5,
+          "kind": "bond"
+        },
+        {
+          "a": 6,
+          "b": 7,
+          "kind": "bond"
+        },
+        {
+          "a": 6,
+          "b": 8,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 9,
+          "kind": "bond"
+        },
+        {
+          "a": 9,
+          "b": 10,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 11,
+          "kind": "bond"
+        },
+        {
+          "a": 11,
+          "b": 12,
+          "kind": "bond"
+        },
+        {
+          "a": 13,
+          "b": 14,
+          "kind": "bond"
+        },
+        {
+          "a": 14,
+          "b": 0,
+          "kind": "encounter"
+        }
+      ],
+      "anchors": [
+        2,
+        6,
+        9,
+        11
+      ],
+      "unknown": false,
+      "composition": {
+        "Si": 1,
+        "F": 3,
+        "N": 4,
+        "H": 7
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "bridge_NH_F3_HF",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "element": "F",
+          "x": 0.25,
+          "y": 0.57
+        },
+        {
+          "element": "N",
+          "x": 0.19,
+          "y": 0.13
+        },
+        {
+          "element": "H",
+          "x": 0.24500000000000002,
+          "y": 0.22526279441628827
+        },
+        {
+          "element": "H",
+          "x": 0.08,
+          "y": 0.13
+        },
+        {
+          "element": "F",
+          "x": 0.75,
+          "y": 0.57
+        },
+        {
+          "element": "N",
+          "x": 0.395,
+          "y": 0.13
+        },
+        {
+          "element": "H",
+          "x": 0.45,
+          "y": 0.22526279441628827
+        },
+        {
+          "element": "H",
+          "x": 0.28500000000000003,
+          "y": 0.13
+        },
+        {
+          "element": "F",
+          "x": 0.25,
+          "y": 0.31
+        },
+        {
+          "element": "N",
+          "x": 0.6,
+          "y": 0.13
+        },
+        {
+          "element": "H",
+          "x": 0.655,
+          "y": 0.22526279441628827
+        },
+        {
+          "element": "H",
+          "x": 0.49,
+          "y": 0.13
+        },
+        {
+          "element": "N",
+          "x": 0.75,
+          "y": 0.31
+        },
+        {
+          "element": "H",
+          "x": 0.75,
+          "y": 0.42
+        },
+        {
+          "element": "F",
+          "x": 0.4,
+          "y": 0.84
+        },
+        {
+          "element": "H",
+          "x": 0.6,
+          "y": 0.84
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 2,
+          "b": 3,
+          "kind": "bond"
+        },
+        {
+          "a": 2,
+          "b": 4,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 5,
+          "kind": "bond"
+        },
+        {
+          "a": 6,
+          "b": 7,
+          "kind": "bond"
+        },
+        {
+          "a": 6,
+          "b": 8,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 9,
+          "kind": "bond"
+        },
+        {
+          "a": 10,
+          "b": 11,
+          "kind": "bond"
+        },
+        {
+          "a": 10,
+          "b": 12,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 13,
+          "kind": "bond"
+        },
+        {
+          "a": 13,
+          "b": 14,
+          "kind": "bond"
+        },
+        {
+          "a": 15,
+          "b": 16,
+          "kind": "bond"
+        },
+        {
+          "a": 16,
+          "b": 0,
+          "kind": "encounter"
+        }
+      ],
+      "anchors": [
+        2,
+        6,
+        10,
+        13
+      ],
+      "unknown": false,
+      "composition": {
+        "Si": 1,
+        "F": 4,
+        "N": 4,
+        "H": 8
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "terminal_NH2_F0",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "element": "N",
+          "x": 0.25,
+          "y": 0.57
+        },
+        {
+          "element": "H",
+          "x": 0.305,
+          "y": 0.6652627944162882
+        },
+        {
+          "element": "H",
+          "x": 0.14,
+          "y": 0.57
+        },
+        {
+          "element": "N",
+          "x": 0.75,
+          "y": 0.57
+        },
+        {
+          "element": "H",
+          "x": 0.805,
+          "y": 0.6652627944162882
+        },
+        {
+          "element": "H",
+          "x": 0.64,
+          "y": 0.57
+        },
+        {
+          "element": "N",
+          "x": 0.25,
+          "y": 0.31
+        },
+        {
+          "element": "H",
+          "x": 0.305,
+          "y": 0.40526279441628826
+        },
+        {
+          "element": "H",
+          "x": 0.14,
+          "y": 0.31
+        },
+        {
+          "element": "N",
+          "x": 0.75,
+          "y": 0.31
+        },
+        {
+          "element": "H",
+          "x": 0.805,
+          "y": 0.40526279441628826
+        },
+        {
+          "element": "H",
+          "x": 0.64,
+          "y": 0.31
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 1,
+          "b": 2,
+          "kind": "bond"
+        },
+        {
+          "a": 1,
+          "b": 3,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 4,
+          "kind": "bond"
+        },
+        {
+          "a": 4,
+          "b": 5,
+          "kind": "bond"
+        },
+        {
+          "a": 4,
+          "b": 6,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 7,
+          "kind": "bond"
+        },
+        {
+          "a": 7,
+          "b": 8,
+          "kind": "bond"
+        },
+        {
+          "a": 7,
+          "b": 9,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 10,
+          "kind": "bond"
+        },
+        {
+          "a": 10,
+          "b": 11,
+          "kind": "bond"
+        },
+        {
+          "a": 10,
+          "b": 12,
+          "kind": "bond"
+        }
+      ],
+      "anchors": [],
+      "unknown": false,
+      "composition": {
+        "Si": 1,
+        "N": 4,
+        "H": 8
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "terminal_NH2_F1",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "element": "F",
+          "x": 0.25,
+          "y": 0.57
+        },
+        {
+          "element": "N",
+          "x": 0.75,
+          "y": 0.57
+        },
+        {
+          "element": "H",
+          "x": 0.805,
+          "y": 0.6652627944162882
+        },
+        {
+          "element": "H",
+          "x": 0.64,
+          "y": 0.57
+        },
+        {
+          "element": "N",
+          "x": 0.25,
+          "y": 0.31
+        },
+        {
+          "element": "H",
+          "x": 0.305,
+          "y": 0.40526279441628826
+        },
+        {
+          "element": "H",
+          "x": 0.14,
+          "y": 0.31
+        },
+        {
+          "element": "N",
+          "x": 0.75,
+          "y": 0.31
+        },
+        {
+          "element": "H",
+          "x": 0.805,
+          "y": 0.40526279441628826
+        },
+        {
+          "element": "H",
+          "x": 0.64,
+          "y": 0.31
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 2,
+          "kind": "bond"
+        },
+        {
+          "a": 2,
+          "b": 3,
+          "kind": "bond"
+        },
+        {
+          "a": 2,
+          "b": 4,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 5,
+          "kind": "bond"
+        },
+        {
+          "a": 5,
+          "b": 6,
+          "kind": "bond"
+        },
+        {
+          "a": 5,
+          "b": 7,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 8,
+          "kind": "bond"
+        },
+        {
+          "a": 8,
+          "b": 9,
+          "kind": "bond"
+        },
+        {
+          "a": 8,
+          "b": 10,
+          "kind": "bond"
+        }
+      ],
+      "anchors": [],
+      "unknown": false,
+      "composition": {
+        "Si": 1,
+        "F": 1,
+        "N": 3,
+        "H": 6
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "terminal_NH2_F2",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "element": "F",
+          "x": 0.25,
+          "y": 0.57
+        },
+        {
+          "element": "F",
+          "x": 0.75,
+          "y": 0.57
+        },
+        {
+          "element": "N",
+          "x": 0.25,
+          "y": 0.31
+        },
+        {
+          "element": "H",
+          "x": 0.305,
+          "y": 0.40526279441628826
+        },
+        {
+          "element": "H",
+          "x": 0.14,
+          "y": 0.31
+        },
+        {
+          "element": "N",
+          "x": 0.75,
+          "y": 0.31
+        },
+        {
+          "element": "H",
+          "x": 0.805,
+          "y": 0.40526279441628826
+        },
+        {
+          "element": "H",
+          "x": 0.64,
+          "y": 0.31
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 2,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 3,
+          "kind": "bond"
+        },
+        {
+          "a": 3,
+          "b": 4,
+          "kind": "bond"
+        },
+        {
+          "a": 3,
+          "b": 5,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 6,
+          "kind": "bond"
+        },
+        {
+          "a": 6,
+          "b": 7,
+          "kind": "bond"
+        },
+        {
+          "a": 6,
+          "b": 8,
+          "kind": "bond"
+        }
+      ],
+      "anchors": [],
+      "unknown": false,
+      "composition": {
+        "Si": 1,
+        "F": 2,
+        "N": 2,
+        "H": 4
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "terminal_NH2_F3",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "element": "F",
+          "x": 0.25,
+          "y": 0.57
+        },
+        {
+          "element": "F",
+          "x": 0.75,
+          "y": 0.57
+        },
+        {
+          "element": "F",
+          "x": 0.25,
+          "y": 0.31
+        },
+        {
+          "element": "N",
+          "x": 0.75,
+          "y": 0.31
+        },
+        {
+          "element": "H",
+          "x": 0.805,
+          "y": 0.40526279441628826
+        },
+        {
+          "element": "H",
+          "x": 0.64,
+          "y": 0.31
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 2,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 3,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 4,
+          "kind": "bond"
+        },
+        {
+          "a": 4,
+          "b": 5,
+          "kind": "bond"
+        },
+        {
+          "a": 4,
+          "b": 6,
+          "kind": "bond"
+        }
+      ],
+      "anchors": [],
+      "unknown": false,
+      "composition": {
+        "Si": 1,
+        "F": 3,
+        "N": 1,
+        "H": 2
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "terminal_NH2_residual",
+      "nodes": [],
+      "bonds": [],
+      "anchors": [],
+      "unknown": true,
+      "composition": {},
+      "scope": "Unparameterized placeholder; structure deliberately not drawn"
+    },
+    {
+      "state_id": "terminal_NH2_F0_HF",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "element": "N",
+          "x": 0.25,
+          "y": 0.57
+        },
+        {
+          "element": "H",
+          "x": 0.305,
+          "y": 0.6652627944162882
+        },
+        {
+          "element": "H",
+          "x": 0.14,
+          "y": 0.57
+        },
+        {
+          "element": "N",
+          "x": 0.75,
+          "y": 0.57
+        },
+        {
+          "element": "H",
+          "x": 0.805,
+          "y": 0.6652627944162882
+        },
+        {
+          "element": "H",
+          "x": 0.64,
+          "y": 0.57
+        },
+        {
+          "element": "N",
+          "x": 0.25,
+          "y": 0.31
+        },
+        {
+          "element": "H",
+          "x": 0.305,
+          "y": 0.40526279441628826
+        },
+        {
+          "element": "H",
+          "x": 0.14,
+          "y": 0.31
+        },
+        {
+          "element": "N",
+          "x": 0.75,
+          "y": 0.31
+        },
+        {
+          "element": "H",
+          "x": 0.805,
+          "y": 0.40526279441628826
+        },
+        {
+          "element": "H",
+          "x": 0.64,
+          "y": 0.31
+        },
+        {
+          "element": "F",
+          "x": 0.4,
+          "y": 0.84
+        },
+        {
+          "element": "H",
+          "x": 0.6,
+          "y": 0.84
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 1,
+          "b": 2,
+          "kind": "bond"
+        },
+        {
+          "a": 1,
+          "b": 3,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 4,
+          "kind": "bond"
+        },
+        {
+          "a": 4,
+          "b": 5,
+          "kind": "bond"
+        },
+        {
+          "a": 4,
+          "b": 6,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 7,
+          "kind": "bond"
+        },
+        {
+          "a": 7,
+          "b": 8,
+          "kind": "bond"
+        },
+        {
+          "a": 7,
+          "b": 9,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 10,
+          "kind": "bond"
+        },
+        {
+          "a": 10,
+          "b": 11,
+          "kind": "bond"
+        },
+        {
+          "a": 10,
+          "b": 12,
+          "kind": "bond"
+        },
+        {
+          "a": 13,
+          "b": 14,
+          "kind": "bond"
+        },
+        {
+          "a": 14,
+          "b": 0,
+          "kind": "encounter"
+        }
+      ],
+      "anchors": [],
+      "unknown": false,
+      "composition": {
+        "Si": 1,
+        "N": 4,
+        "H": 9,
+        "F": 1
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "terminal_NH2_F1_HF",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "element": "F",
+          "x": 0.25,
+          "y": 0.57
+        },
+        {
+          "element": "N",
+          "x": 0.75,
+          "y": 0.57
+        },
+        {
+          "element": "H",
+          "x": 0.805,
+          "y": 0.6652627944162882
+        },
+        {
+          "element": "H",
+          "x": 0.64,
+          "y": 0.57
+        },
+        {
+          "element": "N",
+          "x": 0.25,
+          "y": 0.31
+        },
+        {
+          "element": "H",
+          "x": 0.305,
+          "y": 0.40526279441628826
+        },
+        {
+          "element": "H",
+          "x": 0.14,
+          "y": 0.31
+        },
+        {
+          "element": "N",
+          "x": 0.75,
+          "y": 0.31
+        },
+        {
+          "element": "H",
+          "x": 0.805,
+          "y": 0.40526279441628826
+        },
+        {
+          "element": "H",
+          "x": 0.64,
+          "y": 0.31
+        },
+        {
+          "element": "F",
+          "x": 0.4,
+          "y": 0.84
+        },
+        {
+          "element": "H",
+          "x": 0.6,
+          "y": 0.84
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 2,
+          "kind": "bond"
+        },
+        {
+          "a": 2,
+          "b": 3,
+          "kind": "bond"
+        },
+        {
+          "a": 2,
+          "b": 4,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 5,
+          "kind": "bond"
+        },
+        {
+          "a": 5,
+          "b": 6,
+          "kind": "bond"
+        },
+        {
+          "a": 5,
+          "b": 7,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 8,
+          "kind": "bond"
+        },
+        {
+          "a": 8,
+          "b": 9,
+          "kind": "bond"
+        },
+        {
+          "a": 8,
+          "b": 10,
+          "kind": "bond"
+        },
+        {
+          "a": 11,
+          "b": 12,
+          "kind": "bond"
+        },
+        {
+          "a": 12,
+          "b": 0,
+          "kind": "encounter"
+        }
+      ],
+      "anchors": [],
+      "unknown": false,
+      "composition": {
+        "Si": 1,
+        "F": 2,
+        "N": 3,
+        "H": 7
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "terminal_NH2_F2_HF",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "element": "F",
+          "x": 0.25,
+          "y": 0.57
+        },
+        {
+          "element": "F",
+          "x": 0.75,
+          "y": 0.57
+        },
+        {
+          "element": "N",
+          "x": 0.25,
+          "y": 0.31
+        },
+        {
+          "element": "H",
+          "x": 0.305,
+          "y": 0.40526279441628826
+        },
+        {
+          "element": "H",
+          "x": 0.14,
+          "y": 0.31
+        },
+        {
+          "element": "N",
+          "x": 0.75,
+          "y": 0.31
+        },
+        {
+          "element": "H",
+          "x": 0.805,
+          "y": 0.40526279441628826
+        },
+        {
+          "element": "H",
+          "x": 0.64,
+          "y": 0.31
+        },
+        {
+          "element": "F",
+          "x": 0.4,
+          "y": 0.84
+        },
+        {
+          "element": "H",
+          "x": 0.6,
+          "y": 0.84
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 2,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 3,
+          "kind": "bond"
+        },
+        {
+          "a": 3,
+          "b": 4,
+          "kind": "bond"
+        },
+        {
+          "a": 3,
+          "b": 5,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 6,
+          "kind": "bond"
+        },
+        {
+          "a": 6,
+          "b": 7,
+          "kind": "bond"
+        },
+        {
+          "a": 6,
+          "b": 8,
+          "kind": "bond"
+        },
+        {
+          "a": 9,
+          "b": 10,
+          "kind": "bond"
+        },
+        {
+          "a": 10,
+          "b": 0,
+          "kind": "encounter"
+        }
+      ],
+      "anchors": [],
+      "unknown": false,
+      "composition": {
+        "Si": 1,
+        "F": 3,
+        "N": 2,
+        "H": 5
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "terminal_NH2_F3_HF",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "element": "F",
+          "x": 0.25,
+          "y": 0.57
+        },
+        {
+          "element": "F",
+          "x": 0.75,
+          "y": 0.57
+        },
+        {
+          "element": "F",
+          "x": 0.25,
+          "y": 0.31
+        },
+        {
+          "element": "N",
+          "x": 0.75,
+          "y": 0.31
+        },
+        {
+          "element": "H",
+          "x": 0.805,
+          "y": 0.40526279441628826
+        },
+        {
+          "element": "H",
+          "x": 0.64,
+          "y": 0.31
+        },
+        {
+          "element": "F",
+          "x": 0.4,
+          "y": 0.84
+        },
+        {
+          "element": "H",
+          "x": 0.6,
+          "y": 0.84
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 2,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 3,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 4,
+          "kind": "bond"
+        },
+        {
+          "a": 4,
+          "b": 5,
+          "kind": "bond"
+        },
+        {
+          "a": 4,
+          "b": 6,
+          "kind": "bond"
+        },
+        {
+          "a": 7,
+          "b": 8,
+          "kind": "bond"
+        },
+        {
+          "a": 8,
+          "b": 0,
+          "kind": "encounter"
+        }
+      ],
+      "anchors": [],
+      "unknown": false,
+      "composition": {
+        "Si": 1,
+        "F": 4,
+        "N": 1,
+        "H": 3
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "Si_H_rich_F0",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "element": "N",
+          "x": 0.5,
+          "y": 0.2
+        },
+        {
+          "element": "H",
+          "x": 0.5,
+          "y": 0.31
+        },
+        {
+          "element": "H",
+          "x": 0.24,
+          "y": 0.43
+        },
+        {
+          "element": "H",
+          "x": 0.5,
+          "y": 0.66
+        },
+        {
+          "element": "H",
+          "x": 0.76,
+          "y": 0.43
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 1,
+          "b": 2,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 3,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 4,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 5,
+          "kind": "bond"
+        }
+      ],
+      "anchors": [
+        1
+      ],
+      "unknown": false,
+      "composition": {
+        "Si": 1,
+        "N": 1,
+        "H": 4
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "Si_H_rich_F1",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "element": "N",
+          "x": 0.5,
+          "y": 0.2
+        },
+        {
+          "element": "H",
+          "x": 0.5,
+          "y": 0.31
+        },
+        {
+          "element": "F",
+          "x": 0.24,
+          "y": 0.43
+        },
+        {
+          "element": "H",
+          "x": 0.5,
+          "y": 0.66
+        },
+        {
+          "element": "H",
+          "x": 0.76,
+          "y": 0.43
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 1,
+          "b": 2,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 3,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 4,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 5,
+          "kind": "bond"
+        }
+      ],
+      "anchors": [
+        1
+      ],
+      "unknown": false,
+      "composition": {
+        "Si": 1,
+        "N": 1,
+        "H": 3,
+        "F": 1
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "Si_H_rich_F2",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "element": "N",
+          "x": 0.5,
+          "y": 0.2
+        },
+        {
+          "element": "H",
+          "x": 0.5,
+          "y": 0.31
+        },
+        {
+          "element": "F",
+          "x": 0.24,
+          "y": 0.43
+        },
+        {
+          "element": "F",
+          "x": 0.5,
+          "y": 0.66
+        },
+        {
+          "element": "H",
+          "x": 0.76,
+          "y": 0.43
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 1,
+          "b": 2,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 3,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 4,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 5,
+          "kind": "bond"
+        }
+      ],
+      "anchors": [
+        1
+      ],
+      "unknown": false,
+      "composition": {
+        "Si": 1,
+        "N": 1,
+        "H": 2,
+        "F": 2
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "Si_H_rich_F3",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "element": "N",
+          "x": 0.5,
+          "y": 0.2
+        },
+        {
+          "element": "H",
+          "x": 0.5,
+          "y": 0.31
+        },
+        {
+          "element": "F",
+          "x": 0.24,
+          "y": 0.43
+        },
+        {
+          "element": "F",
+          "x": 0.5,
+          "y": 0.66
+        },
+        {
+          "element": "F",
+          "x": 0.76,
+          "y": 0.43
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 1,
+          "b": 2,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 3,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 4,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 5,
+          "kind": "bond"
+        }
+      ],
+      "anchors": [
+        1
+      ],
+      "unknown": false,
+      "composition": {
+        "Si": 1,
+        "N": 1,
+        "H": 1,
+        "F": 3
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "Si_H_rich_residual",
+      "nodes": [
+        {
+          "element": "N",
+          "x": 0.5,
+          "y": 0.23
+        },
+        {
+          "element": "H",
+          "x": 0.555,
+          "y": 0.32526279441628825
+        },
+        {
+          "element": "H",
+          "x": 0.39,
+          "y": 0.23
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 2,
+          "kind": "bond"
+        }
+      ],
+      "anchors": [
+        0
+      ],
+      "unknown": false,
+      "composition": {
+        "N": 1,
+        "H": 2
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "Si_H_rich_F0_HF",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "element": "N",
+          "x": 0.5,
+          "y": 0.2
+        },
+        {
+          "element": "H",
+          "x": 0.5,
+          "y": 0.31
+        },
+        {
+          "element": "H",
+          "x": 0.24,
+          "y": 0.43
+        },
+        {
+          "element": "H",
+          "x": 0.5,
+          "y": 0.66
+        },
+        {
+          "element": "H",
+          "x": 0.76,
+          "y": 0.43
+        },
+        {
+          "element": "F",
+          "x": 0.4,
+          "y": 0.84
+        },
+        {
+          "element": "H",
+          "x": 0.6,
+          "y": 0.84
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 1,
+          "b": 2,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 3,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 4,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 5,
+          "kind": "bond"
+        },
+        {
+          "a": 6,
+          "b": 7,
+          "kind": "bond"
+        },
+        {
+          "a": 7,
+          "b": 0,
+          "kind": "encounter"
+        }
+      ],
+      "anchors": [
+        1
+      ],
+      "unknown": false,
+      "composition": {
+        "Si": 1,
+        "N": 1,
+        "H": 5,
+        "F": 1
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "Si_H_rich_F1_HF",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "element": "N",
+          "x": 0.5,
+          "y": 0.2
+        },
+        {
+          "element": "H",
+          "x": 0.5,
+          "y": 0.31
+        },
+        {
+          "element": "F",
+          "x": 0.24,
+          "y": 0.43
+        },
+        {
+          "element": "H",
+          "x": 0.5,
+          "y": 0.66
+        },
+        {
+          "element": "H",
+          "x": 0.76,
+          "y": 0.43
+        },
+        {
+          "element": "F",
+          "x": 0.4,
+          "y": 0.84
+        },
+        {
+          "element": "H",
+          "x": 0.6,
+          "y": 0.84
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 1,
+          "b": 2,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 3,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 4,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 5,
+          "kind": "bond"
+        },
+        {
+          "a": 6,
+          "b": 7,
+          "kind": "bond"
+        },
+        {
+          "a": 7,
+          "b": 0,
+          "kind": "encounter"
+        }
+      ],
+      "anchors": [
+        1
+      ],
+      "unknown": false,
+      "composition": {
+        "Si": 1,
+        "N": 1,
+        "H": 4,
+        "F": 2
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "Si_H_rich_F2_HF",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "element": "N",
+          "x": 0.5,
+          "y": 0.2
+        },
+        {
+          "element": "H",
+          "x": 0.5,
+          "y": 0.31
+        },
+        {
+          "element": "F",
+          "x": 0.24,
+          "y": 0.43
+        },
+        {
+          "element": "F",
+          "x": 0.5,
+          "y": 0.66
+        },
+        {
+          "element": "H",
+          "x": 0.76,
+          "y": 0.43
+        },
+        {
+          "element": "F",
+          "x": 0.4,
+          "y": 0.84
+        },
+        {
+          "element": "H",
+          "x": 0.6,
+          "y": 0.84
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 1,
+          "b": 2,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 3,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 4,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 5,
+          "kind": "bond"
+        },
+        {
+          "a": 6,
+          "b": 7,
+          "kind": "bond"
+        },
+        {
+          "a": 7,
+          "b": 0,
+          "kind": "encounter"
+        }
+      ],
+      "anchors": [
+        1
+      ],
+      "unknown": false,
+      "composition": {
+        "Si": 1,
+        "N": 1,
+        "H": 3,
+        "F": 3
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "Si_H_rich_F3_HF",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "element": "N",
+          "x": 0.5,
+          "y": 0.2
+        },
+        {
+          "element": "H",
+          "x": 0.5,
+          "y": 0.31
+        },
+        {
+          "element": "F",
+          "x": 0.24,
+          "y": 0.43
+        },
+        {
+          "element": "F",
+          "x": 0.5,
+          "y": 0.66
+        },
+        {
+          "element": "F",
+          "x": 0.76,
+          "y": 0.43
+        },
+        {
+          "element": "F",
+          "x": 0.4,
+          "y": 0.84
+        },
+        {
+          "element": "H",
+          "x": 0.6,
+          "y": 0.84
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 1,
+          "b": 2,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 3,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 4,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 5,
+          "kind": "bond"
+        },
+        {
+          "a": 6,
+          "b": 7,
+          "kind": "bond"
+        },
+        {
+          "a": 7,
+          "b": 0,
+          "kind": "encounter"
+        }
+      ],
+      "anchors": [
+        1
+      ],
+      "unknown": false,
+      "composition": {
+        "Si": 1,
+        "N": 1,
+        "H": 2,
+        "F": 4
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "bridge_N_F0",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "element": "N",
+          "x": 0.25,
+          "y": 0.57
+        },
+        {
+          "element": "N",
+          "x": 0.75,
+          "y": 0.57
+        },
+        {
+          "element": "N",
+          "x": 0.25,
+          "y": 0.31
+        },
+        {
+          "element": "N",
+          "x": 0.75,
+          "y": 0.31
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 2,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 3,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 4,
+          "kind": "bond"
+        }
+      ],
+      "anchors": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "unknown": false,
+      "composition": {
+        "Si": 1,
+        "N": 4
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "bridge_N_F1",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "element": "F",
+          "x": 0.25,
+          "y": 0.57
+        },
+        {
+          "element": "N",
+          "x": 0.19,
+          "y": 0.13
+        },
+        {
+          "element": "H",
+          "x": 0.19,
+          "y": 0.24
+        },
+        {
+          "element": "N",
+          "x": 0.75,
+          "y": 0.57
+        },
+        {
+          "element": "N",
+          "x": 0.25,
+          "y": 0.31
+        },
+        {
+          "element": "N",
+          "x": 0.75,
+          "y": 0.31
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 2,
+          "b": 3,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 4,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 5,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 6,
+          "kind": "bond"
+        }
+      ],
+      "anchors": [
+        2,
+        4,
+        5,
+        6
+      ],
+      "unknown": false,
+      "composition": {
+        "Si": 1,
+        "F": 1,
+        "N": 4,
+        "H": 1
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "bridge_N_F2",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "element": "F",
+          "x": 0.25,
+          "y": 0.57
+        },
+        {
+          "element": "N",
+          "x": 0.19,
+          "y": 0.13
+        },
+        {
+          "element": "H",
+          "x": 0.19,
+          "y": 0.24
+        },
+        {
+          "element": "F",
+          "x": 0.75,
+          "y": 0.57
+        },
+        {
+          "element": "N",
+          "x": 0.395,
+          "y": 0.13
+        },
+        {
+          "element": "H",
+          "x": 0.395,
+          "y": 0.24
+        },
+        {
+          "element": "N",
+          "x": 0.25,
+          "y": 0.31
+        },
+        {
+          "element": "N",
+          "x": 0.75,
+          "y": 0.31
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 2,
+          "b": 3,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 4,
+          "kind": "bond"
+        },
+        {
+          "a": 5,
+          "b": 6,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 7,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 8,
+          "kind": "bond"
+        }
+      ],
+      "anchors": [
+        2,
+        5,
+        7,
+        8
+      ],
+      "unknown": false,
+      "composition": {
+        "Si": 1,
+        "F": 2,
+        "N": 4,
+        "H": 2
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "bridge_N_F3",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "element": "F",
+          "x": 0.25,
+          "y": 0.57
+        },
+        {
+          "element": "N",
+          "x": 0.19,
+          "y": 0.13
+        },
+        {
+          "element": "H",
+          "x": 0.19,
+          "y": 0.24
+        },
+        {
+          "element": "F",
+          "x": 0.75,
+          "y": 0.57
+        },
+        {
+          "element": "N",
+          "x": 0.395,
+          "y": 0.13
+        },
+        {
+          "element": "H",
+          "x": 0.395,
+          "y": 0.24
+        },
+        {
+          "element": "F",
+          "x": 0.25,
+          "y": 0.31
+        },
+        {
+          "element": "N",
+          "x": 0.6,
+          "y": 0.13
+        },
+        {
+          "element": "H",
+          "x": 0.6,
+          "y": 0.24
+        },
+        {
+          "element": "N",
+          "x": 0.75,
+          "y": 0.31
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 2,
+          "b": 3,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 4,
+          "kind": "bond"
+        },
+        {
+          "a": 5,
+          "b": 6,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 7,
+          "kind": "bond"
+        },
+        {
+          "a": 8,
+          "b": 9,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 10,
+          "kind": "bond"
+        }
+      ],
+      "anchors": [
+        2,
+        5,
+        8,
+        10
+      ],
+      "unknown": false,
+      "composition": {
+        "Si": 1,
+        "F": 3,
+        "N": 4,
+        "H": 3
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "bridge_N_residual",
+      "nodes": [],
+      "bonds": [],
+      "anchors": [],
+      "unknown": true,
+      "composition": {
+        "N": 4,
+        "H": 4
+      },
+      "scope": "Unparameterized placeholder; structure deliberately not drawn"
+    },
+    {
+      "state_id": "bridge_N_F0_HF",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "element": "N",
+          "x": 0.25,
+          "y": 0.57
+        },
+        {
+          "element": "N",
+          "x": 0.75,
+          "y": 0.57
+        },
+        {
+          "element": "N",
+          "x": 0.25,
+          "y": 0.31
+        },
+        {
+          "element": "N",
+          "x": 0.75,
+          "y": 0.31
+        },
+        {
+          "element": "F",
+          "x": 0.4,
+          "y": 0.84
+        },
+        {
+          "element": "H",
+          "x": 0.6,
+          "y": 0.84
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 2,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 3,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 4,
+          "kind": "bond"
+        },
+        {
+          "a": 5,
+          "b": 6,
+          "kind": "bond"
+        },
+        {
+          "a": 6,
+          "b": 0,
+          "kind": "encounter"
+        }
+      ],
+      "anchors": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "unknown": false,
+      "composition": {
+        "Si": 1,
+        "N": 4,
+        "F": 1,
+        "H": 1
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "bridge_N_F1_HF",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "element": "F",
+          "x": 0.25,
+          "y": 0.57
+        },
+        {
+          "element": "N",
+          "x": 0.19,
+          "y": 0.13
+        },
+        {
+          "element": "H",
+          "x": 0.19,
+          "y": 0.24
+        },
+        {
+          "element": "N",
+          "x": 0.75,
+          "y": 0.57
+        },
+        {
+          "element": "N",
+          "x": 0.25,
+          "y": 0.31
+        },
+        {
+          "element": "N",
+          "x": 0.75,
+          "y": 0.31
+        },
+        {
+          "element": "F",
+          "x": 0.4,
+          "y": 0.84
+        },
+        {
+          "element": "H",
+          "x": 0.6,
+          "y": 0.84
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 2,
+          "b": 3,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 4,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 5,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 6,
+          "kind": "bond"
+        },
+        {
+          "a": 7,
+          "b": 8,
+          "kind": "bond"
+        },
+        {
+          "a": 8,
+          "b": 0,
+          "kind": "encounter"
+        }
+      ],
+      "anchors": [
+        2,
+        4,
+        5,
+        6
+      ],
+      "unknown": false,
+      "composition": {
+        "Si": 1,
+        "F": 2,
+        "N": 4,
+        "H": 2
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "bridge_N_F2_HF",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "element": "F",
+          "x": 0.25,
+          "y": 0.57
+        },
+        {
+          "element": "N",
+          "x": 0.19,
+          "y": 0.13
+        },
+        {
+          "element": "H",
+          "x": 0.19,
+          "y": 0.24
+        },
+        {
+          "element": "F",
+          "x": 0.75,
+          "y": 0.57
+        },
+        {
+          "element": "N",
+          "x": 0.395,
+          "y": 0.13
+        },
+        {
+          "element": "H",
+          "x": 0.395,
+          "y": 0.24
+        },
+        {
+          "element": "N",
+          "x": 0.25,
+          "y": 0.31
+        },
+        {
+          "element": "N",
+          "x": 0.75,
+          "y": 0.31
+        },
+        {
+          "element": "F",
+          "x": 0.4,
+          "y": 0.84
+        },
+        {
+          "element": "H",
+          "x": 0.6,
+          "y": 0.84
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 2,
+          "b": 3,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 4,
+          "kind": "bond"
+        },
+        {
+          "a": 5,
+          "b": 6,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 7,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 8,
+          "kind": "bond"
+        },
+        {
+          "a": 9,
+          "b": 10,
+          "kind": "bond"
+        },
+        {
+          "a": 10,
+          "b": 0,
+          "kind": "encounter"
+        }
+      ],
+      "anchors": [
+        2,
+        5,
+        7,
+        8
+      ],
+      "unknown": false,
+      "composition": {
+        "Si": 1,
+        "F": 3,
+        "N": 4,
+        "H": 3
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "bridge_N_F3_HF",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "element": "F",
+          "x": 0.25,
+          "y": 0.57
+        },
+        {
+          "element": "N",
+          "x": 0.19,
+          "y": 0.13
+        },
+        {
+          "element": "H",
+          "x": 0.19,
+          "y": 0.24
+        },
+        {
+          "element": "F",
+          "x": 0.75,
+          "y": 0.57
+        },
+        {
+          "element": "N",
+          "x": 0.395,
+          "y": 0.13
+        },
+        {
+          "element": "H",
+          "x": 0.395,
+          "y": 0.24
+        },
+        {
+          "element": "F",
+          "x": 0.25,
+          "y": 0.31
+        },
+        {
+          "element": "N",
+          "x": 0.6,
+          "y": 0.13
+        },
+        {
+          "element": "H",
+          "x": 0.6,
+          "y": 0.24
+        },
+        {
+          "element": "N",
+          "x": 0.75,
+          "y": 0.31
+        },
+        {
+          "element": "F",
+          "x": 0.4,
+          "y": 0.84
+        },
+        {
+          "element": "H",
+          "x": 0.6,
+          "y": 0.84
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 2,
+          "b": 3,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 4,
+          "kind": "bond"
+        },
+        {
+          "a": 5,
+          "b": 6,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 7,
+          "kind": "bond"
+        },
+        {
+          "a": 8,
+          "b": 9,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 10,
+          "kind": "bond"
+        },
+        {
+          "a": 11,
+          "b": 12,
+          "kind": "bond"
+        },
+        {
+          "a": 12,
+          "b": 0,
+          "kind": "encounter"
+        }
+      ],
+      "anchors": [
+        2,
+        5,
+        8,
+        10
+      ],
+      "unknown": false,
+      "composition": {
+        "Si": 1,
+        "F": 4,
+        "N": 4,
+        "H": 4
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "pre_SiH2F",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "element": "N",
+          "x": 0.5,
+          "y": 0.2
+        },
+        {
+          "element": "F",
+          "x": 0.24,
+          "y": 0.43
+        },
+        {
+          "element": "H",
+          "x": 0.5,
+          "y": 0.66
+        },
+        {
+          "element": "H",
+          "x": 0.76,
+          "y": 0.43
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 2,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 3,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 4,
+          "kind": "bond"
+        }
+      ],
+      "anchors": [
+        1
+      ],
+      "unknown": false,
+      "composition": {
+        "Si": 1,
+        "N": 1,
+        "F": 1,
+        "H": 2
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "pre_SiH2F_HF",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "element": "N",
+          "x": 0.5,
+          "y": 0.2
+        },
+        {
+          "element": "F",
+          "x": 0.24,
+          "y": 0.43
+        },
+        {
+          "element": "H",
+          "x": 0.5,
+          "y": 0.66
+        },
+        {
+          "element": "H",
+          "x": 0.76,
+          "y": 0.43
+        },
+        {
+          "element": "F",
+          "x": 0.4,
+          "y": 0.84
+        },
+        {
+          "element": "H",
+          "x": 0.6,
+          "y": 0.84
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 2,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 3,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 4,
+          "kind": "bond"
+        },
+        {
+          "a": 5,
+          "b": 6,
+          "kind": "bond"
+        },
+        {
+          "a": 6,
+          "b": 0,
+          "kind": "encounter"
+        }
+      ],
+      "anchors": [
+        1
+      ],
+      "unknown": false,
+      "composition": {
+        "Si": 1,
+        "N": 1,
+        "F": 2,
+        "H": 3
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "pre_SiH2F_residual",
+      "nodes": [
+        {
+          "element": "N",
+          "x": 0.5,
+          "y": 0.23
+        },
+        {
+          "element": "H",
+          "x": 0.5,
+          "y": 0.34
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        }
+      ],
+      "anchors": [
+        0
+      ],
+      "unknown": false,
+      "composition": {
+        "N": 1,
+        "H": 1
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "pre_SiHF2",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "element": "N",
+          "x": 0.5,
+          "y": 0.2
+        },
+        {
+          "element": "F",
+          "x": 0.24,
+          "y": 0.43
+        },
+        {
+          "element": "F",
+          "x": 0.5,
+          "y": 0.66
+        },
+        {
+          "element": "H",
+          "x": 0.76,
+          "y": 0.43
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 2,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 3,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 4,
+          "kind": "bond"
+        }
+      ],
+      "anchors": [
+        1
+      ],
+      "unknown": false,
+      "composition": {
+        "Si": 1,
+        "N": 1,
+        "F": 2,
+        "H": 1
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "pre_SiHF2_HF",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.5,
+          "y": 0.43
+        },
+        {
+          "element": "N",
+          "x": 0.5,
+          "y": 0.2
+        },
+        {
+          "element": "F",
+          "x": 0.24,
+          "y": 0.43
+        },
+        {
+          "element": "F",
+          "x": 0.5,
+          "y": 0.66
+        },
+        {
+          "element": "H",
+          "x": 0.76,
+          "y": 0.43
+        },
+        {
+          "element": "F",
+          "x": 0.4,
+          "y": 0.84
+        },
+        {
+          "element": "H",
+          "x": 0.6,
+          "y": 0.84
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 2,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 3,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 4,
+          "kind": "bond"
+        },
+        {
+          "a": 5,
+          "b": 6,
+          "kind": "bond"
+        },
+        {
+          "a": 6,
+          "b": 0,
+          "kind": "encounter"
+        }
+      ],
+      "anchors": [
+        1
+      ],
+      "unknown": false,
+      "composition": {
+        "Si": 1,
+        "N": 1,
+        "F": 3,
+        "H": 2
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "pre_SiHF2_residual",
+      "nodes": [
+        {
+          "element": "N",
+          "x": 0.5,
+          "y": 0.23
+        },
+        {
+          "element": "H",
+          "x": 0.5,
+          "y": 0.34
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        }
+      ],
+      "anchors": [
+        0
+      ],
+      "unknown": false,
+      "composition": {
+        "N": 1,
+        "H": 1
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "Si_Si_F1",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.44,
+          "y": 0.47
+        },
+        {
+          "element": "Si",
+          "x": 0.7,
+          "y": 0.23
+        },
+        {
+          "element": "F",
+          "x": 0.22,
+          "y": 0.56
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 2,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        }
+      ],
+      "anchors": [
+        0,
+        1
+      ],
+      "unknown": false,
+      "composition": {
+        "Si": 2,
+        "F": 1
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "Si_Si_F1_HF",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.44,
+          "y": 0.47
+        },
+        {
+          "element": "Si",
+          "x": 0.7,
+          "y": 0.23
+        },
+        {
+          "element": "F",
+          "x": 0.22,
+          "y": 0.56
+        },
+        {
+          "element": "F",
+          "x": 0.4,
+          "y": 0.84
+        },
+        {
+          "element": "H",
+          "x": 0.6,
+          "y": 0.84
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 2,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 1,
+          "kind": "bond"
+        },
+        {
+          "a": 3,
+          "b": 4,
+          "kind": "bond"
+        },
+        {
+          "a": 4,
+          "b": 0,
+          "kind": "encounter"
+        }
+      ],
+      "anchors": [
+        0,
+        1
+      ],
+      "unknown": false,
+      "composition": {
+        "Si": 2,
+        "F": 2,
+        "H": 1
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    },
+    {
+      "state_id": "Si_Si_cleaved_F2_H",
+      "nodes": [
+        {
+          "element": "Si",
+          "x": 0.44,
+          "y": 0.47
+        },
+        {
+          "element": "Si",
+          "x": 0.7,
+          "y": 0.23
+        },
+        {
+          "element": "F",
+          "x": 0.22,
+          "y": 0.56
+        },
+        {
+          "element": "F",
+          "x": 0.63,
+          "y": 0.61
+        },
+        {
+          "element": "H",
+          "x": 0.83,
+          "y": 0.36
+        }
+      ],
+      "bonds": [
+        {
+          "a": 0,
+          "b": 2,
+          "kind": "bond"
+        },
+        {
+          "a": 0,
+          "b": 3,
+          "kind": "bond"
+        },
+        {
+          "a": 1,
+          "b": 4,
+          "kind": "bond"
+        }
+      ],
+      "anchors": [
+        0,
+        1
+      ],
+      "unknown": false,
+      "composition": {
+        "Si": 2,
+        "F": 2,
+        "H": 1
+      },
+      "scope": "Representative reduced-motif connectivity; not unique relaxed geometry; untracked substrate anchors implicit"
+    }
+  ],
+  "depiction_renderer": "scripts/draw_surface_states.py",
+  "depiction_renderer_sha256": "d50827b84701bad13692364b57b6e17403351d10acc22fa399bd19c08d44fedf"
 }

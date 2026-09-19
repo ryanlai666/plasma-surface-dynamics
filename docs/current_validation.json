@@ -1,6 +1,6 @@
 {
-  "passed": 66,
+  "passed": 76,
   "command": "python -m pytest -q -p no:cacheprovider",
-  "scope": "Local full suite including native backend, saved trajectories, reference audit and sensitivity calculations",
+  "scope": "Full suite including both kinetics engines, multilayer ledgers, rate evidence gates, and surface-drawing inventories",
   "date": "2026-09-18"
 }

@@ -1,0 +1,322 @@
+{
+  "status": "multilayer_connectivity_demonstration_not_validated_etch_prediction",
+  "substrate_atoms": 336,
+  "initial_bonds": 552,
+  "initial_layers": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "fixed_atoms": 56,
+  "baseline_events": 1097,
+  "event_counts": {
+    "HF_adsorption": 536,
+    "SiN_cleavage": 87,
+    "NH3_release": 16,
+    "HF_desorption": 447,
+    "Si_molecule_release": 9,
+    "SiCl_exchange": 2
+  },
+  "removed": {
+    "Si": 9,
+    "N": 16
+  },
+  "removed_by_initial_layer": {
+    "4": 1,
+    "5": 24
+  },
+  "initial_layer_sizes": {
+    "0": 56,
+    "1": 56,
+    "2": 56,
+    "3": 56,
+    "4": 56,
+    "5": 56
+  },
+  "newly_exposed_atoms": 20,
+  "initial_inventory": {
+    "Si": 144,
+    "F": 17,
+    "Cl": 4,
+    "N": 192,
+    "H": 27
+  },
+  "final_gas": {
+    "HF": -89,
+    "NH3": 16,
+    "SiHF3": 2,
+    "HCl": 2,
+    "SiF4": 7
+  },
+  "conservation_exact": true,
+  "control_runs": [
+    {
+      "penetration_A": 0.0,
+      "seed": 71,
+      "removed": {
+        "Si": 8,
+        "N": 8
+      },
+      "removed_by_initial_layer": {
+        "5": 16
+      },
+      "events": 826,
+      "gas": {
+        "HF": -64,
+        "NH3": 8,
+        "SiF4": 6,
+        "HCl": 2,
+        "SiHF3": 2
+      },
+      "conservation_exact": true
+    },
+    {
+      "penetration_A": 0.0,
+      "seed": 72,
+      "removed": {
+        "Si": 6,
+        "N": 4
+      },
+      "removed_by_initial_layer": {
+        "5": 10
+      },
+      "events": 946,
+      "gas": {
+        "HF": -62,
+        "SiHF3": 2,
+        "NH3": 4,
+        "SiF4": 4,
+        "HCl": 2
+      },
+      "conservation_exact": true
+    },
+    {
+      "penetration_A": 0.0,
+      "seed": 73,
+      "removed": {
+        "Si": 7,
+        "N": 14
+      },
+      "removed_by_initial_layer": {
+        "5": 21
+      },
+      "events": 1053,
+      "gas": {
+        "HF": -69,
+        "NH3": 14,
+        "HCl": 2,
+        "SiF4": 5,
+        "SiHF3": 2
+      },
+      "conservation_exact": true
+    },
+    {
+      "penetration_A": 1.0,
+      "seed": 71,
+      "removed": {
+        "Si": 8,
+        "N": 8
+      },
+      "removed_by_initial_layer": {
+        "5": 16
+      },
+      "events": 826,
+      "gas": {
+        "HF": -64,
+        "NH3": 8,
+        "SiF4": 6,
+        "HCl": 2,
+        "SiHF3": 2
+      },
+      "conservation_exact": true
+    },
+    {
+      "penetration_A": 1.0,
+      "seed": 72,
+      "removed": {
+        "Si": 6,
+        "N": 4
+      },
+      "removed_by_initial_layer": {
+        "5": 10
+      },
+      "events": 946,
+      "gas": {
+        "HF": -62,
+        "SiHF3": 2,
+        "NH3": 4,
+        "SiF4": 4,
+        "HCl": 2
+      },
+      "conservation_exact": true
+    },
+    {
+      "penetration_A": 1.0,
+      "seed": 73,
+      "removed": {
+        "Si": 7,
+        "N": 14
+      },
+      "removed_by_initial_layer": {
+        "5": 21
+      },
+      "events": 1053,
+      "gas": {
+        "HF": -69,
+        "NH3": 14,
+        "HCl": 2,
+        "SiF4": 5,
+        "SiHF3": 2
+      },
+      "conservation_exact": true
+    },
+    {
+      "penetration_A": 2.0,
+      "seed": 71,
+      "removed": {
+        "Si": 9,
+        "N": 16
+      },
+      "removed_by_initial_layer": {
+        "4": 1,
+        "5": 24
+      },
+      "events": 1097,
+      "gas": {
+        "HF": -89,
+        "NH3": 16,
+        "SiHF3": 2,
+        "HCl": 2,
+        "SiF4": 7
+      },
+      "conservation_exact": true
+    },
+    {
+      "penetration_A": 2.0,
+      "seed": 72,
+      "removed": {
+        "Si": 10,
+        "N": 17
+      },
+      "removed_by_initial_layer": {
+        "5": 26,
+        "4": 1
+      },
+      "events": 1207,
+      "gas": {
+        "HF": -93,
+        "NH3": 17,
+        "HCl": 2,
+        "SiF4": 8,
+        "SiHF3": 2
+      },
+      "conservation_exact": true
+    },
+    {
+      "penetration_A": 2.0,
+      "seed": 73,
+      "removed": {
+        "Si": 5,
+        "N": 16
+      },
+      "removed_by_initial_layer": {
+        "5": 20,
+        "4": 1
+      },
+      "events": 1303,
+      "gas": {
+        "HF": -75,
+        "NH3": 16,
+        "SiHF3": 2,
+        "SiF3Cl": 1,
+        "HCl": 1,
+        "SiF4": 2
+      },
+      "conservation_exact": true
+    },
+    {
+      "penetration_A": 4.0,
+      "seed": 71,
+      "removed": {
+        "N": 27,
+        "Si": 11
+      },
+      "removed_by_initial_layer": {
+        "4": 8,
+        "5": 29,
+        "3": 1
+      },
+      "events": 1320,
+      "gas": {
+        "HF": -129,
+        "NH3": 27,
+        "HCl": 2,
+        "SiF4": 9,
+        "SiHF3": 2
+      },
+      "conservation_exact": true
+    },
+    {
+      "penetration_A": 4.0,
+      "seed": 72,
+      "removed": {
+        "Si": 12,
+        "N": 29
+      },
+      "removed_by_initial_layer": {
+        "4": 8,
+        "5": 33
+      },
+      "events": 1203,
+      "gas": {
+        "HF": -119,
+        "NH3": 29,
+        "SiHF3": 2,
+        "SiF4": 10,
+        "HCl": 2
+      },
+      "conservation_exact": true
+    },
+    {
+      "penetration_A": 4.0,
+      "seed": 73,
+      "removed": {
+        "N": 29,
+        "Si": 9
+      },
+      "removed_by_initial_layer": {
+        "4": 7,
+        "5": 31
+      },
+      "events": 1344,
+      "gas": {
+        "HF": -118,
+        "NH3": 29,
+        "SiF3Cl": 2,
+        "SiHF3": 2,
+        "SiF4": 5
+      },
+      "conservation_exact": true
+    }
+  ],
+  "validated_only_events": 0,
+  "parameters": {
+    "temperature_K": 450.0,
+    "arrival_s": 5.0,
+    "desorption_s": 100.0,
+    "penetration_A": 2.0,
+    "attenuation_A": 1.0,
+    "dose_s": 2.0,
+    "purge_s": 1.0
+  },
+  "geometry_sha256": "bd0e6f41e8e8a5dbc064e4d10982ed038a8333966849fadbe97fae7282a220d1",
+  "trajectory_sha256": "ffaef13f586b461172381975e962c36fa094bd33071e75cfad39d1a7ea2ef427",
+  "code_sha256": {
+    "plasma_surface/multilayer.py": "14ba968dd934da3853a6d3575bced9b545ac6f925b1d4a048a2258bfe511792f",
+    "plasma_surface/rate_evidence.py": "28fdce0dce03a774a0632aaad95bda8f2334abc72d3ffe8e47459d6c8b84595c",
+    "scripts/run_multilayer.py": "d4f153f15e10d11dc39957773f5af9fa94e7706f170bde4e3e0a0a26afefe71c"
+  }
+}

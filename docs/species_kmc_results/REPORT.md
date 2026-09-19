@@ -4,6 +4,8 @@ This rerun tracks **45 named states and 55 enabled events**, representing all 16
 
 ![Enabled and disabled reaction network](../reaction_network/species_kmc_network.png)
 
+[Surface/adsorbate atlas and enlarged family diagrams](../reaction_network/SURFACE_ATLAS.md). Molecular drawings visualize the reduced-state inventory; they are not unique, relaxed atomic structures.
+
 ## Species and local environments
 
 | Motif family | Source pathways and intermediates | Products and residuals | Restriction |

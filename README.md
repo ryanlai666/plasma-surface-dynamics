@@ -13,11 +13,12 @@ Combining surface reaction kinetics, Python/C++ simulation, public atomistic dat
 <!-- BEGIN CURRENT STATUS -->
 | Component | Current status |
 |---|---|
-| Numerical checks | **66 tests passed**; atom conservation, independent master equation, Python/C++ statistical agreement and artifact provenance. |
+| Numerical checks | **76 tests passed**; atom conservation, independent master equation, Python/C++ statistical agreement and artifact provenance. |
 | Species-resolved kMC | **45 states / 55 enabled events**, 16 source pathways; **512 C++ trajectories** across 325-450 K. Conditional kinetics, not calibrated ALE. |
 | Network discovery | HiPRGen pilot: **40 forward + 40 reverse candidates**, with missing-intermediate audit; no automatic rate assignment. |
 | Atomistic evidence | MACE surface paths and molecular screening; OMol25 local models and direct DFT diagnostics. Convergence limits retained. |
 | Beyond rigid scans | **7/8 HF/substrate relaxations force-converged**, two starts on each of four surfaces; see reference convergence below. |
+| Multilayer prototype | 336 Si/N atoms, six depth bands; explicit bonds and H/F/Cl termination. Unvalidated demonstration rates; strict mode blocks missing data. |
 <!-- END CURRENT STATUS -->
 
 **Evidence boundary:** numerical verification is not experimental validation. The species model uses literature activation energies with assumed arrival/desorption rates, prefactors and initial populations. It does not yet predict calibrated etch per cycle (EPC), arbitrary Si:N composition effects, or a complete plasma mechanism. Unconverged atomistic peaks are excluded from its rates.
@@ -46,7 +47,7 @@ The current kMC rates come from the literature branch. Newly screened or relaxed
 
 **Read the colors:** gray = F0, green = F1, teal = F2, purple = F3, gold = adsorbed HF complex, dark blue = Si released. F0-F3 denote incorporated fluorination stage; gold is additional HF occupancy, with the underlying stage shown by its border in the top view. These colors match the network below.
 
-**Why one layer?** This model follows 400 initial reactive motifs through one HF dose and purge. A Si-release event leaves a residual state; it does not reveal and initialize a fresh subsurface motif. The perspective height only distinguishes retained and released Si. It is a schematic state map, not an atomistic crystal or physical film thickness. Multilayer recession needs explicit subsurface connectivity, exposure rules, new-site chemistry and corresponding rates; those are not yet implemented here.
+**Why one layer?** This model follows 400 initial reactive motifs through one HF dose and purge. A Si-release event leaves a residual state; it does not reveal and initialize a fresh subsurface motif. The perspective height only distinguishes retained and released Si. It is a schematic state map, not an atomistic crystal or physical film thickness. Multilayer recession needs explicit subsurface connectivity, exposure rules, new-site chemistry and corresponding rates; those are not part of this baseline. See the separate multilayer prototype below.
 
 Every frame is a saved stochastic trajectory snapshot, with no interpolated states. [Trajectory and frame provenance](docs/species_kmc_results/animation_manifest.json). The temperature ensemble separately uses 1,000 motifs and 128 replicates per temperature.
 
@@ -55,6 +56,8 @@ Every frame is a saved stochastic trajectory snapshot, with no interpolated stat
 ![Complete kMC network with adsorption, reaction intermediates, products and disabled branches](docs/reaction_network/species_kmc_network.png)
 
 **The complexity is structured:** seven independent motif families contain 45 named states and 55 enabled events. They share gas reservoirs but do not interconvert in this model. All 16 source pathway entries are represented. Gray arrow pairs are HF adsorption/desorption; brown arrows show chemical conversion, source activation energy and released gas; dashed pink steps lack matching barriers and are disabled. Two proposed residual states remain unreachable.
+
+The diagrams now draw central Si, N/H/F groups, intact HF precursor molecules, retained surface groups and outgoing gas molecules. These are **representative bookkeeping sketches**, not optimized adsorption geometries; the hatched support does not imply simulated lower layers in this model. [Surface-state atlas and seven enlarged family diagrams](docs/reaction_network/SURFACE_ATLAS.md).
 
 The figure is generated directly from the [state/event configuration](configs/species_kmc_network.json), not drawn as a speculative fully connected mechanism. [Zoomable SVG](docs/reaction_network/species_kmc_network.svg) | [Simple reading guide](docs/reaction_network/species_kmc_overview.png) | [All event rates and source IDs](docs/species_kmc_results/event_rates.csv).
 
@@ -70,6 +73,20 @@ The figure is generated directly from the [state/event configuration](configs/sp
 The function-level HiPRGen pilot retains 40 forward and 40 reverse substitutions for capped Si-N/Si-O motifs with F/Cl. These are candidates, not verified surface reactions or assigned rates. [Execution scope](docs/HIPRGEN.md) | [Missing intermediates](data/reaction_network/intermediate_gaps.csv) | [Fragments and experimental discrimination](docs/REACTION_CANDIDATES.md).
 
 </details>
+
+## Multilayer bond graph
+
+The separate multilayer prototype now represents **336 Si/N substrate atoms across six unit-cell depth bands**, with explicit H/F/Cl terminations. Bond cleavage changes neighboring coordination; product release exposes deeper sites. Modification depends on depth below the moving local surface, and every event conserves Si/N/H/F/Cl with gas products.
+
+![Actual multilayer bond-graph kMC snapshots](docs/multilayer_results/multilayer_kmc.gif)
+
+<!-- BEGIN MULTILAYER STATUS -->
+The 9 s demonstration recorded **1097 events**, **9 Si + 16 N removals**, and **20 newly exposed atoms**. Twelve access-depth/seed controls accompany it. The rate audit identifies **246 distinct missing-rate environments**, with separate IS/FS connectivity requests for priority cases.
+<!-- END MULTILAYER STATUS -->
+
+**This is an explicit demonstration, not calibrated multilayer ALE.** Crystal host positions stay fixed, accessibility uses a column approximation, and rates are unvalidated transfers or assumptions. Default library calls use `validated_only`: unmatched environments stay disabled. The earlier 45-state animation remains the reproducible single-inventory baseline; it is not the multilayer solver.
+
+[Multilayer results, depth controls, equations and limitations](docs/multilayer_results/REPORT.md) | [Initial Si/N graph](data/multilayer/sin_graph.json) | [Environment-specific IS/FS calculation queue](data/multilayer/rate_requests/index.json).
 
 ## Beyond rigid approach scans
 
@@ -98,7 +115,7 @@ This is **not yet publication-ready predictive ALE**. The [critical scientific r
 
 - **Flux and initial surface state matter:** at 400 K, HF arrival is more influential than any individual enabled chemical-rate group; the assumed motif mixture strongly controls Si release.
 - **Relaxation alone is insufficient:** clean-slab reference bias dominates some apparent Si/HF adsorption energies. Those values are excluded from quantitative binding claims and kinetic parameters.
-- **A plateau is not automatically ALE:** the current graph has a 60% eventual removal ceiling imposed by its initial mixture and missing release paths. Multilayer exposure, coadsorption and product retention need explicit models and evidence.
+- **A plateau is not automatically ALE:** the 45-state graph has a 60% eventual removal ceiling imposed by its initial mixture and missing release paths. Multilayer exposure, coadsorption and product retention need explicit models and evidence.
 
 ![Calculated sensitivity and motif dependence](docs/species_kmc_results/kinetic_priorities.png)
 

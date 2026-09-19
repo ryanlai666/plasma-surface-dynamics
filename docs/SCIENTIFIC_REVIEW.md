@@ -1,5 +1,7 @@
 # Scientific review and a defensible route to publication
 
+Update: a separate [multilayer bond-graph prototype and evidence-gated rate queue](multilayer_results/REPORT.md) has now been implemented. Statements below about independent motifs and no subsurface refill refer to the original 45-state model. The new prototype does not resolve the energetics or experimental-validation gaps.
+
 ## Verdict and narrower research question
 
 This repository is a reproducible research prototype, **not a publication-ready predictive ALE model**. Numerical verification, a large reaction graph and animated trajectories do not establish chemical accuracy. The present scientifically useful result is an audit of which assumptions dominate a bounded HF/SiN:H model, together with explicit failures of atomistic reference choices.
