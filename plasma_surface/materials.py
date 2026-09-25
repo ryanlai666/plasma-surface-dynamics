@@ -1,4 +1,5 @@
 """Explicit composition-tagged scenarios, never an inferred composition-rate law."""
+
 from dataclasses import asdict, replace
 import hashlib
 import json
@@ -11,8 +12,10 @@ from .io import write_csv, write_json, manifest
 
 def compare(cards_path, output, backend="python"):
     import matplotlib
+
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
+
     solver = mean_field
     if backend == "cpp":
         from .native import mean_field as solver
@@ -33,17 +36,37 @@ def compare(cards_path, output, backend="python"):
         values = []
         for energy in np.linspace(0, 100, 101):
             history = solver(ale_recipe(float(energy)), p)
-            epc = history[-1]["net_removed_nm"]-history[-5]["net_removed_nm"]
+            epc = history[-1]["net_removed_nm"] - history[-5]["net_removed_nm"]
             values.append(epc)
-            rows.append(dict(material=card["name"], n_si_ratio=x, hydrogen_atomic_fraction=hydrogen,
-                             energy_ev=float(energy), epc_nm=epc, data_origin=config["status"]))
+            rows.append(
+                dict(
+                    material=card["name"],
+                    n_si_ratio=x,
+                    hydrogen_atomic_fraction=hydrogen,
+                    energy_ev=float(energy),
+                    epc_nm=epc,
+                    data_origin=config["status"],
+                )
+            )
         ax.plot(np.linspace(0, 100, 101), values, label=card["name"])
-    ax.set(xlabel="Ion energy (eV)", ylabel="Cycle-5 net EPC (nm/cycle)",
-           title="Si / SiNx hypothetical parameter sensitivity\nNot measured composition dependence")
+    ax.set(
+        xlabel="Ion energy (eV)",
+        ylabel="Cycle-5 net EPC (nm/cycle)",
+        title="Si / SiNx hypothetical parameter sensitivity\nNot measured composition dependence",
+    )
     ax.legend()
-    write_csv(output/"comparison.csv", rows)
-    fig.savefig(output/"comparison.png", dpi=170)
+    write_csv(output / "comparison.csv", rows)
+    fig.savefig(output / "comparison.png", dpi=170)
     plt.close(fig)
-    write_json(output/"manifest.json", manifest(dict(cards=effective, status=config["status"], backend=backend,
-                                                    cards_sha256=hashlib.sha256(Path(cards_path).read_bytes()).hexdigest())))
+    write_json(
+        output / "manifest.json",
+        manifest(
+            dict(
+                cards=effective,
+                status=config["status"],
+                backend=backend,
+                cards_sha256=hashlib.sha256(Path(cards_path).read_bytes()).hexdigest(),
+            )
+        ),
+    )
     return dict(rows=len(rows), output=str(output), status=config["status"])

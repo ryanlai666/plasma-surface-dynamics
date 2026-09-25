@@ -7,7 +7,9 @@ from .workflows import calibrate, campaign, demo
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Plasma Surface Lab: illustrative research workflows")
+    parser = argparse.ArgumentParser(
+        description="Plasma Surface Lab: illustrative research workflows"
+    )
     sub = parser.add_subparsers(dest="command", required=True)
     run = sub.add_parser("demo", help="Generate ROM, kMC, ML evaluation, and a figure")
     run.add_argument("--output", default="outputs/demo")
@@ -26,7 +28,9 @@ def main():
     bench.add_argument("--sites", type=int, default=2048)
     bench.add_argument("--cycles", type=int, default=10)
     bench.add_argument("--repeats", type=int, default=3)
-    materials = sub.add_parser("materials", help="Compare explicit Si/SiNx hypothetical parameter cards")
+    materials = sub.add_parser(
+        "materials", help="Compare explicit Si/SiNx hypothetical parameter cards"
+    )
     materials.add_argument("--cards", default="configs/materials.json")
     materials.add_argument("--output", default="outputs/materials")
     materials.add_argument("--backend", choices=["python", "cpp"], default="python")
@@ -35,7 +39,9 @@ def main():
     inspect = sub.add_parser("inventory", help="Inventory a previously downloaded DFT archive")
     inspect.add_argument("archive")
     inspect.add_argument("--output", default="data/processed/structure_inventory.csv")
-    fit = sub.add_parser("calibrate", help="Fit two rates to compatible experimental CSV measurements")
+    fit = sub.add_parser(
+        "calibrate", help="Fit two rates to compatible experimental CSV measurements"
+    )
     fit.add_argument("csv")
     fit.add_argument("--output", default="outputs/calibration.json")
     args = parser.parse_args()
@@ -50,9 +56,11 @@ def main():
         result = dict(rows=len(rows), output=args.output)
     elif args.command == "benchmark":
         from .benchmark import benchmark
+
         result = benchmark(args.output, args.sites, args.cycles, args.repeats)
     elif args.command == "materials":
         from .materials import compare
+
         result = compare(args.cards, args.output, args.backend)
     elif args.command == "fetch-data":
         result = fetch_hcl(args.output)

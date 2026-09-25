@@ -1,65 +1,188 @@
 """Report calculated coadsorbate candidates without promoting them to rate evidence."""
+
 from pathlib import Path
 import csv, hashlib, json
 import numpy as np
 import matplotlib
+
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d.art3d import Line3DCollection
 from ase.io import read
-ROOT=Path(__file__).resolve().parents[1]
-DATA=ROOT/'data/intermediate_campaign'
-OUT=ROOT/'docs/intermediate_results'
-COLORS={'Si':'#7C91AD','N':'#3478B9','O':'#D65B4E','F':'#269D78','H':'#E6CD83'}
-CUTOFF={('F','H'):1.4,('H','N'):1.3,('H','O'):1.3,('H','Si'):1.8,('F','Si'):2.0,('N','Si'):2.15,('O','Si'):2.0}
+
+ROOT = Path(__file__).resolve().parents[1]
+DATA = ROOT / 'data/intermediate_campaign'
+OUT = ROOT / 'docs/intermediate_results'
+COLORS = {'Si': '#7C91AD', 'N': '#3478B9', 'O': '#D65B4E', 'F': '#269D78', 'H': '#E6CD83'}
+CUTOFF = {
+    ('F', 'H'): 1.4,
+    ('H', 'N'): 1.3,
+    ('H', 'O'): 1.3,
+    ('H', 'Si'): 1.8,
+    ('F', 'Si'): 2.0,
+    ('N', 'Si'): 2.15,
+    ('O', 'Si'): 2.0,
+}
+
 
 def bonds(a):
-    distances=a.get_all_distances(mic=True);sym=a.get_chemical_symbols()
-    return [[i,j] for i in range(len(a)) for j in range(i) if distances[i,j]<CUTOFF.get(tuple(sorted((sym[i],sym[j]))),0)]
+    distances = a.get_all_distances(mic=True)
+    sym = a.get_chemical_symbols()
+    return [
+        [i, j]
+        for i in range(len(a))
+        for j in range(i)
+        if distances[i, j] < CUTOFF.get(tuple(sorted((sym[i], sym[j]))), 0)
+    ]
+
 
 def main():
-    OUT.mkdir(exist_ok=True);d=json.loads((DATA/'refined_summary.json').read_text());rr=d['results'];nodes=[];edges=[];table=[]
-    fig=plt.figure(figsize=(16,9));energy,axes=plt.subplots(2,4,figsize=(15,7),layout='constrained')
-    for k,r in enumerate(rr):
-        folder=ROOT/r['folder'];a=read(folder/'final.extxyz');initial=read(ROOT/r['initial_attempt']/'trajectory.extxyz',0);pos=a.positions;sym=a.get_chemical_symbols();n=r['host_atoms'];bb=bonds(a)
+    OUT.mkdir(exist_ok=True)
+    d = json.loads((DATA / 'refined_summary.json').read_text())
+    rr = d['results']
+    nodes = []
+    edges = []
+    table = []
+    fig = plt.figure(figsize=(16, 9))
+    energy, axes = plt.subplots(2, 4, figsize=(15, 7), layout='constrained')
+    for k, r in enumerate(rr):
+        folder = ROOT / r['folder']
+        a = read(folder / 'final.extxyz')
+        initial = read(ROOT / r['initial_attempt'] / 'trajectory.extxyz', 0)
+        pos = a.positions
+        sym = a.get_chemical_symbols()
+        n = r['host_atoms']
+        bb = bonds(a)
         # Distances use MIC for classification. The drawing omits wraparound edges.
-        ax=fig.add_subplot(2,4,k+1,projection='3d')
-        seg=[pos[[i,j]] for i,j in bb if np.linalg.norm(pos[i]-pos[j])<2.2]
-        ax.add_collection3d(Line3DCollection(seg,colors='#8895A3',linewidths=1.2))
-        ax.scatter(*pos[:n].T,c=[COLORS[s] for s in sym[:n]],s=40,alpha=.55,depthshade=False)
-        ax.scatter(*pos[n:].T,c=[COLORS[s] for s in sym[n:]],s=80,edgecolors='#324154',linewidths=.6,depthshade=False)
-        for i in range(n,len(a)):ax.text(*pos[i],str(i),fontsize=7)
-        ax.set_box_aspect(np.maximum(np.ptp(pos,axis=0),1));ax.view_init(18,-65);ax.axis('off')
-        name=('SiN' if r['surface'].startswith('beta') else 'SiO2')+' / HF + '+r['coadsorbate']+f" / start {r['start']}"
-        assoc=r['incremental_association_energy_eV'];value=f'{assoc:+.3f} eV' if assoc is not None else 'not assigned'
-        ax.set_title(name+'\nRaw refinement energy: '+value,fontsize=10)
-        rows=list(csv.DictReader((folder/'energies.csv').open()));steps=[int(x['optimization_step']) for x in rows];energies=[float(x['energy_relative_to_start_eV']) for x in rows]
-        axes.flat[k].plot(steps,energies,c='#269D78');axes.flat[k].set(title=name,xlabel='BFGS step (not reaction coordinate)',ylabel='E - initial E (eV)');axes.flat[k].grid(alpha=.15)
-        geometric='parent HF separated' if r['geometry']['parent_HF_distance_A']>1.4 else 'parent HF retained'
-        threshold=1.4 if r['coadsorbate']=='HF' else 1.3
-        geometric+='; added '+r['coadsorbate']+(' separated' if max(r['geometry']['added_bond_distances_A'])>threshold else ' retained')
-        key=r['surface']+'_HF_'+r['coadsorbate']+'_start_'+str(r['start']);before={tuple(x) for x in bonds(initial)};after={tuple(x) for x in bb}
-        node=dict(id=key,formula=a.get_chemical_formula(),host_atoms=n,adsorbate_atom_indices=list(range(n,len(a))),symbols=sym,positions_A=pos.tolist(),cell_A=a.cell.array.tolist(),pbc=a.pbc.tolist(),distance_graph=bb,formed_distance_edges=[list(x) for x in sorted(after-before)],lost_distance_edges=[list(x) for x in sorted(before-after)],classification=geometric,converged=r['converged'],curvature_screen=r['adsorbate_curvature'],structure=r['folder']+'/final.extxyz',structure_sha256=r['final_sha256'],rate_enabled=False)
-        nodes.append(node);edges.append(dict(source=r['surface']+f"_parent_{r['start']}",gas_reactant=r['coadsorbate'],target=key,kind='coadsorption_candidate',incremental_association_energy_eV=assoc,barrier_eV=None,rate_s=None,rate_enabled=False))
-        curve=r['adsorbate_curvature'];curv=f"{curve['minimum_eigenvalue_eV_A2']:+.3f}" if curve else 'not evaluated'
-        table.append(f"| {name} | {'yes' if r['converged'] else 'no'} | {r['max_mobile_force_eV_A']:.3f} | {value} | {curv} | [structure](../../{r['folder']}/final.extxyz), [energies](../../{r['folder']}/energies.csv) |")
-    fig.suptitle('Relaxed coadsorbate candidates: actual final MACE geometries',fontsize=17)
-    fig.text(.5,.035,'Si gray-blue | N blue | O red | F green | H gold. Adsorbate atom indices shown. Faint atoms: substrate.\nDistance-cutoff bonds are a geometric diagnostic; periodic wrap bonds omitted visually. No transition states are claimed.',ha='center',fontsize=10)
-    fig.subplots_adjust(top=.88,bottom=.11,wspace=.05,hspace=.16);fig.savefig(OUT/'coadsorbate_structures.png',dpi=150);plt.close(fig)
-    energy.suptitle('Evaluated optimization energies; these are not minimum-energy reaction paths',fontsize=14);energy.savefig(OUT/'relaxation_energies.png',dpi=140);plt.close(energy)
-    qualified=json.loads((DATA/'stability_qualification.json').read_text())
-    lookup={(r['surface'],r['coadsorbate'],r['start']):r for r in qualified['results']}
-    for node,edge,r in zip(nodes,edges,rr):
-        q=lookup[(r['surface'],r['coadsorbate'],r['start'])]
-        node['full_stability_screen']=q
-        edge['incremental_energy_scope']='Raw original refinement; consult full-stability screened field'
-        edge['screened_association_energy_eV']=q['screened_association_energy_eV']
-        edge['screened_energy_structure']=q['structure']
-        edge['DFT_validated']=False
-    network=dict(scope='Eight calculated candidate endpoints and coadsorption bookkeeping edges; no kinetic network extension enabled',nodes=nodes,edges=edges,distance_cutoffs_A={','.join(k):v for k,v in CUTOFF.items()},runner='scripts/report_coadsorbate_intermediates.py',runner_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),summary_sha256=hashlib.sha256((DATA/'refined_summary.json').read_bytes()).hexdigest())
-    (DATA/'candidate_network.json').write_text(json.dumps(network,indent=2)+'\n')
-    count=sum(r['converged'] for r in rr)
-    text=f'''# Intermediate-gap campaign: HF coadsorbates
+        ax = fig.add_subplot(2, 4, k + 1, projection='3d')
+        seg = [pos[[i, j]] for i, j in bb if np.linalg.norm(pos[i] - pos[j]) < 2.2]
+        ax.add_collection3d(Line3DCollection(seg, colors='#8895A3', linewidths=1.2))
+        ax.scatter(*pos[:n].T, c=[COLORS[s] for s in sym[:n]], s=40, alpha=0.55, depthshade=False)
+        ax.scatter(
+            *pos[n:].T,
+            c=[COLORS[s] for s in sym[n:]],
+            s=80,
+            edgecolors='#324154',
+            linewidths=0.6,
+            depthshade=False,
+        )
+        for i in range(n, len(a)):
+            ax.text(*pos[i], str(i), fontsize=7)
+        ax.set_box_aspect(np.maximum(np.ptp(pos, axis=0), 1))
+        ax.view_init(18, -65)
+        ax.axis('off')
+        name = (
+            ('SiN' if r['surface'].startswith('beta') else 'SiO2')
+            + ' / HF + '
+            + r['coadsorbate']
+            + f" / start {r['start']}"
+        )
+        assoc = r['incremental_association_energy_eV']
+        value = f'{assoc:+.3f} eV' if assoc is not None else 'not assigned'
+        ax.set_title(name + '\nRaw refinement energy: ' + value, fontsize=10)
+        rows = list(csv.DictReader((folder / 'energies.csv').open()))
+        steps = [int(x['optimization_step']) for x in rows]
+        energies = [float(x['energy_relative_to_start_eV']) for x in rows]
+        axes.flat[k].plot(steps, energies, c='#269D78')
+        axes.flat[k].set(
+            title=name, xlabel='BFGS step (not reaction coordinate)', ylabel='E - initial E (eV)'
+        )
+        axes.flat[k].grid(alpha=0.15)
+        geometric = (
+            'parent HF separated'
+            if r['geometry']['parent_HF_distance_A'] > 1.4
+            else 'parent HF retained'
+        )
+        threshold = 1.4 if r['coadsorbate'] == 'HF' else 1.3
+        geometric += (
+            '; added '
+            + r['coadsorbate']
+            + (
+                ' separated'
+                if max(r['geometry']['added_bond_distances_A']) > threshold
+                else ' retained'
+            )
+        )
+        key = r['surface'] + '_HF_' + r['coadsorbate'] + '_start_' + str(r['start'])
+        before = {tuple(x) for x in bonds(initial)}
+        after = {tuple(x) for x in bb}
+        node = dict(
+            id=key,
+            formula=a.get_chemical_formula(),
+            host_atoms=n,
+            adsorbate_atom_indices=list(range(n, len(a))),
+            symbols=sym,
+            positions_A=pos.tolist(),
+            cell_A=a.cell.array.tolist(),
+            pbc=a.pbc.tolist(),
+            distance_graph=bb,
+            formed_distance_edges=[list(x) for x in sorted(after - before)],
+            lost_distance_edges=[list(x) for x in sorted(before - after)],
+            classification=geometric,
+            converged=r['converged'],
+            curvature_screen=r['adsorbate_curvature'],
+            structure=r['folder'] + '/final.extxyz',
+            structure_sha256=r['final_sha256'],
+            rate_enabled=False,
+        )
+        nodes.append(node)
+        edges.append(
+            dict(
+                source=r['surface'] + f"_parent_{r['start']}",
+                gas_reactant=r['coadsorbate'],
+                target=key,
+                kind='coadsorption_candidate',
+                incremental_association_energy_eV=assoc,
+                barrier_eV=None,
+                rate_s=None,
+                rate_enabled=False,
+            )
+        )
+        curve = r['adsorbate_curvature']
+        curv = f"{curve['minimum_eigenvalue_eV_A2']:+.3f}" if curve else 'not evaluated'
+        table.append(
+            f"| {name} | {'yes' if r['converged'] else 'no'} | {r['max_mobile_force_eV_A']:.3f} | {value} | {curv} | [structure](../../{r['folder']}/final.extxyz), [energies](../../{r['folder']}/energies.csv) |"
+        )
+    fig.suptitle('Relaxed coadsorbate candidates: actual final MACE geometries', fontsize=17)
+    fig.text(
+        0.5,
+        0.035,
+        'Si gray-blue | N blue | O red | F green | H gold. Adsorbate atom indices shown. Faint atoms: substrate.\nDistance-cutoff bonds are a geometric diagnostic; periodic wrap bonds omitted visually. No transition states are claimed.',
+        ha='center',
+        fontsize=10,
+    )
+    fig.subplots_adjust(top=0.88, bottom=0.11, wspace=0.05, hspace=0.16)
+    fig.savefig(OUT / 'coadsorbate_structures.png', dpi=150)
+    plt.close(fig)
+    energy.suptitle(
+        'Evaluated optimization energies; these are not minimum-energy reaction paths', fontsize=14
+    )
+    energy.savefig(OUT / 'relaxation_energies.png', dpi=140)
+    plt.close(energy)
+    qualified = json.loads((DATA / 'stability_qualification.json').read_text())
+    lookup = {(r['surface'], r['coadsorbate'], r['start']): r for r in qualified['results']}
+    for node, edge, r in zip(nodes, edges, rr):
+        q = lookup[(r['surface'], r['coadsorbate'], r['start'])]
+        node['full_stability_screen'] = q
+        edge['incremental_energy_scope'] = (
+            'Raw original refinement; consult full-stability screened field'
+        )
+        edge['screened_association_energy_eV'] = q['screened_association_energy_eV']
+        edge['screened_energy_structure'] = q['structure']
+        edge['DFT_validated'] = False
+    network = dict(
+        scope='Eight calculated candidate endpoints and coadsorption bookkeeping edges; no kinetic network extension enabled',
+        nodes=nodes,
+        edges=edges,
+        distance_cutoffs_A={','.join(k): v for k, v in CUTOFF.items()},
+        runner='scripts/report_coadsorbate_intermediates.py',
+        runner_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+        summary_sha256=hashlib.sha256((DATA / 'refined_summary.json').read_bytes()).hexdigest(),
+    )
+    (DATA / 'candidate_network.json').write_text(json.dumps(network, indent=2) + '\n')
+    count = sum(r['converged'] for r in rr)
+    text = (
+        f'''# Intermediate-gap campaign: HF coadsorbates
 
 **{count}/{len(rr)} local relaxations force-converged** at 0.02 eV/angstrom. These are MACE candidates addressing A1/A5, not DFT-validated intermediates, transition states or new kMC rates. Two inherited single-HF adsorption starts on each ideal nitride/oxide slab were extended with HF or H2O. All eight starts are retained, including failures.
 
@@ -71,7 +194,9 @@ def main():
 
 | Surface / coadsorbate / start | Force converged | Max mobile force (eV/A) | Incremental association | Lowest adsorbate-block curvature (eV/A2) | Files |
 |---|---|---:|---:|---:|---|
-'''+ '\n'.join(table)+'''
+'''
+        + '\n'.join(table)
+        + '''
 
 The energy reference is
 
@@ -121,6 +246,10 @@ python scripts/report_coadsorbate_intermediates.py
 
 [Run metadata and hashes](../../data/intermediate_campaign/refined_summary.json). Each system has its own folder with the original FIRE attempt and a separate BFGS refinement, evaluated trajectories, energy tables, final coordinates, optimizer logs and summaries. The plotted energies are the BFGS continuation, not the original starting geometry. Initial FIRE files inherit old single-HF scan metadata; use the correctly labeled refinement exports and JSON metadata for this campaign. Gas and single-HF references are retained separately. This is local CPU screening on a general materials potential, with no vibrational excitation, charge-state control, entropy or electronic-structure validation.
 '''
-    (OUT/'REPORT.md').write_text(text,encoding='utf-8');print('Reported',len(rr),'coadsorbate candidates;',count,'force-converged')
+    )
+    (OUT / 'REPORT.md').write_text(text, encoding='utf-8')
+    print('Reported', len(rr), 'coadsorbate candidates;', count, 'force-converged')
 
-if __name__=='__main__':main()
+
+if __name__ == '__main__':
+    main()

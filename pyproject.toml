@@ -5,17 +5,21 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "plasma-surface-lab"
 version = "0.1.0"
-description = "Plasma Surface Dynamics: reproducible plasma-surface research workflows"
+description = "Plasma Surface Dynamics: kMC and atomistic workflows for Si/SiNx dry and atomic-layer etching"
+readme = "README.md"
 authors = [{name = "Ryan"}]
 requires-python = ">=3.11"
 dependencies = ["numpy>=1.26", "scipy>=1.11", "scikit-learn>=1.4", "matplotlib>=3.8", "pillow>=10"]
 
 [project.optional-dependencies]
-dev = ["pytest>=8"]
+dev = ["pytest>=8", "ruff>=0.6"]
 atomistic = ["ase>=3.23"]
 
 [project.scripts]
 plasma-lab = "plasma_surface.cli:main"
+
+[project.urls]
+Repository = "https://github.com/ryanlai666/plasma-surface-dynamics"
 
 [tool.setuptools.packages.find]
 include = ["plasma_surface*"]
@@ -23,3 +27,16 @@ include = ["plasma_surface*"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["."]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = ["third_party", "archive", ".venv*", "outputs", "build"]
+
+[tool.ruff.format]
+quote-style = "preserve"
+
+[tool.ruff.lint]
+# Pyflakes plus a few correctness rules; style is handled by `ruff format`.
+select = ["F", "E9", "B006", "B008"]
+ignore = ["F401", "F841", "E731"]

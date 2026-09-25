@@ -3,6 +3,7 @@
 Each column exposes one bare or modified site. A removal exposes a bare site.
 No lateral interactions, transport, charging, shadowing, or chemical speciation.
 """
+
 from dataclasses import asdict, dataclass
 import math
 import numpy as np
@@ -25,8 +26,15 @@ class Parameters:
         for key, value in asdict(self).items():
             if not math.isfinite(value) or value < 0:
                 raise ValueError(f"{key} must be finite and nonnegative")
-        if min(self.site_density_m2, self.layer_nm, self.chemical_threshold_ev,
-               self.physical_threshold_ev) <= 0:
+        if (
+            min(
+                self.site_density_m2,
+                self.layer_nm,
+                self.chemical_threshold_ev,
+                self.physical_threshold_ev,
+            )
+            <= 0
+        ):
             raise ValueError("Density, layer thickness, and thresholds must be positive")
         if max(self.sticking, self.deposition_sticking) > 1:
             raise ValueError("Sticking probabilities must be <= 1")
@@ -53,20 +61,33 @@ class Phase:
 def rates(phase: Phase, p: Parameters):
     """Per-site hazards [s^-1]: adsorption, desorption, chemistry, sputter, growth."""
     threshold = lambda e0, scale: scale * max(math.sqrt(phase.ion_energy_ev / e0) - 1, 0)
-    return np.array([
-        p.sticking * phase.radical_flux_m2_s / p.site_density_m2,
-        p.desorption_prefactor_s * math.exp(-p.desorption_barrier_ev / (8.617333262e-5 * phase.temperature_k)),
-        phase.ion_flux_m2_s / p.site_density_m2 * threshold(p.chemical_threshold_ev, p.chemical_yield_scale),
-        phase.ion_flux_m2_s / p.site_density_m2 * threshold(p.physical_threshold_ev, p.physical_yield_scale),
-        p.deposition_sticking * phase.precursor_flux_m2_s / p.site_density_m2,
-    ])
+    return np.array(
+        [
+            p.sticking * phase.radical_flux_m2_s / p.site_density_m2,
+            p.desorption_prefactor_s
+            * math.exp(-p.desorption_barrier_ev / (8.617333262e-5 * phase.temperature_k)),
+            phase.ion_flux_m2_s
+            / p.site_density_m2
+            * threshold(p.chemical_threshold_ev, p.chemical_yield_scale),
+            phase.ion_flux_m2_s
+            / p.site_density_m2
+            * threshold(p.physical_threshold_ev, p.physical_yield_scale),
+            p.deposition_sticking * phase.precursor_flux_m2_s / p.site_density_m2,
+        ]
+    )
 
 
 def ale_recipe(energy_ev=28.0, dose_s=2.0, ion_s=2.0, temperature_k=300.0):
     return [
         Phase("modify", dose_s, radical_flux_m2_s=2e19, temperature_k=temperature_k),
         Phase("purge", 0.5, temperature_k=temperature_k),
-        Phase("remove", ion_s, ion_flux_m2_s=2e19, ion_energy_ev=energy_ev, temperature_k=temperature_k),
+        Phase(
+            "remove",
+            ion_s,
+            ion_flux_m2_s=2e19,
+            ion_energy_ev=energy_ev,
+            temperature_k=temperature_k,
+        ),
         Phase("purge", 0.5, temperature_k=temperature_k),
     ]
 
@@ -97,9 +118,17 @@ def mean_field(phases, p=None, cycles=5):
             removed += (c * integral + s * t) * p.layer_nm
             deposited += g * t * p.layer_nm
             elapsed += t
-            rows.append(dict(cycle=cycle, phase=phase.name, time_s=elapsed,
-                             coverage=float(theta), removed_nm=float(removed),
-                             deposited_nm=float(deposited), net_removed_nm=float(removed-deposited)))
+            rows.append(
+                dict(
+                    cycle=cycle,
+                    phase=phase.name,
+                    time_s=elapsed,
+                    coverage=float(theta),
+                    removed_nm=float(removed),
+                    deposited_nm=float(deposited),
+                    net_removed_nm=float(removed - deposited),
+                )
+            )
     return rows
 
 
@@ -120,11 +149,22 @@ def kmc(phases, p=None, cycles=5, sites=256, seed=42, max_events=2_000_000, obse
     removed = deposited = events = 0
     elapsed = 0.0
     rows = []
+
     def emit(cycle, phase, time):
         if observer is not None:
-            observer(dict(cycle=cycle, phase=phase.name, time_s=float(time),
-                          modified=modified.copy(), heights=heights.copy(),
-                          removed=removed, deposited=deposited, events=events))
+            observer(
+                dict(
+                    cycle=cycle,
+                    phase=phase.name,
+                    time_s=float(time),
+                    modified=modified.copy(),
+                    heights=heights.copy(),
+                    removed=removed,
+                    deposited=deposited,
+                    events=events,
+                )
+            )
+
     for cycle in range(1, cycles + 1):
         for phase in phases:
             r = rates(phase, p)
@@ -132,7 +172,7 @@ def kmc(phases, p=None, cycles=5, sites=256, seed=42, max_events=2_000_000, obse
             emit(cycle, phase, elapsed)
             while t < phase.duration_s:
                 n = int(modified.sum())
-                hazards = r * np.array([sites-n, n, n, sites, sites])
+                hazards = r * np.array([sites - n, n, n, sites, sites])
                 total = hazards.sum()
                 if total == 0:
                     break
@@ -155,12 +195,20 @@ def kmc(phases, p=None, cycles=5, sites=256, seed=42, max_events=2_000_000, obse
                 elif event == 4:
                     heights[site] += 1
                     deposited += 1
-                emit(cycle, phase, elapsed+t)
+                emit(cycle, phase, elapsed + t)
             elapsed += phase.duration_s
             emit(cycle, phase, elapsed)
-            rows.append(dict(cycle=cycle, phase=phase.name, time_s=elapsed,
-                             coverage=float(modified.mean()), removed_nm=removed*p.layer_nm/sites,
-                             deposited_nm=deposited*p.layer_nm/sites,
-                             net_removed_nm=(removed-deposited)*p.layer_nm/sites,
-                             roughness_nm=float(heights.std()*p.layer_nm), events=events))
+            rows.append(
+                dict(
+                    cycle=cycle,
+                    phase=phase.name,
+                    time_s=elapsed,
+                    coverage=float(modified.mean()),
+                    removed_nm=removed * p.layer_nm / sites,
+                    deposited_nm=deposited * p.layer_nm / sites,
+                    net_removed_nm=(removed - deposited) * p.layer_nm / sites,
+                    roughness_nm=float(heights.std() * p.layer_nm),
+                    events=events,
+                )
+            )
     return rows

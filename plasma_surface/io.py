@@ -25,16 +25,25 @@ def write_json(path, data):
 
 def manifest(config):
     source = Path(__file__).parent
-    result = dict(config=config, python=platform.python_version(),
-                packages={m: importlib.metadata.version(m) for m in
-                          ["numpy", "scipy", "scikit-learn", "matplotlib"]},
-                source_sha256={f.name: hashlib.sha256(f.read_bytes()).hexdigest()
-                               for f in sorted(source.glob("*.py"))},
-                data_origin="synthetic_uncalibrated_model")
+    result = dict(
+        config=config,
+        python=platform.python_version(),
+        packages={
+            m: importlib.metadata.version(m)
+            for m in ["numpy", "scipy", "scikit-learn", "matplotlib"]
+        },
+        source_sha256={
+            f.name: hashlib.sha256(f.read_bytes()).hexdigest() for f in sorted(source.glob("*.py"))
+        },
+        data_origin="synthetic_uncalibrated_model",
+    )
     if config.get("backend") == "cpp":
         from .native import library_path
+
         binary = library_path()
-        build = binary.parent/"build_manifest.json"
+        build = binary.parent / "build_manifest.json"
         result["native_binary_sha256"] = hashlib.sha256(binary.read_bytes()).hexdigest()
-        result["native_build"] = json.loads(build.read_text(encoding="utf-8")) if build.exists() else None
+        result["native_build"] = (
+            json.loads(build.read_text(encoding="utf-8")) if build.exists() else None
+        )
     return result

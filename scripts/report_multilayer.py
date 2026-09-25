@@ -1,10 +1,16 @@
 """Publish computed multilayer status and the rate-evidence work queue."""
+
 from pathlib import Path
 import json
-ROOT=Path(__file__).resolve().parents[1]
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
 def main():
-    out=ROOT/'docs/multilayer_results';d=json.loads((out/'summary.json').read_text());q=json.loads((ROOT/'data/multilayer/rate_requests/index.json').read_text())['requests']
-    text="""# Bond-resolved multilayer etching prototype
+    out = ROOT / 'docs/multilayer_results'
+    d = json.loads((out / 'summary.json').read_text())
+    q = json.loads((ROOT / 'data/multilayer/rate_requests/index.json').read_text())['requests']
+    text = """# Bond-resolved multilayer etching prototype
 
 **Implemented and run; not validated predictive ALE.** This Python engine is separate from the original 45-state Python/C++ motif model. The new bond-graph engine has not been ported to C++. Rate and access assumptions must be validated before interpreting physical etch rates.
 
@@ -45,9 +51,10 @@ The network can emit stoichiometrically complete SiHhFfClc molecules with h+f+c=
 Three 2 s HF doses plus 1 s purges were run at an assumed 450 K. This is pulsed reactive etching, not a demonstrated self-limiting ALE sequence. The finite fixed-bottom domain imposes another possible saturation mechanism.
 
 """
-    text+=f"The baseline contains **{d['baseline_events']} events**, removes **{d['removed'].get('Si',0)} Si and {d['removed'].get('N',0)} N**, and exposes **{d['newly_exposed_atoms']} previously covered substrate atoms**. Element conservation is exact. These are simulated demonstration counts, not measurements.\n\n| Initial depth band | Removed / initial substrate atoms |\n|---|---:|\n"
-    for band in range(5,-1,-1):text+=f"| {band} ({'initial top' if band==5 else 'fixed bottom' if band==0 else 'subsurface'}) | {d['removed_by_initial_layer'].get(str(band),0)} / {d['initial_layer_sizes'][str(band)]} |\n"
-    text+="""
+    text += f"The baseline contains **{d['baseline_events']} events**, removes **{d['removed'].get('Si', 0)} Si and {d['removed'].get('N', 0)} N**, and exposes **{d['newly_exposed_atoms']} previously covered substrate atoms**. Element conservation is exact. These are simulated demonstration counts, not measurements.\n\n| Initial depth band | Removed / initial substrate atoms |\n|---|---:|\n"
+    for band in range(5, -1, -1):
+        text += f"| {band} ({'initial top' if band == 5 else 'fixed bottom' if band == 0 else 'subsurface'}) | {d['removed_by_initial_layer'].get(str(band), 0)} / {d['initial_layer_sizes'][str(band)]} |\n"
+    text += """
 ![Access-depth control runs](multilayer_controls.png)
 
 Twelve controls vary the allowed access depth (0, 1, 2, 4 angstrom) over three random seeds. They test how strongly this modeling assumption affects removal, not a physical uncertainty interval. With the empty qualified-rate library, the `validated_only` control produces **zero events**.
@@ -76,9 +83,10 @@ This plateau cannot be cited as physical self-limiting ALE. Repeating doses does
 6. **Calibrate transfer before interpolation.** Benchmark small representative motifs with one consistent DFT method, compute barrier/reference corrections against ML paths, and validate on withheld neighboring environments. Extrapolation or an unreviewed descriptor match stays disabled; no universal barrier offsets are installed.
 
 """
-    text+=f"The saved campaign produced **{len(q)} distinct missing-rate environments**, including unexecuted candidates. Twelve high-priority requests have individual folders; the full index retains all cases. A large count is evidence of unresolved parameterization, not validated mechanism completeness.\n\n| Rank | Event | Observed executions | Sampled candidate occurrences | Request |\n|---|---|---:|---:|---|\n"
-    for r in q[:12]:text+=f"| {r['priority_rank']} | {r['event_kind']} | {r['observed_events']} | {r['candidate_snapshots']} | [IS/FS connectivity](../../data/multilayer/rate_requests/{r['key'][:16]}/request.json) |\n"
-    text+="""
+    text += f"The saved campaign produced **{len(q)} distinct missing-rate environments**, including unexecuted candidates. Twelve high-priority requests have individual folders; the full index retains all cases. A large count is evidence of unresolved parameterization, not validated mechanism completeness.\n\n| Rank | Event | Observed executions | Sampled candidate occurrences | Request |\n|---|---|---:|---:|---|\n"
+    for r in q[:12]:
+        text += f"| {r['priority_rank']} | {r['event_kind']} | {r['observed_events']} | {r['candidate_snapshots']} | [IS/FS connectivity](../../data/multilayer/rate_requests/{r['key'][:16]}/request.json) |\n"
+    text += """
 [All missing environments](../../data/multilayer/rate_requests/index.json) | [Empty qualified library](../../configs/multilayer_rate_library.json) | [Evidence gate](../../plasma_surface/rate_evidence.py) | [Broader literature and scientific critique](../SCIENTIFIC_REVIEW.md).
 
 The present source barriers describe hydrogenated amorphous nitride, whereas this graph starts from a crystal. This material mismatch alone prevents declaring the transferred rates validated. Coadsorbed HF/H2O, salt formation, ion-created defects and charge/spin-dependent paths require additional, separately qualified branches.
@@ -98,5 +106,9 @@ python -m pytest -q
 
 Library calls default to `policy='validated_only'`; use `policy='demonstration'` explicitly to reproduce the unvalidated mechanism exercise. Do not convert these atom counts into EPC or claim an ALE window. The remaining work is environment-specific energetics and matched validation, not additional animation layers.
 """
-    (out/'REPORT.md').write_text(text,encoding='utf-8');print('Reported multilayer run and',len(q),'rate gaps')
-if __name__=='__main__':main()
+    (out / 'REPORT.md').write_text(text, encoding='utf-8')
+    print('Reported multilayer run and', len(q), 'rate gaps')
+
+
+if __name__ == '__main__':
+    main()
