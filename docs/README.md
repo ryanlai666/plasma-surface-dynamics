@@ -16,7 +16,7 @@ Start with the [project overview](../README.md), then use the relevant model and
 1. [Public structures and datasets](DATASETS.md), [atomistic inventory](ATOMISTIC_DATA.md), [literature](LITERATURE.md).
 2. [Molecular/surface calculations](dry_etch_results/MOLECULAR_SURFACES.md), [relaxed adsorption](dry_etch_results/RELAXED_ADSORPTION.md), [transition states](dry_etch_results/TRANSITION_STATES.md).
 3. [Parameter inventory and thermal-rate equations](KINETIC_PARAMETERS.md), [source energetic mapping](DRY_ETCH_PARAMETERS.md), [rate qualification gate](../plasma_surface/rate_evidence.py).
-4. [Vertical kMC algorithm](../README.md#kmc-sampling-flowchart), [sampling details](KMC_ALGORITHM.md), [validation](VALIDATION.md).
+4. [kMC algorithm, flowchart and sampling details](KMC_ALGORITHM.md), [validation](VALIDATION.md).
 
 ## Unresolved chemistry and next calculations
 
@@ -50,7 +50,8 @@ Start with the [project overview](../README.md), then use the relevant model and
 | `docs/*_results/`, `docs/reaction_network/` | Reports, plots, animations and rendering provenance |
 | `scripts/` | [Reproducible calculation/report workflows](../scripts/README.md) |
 | `tests/` | Conservation, numerical, backend and provenance checks |
+| `provenance/` | Ledger of formatting-only code changes, so recorded code hashes stay verifiable |
 | `third_party/` | Licensed pinned source snapshots |
 | `archive/` | Historical/unrelated diagnostics, excluded from active evidence |
 
-Existing source paths are retained because calculation records and hashes reference them. This index organizes their purpose without breaking provenance. [Earlier extended project notes](PROJECT_DETAILS.md) remain available as historical context.
+Existing source paths are retained because calculation records reference them by path and hash; moving a producer script would orphan those records. Formatting-only code changes are allowed and recorded in [`provenance/code_format_ledger.json`](../provenance/code_format_ledger.json) (see [`plasma_surface/provenance.py`](../plasma_surface/provenance.py)). This index organizes the files by purpose without breaking provenance. [Earlier extended project notes](PROJECT_DETAILS.md) remain available as historical context.

@@ -1,19 +1,26 @@
 # Plasma Surface Dynamics
 
-**Physics-based and machine-learning workflows for silicon and silicon-nitride atomic layer etching.**
+**Kinetic Monte Carlo (kMC) and atomistic workflows for studying dry and atomic-layer etching (ALE) of silicon and silicon nitride.**
 
-Combining surface reaction kinetics, Python/C++ simulation, public atomistic data, and pretrained MACE force-field comparisons.
+In atomic layer etching, a surface is first *modified* (for example fluorinated by HF), then the modified layer is *removed* in a separate step. Ideally each cycle removes a fixed amount of material. This project asks:
 
-**Research question:** How do surface modification, competing removal pathways, and uncertain reaction rates determine etch-per-cycle saturation and the usable ALE energy window?
+> **Which surface motifs, competing reaction pathways and uncertain rates control whether a hydrogenated silicon-nitride surface is fluorinated or releases volatile Si, and what does that imply for per-cycle etch saturation?**
 
-[Repository guide](docs/README.md) | [Parameters](docs/KINETIC_PARAMETERS.md) | [Status](#current-status) | [Workflow](#research-workflow) | [kMC flowchart](#kmc-sampling-flowchart) | [kMC animation](#species-resolved-kmc) | [Reaction network](#complete-kmc-network) | [Atomistic results](#beyond-rigid-approach-scans) | [Run locally](#run-locally)
+The project combines three things:
+
+1. **Reaction-network kMC solvers**, in Python with a C++ backend, that track every atom and conserve mass on every event.
+2. **Atomistic evidence**: MACE machine-learned potentials, NEB path searches and DFT single points on Si, Si₃N₄ and SiO₂ surfaces.
+3. **A rate-evidence gate**: a rate enters the kinetics only when it is backed by matching calculations or literature. Missing chemistry stays disabled instead of being guessed.
+
+> [!IMPORTANT]
+> **Evidence boundary.** Passing numerical checks does not mean the model has been validated against experiment. The kinetics use published activation energies together with *assumed* prefactors, arrival rates and initial surface populations. The project does **not** yet predict a calibrated etch per cycle (EPC), composition effects or a complete plasma mechanism. Unconverged atomistic barriers are never used as rates.
 
 ## Current status
 
 <!-- BEGIN CURRENT STATUS -->
 | Component | Current status |
 |---|---|
-| Numerical checks | **95 core tests passed**, plus **2 ASE constraint tests** (the core environment skips that optional module); atom conservation, independent master equation, Python/C++ statistical agreement and artifact provenance. |
+| Numerical checks | **100 tests passed**; atom conservation, independent master equation, Python/C++ statistical agreement and artifact provenance. |
 | Species-resolved kMC | **45 states / 55 enabled events**, 16 source pathways; **512 C++ trajectories** across 325-450 K. Conditional kinetics, not calibrated ALE. |
 | Network discovery | HiPRGen pilot: **40 forward + 40 reverse candidates**, with missing-intermediate audit; no automatic rate assignment. |
 | Atomistic evidence | MACE surface paths and molecular screening; OMol25 local models and direct DFT diagnostics. Convergence limits retained. |
@@ -21,131 +28,105 @@ Combining surface reaction kinetics, Python/C++ simulation, public atomistic dat
 | Multilayer prototype | 336 Si/N atoms, six depth bands; explicit bonds and H/F/Cl termination. Unvalidated demonstration rates; strict mode blocks missing data. |
 <!-- END CURRENT STATUS -->
 
-**Evidence boundary:** numerical verification is not experimental validation. The species model uses literature activation energies with assumed arrival/desorption rates, prefactors and initial populations. It does not yet predict calibrated etch per cycle (EPC), arbitrary Si:N composition effects, or a complete plasma mechanism. Unconverged atomistic peaks are excluded from its rates.
+*This table is regenerated from saved results by `python scripts/update_research_readme.py`.*
 
-## Research workflow
+## Key findings so far
+
+- **Flux and the starting surface matter more than any single chemical rate.** At 400 K, HF arrival rate outweighs every individual enabled reaction-rate group, and the assumed initial motif mixture strongly controls how much Si is released ([sensitivity analysis](docs/species_kmc_results/kinetic_priorities.json)).
+- **A plateau does not by itself show ALE self-limitation.** In the 45-state model, Si removal plateaus at 60% because of the assumed initial mixture and missing release paths, not because of any surface chemistry that self-limits.
+- **The multilayer stall is a gap in the mechanism, not a finding.** Over 12 cycles, removal stops after cycle 2. All 21 reachable Si sites are left with three F caps and one Si-N backbond whose final-cleavage rate is unknown, so those events are disabled ([diagnosis](docs/multilayer_results/cycle_diagnosis.json)).
+- **Relaxing a structure is not enough to get a binding energy.** Bias from the clean-slab reference dominates some apparent HF adsorption energies, and Hessian checks exposed an unstable nitride reference. Those values are excluded from quantitative claims.
+
+The [scientific review](docs/SCIENTIFIC_REVIEW.md) compares these results with independent literature and sets acceptance criteria for a publishable result.
+
+## Quick start
+
+Python 3.11+ on a normal CPU is enough for all kinetic models. A C++17 compiler (GCC/Clang) is optional.
+
+```bash
+python -m venv .venv
+source .venv/bin/activate          # Windows: .venv\Scripts\Activate.ps1
+python -m pip install -e ".[dev]"
+python scripts/build_cpp.py         # optional: original two-state C++ backend
+python scripts/build_species_cpp.py # optional: species-kMC C++ backend
+python -m pytest -q                 # C++ tests are skipped if not built
+```
+
+Reproduce the species-resolved kMC results and figures:
+
+```bash
+python scripts/build_species_cpp.py        # required: ensembles use the C++ backend
+python scripts/run_species_kmc.py          # Python + C++ ensembles -> docs/species_kmc_results/
+python scripts/report_species_kmc.py       # report and plots
+python scripts/plot_reaction_networks.py   # network diagrams -> docs/reaction_network/
+python scripts/analyze_kinetic_priorities.py
+python scripts/update_research_readme.py   # refresh the status table above
+```
+
+The simple two-state demonstration model has a CLI: `plasma-lab demo`, `plasma-lab sweep`, `plasma-lab benchmark` (see [usage](docs/USAGE.md)). Atomistic workflows need a separate [MACE environment](docs/MACE.md), and model weights are not bundled. The [script catalog](scripts/README.md) lists every workflow, grouped by stage.
+
+## Models
+
+| Model | What it represents | Code | Results |
+|---|---|---|---|
+| **Species-resolved HF/SiN:H kMC** | 45 chemical states in 7 motif families, 55 events with published barriers; one initial surface inventory | [Python](plasma_surface/species_kmc.py), [C++](cpp/species.cpp) | [report](docs/species_kmc_results/REPORT.md) |
+| **Multilayer bond-graph kMC** | 336 Si/N atoms in six depth bands with explicit bonds and H/F/Cl terminations; removing a product exposes the atoms beneath it | [Python](plasma_surface/multilayer.py) | [report](docs/multilayer_results/REPORT.md) |
+| **F₂/Si first-event kinetics** | Published facet-specific rate laws | [Python](plasma_surface/dry_etch.py) | [report](docs/dry_etch_results/REPORT.md) |
+| **Two-state ALE baseline** | Generic modify/remove model, used to test the software and run sensitivity sweeps; illustrative parameters | [Python](plasma_surface/model.py), [C++](cpp/surface.cpp) | [equations](docs/MODEL.md), [details](docs/PROJECT_DETAILS.md) |
+
+These models have different scopes. Their rates and validation claims are **not interchangeable**.
+
+### Species-resolved kMC
+
+![Species-resolved kMC snapshots](docs/species_kmc_results/species_kmc.gif)
+
+Each cell is one reactive Si-centered motif followed through one HF dose and purge. **Colors:** gray = F0, green = F1, teal = F2, purple = F3 (fluorination stage), gold = adsorbed HF complex, dark blue = Si released. Every frame is a saved stochastic snapshot, never an interpolation ([frame provenance](docs/species_kmc_results/animation_manifest.json)). The "height" in the perspective view only separates retained from released Si. It is not a film thickness.
+
+![Complete kMC reaction network](docs/reaction_network/species_kmc_network.png)
+
+The network is generated directly from [`configs/species_kmc_network.json`](configs/species_kmc_network.json). Gray arrow pairs show HF adsorption/desorption, brown arrows show reactions labelled with their source barrier and released gas, and dashed pink steps have no matching barrier and are disabled. See also the [surface-state atlas](docs/reaction_network/SURFACE_ATLAS.md), a [zoomable SVG](docs/reaction_network/species_kmc_network.svg) and a table of [all event rates](docs/species_kmc_results/event_rates.csv).
+
+![Temperature-dependent conversion and gas products](docs/species_kmc_results/species_kinetics.png)
+
+### Multilayer bond graph
+
+![Multilayer bond-graph kMC snapshots](docs/multilayer_results/multilayer_kmc.gif)
+
+Si and N colors identify substrate atoms. Red rings mark currently exposed atoms, teal stars mark atoms newly exposed since the previous frame, gold diamonds mark adsorbed HF, and hollow gray circles show where atoms were removed. B0 to B5 are unit-cell depth bands, not atomic monolayers.
+
+<!-- BEGIN MULTILAYER STATUS -->
+The 9 s demonstration recorded **1097 events**, **9 Si + 16 N removals**, and **20 newly exposed atoms**. Twelve access-depth/seed controls accompany it. The rate audit identifies **246 distinct missing-rate environments**, with separate IS/FS connectivity requests for priority cases.
+<!-- END MULTILAYER STATUS -->
+
+This is a **demonstration, not a calibrated multilayer ALE model**. Host atoms stay at fixed crystal positions, and accessibility uses a column approximation. The rates are unvalidated transfers or assumptions. In the default `validated_only` mode, unmatched environments stay disabled. The missing rates are listed as an [environment-specific calculation queue](data/multilayer/rate_requests/index.json).
+
+![Cycle-by-cycle removal and blocked backbonds](docs/multilayer_results/cycle_depth_diagnosis.png)
+
+## How the kMC works
+
+Each step, the solver lists every eligible local event and its rate $a_j$, then makes two random draws:
+
+1. a waiting time $\tau \sim \mathrm{Exp}(A)$ with $A=\sum_j a_j$, and
+2. an event $j$ chosen with probability $a_j/A$ (events are **not** equally likely).
+
+Dose/purge phase boundaries rebuild the rates without firing an event. After every event the solver checks valence and conserves every element, and a trajectory that fails these checks is rejected. See the [algorithm and flowchart](docs/KMC_ALGORITHM.md) for the full version.
 
 ```mermaid
 flowchart LR
     A[Public structures and literature] --> B[Site and orientation screening]
     B --> C[Relax molecule and upper substrate]
     C --> D[NEB, saddle and connectivity checks]
-    D -. Only validated, matched rates .-> F[Species-resolved Python / C++ kMC]
-    A --> E[Source barriers plus explicit rate assumptions]
+    D -. only validated, matched rates .-> F[Python / C++ kMC]
+    A --> E[Source barriers + explicit rate assumptions]
     E --> F
     G[HiPRGen candidate enumeration] --> H[Missing-intermediate audit]
-    H -. Additional structures and TS calculations .-> C
-    F --> I[Conservation, master equation and backend checks]
-    I --> J[Species populations, products and uncertainty]
+    H -. new structures and TS calculations .-> C
+    F --> I[Conservation, master-equation and backend checks]
 ```
 
-The current kMC rates come from the literature branch. Newly screened or relaxed geometries do not automatically become kinetic parameters. The [parameter audit](docs/DRY_ETCH_PARAMETERS.md) and [HiPRGen audit](docs/HIPRGEN.md) identify what is supported and what still needs calculation.
+All current kMC rates come from the literature branch (`A → E → F`). Newly relaxed geometries **do not** become rates automatically. The [parameter audit](docs/KINETIC_PARAMETERS.md) covers 183 parameter records and every event/temperature rate, and marks which ones are sourced and which are assumed.
 
-## kMC sampling flowchart
-
-The vertical flowchart follows the **multilayer graph solver**. Gold boxes mark random draws, blue diamonds mark decisions, and green boxes update the surface. Each eligible local event has a hazard in s^-1; unsupported rates remain disabled under the strict evidence policy.
-
-```mermaid
-flowchart TD
-    A([Start: initialize substrate, gas ledger and seeded RNG]) --> B[Read dose or purge phase and next phase boundary]
-    B --> C[Enumerate eligible local events and apply rate-evidence policy]
-    C --> D[Compute event hazards a_j and total A = sum of a_j]
-    D --> E{Is A greater than zero?}
-    E -- Yes --> F[Random draw 1: waiting time tau from Exp with mean 1/A]
-    E -- No --> G[Set proposed event time to infinity]
-    F --> H[Set proposed event time to t + tau]
-    G --> I[Save due snapshots up to the earlier event or phase boundary]
-    H --> I
-    I --> J{All requested snapshots saved?}
-    J -- Yes --> Z([Finish: return trajectory, event log and atom ledger])
-    J -- No --> K{Phase boundary at or before proposed event?}
-    K -- Yes --> L[Advance to boundary without reaction; rebuild phase rates]
-    L --> B
-    K -- No --> M[Random draw 2: u uniformly in 0 to 1; threshold q = u A]
-    M --> N[Select first event j whose cumulative hazard exceeds q]
-    N --> O[Apply event: update bonds, terminations, HF occupancy and gas products]
-    O --> P{Valence and elemental accounting valid?}
-    P -- No --> X([Stop with error; do not accept invalid trajectory])
-    P -- Yes --> Q[Recompute exposure; log event and newly exposed atoms; advance time]
-    Q --> R{Event count exceeds safety budget?}
-    R -- Yes --> X
-    R -- No --> B
-    classDef random fill:#FFF0C2,stroke:#B47B00,color:#332700;
-    classDef decision fill:#E3EDF9,stroke:#547DAD,color:#152D48;
-    classDef update fill:#DEF1E9,stroke:#38836B,color:#153D31;
-    class F,M random;
-    class E,J,K,P,R decision;
-    class O,Q update;
-```
-
-**Waiting time:** `tau = -ln(r1) / A`, with an ideal independent uniform `r1` in `(0, 1)`. The implementation draws the equivalent exponential distribution directly. **Event choice:** the second uniform draw selects event `j` with probability `a_j / A`; events are not equally likely. At a phase boundary, rates are rebuilt and a fresh waiting time is drawn.
-
-[Equations, zero-rate behavior, snapshot timing and the motif-model distinction](docs/KMC_ALGORITHM.md) | [Multilayer implementation](plasma_surface/multilayer.py).
-
-## Rates, activation energies and free energies
-
-[Complete parameter audit](docs/KINETIC_PARAMETERS.md) lists **183 parameter records**, all **220 event/temperature rates**, diffusion references, assumed prefactors, and missing thermochemical inputs. Published DFT barriers are used conditionally; **AIMD-derived rates and full activation free energies have not been established**. The new thermal-rate helpers calculate Arrhenius/HTST rates, gas arrival and hop diffusivity from explicit inputs without automatically enabling unsupported chemistry. The [NIST gas thermochemistry module](docs/GAS_THERMOCHEMISTRY.md) adds 81 source-bounded gas states for six species, with explicit pressure and energy references; it does not supply surface activation free energies.
-
-## Species-resolved kMC
-
-![Species-resolved kMC: actual recorded top-view and perspective snapshots](docs/species_kmc_results/species_kmc.gif)
-
-**Read the colors:** gray = F0, green = F1, teal = F2, purple = F3, gold = adsorbed HF complex, dark blue = Si released. F0-F3 denote incorporated fluorination stage; gold is additional HF occupancy, with the underlying stage shown by its border in the top view. These colors match the network below.
-
-**Why one layer?** This model follows 400 initial reactive motifs through one HF dose and purge. A Si-release event leaves a residual state; it does not reveal and initialize a fresh subsurface motif. The perspective height only distinguishes retained and released Si. It is a schematic state map, not an atomistic crystal or physical film thickness. Multilayer recession needs explicit subsurface connectivity, exposure rules, new-site chemistry and corresponding rates; those are not part of this baseline. See the separate multilayer prototype below.
-
-Every frame is a saved stochastic trajectory snapshot, with no interpolated states. [Trajectory and frame provenance](docs/species_kmc_results/animation_manifest.json). The temperature ensemble separately uses 1,000 motifs and 128 replicates per temperature.
-
-## Complete kMC network
-
-![Complete kMC network with adsorption, reaction intermediates, products and disabled branches](docs/reaction_network/species_kmc_network.png)
-
-**The complexity is structured:** seven independent motif families contain 45 named states and 55 enabled events. They share gas reservoirs but do not interconvert in this model. All 16 source pathway entries are represented. Gray arrow pairs are HF adsorption/desorption; brown arrows show chemical conversion, source activation energy and released gas; dashed pink steps lack matching barriers and are disabled. Two proposed residual states remain unreachable.
-
-The diagrams now draw central Si, N/H/F groups, intact HF precursor molecules, retained surface groups and outgoing gas molecules. These are **representative bookkeeping sketches**, not optimized adsorption geometries; the hatched support does not imply simulated lower layers in this model. [Surface-state atlas and seven enlarged family diagrams](docs/reaction_network/SURFACE_ATLAS.md).
-
-The figure is generated directly from the [state/event configuration](configs/species_kmc_network.json), not drawn as a speculative fully connected mechanism. [Zoomable SVG](docs/reaction_network/species_kmc_network.svg) | [Simple reading guide](docs/reaction_network/species_kmc_overview.png) | [All event rates and source IDs](docs/species_kmc_results/event_rates.csv).
-
-![Temperature-dependent conversion and gas products](docs/species_kmc_results/species_kinetics.png)
-
-[Full kMC results, equations and validation](docs/species_kmc_results/REPORT.md) | [Intermediate populations](docs/species_kmc_results/intermediate_populations.png) | [Rate-assumption sensitivity](docs/species_kmc_results/assumption_sensitivity.csv).
-
-<details>
-<summary>Broader candidate network: HiPRGen and missing chemistry</summary>
-
-![HiPRGen molecular candidate network](docs/reaction_network/hiprgen_candidates.png)
-
-The function-level HiPRGen pilot retains 40 forward and 40 reverse substitutions for capped Si-N/Si-O motifs with F/Cl. These are candidates, not verified surface reactions or assigned rates. [Execution scope](docs/HIPRGEN.md) | [Missing intermediates](data/reaction_network/intermediate_gaps.csv) | [Fragments and experimental discrimination](docs/REACTION_CANDIDATES.md).
-
-</details>
-
-## Multilayer bond graph
-
-The separate multilayer prototype now represents **336 Si/N substrate atoms across six unit-cell depth bands**, with explicit H/F/Cl terminations. Bond cleavage changes neighboring coordination; product release exposes deeper sites. Modification depends on depth below the moving local surface, and every event conserves Si/N/H/F/Cl with gas products.
-
-![Actual multilayer bond-graph kMC snapshots](docs/multilayer_results/multilayer_kmc.gif)
-
-**Read the multilayer view:** Si/N colors identify substrate atoms; red rings mark current exposure, teal stars mark first exposure during the preceding saved interval, gold diamonds mark adsorbed HF, and hollow gray circles retain removed-site locations. The fixed thin cross-section reveals the lower bands without projecting the entire slab onto one plane. Separate counters retain mixed H/F/Cl chemistry; the depth bars show how many hosts were actually removed. B0-B5 are unit-cell depth bands, not atomic monolayers.
-
-[Enlarged final frame](docs/multilayer_results/multilayer_preview.png) | [Four-stage storyboard](docs/multilayer_results/multilayer_storyboard.png).
-
-<!-- BEGIN MULTILAYER STATUS -->
-The 9 s demonstration recorded **1097 events**, **9 Si + 16 N removals**, and **20 newly exposed atoms**. Twelve access-depth/seed controls accompany it. The rate audit identifies **246 distinct missing-rate environments**, with separate IS/FS connectivity requests for priority cases.
-<!-- END MULTILAYER STATUS -->
-
-**This is an explicit demonstration, not calibrated multilayer ALE.** Crystal host positions stay fixed, accessibility uses a column approximation, and rates are unvalidated transfers or assumptions. Default library calls use `validated_only`: unmatched environments stay disabled. The earlier 45-state animation remains the reproducible single-inventory baseline; it is not the multilayer solver.
-
-**Why does the next cycle not keep removing lower layers?** A 12-cycle run with unchanged parameters removes 21 B5 atoms in cycle 1 and 3 B5 + 1 B4 atoms in cycle 2; cycles 3-12 remove none. The 21 reachable Si sites then have three F caps and one remaining Si-N backbond: 13 to bare N and 8 to NH2. Their final-cleavage rates are missing and disabled. This is a **mechanism gap, not demonstrated ALE self-limitation**. Newly exposed atoms retain their actual bonds and terminations; the solver does not reset them to a fresh top-layer state.
-
-![Cycle-by-cycle removal and blocked backbonds](docs/multilayer_results/cycle_depth_diagnosis.png)
-
-[12-cycle event data and environment diagnosis](docs/multilayer_results/cycle_diagnosis.json).
-
-[Multilayer results, depth controls, equations and limitations](docs/multilayer_results/REPORT.md) | [Initial Si/N graph](data/multilayer/sin_graph.json) | [Environment-specific IS/FS calculation queue](data/multilayer/rate_requests/index.json).
-
-## Beyond rigid approach scans
-
-Rigid scans screen possible starting sites and orientations; they cannot establish relaxed adsorption, transition states or reaction rates. The next stage relaxes both HF and the upper substrate from two distinct site/orientation starts on each of Si(100), Si(111), beta-Si3N4(001) and alpha-quartz(001), with the lower substrate fixed. Convergence and remaining constraints are reported explicitly.
+## Atomistic evidence
 
 <!-- BEGIN RELAXATION STATUS -->
 **7/8 adsorbate/substrate relaxations meet 0.04 eV/angstrom.** Lower-half atoms remain fixed. Force convergence does not establish a stable minimum or transition state. [Full table, energy traces and actual relaxation GIFs](docs/dry_etch_results/RELAXED_ADSORPTION.md).
@@ -153,68 +134,53 @@ Rigid scans screen possible starting sites and orientations; they cannot establi
 ![Force-driven adsorption relaxation](docs/dry_etch_results/relaxed_adsorption.png)
 <!-- END RELAXATION STATUS -->
 
-| Evidence | Result and interpretation |
+| Evidence | Result and how to read it |
 |---|---|
-| Site/orientation screen | 9 molecules x 4 surfaces; 288 curves / 2,592 evaluated geometries, plus 324 baseline geometries. A starting-point inventory, not TS evidence. |
-| Surface diffusion paths | Three constrained MACE F/Cl migration NEBs with recorded energies and checks; see [surface paths](data/surface_paths/README.md). |
-| Water-derived surface saddle | N-to-N H transfer beside Si-OH on constrained nitride: 2.2683 eV above the connected local IS. Not water dissociation or Si removal. |
-| Local Si-N/Si-O cleavage | OMol25 molecular paths remain unconverged. PBE/def2-SVP single points are diagnostic; one Si-O image has an unresolved SCF root and is excluded. No new DFT etch barrier is claimed. |
+| Site/orientation screen | 9 molecules × 4 surfaces, 2,592 evaluated geometries. This is an inventory of starting points, not evidence of transition states. |
+| Surface diffusion paths | Three constrained MACE F/Cl migration NEBs ([surface paths](data/surface_paths/README.md)). |
+| Water-derived surface saddle | N-to-N H transfer beside Si-OH on nitride, 2.27 eV above the connected initial state. This is not water dissociation or Si removal. |
+| HF/HF and HF/H₂O coadsorbates | 8 candidates meet the force criterion, but full Hessians exposed an unstable reference, which is excluded ([report](docs/intermediate_results/REPORT.md), [stability](docs/intermediate_results/FULL_STABILITY.md)). |
+| Final Si-N cleavage | PBE/def2-SVP and def2-TZVP energies/forces, two failed OMol25 NEBs and a checked constrained scan. These are diagnostics, **not** a TS barrier ([report](docs/final_cleavage_results/REPORT.md)). |
 
 ![Evaluated N-to-N hydrogen-transfer path beside Si-OH](data/surface_paths/beta_Si3N4_001/H2O/mace_local_saddle/path.gif)
 
-[All molecular systems, energy tables, equations and hypotheses](docs/dry_etch_results/MOLECULAR_SURFACES.md) | [DFT/TS report](docs/dry_etch_results/TRANSITION_STATES.md) | [Literature and AIMD support](docs/LITERATURE.md).
+More detail: [molecular surfaces](docs/dry_etch_results/MOLECULAR_SURFACES.md), [transition states](docs/dry_etch_results/TRANSITION_STATES.md), [HiPRGen candidates](docs/HIPRGEN.md), [literature](docs/LITERATURE.md).
 
-## Intermediate-gap calculations
+## Reproducibility and provenance
 
-Eight **HF/HF and HF/H2O candidates on nitride and oxide** meet the original force criterion. Full mobile-coordinate Hessians then exposed an unstable nitride reference; its association energies are excluded from the screened set. Following negative modes improves some oxide candidates, but none supplies a DFT-validated surface rate.
+Every saved result records the SHA-256 of its inputs and of the exact code that produced it, and the test suite re-checks those hashes. Code can still be reformatted for readability. [`provenance/code_format_ledger.json`](provenance/code_format_ledger.json) lists formatting-only changes, and [`plasma_surface/provenance.py`](plasma_surface/provenance.py) accepts an old hash only when the current file has the same Python syntax tree as the recorded one. Any logic change breaks the match, and the affected results must then be regenerated. Run `python scripts/record_format_equivalence.py --base <rev>` after a formatting-only change.
 
-[Structures and original refinement](docs/intermediate_results/REPORT.md) | [Full stability checks](docs/intermediate_results/FULL_STABILITY.md) | [Intermediate-gap register](data/reaction_network/intermediate_gaps.csv).
+Calculation scripts refuse to overwrite completed calculation directories. Invalidated runs are kept with an explicit `INVALIDATION.json` rather than deleted.
 
-The final Si-N cleavage campaign now includes **direct PBE/def2-SVP and def2-TZVP energies and forces**, two unsuccessful OMol25 NEB searches, and a corrected three-coordinate relaxed scan. These are diagnostics, not validated TS barriers. The scan's fixed-frame constraint is explicitly checked; an earlier defective run is retained with an invalidation record.
+## Repository layout
 
-![DFT comparison and evaluated local cleavage scan](docs/final_cleavage_results/dft_and_path_checks.png)
-
-[DFT results, energy table and path-search limitations](docs/final_cleavage_results/REPORT.md) | [Material and mechanism decisions from independent literature](docs/MATERIAL_MODEL_DECISIONS.md).
-
-## What the new checks reveal
-
-This is **not yet publication-ready predictive ALE**. The [critical scientific review](docs/SCIENTIFIC_REVIEW.md) compares independent chemical, experimental and modeling sources and sets specific acceptance criteria.
-
-- **Flux and initial surface state matter:** at 400 K, HF arrival is more influential than any individual enabled chemical-rate group; the assumed motif mixture strongly controls Si release.
-- **Relaxation alone is insufficient:** clean-slab reference bias dominates some apparent Si/HF adsorption energies. Those values are excluded from quantitative binding claims and kinetic parameters.
-- **A plateau is not automatically ALE:** the 45-state graph has a 60% eventual removal ceiling imposed by its initial mixture and missing release paths. Multilayer exposure, coadsorption and product retention need explicit models and evidence.
-
-![Calculated sensitivity and motif dependence](docs/species_kmc_results/kinetic_priorities.png)
-
-The next focused objective is to distinguish fluorination from volatile removal on a specified SiNx:H surface, with matched fluxes and competing retained-product states. [Literature evidence map](data/literature/research_evidence_map.json) | [Independent coadsorbate-rate comparison](docs/SCIENTIFIC_REVIEW.md#4-quantify-why-coadsorbate-identity-matters).
-
-## Run locally
-
-Python 3.11+ and a local CPU are sufficient for kMC. From a checkout:
-
-```powershell
-python -m venv .venv
-.venv\Scripts\Activate.ps1
-python -m pip install -e ".[dev]"
-python scripts/build_species_cpp.py
-python scripts/run_species_kmc.py
-python scripts/plot_reaction_networks.py
-python scripts/report_species_kmc.py
-python scripts/analyze_kinetic_priorities.py
-python scripts/compare_literature_channels.py
-python scripts/update_research_readme.py
-python -m pytest -q
+```text
+plasma_surface/   Importable library: kMC solvers, rate laws, rate-evidence gate, provenance
+cpp/              C++17 backends (two-state model, species kMC), loaded via ctypes
+configs/          Network topology, material cards and the qualified-rate library
+scripts/          Calculation, analysis and report workflows (see scripts/README.md)
+tests/            Conservation, numerical, backend and provenance checks
+data/             Literature extracts, reference structures, atomistic calculations
+docs/             Reports, figures, animations and method notes (see docs/README.md)
+provenance/       Formatting-equivalence ledger for recorded code hashes
+hpc/              Example SLURM array job for parameter sweeps
+third_party/      Pinned, licensed HiPRGen source snapshot
+archive/          Historical diagnostics, excluded from active evidence
 ```
 
-On Linux/macOS, activate with `source .venv/bin/activate`. The optional C++ backend needs a C++17 compiler. Atomistic calculations require a separate [MACE environment and model](docs/MACE.md); run `python scripts/relax_adsorption_multistart.py`, `python scripts/audit_adsorption_references.py`, and `python scripts/report_relaxed_adsorption.py` there. Model weights are not bundled.
+## Documentation
 
-## Further documentation
-
-| Topic | Reference |
+| Topic | Where |
 |---|---|
-| Python/C++ species solver and assumptions | [kMC report](docs/species_kmc_results/REPORT.md), [Python](plasma_surface/species_kmc.py), [C++](cpp/species.cpp) |
-| Public structures, datasets and licensing | [Datasets](docs/DATASETS.md), [MACE comparisons](docs/MACE.md) |
-| Original synthetic ALE and composition demonstrations | [Extended results and animation gallery](docs/PROJECT_DETAILS.md), [model equations](docs/MODEL.md), [usage](docs/USAGE.md) |
-| Research gaps and experiment planning | [Intermediate gaps](data/reaction_network/intermediate_gaps.csv), [reaction candidates](docs/REACTION_CANDIDATES.md), [research plan](docs/RESEARCH_PLAN.md) |
+| Guide to all documents | [docs/README.md](docs/README.md) |
+| Installation, CLI and C++ backend | [docs/USAGE.md](docs/USAGE.md) |
+| kMC algorithm and sampling decisions | [docs/KMC_ALGORITHM.md](docs/KMC_ALGORITHM.md) |
+| Every kinetic parameter and its source | [docs/KINETIC_PARAMETERS.md](docs/KINETIC_PARAMETERS.md), [docs/DRY_ETCH_PARAMETERS.md](docs/DRY_ETCH_PARAMETERS.md) |
+| Datasets, structures and licensing | [docs/DATASETS.md](docs/DATASETS.md), [docs/ATOMISTIC_DATA.md](docs/ATOMISTIC_DATA.md) |
+| Critique, open gaps and next calculations | [docs/SCIENTIFIC_REVIEW.md](docs/SCIENTIFIC_REVIEW.md), [docs/RESEARCH_PLAN.md](docs/RESEARCH_PLAN.md), [intermediate gaps](data/reaction_network/intermediate_gaps.csv) |
 
-The original Si/SiNx material cards remain hypothetical sensitivity scenarios; their thickness conversion and generic deposition channel are illustrative. Public measurements are used only within their documented scope; experimental calibration data are not fabricated.
+The original Si/SiNx material cards are hypothetical sensitivity scenarios. Public measurements are used only within their documented scope, and no experimental calibration data are fabricated.
+
+## Author
+
+Ryan ([ryanlai666](https://github.com/ryanlai666)). See [AUTHORS.md](AUTHORS.md). Third-party datasets, models and software keep their own authorship and licenses, and their citations are documented in this repository.

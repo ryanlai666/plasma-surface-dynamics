@@ -1,12 +1,9 @@
 {
-  "passed": 95,
+  "passed": 100,
+  "skipped": 0,
+  "documentation_link_checks": 106,
   "command": "python -m pytest -q -p no:cacheprovider",
-  "scope": "Full core suite, including DFT artifact provenance, full-host Hessian eligibility, gas thermochemistry and fixed-frame trajectory invariants",
-  "date": "2026-09-19",
-  "skipped": 1,
-  "optional_ASE_constraint_tests": {
-    "passed": 2,
-    "reason_for_separate_run": "ASE not installed in the core interpreter",
-    "command": ".venv-mace Python with pytest from system site-packages: tests/test_fixed_frame_constraints.py"
-  }
+  "scope": "Full core suite with both C++ backends built and ASE installed: atom conservation, independent master equation, Python/C++ statistical agreement, DFT artifact provenance (byte hashes or verified formatting-only equivalents), full-host Hessian eligibility, gas thermochemistry, fixed-frame constraint invariants, plus relative-link checks for every Markdown document",
+  "environment": "Windows 11, Python 3.13.5, NumPy 2.5.3, SciPy 1.18.1, scikit-learn 1.9.1, Matplotlib 3.11.2, ASE 3.29.0, MSYS2 GCC",
+  "date": "2026-09-25"
 }

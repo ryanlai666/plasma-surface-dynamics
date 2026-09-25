@@ -1,8 +1,45 @@
 # kMC sampling and decisions
 
-[Vertical flowchart in the README](../README.md#kmc-sampling-flowchart).
+[Back to the project overview](../README.md)
 
 This describes the implemented direct stochastic sampling loop in [`multilayer.simulate`](../plasma_surface/multilayer.py), not a new kinetic model. Rates are constant between events and prescribed dose/purge switches. General continuously varying rates would require a different integrated-hazard treatment.
+
+## Flowchart
+
+This flowchart follows the **multilayer graph solver**. Gold boxes mark random draws, blue diamonds mark decisions, and green boxes update the surface. Each eligible local event has a hazard in s^-1; unsupported rates remain disabled under the strict evidence policy.
+
+```mermaid
+flowchart TD
+    A([Start: initialize substrate, gas ledger and seeded RNG]) --> B[Read dose or purge phase and next phase boundary]
+    B --> C[Enumerate eligible local events and apply rate-evidence policy]
+    C --> D[Compute event hazards a_j and total A = sum of a_j]
+    D --> E{Is A greater than zero?}
+    E -- Yes --> F[Random draw 1: waiting time tau from Exp with mean 1/A]
+    E -- No --> G[Set proposed event time to infinity]
+    F --> H[Set proposed event time to t + tau]
+    G --> I[Save due snapshots up to the earlier event or phase boundary]
+    H --> I
+    I --> J{All requested snapshots saved?}
+    J -- Yes --> Z([Finish: return trajectory, event log and atom ledger])
+    J -- No --> K{Phase boundary at or before proposed event?}
+    K -- Yes --> L[Advance to boundary without reaction; rebuild phase rates]
+    L --> B
+    K -- No --> M[Random draw 2: u uniformly in 0 to 1; threshold q = u A]
+    M --> N[Select first event j whose cumulative hazard exceeds q]
+    N --> O[Apply event: update bonds, terminations, HF occupancy and gas products]
+    O --> P{Valence and elemental accounting valid?}
+    P -- No --> X([Stop with error; do not accept invalid trajectory])
+    P -- Yes --> Q[Recompute exposure; log event and newly exposed atoms; advance time]
+    Q --> R{Event count exceeds safety budget?}
+    R -- Yes --> X
+    R -- No --> B
+    classDef random fill:#FFF0C2,stroke:#B47B00,color:#332700;
+    classDef decision fill:#E3EDF9,stroke:#547DAD,color:#152D48;
+    classDef update fill:#DEF1E9,stroke:#38836B,color:#153D31;
+    class F,M random;
+    class E,J,K,P,R decision;
+    class O,Q update;
+```
 
 ## Two independent stochastic choices
 
