@@ -19,6 +19,7 @@ Run every script from the repository root. The **Env** column says which environ
 |---|---|---|
 | `build_cpp.py` | C++ | Build the two-state model backend (`build/surface.*`) |
 | `build_species_cpp.py` | C++ | Build the species-kMC backend (`build/species.*`) |
+| `make_figures.py` | core | Draw the presentation figures in `docs/figures/` from saved results ([guide](../docs/figures/README.md)) |
 | `update_research_readme.py` | core | Refresh the generated status blocks in the top-level README |
 | `record_format_equivalence.py` | core | Record formatting-only code changes in `provenance/code_format_ledger.json` |
 

@@ -2,6 +2,8 @@
 
 Start with the [project overview](../README.md), then use the relevant model and evidence track below. These models have different scopes; their rates and validation claims are not interchangeable.
 
+[How to read each figure](figures/README.md): every presentation figure, with a reading guide and takeaway.
+
 ## Models and results
 
 | Model | Implementation | Results | What it represents |

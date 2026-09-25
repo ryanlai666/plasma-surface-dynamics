@@ -1,0 +1,35 @@
+{
+  "description": "Presentation figures drawn from saved results only; no simulation is run.",
+  "runner": "scripts/make_figures.py",
+  "runner_sha256": "09900eab5e5cf5b47394074426ec0c79f5bcf593a329c764e2911e5971955d9c",
+  "style_sha256": "71ac48991bf6813eaa0eafe58e1ec59739df9d2aa7d014846ddba1320535cfff",
+  "inputs_sha256": {
+    "data/final_cleavage/SiF3_NH2_HF/dft_initial_path/summary.json": "65787e579d94eeb376fa0a57ae27e6f11fbe0514b2a56e9c0e6a59d69b3e64d2",
+    "data/final_cleavage/SiF3_NH2_HF/fixed_frame_three_coordinate_scan/summary.json": "5ac581edff8b74077243069d04c1c70f9d2657948bbb05e662dac98ac2bc55b1",
+    "data/literature/sin_hf_pathways.csv": "3ad70780d0426b1a5d02169c1d4eb548ccdf1043c2233f5e90173501fe524fe0",
+    "data/surface_paths/Si100/HF/relaxed_adsorption/start_1/energies.csv": "0a28563a0932611d8d674d04fde4c9cdca89572a97ab397614b25791e9ae379a",
+    "data/surface_paths/Si100/HF/relaxed_adsorption/start_2/energies.csv": "6b87cbabc10a404e46fb99fd49ccb1fcf41fc840335d22cd03e5c3716c477874",
+    "data/surface_paths/Si111/HF/relaxed_adsorption/start_1/energies.csv": "f0d17cef094db7707dd1330b27f02fc97141c18db9d51c4854c14b72f268c42b",
+    "data/surface_paths/Si111/HF/relaxed_adsorption/start_2/energies.csv": "9446d8e9ae8b9dfad10d86bd724ee5cde43b2c533b9403c3b3dee3ea0e77cf32",
+    "data/surface_paths/alpha_quartz_001/HF/relaxed_adsorption/start_1/energies.csv": "c2b7e52f89580ff0e662d706a54c166ffaaaaa233210450533c5eada3a61ee41",
+    "data/surface_paths/alpha_quartz_001/HF/relaxed_adsorption/start_2/energies.csv": "538bc080b58cf87f7b2161c2413c519a53cd4cbdf637f931367c9b9eea7f1780",
+    "data/surface_paths/beta_Si3N4_001/HF/relaxed_adsorption/start_1/energies.csv": "bb618774d416424429575b5b5aa25149473b872f3bd4d996cb4bef2d9fdba83d",
+    "data/surface_paths/beta_Si3N4_001/HF/relaxed_adsorption/start_2/energies.csv": "ced770b3953c972deba706d0541aa2493e64696a356bfcb91da80c4d514cd2ce",
+    "docs/dry_etch_results/relaxed_adsorption.json": "3bd60b384eb31cafa86dd7d9eb72de9137a01224ae07dffd1526d6e4dc3ea5da",
+    "docs/multilayer_results/cycle_diagnosis.json": "60295ae86df03ba3511807209ba2d7f2c9ded5743f7872801263709a9be8d1b0",
+    "docs/species_kmc_results/kinetic_priorities.json": "bb355626632fc4dab66f040e430394b9b1b72fc9c498e30a8d42238d27d92fe2",
+    "docs/species_kmc_results/species_populations.csv": "93aea5e7de11f6481c3f75d85f39a2382f9d182b5db12a18474bf51f4bdec0fc",
+    "docs/species_kmc_results/summary.json": "5058b537615c083015488abb55dc0b642d0f5bffbe1d0671c9ab6339501b7c9d",
+    "data/multilayer/demo_trajectory.json": "ffaef13f586b461172381975e962c36fa094bd33071e75cfad39d1a7ea2ef427",
+    "docs/species_kmc_results/lattice_trajectory.npz": "48fdf287e2c1c82c5c075e91a5704c3928388225f9419ad2afc1927fa8078979"
+  },
+  "figures_sha256": {
+    "final_cleavage_checks.png": "ea9122e2ca300ebccb32a04d1326290c018303b14ab079534a9443f19f3cf909",
+    "hf_surface_relaxation.png": "2c0791f53b1fb255475854dd63bd661d03dffc8cca8452f0e4831d253dcd96b8",
+    "multilayer_kmc.gif": "c3a20630fe411f1ee5a50bcdb490f6d98c58c16a1336b9b2c7a359e8d4be5f91",
+    "multilayer_stall.png": "afe385124441f439e3d869e0f1e9680fc37da984518476a1d3468a91260b1588",
+    "si_release_by_temperature.png": "adcfdef14b65b92acae3c12652f0eb1ff0c8f2cd55cb499b9601aef542c77943",
+    "species_kmc.gif": "5c71165d0de60d1c91dbed78aed66b7dbcbd6a91386d87f87af504f92e3a2ab5",
+    "what_controls_si_release.png": "63031ade16a2de5cad4f92bce3112e48c79eef1f8554f6381ccb426aa9d8863a"
+  }
+}

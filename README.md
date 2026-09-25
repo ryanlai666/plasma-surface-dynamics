@@ -37,6 +37,8 @@ The project combines three things:
 - **The multilayer stall is a gap in the mechanism, not a finding.** Over 12 cycles, removal stops after cycle 2. All 21 reachable Si sites are left with three F caps and one Si-N backbond whose final-cleavage rate is unknown, so those events are disabled ([diagnosis](docs/multilayer_results/cycle_diagnosis.json)).
 - **Relaxing a structure is not enough to get a binding energy.** Bias from the clean-slab reference dominates some apparent HF adsorption energies, and Hessian checks exposed an unstable nitride reference. Those values are excluded from quantitative claims.
 
+![What controls Si release](docs/figures/what_controls_si_release.png)
+
 The [scientific review](docs/SCIENTIFIC_REVIEW.md) compares these results with independent literature and sets acceptance criteria for a publishable result.
 
 ## Quick start
@@ -60,6 +62,7 @@ python scripts/run_species_kmc.py          # Python + C++ ensembles -> docs/spec
 python scripts/report_species_kmc.py       # report and plots
 python scripts/plot_reaction_networks.py   # network diagrams -> docs/reaction_network/
 python scripts/analyze_kinetic_priorities.py
+python scripts/make_figures.py             # presentation figures -> docs/figures/
 python scripts/update_research_readme.py   # refresh the status table above
 ```
 
@@ -78,21 +81,21 @@ These models have different scopes. Their rates and validation claims are **not 
 
 ### Species-resolved kMC
 
-![Species-resolved kMC snapshots](docs/species_kmc_results/species_kmc.gif)
+![Species-resolved kMC animation](docs/figures/species_kmc.gif)
 
-Each cell is one reactive Si-centered motif followed through one HF dose and purge. **Colors:** gray = F0, green = F1, teal = F2, purple = F3 (fluorination stage), gold = adsorbed HF complex, dark blue = Si released. Every frame is a saved stochastic snapshot, never an interpolation ([frame provenance](docs/species_kmc_results/animation_manifest.json)). The "height" in the perspective view only separates retained from released Si. It is not a film thickness.
+Each square is one reactive Si-centred motif followed through one HF dose and purge. Blue darkens from F0 to F3 as fluorine is added, orange dots are adsorbed HF, and grey squares have lost their Si as gas. Every frame is a saved stochastic snapshot, never an interpolation.
 
 ![Complete kMC reaction network](docs/reaction_network/species_kmc_network.png)
 
 The network is generated directly from [`configs/species_kmc_network.json`](configs/species_kmc_network.json). Gray arrow pairs show HF adsorption/desorption, brown arrows show reactions labelled with their source barrier and released gas, and dashed pink steps have no matching barrier and are disabled. See also the [surface-state atlas](docs/reaction_network/SURFACE_ATLAS.md), a [zoomable SVG](docs/reaction_network/species_kmc_network.svg) and a table of [all event rates](docs/species_kmc_results/event_rates.csv).
 
-![Temperature-dependent conversion and gas products](docs/species_kmc_results/species_kinetics.png)
+![Si release by temperature and gas products](docs/figures/si_release_by_temperature.png)
 
 ### Multilayer bond graph
 
-![Multilayer bond-graph kMC snapshots](docs/multilayer_results/multilayer_kmc.gif)
+![Multilayer bond-graph kMC animation](docs/figures/multilayer_kmc.gif)
 
-Si and N colors identify substrate atoms. Red rings mark currently exposed atoms, teal stars mark atoms newly exposed since the previous frame, gold diamonds mark adsorbed HF, and hollow gray circles show where atoms were removed. B0 to B5 are unit-cell depth bands, not atomic monolayers.
+The side view shows one fixed slice through the slab, with Si in blue and N in green. Orange rings mark atoms exposed to the gas, and dashed circles mark removed atoms. B0 to B5 are unit-cell depth bands, not atomic monolayers.
 
 <!-- BEGIN MULTILAYER STATUS -->
 The 9 s demonstration recorded **1097 events**, **9 Si + 16 N removals**, and **20 newly exposed atoms**. Twelve access-depth/seed controls accompany it. The rate audit identifies **246 distinct missing-rate environments**, with separate IS/FS connectivity requests for priority cases.
@@ -100,7 +103,7 @@ The 9 s demonstration recorded **1097 events**, **9 Si + 16 N removals**, and **
 
 This is a **demonstration, not a calibrated multilayer ALE model**. Host atoms stay at fixed crystal positions, and accessibility uses a column approximation. The rates are unvalidated transfers or assumptions. In the default `validated_only` mode, unmatched environments stay disabled. The missing rates are listed as an [environment-specific calculation queue](data/multilayer/rate_requests/index.json).
 
-![Cycle-by-cycle removal and blocked backbonds](docs/multilayer_results/cycle_depth_diagnosis.png)
+![Why multilayer etching stalls](docs/figures/multilayer_stall.png)
 
 ## How the kMC works
 
@@ -131,7 +134,7 @@ All current kMC rates come from the literature branch (`A → E → F`). Newly r
 <!-- BEGIN RELAXATION STATUS -->
 **7/8 adsorbate/substrate relaxations meet 0.04 eV/angstrom.** Lower-half atoms remain fixed. Force convergence does not establish a stable minimum or transition state. [Full table, energy traces and actual relaxation GIFs](docs/dry_etch_results/RELAXED_ADSORPTION.md).
 
-![Force-driven adsorption relaxation](docs/dry_etch_results/relaxed_adsorption.png)
+![HF relaxation on four surfaces](docs/figures/hf_surface_relaxation.png)
 <!-- END RELAXATION STATUS -->
 
 | Evidence | Result and how to read it |
@@ -141,6 +144,8 @@ All current kMC rates come from the literature branch (`A → E → F`). Newly r
 | Water-derived surface saddle | N-to-N H transfer beside Si-OH on nitride, 2.27 eV above the connected initial state. This is not water dissociation or Si removal. |
 | HF/HF and HF/H₂O coadsorbates | 8 candidates meet the force criterion, but full Hessians exposed an unstable reference, which is excluded ([report](docs/intermediate_results/REPORT.md), [stability](docs/intermediate_results/FULL_STABILITY.md)). |
 | Final Si-N cleavage | PBE/def2-SVP and def2-TZVP energies/forces, two failed OMol25 NEBs and a checked constrained scan. These are diagnostics, **not** a TS barrier ([report](docs/final_cleavage_results/REPORT.md)). |
+
+![Final Si-N cleavage checks](docs/figures/final_cleavage_checks.png)
 
 ![Evaluated N-to-N hydrogen-transfer path beside Si-OH](data/surface_paths/beta_Si3N4_001/H2O/mace_local_saddle/path.gif)
 
@@ -161,7 +166,7 @@ configs/          Network topology, material cards and the qualified-rate librar
 scripts/          Calculation, analysis and report workflows (see scripts/README.md)
 tests/            Conservation, numerical, backend and provenance checks
 data/             Literature extracts, reference structures, atomistic calculations
-docs/             Reports, figures, animations and method notes (see docs/README.md)
+docs/             Reports, method notes and figures (docs/figures/ = presentation figures)
 provenance/       Formatting-equivalence ledger for recorded code hashes
 hpc/              Example SLURM array job for parameter sweeps
 third_party/      Pinned, licensed HiPRGen source snapshot
@@ -173,6 +178,7 @@ archive/          Historical diagnostics, excluded from active evidence
 | Topic | Where |
 |---|---|
 | Guide to all documents | [docs/README.md](docs/README.md) |
+| How to read each figure | [docs/figures/README.md](docs/figures/README.md) |
 | Installation, CLI and C++ backend | [docs/USAGE.md](docs/USAGE.md) |
 | kMC algorithm and sampling decisions | [docs/KMC_ALGORITHM.md](docs/KMC_ALGORITHM.md) |
 | Every kinetic parameter and its source | [docs/KINETIC_PARAMETERS.md](docs/KINETIC_PARAMETERS.md), [docs/DRY_ETCH_PARAMETERS.md](docs/DRY_ETCH_PARAMETERS.md) |

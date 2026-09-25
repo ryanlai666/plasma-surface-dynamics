@@ -39,7 +39,7 @@ def main():
         lines.append(
             f'| Beyond rigid scans | **{n}/{len(rows)} HF/substrate relaxations force-converged**, two starts on each of four surfaces; see reference convergence below. |'
         )
-        body = f"**{n}/{len(rows)} adsorbate/substrate relaxations meet 0.04 eV/angstrom.** Lower-half atoms remain fixed. Force convergence does not establish a stable minimum or transition state. [Full table, energy traces and actual relaxation GIFs](docs/dry_etch_results/RELAXED_ADSORPTION.md).\n\n![Force-driven adsorption relaxation](docs/dry_etch_results/relaxed_adsorption.png)"
+        body = f"**{n}/{len(rows)} adsorbate/substrate relaxations meet 0.04 eV/angstrom.** Lower-half atoms remain fixed. Force convergence does not establish a stable minimum or transition state. [Full table, energy traces and actual relaxation GIFs](docs/dry_etch_results/RELAXED_ADSORPTION.md).\n\n![HF relaxation on four surfaces](docs/figures/hf_surface_relaxation.png)"
         s = block(s, 'RELAXATION STATUS', body)
     multi = ROOT / 'docs/multilayer_results/summary.json'
     if multi.exists():
